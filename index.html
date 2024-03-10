@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obsah repozitára</title>
+</head>
+<body>
+  <h1>Obsah repozitára</h1>
+  <ul>
+    <!-- Adresáre -->
+    <h2>Adresáre</h2>
+    <ul>
+      <!-- Automatický zoznam adresárov -->
+      {% for folder in site.static_files %}
+        {% if folder.path contains '/' %}
+          <li><a href="{{ folder.path }}">{{ folder.path }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    <!-- Súbory -->
+    <h2>Súbory</h2>
+    <ul>
+      <!-- Automatický zoznam súborov -->
+      {% for file in site.static_files %}
+        {% unless file.path contains '/' %}
+          <li><a href="{{ file.path }}">{{ file.path }}</a></li>
+        {% endunless %}
+      {% endfor %}
+    </ul>
+  </ul>
+</body>
+</html>
