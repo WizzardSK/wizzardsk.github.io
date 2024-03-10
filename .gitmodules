@@ -4,3 +4,6 @@
 [submodule "Nintendo_-_Wii_U"]
 	path = Nintendo_-_Wii_U
 	url = https://github.com/WizzardSK/Nintendo_-_Wii_U
+[submodule "DOS"]
+	path = DOS
+	url = https://github.com/WizzardSK/DOS
