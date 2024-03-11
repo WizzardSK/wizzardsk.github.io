@@ -6,6 +6,19 @@ title: Obsah repozitára
 
 ## Submoduly
 
-{% for submodule in site.submodules %}
-  - [{{ submodule.name }}]({{ submodule.url }})
-{% endfor %}
+{% if site.github.repository %}
+  {% capture submodule_info %}
+    {{ site.github.repository | split:'/' | last }}/blob/{{ site.github.sha }}/.gitmodules
+  {% endcapture %}
+
+  {% assign submodule_content = submodule_info | uri_escape | fetch %}
+  {% assign submodule_lines = submodule_content | newline_to_br | split: '<br />' %}
+
+  {% for line in submodule_lines %}
+    {% if line contains 'url =' or line contains 'path =' %}
+      {{ line | strip_html }} <br/>
+    {% endif %}
+  {% endfor %}
+{% else %}
+  Žiadne informácie o repozitári niesú dostupné.
+{% endif %}
