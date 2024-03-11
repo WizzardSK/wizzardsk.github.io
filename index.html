@@ -4,18 +4,18 @@ title: Obsah repozitára
 
 # Obsah repozitára
 
-## Adresáre
-
-{% for folder in site.static_files %}
-  {% if folder.path contains '/' %}
-    - [{{ folder.basename }}]({{ folder.basename }})
+{% for entry in site.static_files %}
+  {% assign parts = entry.path | split: '/' %}
+  {% if parts.size == 1 %}
+    - [{{ entry.name }}]({{ entry.name }})
+  {% else %}
+    {% for part in parts %}
+      {% if part != parts.last %}
+        {% assign path = path | append: part | append: '/' %}
+        - [{{ part }}/]({{ path }})
+      {% else %}
+        - [{{ part }}]({{ entry.path }})
+      {% endif %}
+    {% endfor %}
   {% endif %}
-{% endfor %}
-
-## Súbory
-
-{% for file in site.static_files %}
-  {% unless file.path contains '/' %}
-    - [{{ file.name }}]({{ file.name }})
-  {% endunless %}
 {% endfor %}
