@@ -1,0 +1,21 @@
+---
+title: Obsah repozitára
+---
+
+# Obsah repozitára
+
+## Adresáre
+
+{% for folder in site.static_files %}
+  {% if folder.path contains '/' %}
+    - [{{ folder.basename }}]({{ folder.basename }})
+  {% endif %}
+{% endfor %}
+
+## Súbory
+
+{% for file in site.static_files %}
+  {% unless file.path contains '/' %}
+    - [{{ file.name }}]({{ file.name }})
+  {% endunless %}
+{% endfor %}
