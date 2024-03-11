@@ -4,8 +4,8 @@ title: Obsah repozitára
 
 # Obsah repozitára
 
-## Adresáre
+## Submoduly
 
-{% for dir in site.directories %}
-  - [{{ dir }}]({{ dir }})
+{% for submodule in site.submodules %}
+  - [{{ submodule.name }}]({{ submodule.url }})
 {% endfor %}
