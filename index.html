@@ -4,18 +4,8 @@ title: Obsah repozitára
 
 # Obsah repozitára
 
-{% for entry in site.static_files %}
-  {% assign parts = entry.path | split: '/' %}
-  {% if parts.size == 1 %}
-    - [{{ entry.name }}]({{ entry.name }})
-  {% else %}
-    {% for part in parts %}
-      {% if part != parts.last %}
-        {% assign path = path | append: part | append: '/' %}
-        - [{{ part }}/]({{ path }})
-      {% else %}
-        - [{{ part }}]({{ entry.path }})
-      {% endif %}
-    {% endfor %}
-  {% endif %}
+## Adresáre
+
+{% for dir in site.directories %}
+  - [{{ dir }}]({{ dir }})
 {% endfor %}
