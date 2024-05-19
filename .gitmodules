@@ -1,9 +1,0 @@
-[submodule "Atari_-_Lynx"]
-	path = Atari_-_Lynx
-	url = https://github.com/WizzardSK/Atari_-_Lynx
-[submodule "Nintendo_-_Wii_U"]
-	path = Nintendo_-_Wii_U
-	url = https://github.com/WizzardSK/Nintendo_-_Wii_U
-[submodule "DOS"]
-	path = DOS
-	url = https://github.com/WizzardSK/DOS
