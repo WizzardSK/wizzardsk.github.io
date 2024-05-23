@@ -1,0 +1,6 @@
+[submodule "DOS"]
+	path = DOS
+	url = https://github.com/wizzardsk/DOS.git
+	branch = master
+	ignore = dirty
+	shallow = true
