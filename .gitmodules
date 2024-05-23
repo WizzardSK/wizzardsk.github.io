@@ -1,0 +1,3 @@
+[submodule "DOS"]
+  path = DOS
+  url = https://github.com/WizzardSK/DOS.git
