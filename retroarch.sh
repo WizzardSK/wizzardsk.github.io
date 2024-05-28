@@ -32,6 +32,13 @@ case "$adresar" in
 *"ZX Spectrum TZX") core="fuse_libretro";;
 *"ZX Spectrum Z80") core="fuse_libretro";;
 *"Spectravideo TOSEC") core="bluemsx_libretro";;
+*"Thomson MO5 K7") core="theodore_libretro";;
+*"Thomson MO6 K7") core="theodore_libretro";;
+*"Thomson TO7 K7") core="theodore_libretro";;
+*"Thomson TO7 M7") core="theodore_libretro";;
+*"Thomson TO8 FD") core="theodore_libretro";;
+*"Thomson TO8 K7") core="theodore_libretro";;
+*"Thomson TO8 SAP") core="theodore_libretro";;
 *"Atari - 2600") core="stella_libretro";;
 *"Atari 2600 TOSEC") core="stella_libretro";;
 *"Atari - 5200") core="a5200_libretro";;
