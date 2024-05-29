@@ -151,6 +151,7 @@ case "$adresar" in
 *"Commodore 64 Sports") core="vice_x64sc_libretro";;
 *"Commodore 64 Strategy") core="vice_x64sc_libretro";;
 *"Commodore 64 Educational") core="vice_x64sc_libretro";;
+*"Commodore 128 D64") core="vice_x128_libretro";;
 *"Commodore - Amiga") core="puae_libretro";;
 *"Amiga 1200 ADF") core="puae_libretro";;
 *"Amiga 1200 SPS") core="puae_libretro";;
