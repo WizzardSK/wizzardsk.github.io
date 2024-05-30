@@ -139,6 +139,8 @@ case "$adresar" in
 *"Commodore - VIC-20") core="vice_xvic_libretro";;
 *"Commodore VIC-20 TOSEC") core="vice_xvic_libretro";;
 *"Commodore - Commodore 64") core="vice_x64sc_libretro";;
+*"Commodore - Commodore 64 (PP)") core="vice_x64sc_libretro";;
+*"Commodore - Commodore 64 (Tapes)") core="vice_x64sc_libretro";;
 *"Commodore 64 Adventure") core="vice_x64sc_libretro";;
 *"Commodore 64 Arcade") core="vice_x64sc_libretro";;
 *"Commodore 64 Boulder") core="vice_x64sc_libretro";;
