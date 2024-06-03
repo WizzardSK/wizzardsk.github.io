@@ -29,6 +29,9 @@ case "$adresar" in
 *"Amstrad GX4000 TOSEC") core="cap32_libretro";;
 *"Sinclair ZX81 TOSEC") core="81_libretro";;
 *"ZX Spectrum DSK") core="fuse_libretro";;
+*"ZX Spectrum SCL") core="fuse_libretro";;
+*"ZX Spectrum TAP") core="fuse_libretro";;
+*"ZX Spectrum TRD") core="fuse_libretro";;
 *"ZX Spectrum TZX") core="fuse_libretro";;
 *"ZX Spectrum Z80") core="fuse_libretro";;
 *"Spectravideo TOSEC") core="bluemsx_libretro";;
@@ -48,6 +51,7 @@ case "$adresar" in
 *"Atari 8bit ATR") core="atari800";;
 *"Atari 8bit ATX") core="atari800";;
 *"Atari 8bit BIN") core="atari800";;
+*"Atari 8bit CAS") core="atari800";;
 *"Atari 8bit XEX") core="atari800";;
 *"Atari - ST") core="hatari_libretro";;
 *"Atari ST ST") core="hatari_libretro";;
@@ -135,9 +139,13 @@ case "$adresar" in
 *"MSX TurboR") core="bluemsx_libretro";;
 *"Commodore PET TOSEC") core="vice_xpet_libretro";;
 *"Commodore - Plus-4") core="vice_xplus4_libretro";;
-*"Commodore Plus-4 TOSEC") core="vice_xplus4_libretro";;
+*"Commodore Plus-4 PRG") core="vice_xplus4_libretro";;
+*"Commodore Plus-4 TAP") core="vice_xplus4_libretro";;
 *"Commodore - VIC-20") core="vice_xvic_libretro";;
-*"Commodore VIC-20 TOSEC") core="vice_xvic_libretro";;
+*"Commodore VIC-20 CRT") core="vice_xvic_libretro";;
+*"Commodore VIC-20 D64") core="vice_xvic_libretro";;
+*"Commodore VIC-20 PRG") core="vice_xvic_libretro";;
+*"Commodore VIC-20 TAP") core="vice_xvic_libretro";;
 *"Commodore - Commodore 64") core="vice_x64sc_libretro";;
 *"Commodore - Commodore 64 (PP)") core="vice_x64sc_libretro";;
 *"Commodore - Commodore 64 (Tapes)") core="vice_x64sc_libretro";;
@@ -156,6 +164,8 @@ case "$adresar" in
 *"Commodore 128 D64") core="vice_x128_libretro";;
 *"Commodore - Amiga") core="puae_libretro";;
 *"Amiga 1200 ADF") core="puae_libretro";;
+*"Amiga 1200 IPF") core="puae_libretro";;
+*"Amiga 1200 PD") core="puae_libretro";;
 *"Amiga 1200 SPS") core="puae_libretro";;
 *"Commodore - Amiga CD32") core="puae_libretro"; ext="cue";;
 *"[ISO]") core="puae_libretro"; ext="cue";;
