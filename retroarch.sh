@@ -47,6 +47,10 @@ case "$adresar" in
 *"VTech - V.Smile") core="mame_libretro";;
 *"TRS-80 Color Computer") core="mame_libretro";;
 *"Acorn BBC") core="mame_libretro";;
+*"Fujitsu - FM-7 (Sector)") core="mame_libretro";;
+*"Tomy Tutor") core="mame_libretro";;
+*"Acorn Electron") core="mame_libretro";;
+*"Coleco Adam") core="mame_libretro";;
 *"Thomson MO5 K7") core="theodore_libretro";;
 *"Thomson MO6 K7") core="theodore_libretro";;
 *"Thomson TO7 K7") core="theodore_libretro";;
