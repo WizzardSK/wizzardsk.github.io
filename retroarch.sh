@@ -45,6 +45,9 @@ case "$adresar" in
 *"Casio - PV-1000") core="mame_libretro";;
 *"Funtech - Super Acan") core="mame_libretro";;
 *"VTech - V.Smile") core="mame_libretro";;
+*"Welback - Mega Duck") core="mame_libretro";;
+*"Bit Corporation - Gamate") core="mame_libretro";;
+*"Hartung - Game Master") core="mame_libretro";;
 *"TRS-80 Color Computer") core="mame_libretro";;
 *"Acorn BBC") core="mame_libretro";;
 *"Fujitsu - FM-7 (Sector)") core="mame_libretro";;
