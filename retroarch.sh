@@ -54,6 +54,10 @@ case "$adresar" in
 *"Tomy Tutor") core="mame_libretro";;
 *"Acorn Electron") core="mame_libretro";;
 *"Coleco Adam") core="mame_libretro";;
+*"Fujitsu FM Towns BIN") core="mame_libretro";;
+*"Fujitsu FM Towns D88") core="mame_libretro";;
+*"Apple II DSK") core="mame_libretro";;
+*"Apple II WOZ") core="mame_libretro";;
 *"Thomson MO5 K7") core="theodore_libretro";;
 *"Thomson MO6 K7") core="theodore_libretro";;
 *"Thomson TO7 K7") core="theodore_libretro";;
