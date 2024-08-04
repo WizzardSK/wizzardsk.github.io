@@ -203,7 +203,7 @@ case "$adresar" in
 *"Commodore 64 Simulation") core="vice_x64sc_libretro";;
 *"Commodore 64 Sports") core="vice_x64sc_libretro";;
 *"Commodore 64 Strategy") core="vice_x64sc_libretro";;
-*"Commodore 64 Educational") core="vice_x64sc_libretro";;
+*"Commodore 64 Edu") core="vice_x64sc_libretro";;
 *"Commodore - Amiga") core="puae_libretro";;
 *"Amiga 1200 ADF") core="puae_libretro";;
 *"Amiga 1200 IPF") core="puae_libretro";;
