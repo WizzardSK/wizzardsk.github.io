@@ -16,7 +16,8 @@ case "$adresar" in
 *"Coleco - ColecoVision") core="bluemsx_libretro";;
 *"Coleco Colecovision TOSEC") core="bluemsx_libretro";;
 *"Epoch - Super Cassette Vision") core="emuscv_libretro";;
-*"Super Cassette Vision TOSEC") core="emuscv_libretro";;
+*"Epoch SCV TOSEC") core="emuscv_libretro";;
+*"Epoch - Game Pocket Computer") core="mame gamepock -cart";;
 *"Watara - Supervision") core="potator_libretro";;
 *"Watara Supervision TOSEC") core="potator_libretro";;
 *"Bandai - WonderSwan") core="mednafen_wswan_libretro";;
@@ -25,6 +26,15 @@ case "$adresar" in
 *"Bandai - WonderSwan Color") core="mednafen_wswan_libretro";;
 *"WonderSwan Color TOSEC") core="mednafen_wswan_libretro";;
 *"Arduboy Inc - Arduboy") core="arduous_libretro";;
+*"Welback - Mega Duck") core="mame megaduck -cart";;
+*"Bit Corporation - Gamate") core="mame gamate -cart";;
+*"Bitcorp Gamate TOSEC") core="mame gamate -cart";;
+*"Hartung - Game Master") core="mame gmaster -cart";;
+*"Hartung Game Master TOSEC") core="mame gmaster -cart";;
+*"Tiger - Game.com") core="mame gamecom -cart1";;
+*"Tiger Game.com TOSEC") core="mame gamecom -cart1";;
+*"GamePark - GP32") core="mame gp32 -memc";;
+*"GamePark GP32 TOSEC") core="mame gp32 -memc";;
 *"Amstrad CPC TOSEC") core="cap32_libretro";;
 *"Amstrad GX4000 TOSEC") core="cap32_libretro";;
 *"Sinclair ZX81 TOSEC") core="81_libretro";;
@@ -37,33 +47,36 @@ case "$adresar" in
 *"Spectravideo TOSEC") core="bluemsx_libretro";;
 *"Sam Coupé DSK") core="simcoupe";;
 *"Sam Coupé SAD") core="simcoupe";;
-*"Bally - Astrocade") core="mame_libretro";;
-*"APF - MP-1000") core="mame_libretro";;
-*"Entex - Adventure Vision") core="mame_libretro";;
-*"VTech - CreatiVision") core="mame_libretro";;
-*"Emerson - Arcadia 2001") core="mame_libretro";;
-*"Casio - PV-1000") core="mame_libretro";;
-*"Funtech - Super Acan") core="mame_libretro";;
-*"VTech - V.Smile") core="mame_libretro";;
-*"Welback - Mega Duck") core="mame_libretro";;
-*"Bit Corporation - Gamate") core="mame_libretro";;
-*"Hartung - Game Master") core="mame_libretro";;
-*"Tiger - Game.com") core="mame_libretro";;
-*"Tiger Game.com TOSEC") core="mame_libretro";;
-*"GamePark - GP32") core="mame_libretro";;
-*"Epoch - Game Pocket Computer") core="mame_libretro";;
-*"TRS-80 Color Computer") core="mame_libretro";;
-*"Acorn BBC") core="mame_libretro";;
-*"Fujitsu - FM-7 (Sector)") core="mame_libretro";;
-*"Tomy Tutor") core="mame_libretro";;
-*"Acorn Electron") core="mame_libretro";;
-*"Coleco Adam") core="mame_libretro";;
-*"Fujitsu - FM-Towns") core="mame_libretro";;
-*"Apple II DSK") core="mame_libretro";;
-*"Apple II WOZ") core="mame_libretro";;
-*"Acorn Archimedes") core="mame_libretro";;
+*"Bally - Astrocade") core="mame astrocde -cart";;
+*"Bally Astrocade BIN") core="mame astrocde -cart";;
+*"Bally Astrocade PRG") core="mame astrocde -cart";;
+*"APF - MP-1000") core="mame apfm1000 -cart";;
+*"APF MP-1000 TOSEC") core="mame apfm1000 -cart";;
+*"Entex - Adventure Vision") core="mame advision -cart";;
+*"Adventure Vision TOSEC") core="mame advision -cart";;
+*"VTech - CreatiVision") core="mame crvision -cart";;
+*"CreatiVision TOSEC") core="mame crvision -cart";;
+*"VTech - V.Smile") core="mame vsmile -cart";;
+*"VTech V.Smile TOSEC") core="mame vsmile -cart";;
+*"Emerson - Arcadia 2001") core="mame arcadia -cart";;
+*"Arcadia 2001 TOSEC") core="mame arcadia -cart";;
+*"Casio - PV-1000") core="mame pv1000 -cart";;
+*"Casio PV-1000 TOSEC") core="mame pv1000 -cart";;
+*"Funtech - Super Acan") core="mame supracan -cart";;
+*"Super Acan TOSEC") core="mame supracan -cart";;
+*"Interton - VC 4000") core="mame vc4000 -cart";;
 *"Othello Multivision") core="gearsystem_libretro";;
-*"Interton - VC 4000") core="mame_libretro";;
+*"Coleco Adam") core="mame adam -flop1";;
+*"TRS-80 Color Computer") core="mame coco3 -cart";;
+*"Acorn BBC") core="mame bbcb -flop1";;
+*"Acorn Electron") core="mame electron64 -cass";;
+*"Fujitsu - FM-7 (Sector)") core="mame fm7 -flop1";;
+*"Fujitsu Micro 7 D77") core="mame fm7 -flop1";;
+*"Fujitsu - FM-Towns") core="mame fmtmarty -cdrm";;
+*"Tomy Tutor") core="mame tutor -cart";;
+*"Apple II DSK") core="mame apple2ee -flop1";;
+*"Apple II WOZ") core="mame apple2ee -flop1";;
+*"Acorn Archimedes") core="mame aa4401 -flop";;
 *"Thomson MO5 K7") core="theodore_libretro";;
 *"Thomson MO6 K7") core="theodore_libretro";;
 *"Thomson TO7 K7") core="theodore_libretro";;
@@ -175,6 +188,7 @@ case "$adresar" in
 *"Commodore VIC-20 D64") core="vice_xvic_libretro";;
 *"Commodore VIC-20 PRG") core="vice_xvic_libretro";;
 *"Commodore VIC-20 TAP") core="vice_xvic_libretro";;
+*"Commodore 128 D64") core="vice_x128_libretro";;
 *"Commodore - Commodore 64") core="vice_x64sc_libretro";;
 *"Commodore - Commodore 64 (PP)") core="vice_x64sc_libretro";;
 *"Commodore - Commodore 64 (Tapes)") core="vice_x64sc_libretro";;
@@ -190,7 +204,6 @@ case "$adresar" in
 *"Commodore 64 Sports") core="vice_x64sc_libretro";;
 *"Commodore 64 Strategy") core="vice_x64sc_libretro";;
 *"Commodore 64 Educational") core="vice_x64sc_libretro";;
-*"Commodore 128 D64") core="vice_x128_libretro";;
 *"Commodore - Amiga") core="puae_libretro";;
 *"Amiga 1200 ADF") core="puae_libretro";;
 *"Amiga 1200 IPF") core="puae_libretro";;
@@ -213,6 +226,10 @@ if [ -n "$ext" ]; then
   rom=$(find ~/iso -type f -name "*.${ext}" | head -n 1)
 else
   rom="$1"
+fi
+
+if [[ "$core" == *"mame"* ]]; then
+  ${core} "${rom}" -skip_gameinfo -rompath "$HOME/.config/retroarch/system/"
 fi
 
 if [[ "$core" == *"libretro"* ]]; then
