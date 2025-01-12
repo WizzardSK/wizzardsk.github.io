@@ -68,6 +68,7 @@ case "$adresar" in
 *"Othello Multivision") core="gearsystem_libretro";;
 *"Coleco Adam") core="mame adam -flop1";;
 *"TRS-80 Color Computer") core="mame coco3 -cart";;
+*"Memorex - Visual Information System") core="mame vis -cdrm"; ext="cue";;
 *"Acorn BBC") core="mame bbcb -flop1";;
 *"Acorn Electron") core="mame electron64 -cass";;
 *"Fujitsu - FM-7 (Sector)") core="mame fm7 -flop1";;
@@ -100,6 +101,7 @@ case "$adresar" in
 *"Atari ST STX") core="hatari_libretro";;
 *"Atari - Jaguar (J64)") core="virtualjaguar_libretro";;
 *"Atari Jaguar TOSEC") core="virtualjaguar_libretro";;
+*"Atari - Jaguar CD Interactive Multimedia System") core="virtualjaguar_libretro";;
 *"Atari - Lynx (LYX)") core="mednafen_lynx_libretro";;
 *"Atari Lynx TOSEC") core="mednafen_lynx_libretro";;
 *"Nintendo - Nintendo Entertainment System (Headered)") core="nestopia_libretro";;
@@ -160,6 +162,7 @@ case "$adresar" in
 *"PC Engine 2 TOSEC") core="mednafen_supergrafx_libretro";;
 *"NEC - PC-FX & PC-FXGA") core="mednafen_pcfx_libretro"; ext="cue";;
 *"Games") core="mednafen_pcfx_libretro"; ext="cue";;
+*"mame-merged") core="mame";;
 *"Philips - CD-i") core="same_cdi_libretro"; ext="cue";;
 *"Games") core="same_cdi_libretro"; ext="cue";;
 *"Panasonic - 3DO Interactive Multiplayer") core="opera_libretro"; ext="cue";;
@@ -173,6 +176,23 @@ case "$adresar" in
 *"dos-other") core="dosbox_pure_libretro";;
 *"MS-DOS TOSEC") core="dosbox_pure_libretro";;
 *"[ISO]") core="dosbox_pure_libretro";;
+*"1982") core="dosbox_pure_libretro";;
+*"1983") core="dosbox_pure_libretro";;
+*"1985") core="dosbox_pure_libretro";;
+*"1988") core="dosbox_pure_libretro";;
+*"1990") core="dosbox_pure_libretro";;
+*"1991") core="dosbox_pure_libretro";;
+*"1996") core="dosbox_pure_libretro";;
+*"1997") core="dosbox_pure_libretro";;
+*"1999") core="dosbox_pure_libretro";;
+*"199x") core="dosbox_pure_libretro";;
+*"2002") core="dosbox_pure_libretro";;
+*"2003") core="dosbox_pure_libretro";;
+*"2008") core="dosbox_pure_libretro";;
+*"2009") core="dosbox_pure_libretro";;
+*"2011") core="dosbox_pure_libretro";;
+*"2014") core="dosbox_pure_libretro";;
+*"2015") core="dosbox_pure_libretro";;
 *"Microsoft - MSX") core="bluemsx_libretro";;
 *"MSX 1 TOSEC") core="bluemsx_libretro";;
 *"Microsoft - MSX2") core="bluemsx_libretro";;
