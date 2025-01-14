@@ -13,6 +13,7 @@ filterInput.addEventListener('input', function () {
             const captionText = caption.textContent.toLowerCase();
             if (captionText.includes(filterText)) { figures[i].style.display = ''; } else { figures[i].style.display = 'none'; }
         }
+        showHideAlfa.dispatchEvent(new Event('change'));
         showHideBeta.dispatchEvent(new Event('change'));
         showHideDemo.dispatchEvent(new Event('change'));
         showHideAftermarket.dispatchEvent(new Event('change'));
@@ -37,6 +38,7 @@ function handleCheckboxChange(checkbox, filterText) {
         document.getElementById('pocet').innerHTML = " Games: " + displayedCount;
     });
 }
+handleCheckboxChange(showHideAlfa, "(alpha");
 handleCheckboxChange(showHideBeta, "(beta");
 handleCheckboxChange(showHideDemo, "(demo");
 handleCheckboxChange(showHideAftermarket, "(aftermarket");
@@ -51,6 +53,7 @@ document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
         filterInput.value = '';
         filterInput.dispatchEvent(new Event('input'));
+        showHideAlfa.dispatchEvent(new Event('change'));
         showHideBeta.dispatchEvent(new Event('change'));
         showHideDemo.dispatchEvent(new Event('change'));
         showHideAftermarket.dispatchEvent(new Event('change'));
@@ -83,9 +86,10 @@ function change320() { changeSize(320); }
 function processImages(operation) {
     var obrazky = document.getElementsByTagName('img');
     var replaceMap = {
-        'boxarts': { from: /_Snaps|_Titles/g, to: '_Boxarts' },
-        'snaps': { from: /_Boxarts|_Titles/g, to: '_Snaps' },
-        'titles': { from: /_Snaps|_Boxarts/g, to: '_Titles' }
+        'boxarts': { from: /_Snaps|_Titles|_Logos/g, to: '_Boxarts' },
+        'snaps': { from: /_Boxarts|_Titles|_Logos/g, to: '_Snaps' },
+        'titles': { from: /_Snaps|_Boxarts|_Logos/g, to: '_Titles' },
+        'logos': { from: /_Snaps|_Boxarts|_Titles/g, to: '_Logos' }
     };
     for (var i = 0; i < obrazky.length; i++) {
         obrazky[i].style.visibility = "visible";
@@ -95,6 +99,7 @@ function processImages(operation) {
 function boxarts() { processImages('boxarts'); }
 function snaps() { processImages('snaps'); }
 function titles() { processImages('titles'); }
+function logos() { processImages('logos'); }
 
 function imgonerror(image) {
     image.src = image.src.replace("&", "_");
