@@ -35,7 +35,9 @@ case "$adresar" in
 *"Tiger Game.com TOSEC") core="mame gamecom -cart1";;
 *"GamePark - GP32") core="mame gp32 -memc";;
 *"GamePark GP32 TOSEC") core="mame gp32 -memc";;
-*"Amstrad CPC TOSEC") core="cap32_libretro";;
+*"Amstrad CPC DSK") core="cap32_libretro";;
+*"Amstrad CPC CDT") core="cap32_libretro";;
+*"Amstrad CPC SNA") core="cap32_libretro";;
 *"Amstrad GX4000 TOSEC") core="cap32_libretro";;
 *"Sinclair ZX81 TOSEC") core="81_libretro";;
 *"ZX Spectrum DSK") core="fuse_libretro";;
