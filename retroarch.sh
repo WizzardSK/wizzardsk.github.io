@@ -69,7 +69,7 @@ case "$adresar" in
 *"Interton - VC 4000") core="mame vc4000 -cart";;
 *"Othello Multivision") core="gearsystem_libretro";;
 *"Coleco Adam") core="mame adam -flop1";;
-*"TRS-80 Color Computer") core="mame coco3 -cart";;
+*"Tandy TRS-80 CoCo") core="mame coco3 -cart";;
 *"Memorex - Visual Information System") core="mame vis -cdrm"; ext="cue";;
 *"Acorn BBC") core="mame bbcb -flop1";;
 *"Acorn Electron") core="mame electron64 -cass";;
@@ -251,7 +251,10 @@ else
 fi
 
 if [[ "$core" == *"mame"* ]]; then
-  ${core} "${rom}" -skip_gameinfo -rompath "$HOME/.config/retroarch/system/"
+  filename="${rom##*/}"
+  basename="${filename%.*}"
+  ${core} "${rom}" -skip_gameinfo -snapname "${basename}"
+  exit
 fi
 
 if [[ "$core" == *"libretro"* ]]; then
