@@ -51,8 +51,7 @@ case "$adresar" in
 *"Sam Coupé DSK") core="simcoupe";;
 *"Sam Coupé SAD") core="simcoupe";;
 *"Bally - Astrocade") core="mame astrocde -cart";;
-*"Bally Astrocade BIN") core="mame astrocde -cart";;
-*"Bally Astrocade PRG") core="mame astrocde -cart";;
+*"Bally Astrocade TOSEC") core="mame astrocde -cart";;
 *"APF - MP-1000") core="mame apfm1000 -cart";;
 *"APF MP-1000 TOSEC") core="mame apfm1000 -cart";;
 *"Entex - Adventure Vision") core="mame advision -cart";;
@@ -73,13 +72,13 @@ case "$adresar" in
 *"Memorex - Visual Information System") core="mame vis -cdrm"; ext="cue";;
 *"Acorn BBC") core="mame bbcb -flop1";;
 *"Acorn Electron") core="mame electron64 -cass";;
+*"Acorn Archimedes") core="mame aa4401 -flop";;
 *"Fujitsu - FM-7 (Sector)") core="mame fm7 -flop1";;
 *"Fujitsu Micro 7 D77") core="mame fm7 -flop1";;
 *"Fujitsu - FM-Towns") core="mame fmtmarty -cdrm";;
 *"Tomy Tutor") core="mame tutor -cart";;
 *"Apple II DSK") core="mame apple2ee -flop1";;
 *"Apple II WOZ") core="mame apple2ee -flop1";;
-*"Acorn Archimedes") core="mame aa4401 -flop";;
 *"Thomson MO5 K7") core="theodore_libretro";;
 *"Thomson MO6 K7") core="theodore_libretro";;
 *"Thomson TO7 K7") core="theodore_libretro";;
@@ -103,7 +102,8 @@ case "$adresar" in
 *"Atari ST STX") core="hatari_libretro";;
 *"Atari - Jaguar (J64)") core="virtualjaguar_libretro";;
 *"Atari Jaguar TOSEC") core="virtualjaguar_libretro";;
-*"Atari - Jaguar CD Interactive Multimedia System") core="virtualjaguar_libretro";;
+*"Atari - Jaguar CD Interactive Multimedia System") core="bigpemu"; ext="cue";;
+*"Non-Redump - Atari - Atari Jaguar CD") core="bigpemu"; ext="cdi";;
 *"Atari - Lynx (LYX)") core="mednafen_lynx_libretro";;
 *"Atari Lynx TOSEC") core="mednafen_lynx_libretro";;
 *"Nintendo - Nintendo Entertainment System (Headered)") core="nestopia_libretro";;
