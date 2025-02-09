@@ -13,6 +13,7 @@ case "$adresar" in
 *"Philips Videopac+ TOSEC") core="o2em_libretro";;
 *"Mattel - Intellivision") core="freeintv_libretro";;
 *"Mattel Intellivision TOSEC") core="freeintv_libretro";;
+*"Coleco Adam") core="mame adam -flop1";;
 *"Coleco - ColecoVision") core="bluemsx_libretro";;
 *"Coleco Colecovision TOSEC") core="bluemsx_libretro";;
 *"Epoch - Super Cassette Vision") core="emuscv_libretro";;
@@ -68,7 +69,6 @@ case "$adresar" in
 *"Super Acan TOSEC") core="mame supracan -cart";;
 *"Interton - VC 4000") core="mame vc4000 -cart";;
 *"Othello Multivision") core="gearsystem_libretro";;
-*"Coleco Adam") core="mame adam -flop1";;
 *"Tandy TRS-80 CoCo") core="mame coco3 -cart";;
 *"Memorex - Visual Information System") core="mame vis -cdrm"; ext="cue";;
 *"Acorn BBC") core="mame bbcb -flop1";;
