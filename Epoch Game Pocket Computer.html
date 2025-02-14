@@ -1,8 +1,16 @@
 <script src="platform.js"></script>
 <style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/gamepock.png'); } </style>
-<a href="../myrient/No-Intro/Epoch - Game Pocket Computer/Astro Bomber (Japan).zip" target=main><figure><img loading=lazy src="https://raw.githubusercontent.com/WizzardSK/Epoch_-_Game_Pocket_Computer/master/Named_Snaps/Astro Bomber (Japan).png"><figcaption>Astro Bomber (Japan)</figcaption></figure></a>
-<a href="../myrient/No-Intro/Epoch - Game Pocket Computer/Block Maze (Japan).zip" target=main><figure><img loading=lazy src="https://raw.githubusercontent.com/WizzardSK/Epoch_-_Game_Pocket_Computer/master/Named_Snaps/Block Maze (Japan).png"><figcaption>Block Maze (Japan)</figcaption></figure></a>
-<a href="../myrient/No-Intro/Epoch - Game Pocket Computer/Pocket Computer Mahjong (Japan).zip" target=main><figure><img loading=lazy src="https://raw.githubusercontent.com/WizzardSK/Epoch_-_Game_Pocket_Computer/master/Named_Snaps/Pocket Computer Mahjong (Japan).png"><figcaption>Pocket Computer Mahjong (Japan)</figcaption></figure></a>
-<a href="../myrient/No-Intro/Epoch - Game Pocket Computer/Pocket Computer Reversi (Japan).zip" target=main><figure><img loading=lazy src="https://raw.githubusercontent.com/WizzardSK/Epoch_-_Game_Pocket_Computer/master/Named_Snaps/Pocket Computer Reversi (Japan).png"><figcaption>Pocket Computer Reversi (Japan)</figcaption></figure></a>
-<a href="../myrient/No-Intro/Epoch - Game Pocket Computer/Soukoban (Japan).zip" target=main><figure><img loading=lazy src="https://raw.githubusercontent.com/WizzardSK/Epoch_-_Game_Pocket_Computer/master/Named_Snaps/Soukoban (Japan).png"><figcaption>Soukoban (Japan)</figcaption></figure></a>
-</div><script src="script.js"></script>
+<script>const fileNames = [
+"Astro Bomber (Japan).zip",
+"Block Maze (Japan).zip",
+"Pocket Computer Mahjong (Japan).zip",
+"Pocket Computer Reversi (Japan).zip",
+"Soukoban (Japan).zip",
+];
+fileNames.forEach(fileName => { document.write(`<a href="../
+myrient/No-Intro/Epoch - Game Pocket Computer
+/
+${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
+Epoch_-_Game_Pocket_Computer
+/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+</script></div><script src="script.js"></script>

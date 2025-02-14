@@ -174,6 +174,8 @@ case "$adresar" in
 *"Redump/NEC - PC-FX & PC-FXGA") core="mednafen_pcfx_libretro"; ext="cue";;
 *"TOSEC-ISO/NEC/PC-FX/Games") core="mednafen_pcfx_libretro"; ext="cue";;
 *"Internet Archive/chadmaster/mame-merged/mame-merged") core="mame";;
+*"Internet Archive/chadmaster/fbnarcade-fullnonmerged/arcade") core="fbneo_libretro";;
+*"Internet Archive/chadmaster/segamodel3/ROMs") core="supermodel";;
 *"Redump/Philips - CD-i") core="same_cdi_libretro"; ext="cue";;
 *"No-Intro/Non-Redump - Philips - CD-i") core="same_cdi_libretro"; ext="cue";;
 *"TOSEC-ISO/Philips/CD-i/Games") core="same_cdi_libretro"; ext="cue";;
