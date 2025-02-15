@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/amiga1200.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("amiga1200"); const fileNames = [
 "Aardvarks (1994)(Galaxya Software)(PD)[h SB-Soft][AMOS].adf",
 "Above Top Secret (1996)(Nordovics, Paul - F1 Licenceware)(LW)[KS2.0].adf",
 "Above Top Secret (1996)(Nordovics, Paul - F1 Licenceware)(LW)[1998 edition][KS2.0].adf",
@@ -5358,10 +5357,5 @@
 "6Tris v1.1 (1994)(Daniels, James)(FW)[h SB-Soft][AMOS].adf",
 "6Tris ++ (1996)(Daniels, James)(FW)[h BTTR][AMOS].adf",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Amiga 1200 PD
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Commodore_-_Amiga
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Amiga 1200 PD", "Commodore_-_Amiga");
 </script></div><script src="script.js"></script>

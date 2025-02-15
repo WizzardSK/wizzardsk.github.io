@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/dos.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("dos"); const fileNames = [
 "ABC Fun Keys v4.2 [SW] (1991)(Courtney E. Krehbiel) [Educational].zip",
 "ABC Paint v1.2 [SW] (1991)(Belinda D. Aboshanab) [Educational].zip",
 "ABC's For Toddlers [SW] (1991)(Rickers Software) [Educational].zip",
@@ -1994,5 +1993,5 @@
 "7 Colors (En)(De)(Es)(Fr)(It)(Ru) [a1] (1991)(Infogrames Europe SA) [Strategy].zip",
 "7 Colors (En)(De)(Es)(Fr)(It)(Ru) (1991)(Infogrames Europe SA) [Strategy].zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../myrient/Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/1991/${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/DOS/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/1991", "DOS");
 </script></div><script src="script.js"></script>

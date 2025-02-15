@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/supervision.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("supervision"); const fileNames = [
 "Alien (USA, Europe).zip",
 "Balloon Fight (USA, Europe).zip",
 "Block Buster (USA, Europe).zip",
@@ -74,10 +73,5 @@
 "2 in 1 - Hash Blocks + Eagle Plan (USA, Europe).zip",
 "4 in 1 - Hash Block + Challenger Tank + Brain Power + Jacky Lucky (USA, Europe).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/No-Intro/Watara - Supervision
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Watara_-_Supervision
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/No-Intro/Watara - Supervision", "Watara_-_Supervision");
 </script></div><script src="script.js"></script>

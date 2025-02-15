@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/supracan.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("supracan"); const fileNames = [
 "Boom Zoo ~ Bao Bao Dong Wu Yuan (1995)(Funtech)(TW)[F011].bin",
 "Formosa Duel (1995)(AV Artisan)(TW)[F001].bin",
 "Gambling Lord (1996)(Funtech)(TW)[F009].bin",
@@ -14,10 +13,5 @@
 "Super Light Saga - Dragon Force ~ Chao Ji Guang Ming Zhan Shi (1996)(Kingformation)(TW)[F007][16007].bin",
 "Super Taiwanese Baseball League ~ Chao Ji Zhong Hua Zhi Bang Lian Meng (1995)(C&E Soft)(TW)[F005].bin",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Super Acan TOSEC
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Funtech_-_Super_Acan
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Super Acan TOSEC", "Funtech_-_Super_Acan");
 </script></div><script src="script.js"></script>

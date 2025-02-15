@@ -188,7 +188,7 @@ case "$adresar" in
 *"Neo Geo Pocket TOSEC") core="mednafen_ngp_libretro";;
 *"No-Intro/SNK - NeoGeo Pocket Color") core="mednafen_ngp_libretro";;
 *"NGP Color TOSEC") core="mednafen_ngp_libretro";;
-*"../roms/dos-other") core="dosbox_pure_libretro";;
+*"roms/dos-other") core="dosbox_pure_libretro";;
 *"MS-DOS TOSEC") core="dosbox_pure_libretro";;
 *"TOSEC-ISO/IBM/PC Compatibles/CD/Games/[ISO]") core="dosbox_pure_libretro";;
 *"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/1982") core="dosbox_pure_libretro";;

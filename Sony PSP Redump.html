@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/psp.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("psp"); const fileNames = [
 "Abunai - Koi no Sousa Shitsu (Japan).zip",
 "Accel World - Gin'yoku no Kakusei (Japan).zip",
 "Accel World - Kasoku no Chouten (Japan).zip",
@@ -2812,10 +2811,5 @@
 "7 Wonders of the Ancient World (USA).zip",
 "-8 (Japan).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/Redump/Sony - PlayStation Portable
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Sony_-_PlayStation_Portable
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/Redump/Sony - PlayStation Portable", "Sony_-_PlayStation_Portable");
 </script></div><script src="script.js"></script>

@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/atari800.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("atari800"); const fileNames = [
 "Abracadabra! (1983)(TG Software)(US)[compressed].xex",
 "Abracadabra! (1983)(TG Software)(US).xex",
 "Accion (2006)(Caillahuz, Mario)(PE)(en)(FW).xex",
@@ -3010,10 +3009,5 @@
 "3-D Tic-Tac-Toe (1979)(Atari)(US).xex",
 "3d24 (1993)(L.K. Avalon)(PL).xex",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Atari 8bit XEX
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Atari_-_8-bit
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Atari 8bit XEX", "Atari_-_8-bit");
 </script></div><script src="script.js"></script>

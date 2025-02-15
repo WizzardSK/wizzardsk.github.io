@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/c64.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("c64"); const fileNames = [
 "ABC Monday Night Football (19xx)(Data East)(Side A)[a].d64",
 "ABC Monday Night Football (19xx)(Data East)(Side A)[cr Intense][a].d64",
 "ABC Monday Night Football (19xx)(Data East)(Side A)[cr Intense][a2].d64",
@@ -14170,10 +14169,5 @@
 "720 Degrees 2 (1987)(US Gold)[h Ikari+The Survivors][a4].d64",
 "720 Degrees 2 (1987)(US Gold)[h Ikari+The Survivors].d64",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Commodore 64 Sports
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Commodore_-_64
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Commodore 64 Sports", "Commodore_-_64");
 </script></div><script src="script.js"></script>

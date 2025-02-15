@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/c64.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("c64"); const fileNames = [
 "Aaaargh! (1989)(Melbourne House)[cr Abnormal][t].d64",
 "Aaaargh! (1989)(Melbourne House)[cr Action][a].d64",
 "Aaaargh! (1989)(Melbourne House)[cr Action].d64",
@@ -37805,10 +37804,5 @@
 "8-Ball (1991)(-)[cr ASS][PCS].d64",
 "99 Luftballons (1985)(Mario Walther).d64",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Commodore 64 Arcade
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Commodore_-_64
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Commodore 64 Arcade", "Commodore_-_64");
 </script></div><script src="script.js"></script>

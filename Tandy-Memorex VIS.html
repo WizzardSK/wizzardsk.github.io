@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/vis.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("vis"); const fileNames = [
 "Adventures of Victor Vector & Yondo, The - Adventure No. 1 - The Vampire's Coffin (USA).zip",
 "American Heritage - Illustrated Encyclopedic Dictionary (USA).zip",
 "Americans in Space (USA).zip",
@@ -73,10 +72,5 @@
 "Wild Animals! (USA).zip",
 "World Vista (USA).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/Redump/Memorex - Visual Information System
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Tandy_-_Video_Information_System
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/Redump/Memorex - Visual Information System", "Tandy_-_Video_Information_System");
 </script></div><script src="script.js"></script>

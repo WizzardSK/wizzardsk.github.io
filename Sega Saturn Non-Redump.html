@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/saturn.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("saturn"); const fileNames = [
 "Armed (Unknown) (Beta) (1997-01-22) [b].zip",
 "Astrocade (Unknown) (Beta) (1996-08-01).zip",
 "[BIOS] Sega Saturn (Japan) (v1.003).zip",
@@ -55,10 +54,5 @@
 "Werewolf (Unknown) (Beta) (1996-06-14).zip",
 "Winning Post (Unknown) (Beta) (1995-12-27).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/No-Intro/Non-Redump - Sega - Sega Saturn
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Sega_-_Saturn
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/No-Intro/Non-Redump - Sega - Sega Saturn", "Sega_-_Saturn");
 </script></div><script src="script.js"></script>

@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/nds.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("nds"); const fileNames = [
 "Advance Wars - Dual Strike (2005)(Nintendo)(EU)(M5).nds",
 "Advance Wars - Dual Strike (2005)(Nintendo)(US).nds",
 "Aka-chan wa Doko kara Kuru no (2005)(Sega)(JP).nds",
@@ -400,10 +399,5 @@
 "4 Game Fun Pack - Monopoly + Boggle + Yahtzee + Battleship (2005)(Atari)(EU)(en).nds",
 "4 Game Fun Pack - Monopoly + Boggle + Yahtzee + Battleship (2005)(Atari)(US).nds",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Nintendo DS TOSEC
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Nintendo_-_Nintendo_DS
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Nintendo DS TOSEC", "Nintendo_-_Nintendo_DS");
 </script></div><script src="script.js"></script>

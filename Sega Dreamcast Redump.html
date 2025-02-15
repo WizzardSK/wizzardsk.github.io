@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/dreamcast.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("dreamcast"); const fileNames = [
 "Action Replay CDX - Demo Version (UK) (Unl).zip",
 "Advanced Daisenryaku - Sturm ueber Europa - Der Deutsche Blitzkrieg (Japan).zip",
 "Advanced Daisenryaku 2001 (Japan).zip",
@@ -1474,10 +1473,5 @@
 "4x4 Evo (USA).zip",
 "90 Minutes - Sega Championship Football (Europe) (En,Fr,De,Es,It).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/Redump/Sega - Dreamcast
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Sega_-_Dreamcast
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/Redump/Sega - Dreamcast", "Sega_-_Dreamcast");
 </script></div><script src="script.js"></script>

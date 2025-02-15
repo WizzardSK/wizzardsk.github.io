@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/electron.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("electron"); const fileNames = [
 "Abyss (198x)(CCS).uef",
 "Acornsoft Meteors (1983)(Acornsoft)[a].uef",
 "Acornsoft Meteors (1983)(Acornsoft).uef",
@@ -730,10 +729,5 @@
 "747 Flight Simulator (1983)(DACC).uef",
 "747 (198x)(Doctor Soft).uef",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Acorn Electron
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Acorn_-_Electron
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Acorn Electron", "Acorn_-_Electron");
 </script></div><script src="script.js"></script>

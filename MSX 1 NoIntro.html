@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/msx1.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("msx1"); const fileNames = [
 "Actman (Japan) (Alt).zip",
 "Actman (Japan).zip",
 "Adven' Chuta! (Japan).zip",
@@ -952,10 +951,5 @@
 "3-D Golf Simulation (Japan).zip",
 "3D Tennis (Japan).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/No-Intro/Microsoft - MSX
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Microsoft_-_MSX
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/No-Intro/Microsoft - MSX", "Microsoft_-_MSX");
 </script></div><script src="script.js"></script>

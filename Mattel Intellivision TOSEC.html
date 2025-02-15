@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/intellivision.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("intellivision"); const fileNames = [
 "ABPA Backgammon (1978)(Mattel).bin",
 "Advanced Dungeons and Dragons - Treasure of Tarmin (1982)(Mattel).bin",
 "Advanced Dungeons and Dragons (1982)(Mattel).bin",
@@ -221,10 +220,5 @@
 "4-Tris (2000)(IntelligentVision)[download version][9111].bin",
 "4-TRIS (2000)(Zbiciak, Joseph)(PD).bin",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Mattel Intellivision TOSEC
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Mattel_-_Intellivision
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Mattel Intellivision TOSEC", "Mattel_-_Intellivision");
 </script></div><script src="script.js"></script>

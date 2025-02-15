@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/pcfx.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("pcfx"); const fileNames = [
 "Aa! Megami-sama! (1997)(NEC Home Electronics)(JP)(Disk 1 of 2)[FXNHE742].zip",
 "Aa! Megami-sama! (1997)(NEC Home Electronics)(JP)(Disk 2 of 2)[FXNHE742].zip",
 "Akazukin Cha Cha - Osawagase! Panic Race! (1996)(NEC Home Electronics)(JP)[FXNHE630].zip",
@@ -66,10 +65,5 @@
 "Zoku Hatsukoi Monogatari - Shuugaku Ryokou (1997)(NEC Home Electronics)(JP)(Disc 1 of 2)[FXNHE629].zip",
 "Zoku Hatsukoi Monogatari - Shuugaku Ryokou (1997)(NEC Home Electronics)(JP)(Disc 2 of 2)[FXNHE629].zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/TOSEC-ISO/NEC/PC-FX/Games
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-NEC_-_PC-FX
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/TOSEC-ISO/NEC/PC-FX/Games", "NEC_-_PC-FX");
 </script></div><script src="script.js"></script>

@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/amiga1200.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("amiga1200"); const fileNames = [
 "Albedo (1988)(Myriad)(FR).ipf",
 "Alien Strike (1987)(Diamond).ipf",
 "Alternate Reality - The City v3.0.1 (1988)(Datasoft).ipf",
@@ -192,10 +191,5 @@
 "Wizards Castle (1988)(Kingsoft)(Disk 2 of 2).ipf",
 "Xorron 2001 (1989)(Starbyte).ipf",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Amiga 1200 IPF
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Commodore_-_Amiga
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Amiga 1200 IPF", "Commodore_-_Amiga");
 </script></div><script src="script.js"></script>

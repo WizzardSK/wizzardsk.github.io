@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/wonderswan.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("wonderswan"); const fileNames = [
 "Anchorz Field (Japan).zip",
 "Armored Unit (Japan).zip",
 "Atakshii (World) (Ja) (WonderWitch) (Unl).zip",
@@ -258,10 +257,5 @@
 "7 Days Left (World) (Ja) (v1.00) (WonderWitch) (WWGP2002) (Unl).zip",
 "7 Days Left (World) (Ja) (v1.01) (WonderWitch) (Unl).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/No-Intro/Bandai - WonderSwan
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Bandai_-_WonderSwan
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/No-Intro/Bandai - WonderSwan", "Bandai_-_WonderSwan");
 </script></div><script src="script.js"></script>

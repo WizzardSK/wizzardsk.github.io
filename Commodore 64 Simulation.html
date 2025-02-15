@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/c64.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("c64"); const fileNames = [
 "ACE - Air Combat Emulator (1985)(Cascade)[cr Berlin Cracking Service][a].d64",
 "ACE - Air Combat Emulator (1985)(Cascade)[cr Berlin Cracking Service].d64",
 "ACE - Air Combat Emulator (1985)(Cascade)[cr BST][a].d64",
@@ -3201,10 +3200,5 @@
 "747 (1985)(Doctorsoft)[cr Danish Dynamite].d64",
 "747 (1985)(Doctorsoft).d64",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Commodore 64 Simulation
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Commodore_-_64
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Commodore 64 Simulation", "Commodore_-_64");
 </script></div><script src="script.js"></script>

@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/vectrex.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("vectrex"); const fileNames = [
 "AnimAction - Advanced Animation (USA).zip",
 "Armor Attack (World).zip",
 "Art Master (USA).zip",
@@ -48,10 +47,5 @@
 "3D Mine Storm (USA).zip",
 "3D Narrow Escape (USA).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/No-Intro/GCE - Vectrex
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-GCE_-_Vectrex
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/No-Intro/GCE - Vectrex", "GCE_-_Vectrex");
 </script></div><script src="script.js"></script>

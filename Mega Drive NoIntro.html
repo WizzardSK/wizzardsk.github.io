@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/megadrive.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("megadrive"); const fileNames = [
 "Aaahh!!! Real Monsters (Europe).zip",
 "Aaahh!!! Real Monsters (USA) (Beta) (1995-07-07).zip",
 "Aaahh!!! Real Monsters (USA).zip",
@@ -3055,10 +3054,5 @@
 "688 Attack Sub (USA, Europe).zip",
 "99 Balls (World) (Aftermarket) (Unl).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/No-Intro/Sega - Mega Drive - Genesis
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Sega_-_Mega_Drive_-_Genesis
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/No-Intro/Sega - Mega Drive - Genesis", "Sega_-_Mega_Drive_-_Genesis");
 </script></div><script src="script.js"></script>

@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/zxspectrum.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("zxspectrum"); const fileNames = [
 "Abadia del Crimen, La (1988)(MCM)(+3)(ES)[re-release].dsk",
 "Abenteur - Das Interaktive Original - ZxZvm (1998)(Arnold, Toni)(+3)(de).dsk",
 "ACE 2 - The Ultimate Head to Head Conflict (1987)(Cascade Games)(+3).dsk",
@@ -1280,10 +1279,5 @@
 "3D Grand Prix (1991)(Zeppelin Games)(+3)(Side A)[aka Grand Prix Championship][master disk].dsk",
 "3D Pool (1989)(Firebird)(+3)[aka Maltese Joe's Pool Challenge].dsk",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/ZX Spectrum DSK
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Sinclair_-_ZX_Spectrum
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/ZX Spectrum DSK", "Sinclair_-_ZX_Spectrum");
 </script></div><script src="script.js"></script>

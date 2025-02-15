@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/dos.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("dos"); const fileNames = [
 "Aces of the Pacific (1994)(Sierra).zip",
 "Aces over Europe (1995)(Sierra)[budget Sierra Originals].zip",
 "Ace Ventura (1996)(Bomico)(DE).zip",
@@ -617,10 +616,5 @@
 "5 Plus One - Super Tetris (1996)(Prism Leisure)[compilation].zip",
 "688I Hunter-Killer (1997)(Electronic Arts).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/TOSEC-ISO/IBM/PC Compatibles/CD/Games/[ISO]
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-DOS
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/TOSEC-ISO/IBM/PC Compatibles/CD/Games/[ISO]", "DOS");
 </script></div><script src="script.js"></script>

@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/c64.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("c64"); const fileNames = [
 "Aaargh (1989)(Virgin)[cr 711][t].d64",
 "Abandon (19xx)(-)[a].d64",
 "Abandon (19xx)(-).d64",
@@ -7503,10 +7502,5 @@
 "64 Mastermind (1994)(Magic Disk)[cr Alpha Flight][t].d64",
 "8bit-Slicks (2018)(Beaucamp, Anthony)(PD)[cr LXT].d64",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Commodore 64 Misc
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Commodore_-_64
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Commodore 64 Misc", "Commodore_-_64");
 </script></div><script src="script.js"></script>

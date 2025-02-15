@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/sega32x.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("sega32x"); const fileNames = [
 "After Burner Complete (Europe).zip",
 "After Burner Complete (Japan, USA) (En).zip",
 "Amazing Spider-Man, The - Web of Fire (USA).zip",
@@ -216,10 +215,5 @@
 "240p Test Suite (World) (Program) (Aftermarket) (Unl).zip",
 "32X Sample Program - PWM Sound Demo (Unknown) (SDK Build).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/No-Intro/Sega - 32X
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Sega_-_32X
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/No-Intro/Sega - 32X", "Sega_-_32X");
 </script></div><script src="script.js"></script>

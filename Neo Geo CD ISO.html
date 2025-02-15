@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/neogeocd.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("neogeocd"); const fileNames = [
 "ASO II - Last Guardian (1994)(SNK)(en-ja)[aka Alpha Mission II].zip",
 "Bakumatsu Roman Dai Ni Maku Gekka no Kenshi - Tsuki ni Saku Hana, Chiriyuku Hana (1999)(SNK)(M4)[aka Last Blade 2, The].zip",
 "Bakumatsu Roman Gekka no Kenshi (1998)(SNK)(M4)[aka Last Blade, The].zip",
@@ -103,10 +102,5 @@
 "World Heroes 2 (1995)(ADK - SNK)(en-ja).zip",
 "2020 Super Baseball (1995)(SNK)(en-ja).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/TOSEC-ISO/SNK/Neo-Geo CD/Games/[ISO]
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-SNK_-_Neo_Geo_CD
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/TOSEC-ISO/SNK/Neo-Geo CD/Games/[ISO]", "SNK_-_Neo_Geo_CD");
 </script></div><script src="script.js"></script>

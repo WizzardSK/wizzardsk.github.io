@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/fm7.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("fm7"); const fileNames = [
 "Albatross (1986)(Telenet)(JP).d77",
 "Alpha (1986)(Square)(JP).d77",
 "Amnork (1986)(ASCII)(JP).d77",
@@ -113,10 +112,5 @@
 "Yuunagi no Horizon (1986)(Victor)(JP).d77",
 "1942 (1987)(ASCII)(JP).d77",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Fujitsu Micro 7 D77
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Fujitsu_-_Micro_7
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Fujitsu Micro 7 D77", "Fujitsu_-_Micro_7");
 </script></div><script src="script.js"></script>

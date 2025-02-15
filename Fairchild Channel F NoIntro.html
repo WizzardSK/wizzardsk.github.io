@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/channelf.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("channelf"); const fileNames = [
 "Alien Invasion (USA).zip",
 "Backgammon, Acey-Deucey (USA).zip",
 "Baseball (USA).zip",
@@ -39,10 +38,5 @@
 "Video Blackjack (USA).zip",
 "Video Whizball (USA).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/No-Intro/Fairchild - Channel F
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Fairchild_-_Channel_F
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/No-Intro/Fairchild - Channel F", "Fairchild_-_Channel_F");
 </script></div><script src="script.js"></script>

@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/vic20.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("vic20"); const fileNames = [
 "Aardvark Attack (1983-10)(Compute!)[Compute!'s Gazette][type-in].prg",
 "Aavelabyrintti (19xx)(-)(fi)[b].prg",
 "Aavelabyrintti (19xx)(-)(fi)[f Ubiali, Alessandro].prg",
@@ -1651,10 +1650,5 @@
 "4 op een Rij (19xx)(-)(nl)[8k][different].prg",
 "8 Player Panic (2012)(Kananga)[24k].prg",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Commodore VIC-20 PRG
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Commodore_-_VIC-20
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Commodore VIC-20 PRG", "Commodore_-_VIC-20");
 </script></div><script src="script.js"></script>

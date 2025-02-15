@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/n64.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("n64"); const fileNames = [
 "Action Replay Pro 64 (Europe) (v3.0) (Unl).zip",
 "Action Replay Pro 64 (Europe) (v3.3) (Unl).zip",
 "AeroFighters Assault (Europe) (En,Fr,De).zip",
@@ -1131,10 +1130,5 @@
 "64 Oozumou 2 (Japan).zip",
 "64 Trump Collection - Alice no Wakuwaku Trump World (Japan).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/No-Intro/Nintendo - Nintendo 64 (ByteSwapped)
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Nintendo_-_Nintendo_64
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/No-Intro/Nintendo - Nintendo 64 (ByteSwapped)", "Nintendo_-_Nintendo_64");
 </script></div><script src="script.js"></script>

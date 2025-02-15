@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/gbc.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("gbc"); const fileNames = [
 "Aardvark (World) (Aftermarket) (Unl).zip",
 "Absolute X (Europe) (Proto).zip",
 "Action Man - Search for Base X (USA, Europe).zip",
@@ -2286,10 +2285,5 @@
 "4x4 World Trophy (Europe) (En,Fr,De,Es,It) (GB Compatible).zip",
 "720 Degrees (USA, Europe) (GB Compatible).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/No-Intro/Nintendo - Game Boy Color
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Nintendo_-_Game_Boy_Color
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/No-Intro/Nintendo - Game Boy Color", "Nintendo_-_Game_Boy_Color");
 </script></div><script src="script.js"></script>

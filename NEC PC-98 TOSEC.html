@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/pc98.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("pc98"); const fileNames = [
 "Aa Megamisama (1993)(Banpresto)(Disk 1 of 6)(Disk A).fdd",
 "Aa Megamisama (1993)(Banpresto)(Disk 2 of 6)(Disk B).fdd",
 "Aa Megamisama (1993)(Banpresto)(Disk 3 of 6)(Disk C).fdd",
@@ -2633,10 +2632,5 @@
 "3×3 Eyes (1993)(Nihon Create)(Disk 12 of 12)(Disk L).fdd",
 "5x5 Go! Go! (19xx)(Udukisya).fdd",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/NEC PC-98 TOSEC
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-NEC_-_PC-98
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/NEC PC-98 TOSEC", "NEC_-_PC-98");
 </script></div><script src="script.js"></script>

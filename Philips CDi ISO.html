@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/cdi.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("cdi"); const fileNames = [
 "affaire Morlov, L' (1996)(Titus)(EU)(en-fr)[!][The Morlov Affair][CD-i-PC].zip",
 "A Great Day at the Races (1993)(Philips)(EU).zip",
 "A Great Day at the Races (1993)(Philips)(US)[!].zip",
@@ -221,10 +220,5 @@
 "7th Guest, The (1994)(Philips)(EU)(Disc 2 of 2)[!][The Music, Die Musik][CD-Audio].zip",
 "7th Guest, The (1994)(Philips)(FR)(Disc 1 of 2)[Le Jeu][DVC].zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/TOSEC-ISO/Philips/CD-i/Games
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Philips_-_CD-i
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/TOSEC-ISO/Philips/CD-i/Games", "Philips_-_CD-i");
 </script></div><script src="script.js"></script>

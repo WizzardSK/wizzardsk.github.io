@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/dreamcast.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("dreamcast"); const fileNames = [
 "AeroWings v1.002 (1999)(Crave)(US)[!].zip",
 "AeroWings 2 - Airstrike v1.001 (2000)(Crave)(US)[!].zip",
 "Airforce Delta v1.000 (1999)(Konami)(US)[!][1S].zip",
@@ -311,10 +310,5 @@
 "4 Wheel Thunder v1.002 (2000)(Midway)(US)[!].zip",
 "4X4 EVO v1.001 (2000)(GOD)(US)[!].zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/TOSEC-ISO/Sega/Dreamcast/Games/US
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Sega_-_Dreamcast
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/TOSEC-ISO/Sega/Dreamcast/Games/US", "Sega_-_Dreamcast");
 </script></div><script src="script.js"></script>

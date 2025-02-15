@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/dreamcast.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("dreamcast"); const fileNames = [
 "AeroWings v1.001 (1999)(Crave)(PAL)(M3)[!].zip",
 "AeroWings 2 - Airstrike v1.001 (2000)(Crave - Ubi Soft)(PAL)(de-en)[!].zip",
 "Alone in the Dark - The New Nightmare v1.000 (2001)(Infogrames)(PAL)(DE)(Disc 1 of 2)[!].zip",
@@ -305,10 +304,5 @@
 "4 Wheel Thunder v1.002 (2000)(Midway)(PAL)(en-fr)[!].zip",
 "90 Minutes - Sega Championship Football v1.009 (2001)(Sega)(PAL)(M5)[!].zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/TOSEC-ISO/Sega/Dreamcast/Games/PAL
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Sega_-_Dreamcast
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/TOSEC-ISO/Sega/Dreamcast/Games/PAL", "Sega_-_Dreamcast");
 </script></div><script src="script.js"></script>

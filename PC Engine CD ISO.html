@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/pcenginecd.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("pcenginecd"); const fileNames = [
 "Addams Family, The (1991)(Icom Simulations - NEC)(US).zip",
 "Advanced V.G. (1994)(TGL)(JP).zip",
 "Adventure Quiz - Capcom World - Hatena no Dai Bouken (1992)(Hudson)(JP).zip",
@@ -403,10 +402,5 @@
 "3x3 Eyes - Sanjiyan Hensei (1994)(NEC)(JP)[HE100523-1].zip",
 "3x3 Eyes - Sanjiyan Hensei (1994)(NEC)(JP)[HE100802-2].zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/TOSEC-ISO/NEC/PC-Engine CD & TurboGrafx-16 CD/Games/[IMG]
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-NEC_-_PC_Engine_CD_-_TurboGrafx-CD
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/TOSEC-ISO/NEC/PC-Engine CD & TurboGrafx-16 CD/Games/[IMG]", "NEC_-_PC_Engine_CD_-_TurboGrafx-CD");
 </script></div><script src="script.js"></script>

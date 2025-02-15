@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/samcoupe.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("samcoupe"); const fileNames = [
 "Basic Scrolly Pokers (19xx)(-).sad",
 "Batz'n'Ball (1992)(Revelation).sad",
 "Boing! & Sphera (1992)(Noesis Software).sad",
@@ -39,10 +38,5 @@
 "Spectrum Games Disk 5 (19xx)(-)[Req 48k].sad",
 "Spectrum Games Disk 6 (19xx)(-)[Req 48k].sad",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Sam Coupé SAD
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-MGT_-_Sam_Coupe
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Sam Coupé SAD", "MGT_-_Sam_Coupe");
 </script></div><script src="script.js"></script>

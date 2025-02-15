@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/astrocade.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("astrocade"); const fileNames = [
 "Amazing Maze + Tic-Tac-Toe (19xx)(Bally).bin",
 "Artillery Duel (1982)(Astrocade)(proto)[a].bin",
 "Artillery Duel (1982)(Astrocade)(proto).bin",
@@ -93,10 +92,5 @@
 "X-Ray Maze (2010)(Degler, Richard)[h Amazing Maze].bin",
 "280 Zzzap + Dodgem (19xx)(Bally).bin",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Bally Astrocade TOSEC
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Bally_-_Astrocade
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Bally Astrocade TOSEC", "Bally_-_Astrocade");
 </script></div><script src="script.js"></script>

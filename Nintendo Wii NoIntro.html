@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/wii.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("wii"); const fileNames = [
 "Aa! Mitsuketa! Item Sagashi Game (Japan) (WiiWare).zip",
 "Actionloop Twist (Europe) (WiiWare).zip",
 "ActRaiser (Europe) (SNES) (Virtual Console).zip",
@@ -3282,10 +3281,5 @@
 "530 Eco Shooter (Japan) (WiiWare).zip",
 "81diver Wii (Japan) (WiiWare).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/No-Intro/Unofficial - Nintendo - Wii (Digital) (Deprecated) (WAD)
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Nintendo_-_Wii
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/No-Intro/Unofficial - Nintendo - Wii (Digital) (Deprecated) (WAD)", "Nintendo_-_Wii");
 </script></div><script src="script.js"></script>

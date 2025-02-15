@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/amstradcpc.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("amstradcpc"); const fileNames = [
 "Abyssal (2022)(Cabbage Corp).sna",
 "Akuma no Boken (2022)(Createvia).sna",
 "Angel's Choice, The (2022)(Heaven Studio).sna",
@@ -45,10 +44,5 @@
 "Zollowers (2022)(Blue Panda Studio).sna",
 "Zombie Disco (2022)(Pandemix Studio).sna",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Amstrad CPC SNA
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Amstrad_-_CPC
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Amstrad CPC SNA", "Amstrad_-_CPC");
 </script></div><script src="script.js"></script>

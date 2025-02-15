@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/vsmile.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("vsmile"); const fileNames = [
 "Action Mania Rev 4 (201x)(V-Tech)(US)[sn 80-084000].bin",
 "Action Mania Rev 6 (201x)(V-Tech)(US)[sn 80-084000].bin",
 "Action Mania (201x)(V-Tech)(US)[a][sn 80-084000].bin",
@@ -66,10 +65,5 @@
 "Wonder Pets! - Save the Animals! (2008)(V-Tech)(US)[sn 80-084100].bin",
 "Yingyu Yundongyuan (201x)(V-Tech)(CN)[sn 80-084008].bin",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/VTech V.Smile TOSEC
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-VTech_-_V.Smile
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/VTech V.Smile TOSEC", "VTech_-_V.Smile");
 </script></div><script src="script.js"></script>

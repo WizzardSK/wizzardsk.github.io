@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/pokemini.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("pokemini"); const fileNames = [
 "Lunch Time (2003)(Nintendo)(US)[GameCube].bin",
 "Mini Cookie (2015)(Mihai, Sebastian).bin",
 "Pichu Bros. Mini - Hoppip's Jump Match (2002)(Nintendo)(JP)[preview].bin",
@@ -46,10 +45,5 @@
 "Togepi no Daibouken (2002)(Nintendo)(JP).bin",
 "Togepi no Daibouken (2002)(Nintendo)(JP)[preview].bin",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Pokemon Mini TOSEC
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Nintendo_-_Pokemon_Mini
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Pokemon Mini TOSEC", "Nintendo_-_Pokemon_Mini");
 </script></div><script src="script.js"></script>

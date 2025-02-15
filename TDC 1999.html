@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/dos.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("dos"); const fileNames = [
 "Action SuperCross v1.3 (Installer) [SW] (1999)(Balazs Rozsa) [Action, Sports].zip",
 "Action SuperCross v1.3 [SW] (1999)(Balazs Rozsa) [Action, Sports].zip",
 "Adventures of SandDude, The (1999)(Scott Piper) [Action].zip",
@@ -412,5 +411,5 @@
 "4 in a Line (4 in einer Reihe) v2.0 (En)(De) (1999)(Christian Pervoelz) [Strategy].zip",
 "5 in a Row (1999)(Jason Gould) [Strategy].zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../myrient/Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/1999/${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/DOS/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/1999", "DOS");
 </script></div><script src="script.js"></script>

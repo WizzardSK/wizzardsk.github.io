@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/dos.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("dos"); const fileNames = [
 "Amoba (2011)(Maxuser 6000) [Strategy].zip",
 "Builder (2011)(A-J Games) [Action, Strategy].zip",
 "Commander Keen Episode IX- Battle of the Brains (2011)(Ceilick, Mink, Tulip) [Action].zip",
@@ -39,5 +38,5 @@
 "3D Isometric Sokoban [FW] (2011)(Loren Blaney) [Strategy, Puzzle].zip",
 "8-Across Solitaire [FW] (2011)(Loren Blaney) [Strategy, Cards].zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../myrient/Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2011/${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/DOS/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2011", "DOS");
 </script></div><script src="script.js"></script>

@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/atari2600.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("atari2600"); const fileNames = [
 "Ace (2003)(Rotschkar, Manuel)(NTSC)(PD)[h Driving Controller][Combat].a26",
 "Acid Drop (1992)(Salu)(NTSC)[f NTSC Jentzsch, Thomas].a26",
 "Acid Drop (1992)(Salu)(PAL)[b].a26",
@@ -1982,10 +1981,5 @@
 "4 Game in One (Dark Green) - Rodeo Champ & Open Sesame & Bobby is Going Home & Festival (1983)(Bit)(PAL)[p][aka 4 Pak (Dark Green)][P460].a26",
 "4 Game in One (Light Green) - Ice Hockey & Phantom UFO & Spy vs. Spy & Cosmic Acenger (1983)(Bit)(PAL)[p][aka 4 Pak (Light Green)].a26",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Atari 2600 TOSEC
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Atari_-_2600
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Atari 2600 TOSEC", "Atari_-_2600");
 </script></div><script src="script.js"></script>

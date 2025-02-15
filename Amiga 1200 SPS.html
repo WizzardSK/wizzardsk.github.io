@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/amiga1200.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("amiga1200"); const fileNames = [
 "Aaargh!.ipf",
 "AbandonedPlaces_Disk1.ipf",
 "AbandonedPlaces_Disk1of5.ipf",
@@ -6015,10 +6014,5 @@
 "7Colors.ipf",
 "9Lives.ipf",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Amiga 1200 SPS
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Commodore_-_Amiga
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Amiga 1200 SPS", "Commodore_-_Amiga");
 </script></div><script src="script.js"></script>

@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/gp32.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("gp32"); const fileNames = [
 "Astonishia Story R (Korea).zip",
 "[BIOS] GamePark GP32 (Europe) (v1.5.7).zip",
 "[BIOS] GamePark GP32 (Europe) (v1.6.6) (Beta).zip",
@@ -37,10 +36,5 @@
 "Woody & Kunta - Treasure Island (Europe).zip",
 "Woody & Kunta - Treasure Island (Korea).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/No-Intro/GamePark - GP32
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-GamePark_-_GP32
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/No-Intro/GamePark - GP32", "GamePark_-_GP32");
 </script></div><script src="script.js"></script>

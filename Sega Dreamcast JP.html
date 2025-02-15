@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/dreamcast.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("dreamcast"); const fileNames = [
 "Advanced Daisenryaku - Sturm uber Europa - Der Deutsche Blitzkrieg v1.013 (2000)(Sega)(JP)[!].zip",
 "Advanced Daisenryaku 2001 v1.008 (2001)(Sega)(JP)[!].zip",
 "Aero Dancing - Featuring Blue Impulse v1.003 (1999)(CRI)(JP)[!].zip",
@@ -628,10 +627,5 @@
 "18 Wheeler - American Pro Trucker v1.006 (2000)(Sega)(JP)(en)[!].zip",
 "21 - Two One v1.003 (2001)(Princess Soft)(JP)[!].zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/TOSEC-ISO/Sega/Dreamcast/Games/JP
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Sega_-_Dreamcast
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/TOSEC-ISO/Sega/Dreamcast/Games/JP", "Sega_-_Dreamcast");
 </script></div><script src="script.js"></script>

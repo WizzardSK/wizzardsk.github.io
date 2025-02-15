@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/n64.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("n64"); const fileNames = [
 "Aero Fighters Assault (1997)(Video System)(EU)(M3)[b].bin",
 "Aero Fighters Assault (1997)(Video System)(EU)(M3).bin",
 "Aero Fighters Assault (1997)(Video System)(EU)(M3)[h].bin",
@@ -3245,10 +3244,5 @@
 "77a (1998)(Count0)(PD)[b].bin",
 "77a (1998)(Count0)(PD).bin",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Nintendo 64 TOSEC
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Nintendo_-_Nintendo_64
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Nintendo 64 TOSEC", "Nintendo_-_Nintendo_64");
 </script></div><script src="script.js"></script>

@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/scv.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("scv"); const fileNames = [
 "Astro Wars - Invaders from Space (1984)(Epoch)(JP)(en).bin",
 "Astro Wars 2 - Battle in Galaxy (1984)(Epoch)(JP)(en).bin",
 "BASIC Nyuumon (1985)(Epoch)(JP)(en).bin",
@@ -41,10 +40,5 @@
 "Wheelie Racer (1985)(Epoch)(JP)(en).bin",
 "Y2 Monster Land (1986)(Epoch)(JP)(en).bin",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Epoch SCV TOSEC
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Epoch_-_Super_Cassette_Vision
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Epoch SCV TOSEC", "Epoch_-_Super_Cassette_Vision");
 </script></div><script src="script.js"></script>

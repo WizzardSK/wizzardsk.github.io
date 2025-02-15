@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/dos.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("dos"); const fileNames = [
 "$100,000 Pyramid (1988).zip",
 "AAARGH! (1988).zip",
 "Aardvarks Museum (1987).zip",
@@ -7635,5 +7634,5 @@
 "9-Hole Miniature Golf (1983).zip",
 "905 (2000).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../myrient/../roms/dos-other/${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/DOS/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/dos-other", "DOS");
 </script></div><script src="script.js"></script>

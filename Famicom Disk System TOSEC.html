@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/fds.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("fds"); const fileNames = [
 "Adian no Tsue (1986-10-29)(Sunsoft)(JP)(beta).fds",
 "Adian no Tsue (1986-12-12)(Sunsoft)(JP).fds",
 "Ai Senshi Nicol (1987)(Konami)[h header].fds",
@@ -516,10 +515,5 @@
 "Zelda no Densetsu - The Hyrule Fantasy (1986-02-21)(Nintendo)[FMC-ZEL].fds",
 "Zelda no Densetsu - The Hyrule Fantasy (2006-12-02)(Nintendo)[Virtual Console].fds",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Famicom Disk System TOSEC
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Nintendo_-_Family_Computer_Disk_System
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Famicom Disk System TOSEC", "Nintendo_-_Family_Computer_Disk_System");
 </script></div><script src="script.js"></script>

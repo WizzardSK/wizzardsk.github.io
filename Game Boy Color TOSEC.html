@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/gbc.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("gbc"); const fileNames = [
 "A Bug's Life (1998)(THQ)(EU).bin",
 "A Bug's Life (1998)(THQ)(US)[a].bin",
 "A Bug's Life (1998)(THQ)(US).bin",
@@ -73,10 +72,5 @@
 "102 Dalmatiner (2000)(Disney)(DE).bin",
 "3-D Ultra Pinball - Thrillride (2000)(Sierra)(US).bin",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Game Boy Color TOSEC
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Nintendo_-_Game_Boy_Color
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Game Boy Color TOSEC", "Nintendo_-_Game_Boy_Color");
 </script></div><script src="script.js"></script>

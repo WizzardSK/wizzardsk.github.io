@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/adam.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("adam"); const fileNames = [
 "Adam Links Golf (1986)(Superior Software).dsk",
 "Addictus (1989)(Reedy Software).dsk",
 "Buck Rogers - Planet of Zoom (1983)(Sega).dsk",
@@ -30,10 +29,5 @@
 "Trolls Tale (19xx)(-)(PD)[b].dsk",
 "2010 - The Ultimate Text Adventure (1985)(MGM - United Artists Entertainment).dsk",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Coleco Adam
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Coleco_-_Adam
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Coleco Adam", "Coleco_-_Adam");
 </script></div><script src="script.js"></script>

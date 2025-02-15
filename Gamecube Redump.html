@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/gc.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("gc"); const fileNames = [
 "Ace Golf (Europe) (En,Fr).zip",
 "Action Replay for GameCube (Europe) (En,Fr,De,Es,It,Pt) (Unl) (v1.14b).zip",
 "Action Replay for GameCube (Europe) (Unl) (v1.0E).zip",
@@ -1969,10 +1968,5 @@
 "4 Fantastiques, Les (France).zip",
 "4x4 Evo 2 (USA).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/Redump/Nintendo - GameCube - NKit RVZ [zstd-19-128k]
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Nintendo_-_GameCube
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/Redump/Nintendo - GameCube - NKit RVZ [zstd-19-128k]", "Nintendo_-_GameCube");
 </script></div><script src="script.js"></script>

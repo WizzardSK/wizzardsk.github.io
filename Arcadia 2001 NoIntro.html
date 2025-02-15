@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/arcadia.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("arcadia"); const fileNames = [
 "Alien Invaders (USA, Europe).zip",
 "American Football (USA, Europe).zip",
 "Astro Invader (Europe).zip",
@@ -50,10 +49,5 @@
 "3D Bowling (USA, Europe).zip",
 "3D Soccer (Europe).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/No-Intro/Emerson - Arcadia 2001
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Emerson_-_Arcadia_2001
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/No-Intro/Emerson - Arcadia 2001", "Emerson_-_Arcadia_2001");
 </script></div><script src="script.js"></script>

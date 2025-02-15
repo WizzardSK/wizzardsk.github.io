@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/gp32.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("gp32"); const fileNames = [
 "Again ~ Tomak Jiguleul Jikyeola, Again (2002)(Gamepark)(KR).smc",
 "Astonishia Story R (2002)(Gamepark)(KR).smc",
 "Blue Angelo - Angels from the Shrine (2005)(Shibuya Interactive)(EU)(M6).smc",
@@ -42,10 +41,5 @@
 "Woody & Kunta - Treasure Island (2002)(Gamepark)(EU).smc",
 "Woody & Kunta - Treasure Island (2002)(Gamepark)(KR).smc",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/GamePark GP32 TOSEC
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-GamePark_-_GP32
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/GamePark GP32 TOSEC", "GamePark_-_GP32");
 </script></div><script src="script.js"></script>

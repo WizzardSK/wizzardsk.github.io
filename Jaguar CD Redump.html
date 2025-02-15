@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/atarijaguarcd.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("atarijaguarcd"); const fileNames = [
 "Ants (USA) (Unl).zip",
 "Baldies (USA) (Rev 1).zip",
 "Battle Morph (USA).zip",
@@ -26,10 +25,5 @@
 "World Tour Racing (USA) (Songbird).zip",
 "World Tour Racing (USA).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/Redump/Atari - Jaguar CD Interactive Multimedia System
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Atari_-_Jaguar
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/Redump/Atari - Jaguar CD Interactive Multimedia System", "Atari_-_Jaguar");
 </script></div><script src="script.js"></script>

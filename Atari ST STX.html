@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/atarist.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("atarist"); const fileNames = [
 "Action Fighter (1989)(Sega).stx",
 "Action Service (1988)(Infogrames)[a].stx",
 "Action Service (1988)(Infogrames).stx",
@@ -1446,10 +1445,5 @@
 "9 Lives (1990)(Frames)[a].stx",
 "9 Lives (1990)(Frames).stx",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Atari ST STX
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Atari_-_ST
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Atari ST STX", "Atari_-_ST");
 </script></div><script src="script.js"></script>

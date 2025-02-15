@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/gamate.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("gamate"); const fileNames = [
 "Bao Qing Tian (Taiwan).zip",
 "Baseball (World).zip",
 "Basketball (World).zip",
@@ -66,10 +65,5 @@
 "World Cup Soccer (World).zip",
 "4 in 1 - Cube Up + Mini Golf + Vindicators + Brick Blaster (World).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/No-Intro/Bit Corporation - Gamate
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Bitcorp_-_Gamate
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/No-Intro/Bit Corporation - Gamate", "Bitcorp_-_Gamate");
 </script></div><script src="script.js"></script>

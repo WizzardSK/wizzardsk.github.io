@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/cplus4.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("cplus4"); const fileNames = [
 "Atomic Mission (USA, Europe).zip",
 "[BIOS] Commodore Plus-4 (Europe) (R3).zip",
 "[BIOS] Commodore Plus-4 (Europe) (R4).zip",
@@ -20,10 +19,5 @@
 "Strange Odyssey (USA, Europe).zip",
 "Viduzzles (USA, Europe).zip",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-myrient/No-Intro/Commodore - Plus-4
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Commodore_-_Plus-4
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("myrient/No-Intro/Commodore - Plus-4", "Commodore_-_Plus-4");
 </script></div><script src="script.js"></script>

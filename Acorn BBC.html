@@ -1,6 +1,5 @@
 <script src="platform.js"></script>
-<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/bbcmicro.png'); } </style>
-<script>const fileNames = [
+<script>bgImage("bbcmicro"); const fileNames = [
 "Aabatron (1984)(Bevan Technology)[a][AABATRO].ssd",
 "Aabatron (1984)(Bevan Technology)[AABATRO].ssd",
 "Aabatron (1984)(Bevan Technology)[a2][AABATRO].ssd",
@@ -4325,10 +4324,5 @@
 "9 Classic Card and Board Games - No. 1 (19xx)(Micro & Electron User).ssd",
 "9 Classic Card and Board Games - No. 2 (19xx)(Micro & Electron User).ssd",
 ];
-fileNames.forEach(fileName => { document.write(`<a href="../
-roms/Acorn BBC
-/
-${fileName}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/
-Acorn_-_BBC
-/master/Named_Snaps/${fileName.slice(0, fileName.lastIndexOf("."))}.png" alt="${fileName}"><figcaption>${fileName}</figcaption></figure></a>`); });
+generateFileLinks("roms/Acorn BBC", "Acorn_-_BBC");
 </script></div><script src="script.js"></script>
