@@ -133,7 +133,9 @@ case "$adresar" in
 *"No-Intro/Nintendo - Game Boy Advance") core="mgba_libretro";;
 *"Game Boy Advance TOSEC") core="sameboy_libretro";;
 *"No-Intro/Nintendo - Nintendo DS (Decrypted)") core="melonds_libretro";;
+*"No-Intro/Nintendo - Nintendo DS (Download Play)") core="melonds_libretro";;
 *"Nintendo DS TOSEC") core="melonds_libretro";;
+*"No-Intro/Nintendo - Nintendo DSi (Decrypted)") core="melondsds_libretro";;
 *"No-Intro/Nintendo - Nintendo 3DS (Decrypted)") core="citra_libretro"; ext="3ds";;
 *"No-Intro/Sega - SG-1000") core="genesis_plus_gx_libretro";;
 *"SG 1000 TOSEC") core="genesis_plus_gx_libretro";;
