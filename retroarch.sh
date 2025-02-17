@@ -47,6 +47,9 @@ case "$adresar" in
 *"ZX Spectrum TRD") core="fuse_libretro";;
 *"ZX Spectrum TZX") core="fuse_libretro";;
 *"ZX Spectrum Z80") core="fuse_libretro";;
+*"ZX Spectrum Edu TAP") core="fuse_libretro";;
+*"ZX Spectrum Edu TZX") core="fuse_libretro";;
+*"ZX Spectrum Edu Z80") core="fuse_libretro";;
 *"Spectravideo TOSEC") core="bluemsx_libretro";;
 *"Sam Coupé DSK") core="simcoupe";;
 *"Sam Coupé SAD") core="simcoupe";;
@@ -79,6 +82,8 @@ case "$adresar" in
 *"Tomy Tutor") core="mame tutor -cart";;
 *"Apple II DSK") core="mame apple2ee -flop1";;
 *"Apple II WOZ") core="mame apple2ee -flop1";;
+*"Apple II Edu DSK") core="mame apple2ee -flop1";;
+*"Apple II Edu WOZ") core="mame apple2ee -flop1";;
 *"Thomson MO5 K7") core="theodore_libretro";;
 *"Thomson MO6 K7") core="theodore_libretro";;
 *"Thomson TO7 K7") core="theodore_libretro";;
@@ -97,6 +102,7 @@ case "$adresar" in
 *"Atari 8bit BIN") core="atari800";;
 *"Atari 8bit CAS") core="atari800";;
 *"Atari 8bit XEX") core="atari800";;
+*"Atari 8bit Edu") core="atari800";;
 *"No-Intro/Atari - ST") core="hatari_libretro";;
 *"Atari ST ST") core="hatari_libretro";;
 *"Atari ST STX") core="hatari_libretro";;
@@ -246,6 +252,7 @@ case "$adresar" in
 *"Amiga 1200 IPF") core="puae_libretro";;
 *"Amiga 1200 PD") core="puae_libretro";;
 *"Amiga 1200 SPS") core="puae_libretro";;
+*"Amiga 1200 Edu") core="puae_libretro";;
 *"Redump/Commodore - Amiga CD32") core="puae_libretro"; ext="cue";;
 *"TOSEC-ISO/Commodore/Amiga CD32/Games/[ISO]") core="puae_libretro"; ext="cue";;
 *"Redump/Commodore - Amiga CDTV") core="puae_libretro"; ext="cue";;
