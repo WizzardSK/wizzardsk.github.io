@@ -112,6 +112,8 @@ case "$adresar" in
 *"No-Intro/Atari - ST") core="hatari_libretro";;
 *"Atari ST ST") core="hatari_libretro";;
 *"Atari ST STX") core="hatari_libretro";;
+*"Atari ST Edu ST") core="hatari_libretro";;
+*"Atari ST Edu STX") core="hatari_libretro";;
 *"No-Intro/Atari - Jaguar (J64)") core="virtualjaguar_libretro";;
 *"Atari Jaguar TOSEC") core="virtualjaguar_libretro";;
 *"Redump/Atari - Jaguar CD Interactive Multimedia System") core="bigpemu"; ext="cue";;
