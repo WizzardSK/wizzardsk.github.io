@@ -40,6 +40,16 @@ function generateTicLinks(romPath, imagePath) {
     document.write("</div>");
 }
 
+function generateWasmLinks(romPath, imagePath) {
+    document.write("<div id=\"figureList\">");
+    fileNames.forEach(fileName => {
+        const nameWithoutExt = fileName.slice(0, fileName.lastIndexOf(".")) || fileName;
+        document.write(`<a href="../${romPath}/${encodeURIComponent(fileName)}" target="main">
+        <figure><img loading="lazy" src="https://wasm4.org/carts/${nameWithoutExt}.png" alt="${nameWithoutExt}"><figcaption>${nameWithoutExt}</figcaption></figure></a>`);
+    });
+    document.write("</div>");
+}
+
 function generateFileLinks(romPath, imagePath) {
     document.write("<div id=\"figureList\">");
     fileNames.forEach(fileName => {

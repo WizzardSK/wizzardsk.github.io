@@ -4,6 +4,7 @@ adresar=$(dirname "$1")
 adresar2="${adresar##*/}"
 case "$adresar" in
 *"TIC-80") core="tic80_libretro";;
+*"WASM-4") core="wasm4_libretro";;
 *"Atari 2600 ROMS") core="stella_libretro";;
 *"No-Intro/Atari - 2600") core="stella_libretro";;
 *"Atari 2600 TOSEC") core="stella_libretro";;
