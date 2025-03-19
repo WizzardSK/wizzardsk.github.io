@@ -6,6 +6,7 @@ case "$adresar" in
 *"TIC-80") core="tic80_libretro";;
 *"WASM-4") core="wasm4_libretro";;
 *"Uzebox") core="uzem_libretro";;
+*"LowresNX") core="lowresnx_libretro";;
 *"Atari 2600 ROMS") core="stella_libretro";;
 *"No-Intro/Atari - 2600") core="stella_libretro";;
 *"Atari 2600 TOSEC") core="stella_libretro";;

@@ -43,6 +43,14 @@ function generateWasmLinks(romPath, imagePath) {
     }); document.write("</div>");
 }
 
+function generateLrNXLinks(romPath, imagePath) {
+    document.write("<div id=\"figureList\">");
+    fileNames.forEach(fileName => {
+        const [subor, obrazok] = fileName.split(','); document.write(`<a href="../${romPath}/${encodeURIComponent(subor)}" target="main">
+        <figure><img loading="lazy" src="https://lowresnx.inutilis.com/uploads/${obrazok}" alt="${subor.slice(11)}"><figcaption>${subor.slice(11)}</figcaption></figure></a>`);
+    }); document.write("</div>");
+}
+
 function generateUzeLinks(romPath, imagePath) {
     document.write("<div id=\"figureList\">");
     fileNames.forEach(fileName => {
