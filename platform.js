@@ -29,23 +29,31 @@ document.addEventListener("DOMContentLoaded", function() { if (location.protocol
 
 function generateTicLinks(romPath, imagePath) {
     document.write("<div id=\"figureList\">"); fileNames.forEach(fileName => {
-        const nameWithoutExt = fileName.slice(0, fileName.lastIndexOf(".")) || fileName; document.write(`<a href="../${romPath}/${encodeURIComponent(fileName)}" target="main">
+        const nameWithoutExt = fileName.slice(0, fileName.lastIndexOf(".")) || fileName; document.write(`<a href="../${romPath}/${nameWithoutExt.slice(0, 32)}.tic" target="main">
         <figure><img loading="lazy" src="https://tic80.com/cart/${nameWithoutExt.slice(0, 32)}/cover.gif" alt="${nameWithoutExt}"><figcaption>${nameWithoutExt.slice(33)}</figcaption></figure></a>`);
     }); document.write("</div>");
 }
 
 function generateWasmLinks(romPath, imagePath) {
     document.write("<div id=\"figureList\">"); fileNames.forEach(fileName => {
-        const nameWithoutExt = fileName.slice(0, fileName.lastIndexOf(".")) || fileName; document.write(`<a href="../${romPath}/${encodeURIComponent(fileName)}" target="main">
-        <figure><img loading="lazy" src="https://wasm4.org/carts/${nameWithoutExt}.png" alt="${nameWithoutExt}"><figcaption>${nameWithoutExt}</figcaption></figure></a>`);
+        const [subor, nazov] = fileName.split(',');
+        document.write(`<a href="../${romPath}/${encodeURIComponent(subor)}.wasm" target="main">
+        <figure><img loading="lazy" src="https://wasm4.org/carts/${subor}.png" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
     }); document.write("</div>");
 }
 
 function generateLrNXLinks(romPath, imagePath) {
     document.write("<div id=\"figureList\">"); fileNames.forEach(fileName => {
-        const [subor, obrazok] = fileName.split(','); const suborx = subor.slice(0, subor.lastIndexOf(".")) || subor;
-        document.write(`<a href="../${romPath}/${encodeURIComponent(subor)}" target="main">
-        <figure><img loading="lazy" src="https://lowresnx.inutilis.com/uploads/${obrazok}" alt="${suborx.slice(11)}"><figcaption>${suborx.slice(11)}</figcaption></figure></a>`);
+        const [subor, obrazok, nazov] = fileName.split('|'); document.write(`<a href="../${romPath}/${encodeURIComponent(subor)}" target="main">
+        <figure><img loading="lazy" src="https://lowresnx.inutilis.com/uploads/${obrazok}" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
+    }); document.write("</div>");
+}
+
+function generatePicoLinks(romPath, imagePath) {
+    document.write("<div id=\"figureList\">"); fileNames.forEach(fileName => {
+        const [nazov, kart] = fileName.split('\t'); let skratka = /^[a-zA-Z]/.test(kart) ? kart.slice(0, 2) : !isNaN(kart.charAt(0)) ? kart.charAt(0) : '';
+        document.write(`<a href="../${romPath}/${encodeURIComponent(kart)}" target="main">
+        <figure><img loading="lazy" src="https://www.lexaloffle.com/bbs/cposts/${skratka}/${kart}" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
     }); document.write("</div>");
 }
 
