@@ -51,9 +51,11 @@ function generateLrNXLinks(romPath, imagePath) {
 
 function generatePicoLinks(romPath, imagePath) {
     document.write("<div id=\"figureList\">"); fileNames.forEach(fileName => {
-        const [nazov, kart] = fileName.split('\t'); let skratka = /^[a-zA-Z]/.test(kart) ? kart.slice(0, 2) : !isNaN(kart.charAt(0)) ? kart.charAt(0) : '';
+        const [nazov, kart] = fileName.split('\t');
+        let screen;
+        if (/^\d/.test(kart)) { screen = "pico" + kart.replace(/\.p8\.png$/, '.png'); } else { screen = kart.replace(/^(.*)\.p8\.png$/, 'pico8_$1.png'); }
         document.write(`<a href="../${romPath}/${encodeURIComponent(kart)}" target="main">
-        <figure><img loading="lazy" src="https://www.lexaloffle.com/bbs/cposts/${skratka}/${kart}" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
+        <figure><img loading="lazy" src="https://www.lexaloffle.com/bbs/thumbs/${screen}" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
     }); document.write("</div>");
 }
 
