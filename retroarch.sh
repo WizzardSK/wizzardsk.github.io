@@ -8,6 +8,7 @@ case "$adresar" in
 *"Uzebox") core="uzem_libretro";;
 *"LowresNX") core="lowresnx_libretro";;
 *"PICO-8") core="pico8 -run";;
+*"Voxatron") core="vox";;
 *"Atari 2600 ROMS") core="stella_libretro";;
 *"No-Intro/Atari - 2600") core="stella_libretro";;
 *"Atari 2600 TOSEC") core="stella_libretro";;

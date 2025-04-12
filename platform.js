@@ -26,6 +26,7 @@ let text = `<div id=\"topbar\"><link rel=\"stylesheet\" type=\"text/css\" href=\
 
 document.write(text);
 document.addEventListener("DOMContentLoaded", function() { if (location.protocol !== "file:") { document.querySelectorAll("a").forEach(link => { link.addEventListener("click", function(event) { event.preventDefault(); }); }); } });
+function bgImage(platform) { document.write(`<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/${platform}.png'); } </style>`); }
 
 function generateTicLinks(romPath, imagePath) {
     document.write("<div id=\"figureList\">"); fileNames.forEach(fileName => {
@@ -51,10 +52,21 @@ function generateLrNXLinks(romPath, imagePath) {
 
 function generatePicoLinks(romPath, imagePath) {
     document.write("<div id=\"figureList\">"); fileNames.forEach(fileName => {
-        const [nazov, kart] = fileName.split('\t');
+        const [id, nazov, kart] = fileName.split('\t');
         let screen;
         if (/^\d/.test(kart)) { screen = "pico" + kart.replace(/\.p8\.png$/, '.png'); } else { screen = kart.replace(/^(.*)\.p8\.png$/, 'pico8_$1.png'); }
-        document.write(`<a href="../${romPath}/${encodeURIComponent(kart)}" target="main">
+        let cart = kart.replace(/\.p8.png$/, "");
+        document.write(`<a href="https://www.lexaloffle.com/bbs/?pid=${cart}#p" target="main">
+        <figure><img loading="lazy" src="https://www.lexaloffle.com/bbs/thumbs/${screen}" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
+    }); document.write("</div>");
+}
+
+function generateVoxLinks(romPath, imagePath) {
+    document.write("<div id=\"figureList\">"); fileNames.forEach(fileName => {
+        const [id, nazov, kart] = fileName.split('\t');
+        let screen; screen = kart.replace(/^(.*)\.vx\.png$/, 'vox_$1.png'); screen = screen.replace(/^cpost/, "vox");
+        let cart = kart.replace(/^cpost/, ""); cart = cart.replace(/\.png$/, "");
+        document.write(`<a href="https://www.lexaloffle.com/bbs/?pid=${cart}#p" target="main">
         <figure><img loading="lazy" src="https://www.lexaloffle.com/bbs/thumbs/${screen}" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
     }); document.write("</div>");
 }
@@ -72,5 +84,3 @@ function generateFileLinks(romPath, imagePath) {
         <figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(nameWithoutExt)}.png" alt="${nameWithoutExt}"><figcaption>${nameWithoutExt}</figcaption></figure></a>`);
     }); document.write("</div>");
 }
-
-function bgImage(platform) { document.write(`<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/${platform}.png'); } </style>`); }
