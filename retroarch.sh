@@ -206,6 +206,7 @@ case "$adresar" in
 *"No-Intro/Non-Redump - Panasonic - 3DO Interactive Multiplayer") core="opera_libretro"; ext="cue";;
 *"TOSEC-ISO/3DO/3DO Interactive Multiplayer/Games") core="opera_libretro"; ext="cue";;
 *"Neo Geo AES") core="fbneo_libretro";;
+*"Neo Geo MVS") core="fbneo_libretro";;
 *"Redump/SNK - Neo Geo CD") core="neocd_libretro"; ext="cue";;
 *"TOSEC-ISO/SNK/Neo-Geo CD/Games/[ISO]") core="neocd_libretro"; ext="cue";;
 *"No-Intro/SNK - NeoGeo Pocket") core="mednafen_ngp_libretro";;
