@@ -10,12 +10,12 @@ case "$adresar" in
 *"PICO-8") core="pico8 -run";;
 *"Voxatron") core="vox";;
 *"Atari 2600 ROMS") core="stella_libretro";;
-*"No-Intro/Atari - 2600") core="stella_libretro";;
+*"No-Intro/Atari - Atari 2600") core="stella_libretro";;
 *"TOSEC/Atari/2600 & VCS/Games") core="stella_libretro";;
 *"TOSEC/Atari/2600 & VCS/Homebrew/Games/[BIN]") core="stella_libretro";;
-*"No-Intro/Atari - 5200") core="a5200_libretro";;
+*"No-Intro/Atari - Atari 5200") core="a5200_libretro";;
 *"TOSEC/Atari/5200/Games") core="a5200_libretro";;
-*"No-Intro/Atari - 7800") core="prosystem_libretro";;
+*"No-Intro/Atari - Atari 7800 (BIN)") core="prosystem_libretro";;
 *"TOSEC/Atari/7800/Games") core="prosystem_libretro";;
 *"TOSEC/Atari/8bit/Games/[ATR]") core="atari800";;
 *"TOSEC/Atari/8bit/Games/[ATX]") core="atari800";;
@@ -24,16 +24,16 @@ case "$adresar" in
 *"TOSEC/Atari/8bit/Games/[XEX]") core="atari800";;
 *"TOSEC/Atari/8bit/Educational/[ATR]") core="atari800";;
 *"TOSEC/Atari/8bit/Applications/[ATR]") core="atari800";;
-*"No-Intro/Atari - ST") core="hatari_libretro";;
+*"No-Intro/Atari - Atari ST") core="hatari_libretro";;
 *"TOSEC/Atari/ST/Games/[ST]") core="hatari_libretro";;
 *"TOSEC/Atari/ST/Games/[STX]") core="hatari_libretro";;
 *"TOSEC/Atari/ST/Educational/[ST]") core="hatari_libretro";;
 *"TOSEC/Atari/ST/Educational/[STX]") core="hatari_libretro";;
-*"No-Intro/Atari - Jaguar (J64)") core="virtualjaguar_libretro";;
+*"No-Intro/Atari - Atari Jaguar (J64)") core="virtualjaguar_libretro";;
 *"TOSEC/Atari/Jaguar/Games/[J64]") core="virtualjaguar_libretro";;
 *"Redump/Atari - Jaguar CD Interactive Multimedia System") core="bigpemu"; ext="cue";;
 *"No-Intro/Non-Redump - Atari - Atari Jaguar CD") core="bigpemu"; ext="cdi";;
-*"No-Intro/Atari - Lynx (LYX)") core="mednafen_lynx_libretro";;
+*"No-Intro/Atari - Atari Lynx (LYX)") core="mednafen_lynx_libretro";;
 *"TOSEC/Atari/Lynx/Games/[LNX]") core="mednafen_lynx_libretro";;
 *"No-Intro/Fairchild - Channel F") core="freechaf_libretro";;
 *"TOSEC/Fairchild/VES & Channel F/Games") core="freechaf_libretro";;
@@ -209,8 +209,6 @@ case "$adresar" in
 *"Redump/Panasonic - 3DO Interactive Multiplayer") core="opera_libretro"; ext="cue";;
 *"No-Intro/Non-Redump - Panasonic - 3DO Interactive Multiplayer") core="opera_libretro"; ext="cue";;
 *"TOSEC-ISO/3DO/3DO Interactive Multiplayer/Games") core="opera_libretro"; ext="cue";;
-*"Neo Geo AES") core="fbneo_libretro";;
-*"Neo Geo MVS") core="fbneo_libretro";;
 *"Redump/SNK - Neo Geo CD") core="neocd_libretro"; ext="cue";;
 *"TOSEC-ISO/SNK/Neo-Geo CD/Games/[ISO]") core="neocd_libretro"; ext="cue";;
 *"No-Intro/SNK - NeoGeo Pocket") core="mednafen_ngp_libretro";;
@@ -285,6 +283,7 @@ case "$adresar" in
 *"TOSEC/Sharp/X1/Games/[2D]") core="x1_libretro";;
 *"TOSEC/Sharp/X1/Games/[D88]") core="x1_libretro";;
 *"TOSEC/Sharp/X68000/Games/[DIM]") core="px68k_libretro";;
+*"Neo Geo") core="fbneo_libretro";;
 esac
 
 if [ -n "$ext" ]; then
