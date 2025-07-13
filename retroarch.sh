@@ -9,6 +9,7 @@ case "$adresar" in
 *"LowresNX") core="lowresnx_libretro";;
 *"PICO-8") core="pico8 -run";;
 *"Voxatron") core="vox";;
+*"Vircon32") core="vircon32_libretro";;
 *"Atari 2600 ROMS") core="stella_libretro";;
 *"No-Intro/Atari - Atari 2600") core="stella_libretro";;
 *"TOSEC/Atari/2600 & VCS/Games") core="stella_libretro";;
@@ -200,21 +201,12 @@ case "$adresar" in
 *"TOSEC/NEC/SuperGrafx/Games") core="mednafen_supergrafx_libretro";;
 *"Redump/NEC - PC-FX & PC-FXGA") core="mednafen_pcfx_libretro"; ext="cue";;
 *"TOSEC-ISO/NEC/PC-FX/Games") core="mednafen_pcfx_libretro"; ext="cue";;
-*"Internet Archive/chadmaster/mame-merged/mame-merged") core="mame";;
-*"Internet Archive/chadmaster/fbnarcade-fullnonmerged/arcade") core="fbneo_libretro";;
-*"Internet Archive/chadmaster/segamodel3/ROMs") core="supermodel";;
 *"Redump/Philips - CD-i") core="same_cdi_libretro"; ext="cue";;
 *"No-Intro/Non-Redump - Philips - CD-i") core="same_cdi_libretro"; ext="cue";;
 *"TOSEC-ISO/Philips/CD-i/Games") core="same_cdi_libretro"; ext="cue";;
 *"Redump/Panasonic - 3DO Interactive Multiplayer") core="opera_libretro"; ext="cue";;
 *"No-Intro/Non-Redump - Panasonic - 3DO Interactive Multiplayer") core="opera_libretro"; ext="cue";;
 *"TOSEC-ISO/3DO/3DO Interactive Multiplayer/Games") core="opera_libretro"; ext="cue";;
-*"Redump/SNK - Neo Geo CD") core="neocd_libretro"; ext="cue";;
-*"TOSEC-ISO/SNK/Neo-Geo CD/Games/[ISO]") core="neocd_libretro"; ext="cue";;
-*"No-Intro/SNK - NeoGeo Pocket") core="mednafen_ngp_libretro";;
-*"TOSEC/SNK/Neo-Geo Pocket/Games") core="mednafen_ngp_libretro";;
-*"No-Intro/SNK - NeoGeo Pocket Color") core="mednafen_ngp_libretro";;
-*"TOSEC/SNK/Neo-Geo Pocket Color/Games") core="mednafen_ngp_libretro";;
 *"roms/MS-DOS eXoDOS") core="dosbox_pure_libretro";;
 *"TOSEC/IBM/PC Compatibles/Games/[IMG]") core="dosbox_pure_libretro";;
 *"TOSEC-ISO/IBM/PC Compatibles/CD/Games/[ISO]") core="dosbox_pure_libretro";;
@@ -283,6 +275,15 @@ case "$adresar" in
 *"TOSEC/Sharp/X1/Games/[2D]") core="x1_libretro";;
 *"TOSEC/Sharp/X1/Games/[D88]") core="x1_libretro";;
 *"TOSEC/Sharp/X68000/Games/[DIM]") core="px68k_libretro";;
+*"Internet Archive/chadmaster/mame-merged/mame-merged") core="mame";;
+*"Internet Archive/chadmaster/fbnarcade-fullnonmerged/arcade") core="fbneo_libretro";;
+*"Internet Archive/chadmaster/segamodel3/ROMs") core="supermodel";;
+*"Redump/SNK - Neo Geo CD") core="neocd_libretro"; ext="cue";;
+*"TOSEC-ISO/SNK/Neo-Geo CD/Games/[ISO]") core="neocd_libretro"; ext="cue";;
+*"No-Intro/SNK - NeoGeo Pocket") core="mednafen_ngp_libretro";;
+*"TOSEC/SNK/Neo-Geo Pocket/Games") core="mednafen_ngp_libretro";;
+*"No-Intro/SNK - NeoGeo Pocket Color") core="mednafen_ngp_libretro";;
+*"TOSEC/SNK/Neo-Geo Pocket Color/Games") core="mednafen_ngp_libretro";;
 *"Neo Geo") core="fbneo_libretro";;
 esac
 
