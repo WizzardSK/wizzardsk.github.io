@@ -18,6 +18,7 @@ case "$adresar" in
 *"TOSEC/Atari/5200/Games") core="a5200_libretro";;
 *"No-Intro/Atari - Atari 7800 (BIN)") core="prosystem_libretro";;
 *"TOSEC/Atari/7800/Games") core="prosystem_libretro";;
+*"No-Intro/Atari - 8-bit Family") core="atari800";;
 *"TOSEC/Atari/8bit/Games/[ATR]") core="atari800";;
 *"TOSEC/Atari/8bit/Games/[ATX]") core="atari800";;
 *"TOSEC/Atari/8bit/Games/[BIN]") core="atari800";;
