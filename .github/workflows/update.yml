@@ -1,8 +1,8 @@
-name: 0:0 Gamelists updater
+name: Gamelists updater
 
 on:
   schedule:
-    - cron: '0 0 * * *' 
+    - cron: '0 7 * * *' 
   workflow_dispatch: 
 
 jobs:
