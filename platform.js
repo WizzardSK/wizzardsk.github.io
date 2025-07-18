@@ -83,8 +83,7 @@ function generateFileLinks(romPath, imagePath) {
         const subor = fileName.includes("\t") ? fileName.split("\t")[0] : fileName;
         const nameWithoutExt = subor.slice(0, subor.lastIndexOf(".")) || subor;
         const nazov = fileName.includes("\t") ? fileName.split("\t")[1] : fileName.replace(/\.[^.]+$/, "");
-        //document.write(`<a href="../${romPath}/${encodeURIComponent(subor)}" target="main">
-        document.write(`<a href="${(location.protocol === 'file:' ? '../' : 'https://myrient.erista.me/files/') + romPath.split('/').map(encodeURIComponent).join('/') + '/' + encodeURIComponent(subor)}" target="main">${subor}</a><br>`);
+        document.write(`<a href="../${romPath}/${encodeURIComponent(subor)}" target="main">
         <figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(nameWithoutExt)}.png" alt="${nameWithoutExt}"><figcaption>${nazov}</figcaption></figure></a>`);
     }); document.write("</div>");
 }
