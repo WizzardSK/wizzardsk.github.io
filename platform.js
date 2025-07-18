@@ -37,17 +37,19 @@ function generateTicLinks(romPath, imagePath) {
 function generateWasmLinks(romPath, imagePath) {
     document.write("<div id=\"figureList\">");
     if (location.protocol !== "file:" && romPath.includes("roms/WASM-4")) { romPath = romPath.replace("roms/WASM-4", "https://wasm4.org/play"); wasm = ``; } else { romPath = `../${romPath}`; wasm = `.wasm`; }
-        fileNames.forEach(fileName => {
-            const [subor, nazov] = fileName.split('\t');
-            document.write(`<a href="${romPath}/${encodeURIComponent(subor)}${wasm}" target="main">
-            <figure><img loading="lazy" src="https://wasm4.org/carts/${subor}.png" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
-        }); document.write("</div>");
+    fileNames.forEach(fileName => {
+        const [subor, nazov] = fileName.split('\t');
+        document.write(`<a href="${romPath}/${encodeURIComponent(subor)}${wasm}" target="main">
+        <figure><img loading="lazy" src="https://wasm4.org/carts/${subor}.png" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
+    }); document.write("</div>");
 }
 
 function generateLrNXLinks(romPath, imagePath) {
     document.write("<div id=\"figureList\">");
+    if (location.protocol !== "file:" && romPath.includes("roms/LowresNX")) { romPath = romPath.replace("roms/LowresNX", "https://lowresnx.inutilis.com/topic.php?id="); } 
+    else { romPath = `../${romPath}`; }
     fileNames.forEach(fileName => {
-        const [subor, obrazok, nazov, id] = fileName.split('\t'); document.write(`<a href="../${romPath}/${encodeURIComponent(subor)}" target="main">
+        const [subor, obrazok, nazov, id] = fileName.split('\t'); document.write(`<a href="${romPath}/${encodeURIComponent(subor)}" target="main">
         <figure><img loading="lazy" src="https://lowresnx.inutilis.com/uploads/${obrazok}" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
     }); document.write("</div>");
 }
