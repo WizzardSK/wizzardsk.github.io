@@ -46,10 +46,11 @@ function generateWasmLinks(romPath, imagePath) {
 
 function generateLrNXLinks(romPath, imagePath) {
     document.write("<div id=\"figureList\">");
-    if (location.protocol !== "file:" && romPath.includes("roms/LowresNX")) { romPath = romPath.replace("roms/LowresNX", "https://lowresnx.inutilis.com/topic.php?id="); } 
-    else { romPath = `../${romPath}`; }
+    if (location.protocol !== "file:" && romPath.includes("roms/LowresNX")) { romPath = romPath.replace("roms/LowresNX", "https://lowresnx.inutilis.com/topic.php?id="); web = true; } 
+    else { romPath = `../${romPath}/`; }
     fileNames.forEach(fileName => {
-        const [subor, obrazok, nazov, id] = fileName.split('\t'); document.write(`<a href="${romPath}/${encodeURIComponent(subor)}" target="main">
+        const [subor, obrazok, nazov, id] = fileName.split('\t'); if (web) { subor = id; }
+        document.write(`<a href="${romPath}${encodeURIComponent(subor)}" target="main">
         <figure><img loading="lazy" src="https://lowresnx.inutilis.com/uploads/${obrazok}" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
     }); document.write("</div>");
 }
