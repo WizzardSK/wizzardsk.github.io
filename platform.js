@@ -25,7 +25,7 @@ let text = `<div id=\"topbar\"><link rel=\"stylesheet\" type=\"text/css\" href=\
 <br /><br /></div><br /><br /><br />`;
 
 document.write(text);
-document.addEventListener("DOMContentLoaded", function() { if (location.protocol !== "file:") { document.querySelectorAll("a").forEach(link => { link.addEventListener("click", function(event) { event.preventDefault(); }); }); } });
+//document.addEventListener("DOMContentLoaded", function() { if (location.protocol !== "file:") { document.querySelectorAll("a").forEach(link => { link.addEventListener("click", function(event) { event.preventDefault(); }); }); } });
 function bgImage(platform) { document.write(`<style> figure { background-image: url('https://raw.githubusercontent.com/fabricecaruso/es-theme-carbon/master/art/consoles/${platform}.png'); } </style>`); }
 
 function generateTicLinks(romPath, imagePath) {
@@ -86,7 +86,6 @@ function generateFileLinks(romPath, imagePath) {
     //    document.write(`<a href="../${romPath}/${encodeURIComponent(subor)}" target="main">
     //    <figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(nameWithoutExt)}.png" alt="${nameWithoutExt}"><figcaption>${nazov}</figcaption></figure></a>`);
     //}); document.write("</div>");
-    
     document.write("<div id=\"figureList\">");
     const baseRomURL = location.protocol === "file:" ? "../" : "https://myrient.erista.me/files/";
     fileNames.forEach(fileName => {
@@ -98,5 +97,3 @@ function generateFileLinks(romPath, imagePath) {
     });
     document.write("</div>");
 }
-
-
