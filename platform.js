@@ -36,8 +36,7 @@ function generateTicLinks(romPath, imagePath) {
 
 function generateWasmLinks(romPath, imagePath) {
     document.write("<div id=\"figureList\">"); 
-    if (location.protocol !== "file:" && romPath.includes("roms/WASM-4")) { romPath = romPath.replace("roms/WASM-4", "https://wasm4.org/play"); }
-    else { romPath = `../${romPath}`; wasm = `.wasm`; }
+    if (location.protocol !== "file:" && romPath.includes("roms/WASM-4")) { romPath = romPath.replace("roms/WASM-4", "https://wasm4.org/play"); wasm = ``; } else { romPath = `../${romPath}`; wasm = `.wasm`; }
     fileNames.forEach(fileName => {
         const [subor, nazov] = fileName.split(',');
         document.write(`<a href="${romPath}/${encodeURIComponent(subor)}${wasm}" target="main">
