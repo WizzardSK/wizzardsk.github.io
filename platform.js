@@ -87,12 +87,12 @@ function generateFileLinks(romPath, imagePath) {
     //    <figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(nameWithoutExt)}.png" alt="${nameWithoutExt}"><figcaption>${nazov}</figcaption></figure></a>`);
     //}); document.write("</div>");
     document.write("<div id=\"figureList\">");
-    const baseRomURL = location.protocol === "file:" ? "../" : "https://myrient.erista.me/files/";
+    if (location.protocol !== "file:" && romPath.includes("myrient")) { romPath = romPath.replace(/^myrient\/?/, "https://myrient.erista.me/files/"); }
     fileNames.forEach(fileName => {
         const subor = fileName.includes("\t") ? fileName.split("\t")[0] : fileName;
         const nameWithoutExt = subor.slice(0, subor.lastIndexOf(".")) || subor;
         const nazov = fileName.includes("\t") ? fileName.split("\t")[1] : fileName.replace(/\.[^.]+$/, "");
-        document.write(`<a href="${baseRomURL}${romPath}/${encodeURIComponent(subor)}" target="main">
+        document.write(`<a href="${romPath}/${encodeURIComponent(subor)}" target="main">
         <figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(nameWithoutExt)}.png" alt="${nameWithoutExt}"><figcaption>${nazov}</figcaption></figure></a>`);
     });
     document.write("</div>");
