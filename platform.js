@@ -32,8 +32,8 @@ function generateTicLinks(romPath, imagePath) {
     if (location.protocol !== "file:" && romPath.includes("roms/TIC-80")) { romPath = romPath.replace("roms/TIC-80", "https://tic80.com/play?cart="); web = true; }
     else { romPath = `../${romPath}/`; web = false; }
     fileNames.forEach(fileName => {
-        let [id, hash, nazov] = fileName.split('\t'); if (web) { hash = `${id}`; }
-        document.write(`<a href="${romPath}${hash}.tic" target="main">
+        let [id, hash, nazov] = fileName.split('\t'); if (web) { cart = `${id}`; } else { cart = `${hash}.tic`; }
+        document.write(`<a href="${romPath}${cart}" target="main">
         <figure><img loading="lazy" src="https://tic80.com/cart/${hash}/cover.gif" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
     }); document.write("</div>");
 }
