@@ -208,7 +208,7 @@ case "$adresar" in
 *"Redump/Panasonic - 3DO Interactive Multiplayer") core="opera_libretro"; ext="cue";;
 *"No-Intro/Non-Redump - Panasonic - 3DO Interactive Multiplayer") core="opera_libretro"; ext="cue";;
 *"TOSEC-ISO/3DO/3DO Interactive Multiplayer/Games") core="opera_libretro"; ext="cue";;
-*"roms/MS-DOS eXoDOS") core="dosbox_pure_libretro";;
+*"../roms/MS-DOS eXoDOS") core="dosbox_pure_libretro";;
 *"TOSEC/IBM/PC Compatibles/Games/[IMG]") core="dosbox_pure_libretro";;
 *"TOSEC-ISO/IBM/PC Compatibles/CD/Games/[ISO]") core="dosbox_pure_libretro";;
 *"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/1982") core="dosbox_pure_libretro";;
