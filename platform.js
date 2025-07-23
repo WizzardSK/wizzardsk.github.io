@@ -85,7 +85,7 @@ function generateUzeLinks(romPath, imagePath) {
         const nameWithoutExt = subor.slice(0, subor.lastIndexOf(".")) || subor; 
         if (web) { cart = `${id}`; } else { cart = `${subor}`; }
         document.write(`<a href="${romPath}${encodeURIComponent(cart)}" target="main">
-        <figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(subor)}.png" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
+        <figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(nameWithoutExt)}.png" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
     }); document.write("</div>");
 }
 
