@@ -81,9 +81,11 @@ function generateUzeLinks(romPath, imagePath) {
     document.write("<div id=\"figureList\">");
     if (location.protocol !== "file:" && romPath.includes("roms/Uzebox")) { romPath = romPath.replace("roms/Uzebox", "https://nicksen782.net/UAM/APP_emu/emu.php?gameid="); web = true; } else { romPath = `../${romPath}/`; web = false; }
     fileNames.forEach(fileName => {
-        const [subor, id] = fileName.split('\t'); if (web) { subor = `${id}`; }
-        const nameWithoutExt = fileName.slice(0, fileName.lastIndexOf(".")) || fileName; document.write(`<a href="${romPath}${encodeURIComponent(fileName)}" target="main">
-        <figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(nameWithoutExt)}.png" alt="${nameWithoutExt}"><figcaption>${nameWithoutExt}</figcaption></figure></a>`);
+        const [id, subor, nazov] = fileName.split('\t'); 
+        const nameWithoutExt = subor.slice(0, subor.lastIndexOf(".")) || subor; 
+        if (web) { subor = `${id}`; }
+        document.write(`<a href="${romPath}${encodeURIComponent(subor)}" target="main">
+        <figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(subor)}.png" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
     }); document.write("</div>");
 }
 
