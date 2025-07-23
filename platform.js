@@ -83,9 +83,9 @@ function generateUzeLinks(romPath, imagePath) {
     fileNames.forEach(fileName => {
         let [id, subor, nazov] = fileName.split('\t'); 
         const nameWithoutExt = subor.slice(0, subor.lastIndexOf(".")) || subor; 
-        if (web) { subor = `${id}`; }
+        if (web) { cart = `${id}`; } else { cart = `${subor}`; }
         document.write(`<a href="${romPath}${encodeURIComponent(subor)}" target="main">
-        <figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(subor)}.png" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
+        <figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(cart)}.png" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
     }); document.write("</div>");
 }
 
