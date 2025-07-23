@@ -81,7 +81,7 @@ function generateUzeLinks(romPath, imagePath) {
     document.write("<div id=\"figureList\">");
     if (location.protocol !== "file:" && romPath.includes("roms/Uzebox")) { romPath = romPath.replace("roms/Uzebox", "https://nicksen782.net/UAM/APP_emu/emu.php?gameid="); web = true; } else { romPath = `../${romPath}/`; web = false; }
     fileNames.forEach(fileName => {
-        const [id, subor, nazov] = fileName.split('\t'); 
+        let [id, subor, nazov] = fileName.split('\t'); 
         const nameWithoutExt = subor.slice(0, subor.lastIndexOf(".")) || subor; 
         if (web) { subor = `${id}`; }
         document.write(`<a href="${romPath}${encodeURIComponent(subor)}" target="main">
