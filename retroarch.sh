@@ -14,6 +14,8 @@ case "$adresar" in
 *"No-Intro/Atari - Atari 2600") core="stella_libretro";;
 *"TOSEC/Atari/2600 & VCS/Games") core="stella_libretro";;
 *"TOSEC/Atari/2600 & VCS/Homebrew/Games/[BIN]") core="stella_libretro";;
+*"TOSEC/Atari/2600 & VCS/Applications") core="stella_libretro";;
+*"TOSEC/Atari/2600 & VCS/Educational") core="stella_libretro";;
 *"No-Intro/Atari - Atari 5200") core="a5200_libretro";;
 *"TOSEC/Atari/5200/Games") core="a5200_libretro";;
 *"No-Intro/Atari - Atari 7800 (BIN)") core="prosystem_libretro";;
@@ -29,6 +31,8 @@ case "$adresar" in
 *"No-Intro/Atari - Atari ST") core="hatari_libretro";;
 *"TOSEC/Atari/ST/Games/[ST]") core="hatari_libretro";;
 *"TOSEC/Atari/ST/Games/[STX]") core="hatari_libretro";;
+*"TOSEC/Atari/ST/Applications/[ST]") core="hatari_libretro";;
+*"TOSEC/Atari/ST/Applications/[STX]") core="hatari_libretro";;
 *"TOSEC/Atari/ST/Educational/[ST]") core="hatari_libretro";;
 *"TOSEC/Atari/ST/Educational/[STX]") core="hatari_libretro";;
 *"No-Intro/Atari - Atari Jaguar (J64)") core="virtualjaguar_libretro";;
@@ -88,6 +92,9 @@ case "$adresar" in
 *"TOSEC/Sinclair/ZX Spectrum/Applications/[TAP]") core="fuse_libretro";;
 *"TOSEC/Sinclair/ZX Spectrum/Applications/[TZX]") core="fuse_libretro";;
 *"TOSEC/Sinclair/ZX Spectrum/Applications/[Z80]") core="fuse_libretro";;
+*"TOSEC/Spectravideo/SVI-318 & SVI-328/Games/[BIN]") core="bluemsx_libretro";;
+*"TOSEC/Spectravideo/SVI-318 & SVI-328/Games/[CAS]") core="bluemsx_libretro";;
+*"TOSEC/Spectravideo/SVI-318 & SVI-328/Various/[BIN]") core="bluemsx_libretro";;
 *"TOSEC/Spectravideo/SVI-318 & SVI-328/Various/[CAS]") core="bluemsx_libretro";;
 *"TOSEC/MGT/Sam Coupe/Games/[DSK]") core="simcoupe";;
 *"TOSEC/MGT/Sam Coupe/Games/[SAD]") core="simcoupe";;
