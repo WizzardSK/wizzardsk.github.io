@@ -24,6 +24,12 @@ case "$adresar" in
 *"TOSEC/Atari/7800/Games") core="prosystem_libretro";;
 *"TOSEC/Atari/7800/Homebrew/Games") core="prosystem_libretro";;
 *"TOSEC/Atari/7800/Applications") core="prosystem_libretro";;
+*"No-Intro/Atari - Atari Jaguar (J64)") core="virtualjaguar_libretro";;
+*"TOSEC/Atari/Jaguar/Games/[J64]") core="virtualjaguar_libretro";;
+*"Redump/Atari - Jaguar CD Interactive Multimedia System") core="bigpemu"; ext="cue";;
+*"No-Intro/Non-Redump - Atari - Atari Jaguar CD") core="bigpemu"; ext="cdi";;
+*"No-Intro/Atari - Atari Lynx (LYX)") core="mednafen_lynx_libretro";;
+*"TOSEC/Atari/Lynx/Games/[LNX]") core="mednafen_lynx_libretro";;
 *"No-Intro/Atari - 8-bit Family") core="atari800_libretro";;
 *"TOSEC/Atari/8bit/Games/[ATR]") core="atari800_libretro";;
 *"TOSEC/Atari/8bit/Games/[ATX]") core="atari800_libretro";;
@@ -45,12 +51,6 @@ case "$adresar" in
 *"TOSEC/Atari/ST/Applications/[STX]") core="hatari_libretro";;
 *"TOSEC/Atari/ST/Educational/[ST]") core="hatari_libretro";;
 *"TOSEC/Atari/ST/Educational/[STX]") core="hatari_libretro";;
-*"No-Intro/Atari - Atari Jaguar (J64)") core="virtualjaguar_libretro";;
-*"TOSEC/Atari/Jaguar/Games/[J64]") core="virtualjaguar_libretro";;
-*"Redump/Atari - Jaguar CD Interactive Multimedia System") core="bigpemu"; ext="cue";;
-*"No-Intro/Non-Redump - Atari - Atari Jaguar CD") core="bigpemu"; ext="cdi";;
-*"No-Intro/Atari - Atari Lynx (LYX)") core="mednafen_lynx_libretro";;
-*"TOSEC/Atari/Lynx/Games/[LNX]") core="mednafen_lynx_libretro";;
 *"No-Intro/Fairchild - Channel F") core="freechaf_libretro";;
 *"TOSEC/Fairchild/VES & Channel F/Games") core="freechaf_libretro";;
 *"No-Intro/GCE - Vectrex") core="vecx_libretro";;
@@ -61,7 +61,6 @@ case "$adresar" in
 *"TOSEC/Philips/Videopac+/Games") core="o2em_libretro";;
 *"No-Intro/Mattel - Intellivision") core="freeintv_libretro";;
 *"TOSEC/Mattel/Intellivision/Games/[BIN]") core="freeintv_libretro";;
-*"TOSEC/Coleco/ColecoVision ADAM/Games/[DSK]") core="mame adam -flop1";;
 *"No-Intro/Coleco - ColecoVision") core="bluemsx_libretro";;
 *"TOSEC/Coleco/ColecoVision/Games") core="bluemsx_libretro";;
 *"No-Intro/Epoch - Super Cassette Vision") core="emuscv_libretro";;
@@ -129,11 +128,17 @@ case "$adresar" in
 *"TOSEC/Funtech/Super A'can/Games") core="mame supracan -cart";;
 *"No-Intro/Interton - VC 4000") core="mame vc4000 -cart";;
 *"TOSEC/Tsukuda Original/Othello Multivision/Games") core="gearsystem_libretro";;
+*"TOSEC/Coleco/ColecoVision ADAM/Games/[DSK]") core="mame adam -flop1";;
+*"TOSEC/Coleco/ColecoVision ADAM/Applications/[DSK]") core="mame adam -flop1";;
 *"TOSEC/Tandy Radio Shack/TRS-80 Color Computer/Games/[ROM]") core="mame coco3 -cart";;
+*"TOSEC/Tandy Radio Shack/TRS-80 Color Computer/Applications/[ROM]") core="mame coco3 -cart";;
 *"Redump/Memorex - Visual Information System") core="mame vis -cdrm"; ext="cue";;
 *"TOSEC/Acorn/BBC/Games/[SSD]") core="mame bbcb -flop1";;
 *"TOSEC/Acorn/Electron/Games/[UEF]") core="mame electron64 -cass";;
+*"TOSEC/Acorn/Electron/Applications/[UEF]") core="mame electron64 -cass";;
+*"TOSEC/Acorn/Electron/Educational/[UEF]") core="mame electron64 -cass";;
 *"TOSEC/Acorn/Archimedes/Games/[ADF]") core="mame aa4401 -flop";;
+*"TOSEC/Acorn/Archimedes/Applications/[ADF]") core="mame aa4401 -flop";;
 *"No-Intro/Fujitsu - FM-7 (Sector)") core="mame fm7 -flop1";;
 *"TOSEC/Fujitsu/FM-7/Games/[D77]") core="mame fm7 -flop1";;
 *"Redump/Fujitsu - FM-Towns") core="mame fmtmarty -cdrm";;
@@ -144,6 +149,9 @@ case "$adresar" in
 *"TOSEC/Apple/II/Educational/[WOZ]") core="mame apple2ee -flop1";;
 *"TOSEC/Apple/II/Applications/[DSK]") core="mame apple2ee -flop1";;
 *"TOSEC/Apple/II/Applications/[WOZ]") core="mame apple2ee -flop1";;
+*"TOSEC/VTech/Laser 200/Games/[VZ]") core="mame laser310 -dump";;
+*"TOSEC/VTech/Laser 200/Applications") core="mame laser310 -dump";;
+*"TOSEC/VTech/Laser 310/Applications") core="mame laser310 -dump";;
 *"TOSEC/Thomson/MO5/Games/[K7]") core="theodore_libretro";;
 *"TOSEC/Thomson/MO6/Games") core="theodore_libretro";;
 *"TOSEC/Thomson/TO7/Games/[K7]") core="theodore_libretro";;
@@ -166,7 +174,6 @@ case "$adresar" in
 *"TOSEC-ISO/Nintendo/GameCube/Games") core="dolphin_libretro"; ext="iso";;
 *"No-Intro/Unofficial - Nintendo - Wii (Digital) (Deprecated) (WAD)") core="dolphin_libretro"; ext="wad";;
 *"Redump/Nintendo - Wii - NKit RVZ [zstd-19-128k]") core="dolphin_libretro"; ext="rvz";;
-*"Redump/Nintendo - Wii U - WUX") core="cemu -g"; ext="wux";;
 *"No-Intro/Nintendo - Pokemon Mini") core="pokemini_libretro";;
 *"TOSEC/Nintendo/Pokemon Mini/Games") core="pokemini_libretro";;
 *"No-Intro/Nintendo - Virtual Boy") core="mednafen_vb_libretro";;
@@ -182,6 +189,7 @@ case "$adresar" in
 *"TOSEC/Nintendo/DS/Games") core="melonds_libretro";;
 *"No-Intro/Nintendo - Nintendo DSi (Decrypted)") core="melondsds_libretro";;
 *"No-Intro/Nintendo - Nintendo 3DS (Decrypted)") core="citra_libretro"; ext="3ds";;
+*"Redump/Nintendo - Wii U - WUX") core="cemu -g"; ext="wux";;
 *"No-Intro/Sega - SG-1000") core="genesis_plus_gx_libretro";;
 *"TOSEC/Sega/Game 1000/Games") core="genesis_plus_gx_libretro";;
 *"No-Intro/Sega - Master System - Mark III") core="genesis_plus_gx_libretro";;
