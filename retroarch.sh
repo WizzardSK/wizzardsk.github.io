@@ -152,6 +152,8 @@ case "$adresar" in
 *"TOSEC/VTech/Laser 200/Games/[VZ]") core="mame laser310 -dump";;
 *"TOSEC/VTech/Laser 200/Applications") core="mame laser310 -dump";;
 *"TOSEC/VTech/Laser 310/Applications") core="mame laser310 -dump";;
+*"roms/Socrates") core="mame socrates -cart";;
+*"roms/TI99") core="mame ti99_4a -cart";;
 *"TOSEC/Thomson/MO5/Games/[K7]") core="theodore_libretro";;
 *"TOSEC/Thomson/MO6/Games") core="theodore_libretro";;
 *"TOSEC/Thomson/TO7/Games/[K7]") core="theodore_libretro";;
