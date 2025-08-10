@@ -9,8 +9,8 @@ case "$adresar" in
 *"Uzebox") core="uzem_libretro";;
 *"PICO-8") core="pico8 -run";;
 *"Voxatron") core="vox";;
-*"../roms/vircon32/Vircon32") core="vircon32_libretro";;
-*"../roms/atari2600/Atari 2600 ROMS") core="stella_libretro";;
+*"roms/Vircon32") core="vircon32_libretro";;
+*"roms/Atari 2600 ROMS") core="stella_libretro";;
 *"No-Intro/Atari - Atari 2600") core="stella_libretro";;
 *"TOSEC/Atari/2600 & VCS/Games") core="stella_libretro";;
 *"TOSEC/Atari/2600 & VCS/Homebrew/Games/[BIN]") core="stella_libretro";;
@@ -152,8 +152,8 @@ case "$adresar" in
 *"TOSEC/VTech/Laser 200/Games/[VZ]") core="mame laser310 -dump";;
 *"TOSEC/VTech/Laser 200/Applications") core="mame laser310 -dump";;
 *"TOSEC/VTech/Laser 310/Applications") core="mame laser310 -dump";;
-*"../roms/socrates/VTech Socrates") core="mame socrates -cart";;
-*"../roms/ti99/Texas Instruments TI99") core="mame ti99_4a -cart";;
+*"roms/Socrates") core="mame socrates -cart";;
+*"roms/TI99") core="mame ti99_4a -cart";;
 *"TOSEC/Thomson/MO5/Games/[K7]") core="theodore_libretro";;
 *"TOSEC/Thomson/MO6/Games") core="theodore_libretro";;
 *"TOSEC/Thomson/TO7/Games/[K7]") core="theodore_libretro";;
@@ -242,7 +242,7 @@ case "$adresar" in
 *"TOSEC-ISO/3DO/3DO Interactive Multiplayer/Applications/[ISO]") core="opera_libretro"; ext="cue";;
 *"TOSEC-ISO/3DO/3DO Interactive Multiplayer/Educational/[ISO]") core="opera_libretro"; ext="cue";;
 *"TOSEC-ISO/3DO/3DO Interactive Multiplayer/Multimedia") core="opera_libretro"; ext="cue";;
-*"../roms/dos/MS-DOS eXoDOS") core="dosbox_pure_libretro";;
+*"roms/MS-DOS eXoDOS") core="dosbox_pure_libretro";;
 *"TOSEC/IBM/PC Compatibles/Games/[IMG]") core="dosbox_pure_libretro";;
 *"TOSEC-ISO/IBM/PC Compatibles/CD/Games/[ISO]") core="dosbox_pure_libretro";;
 *"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/1982") core="dosbox_pure_libretro";;
