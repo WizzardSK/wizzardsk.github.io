@@ -305,6 +305,10 @@ case "$adresar" in
 *"TOSEC/Commodore/Amiga/Games/SPS") core="puae_libretro";;
 *"TOSEC/Commodore/Amiga/Educational/[ADF]") core="puae_libretro";;
 *"TOSEC/Commodore/Amiga/Applications/[ADF]") core="puae_libretro";;
+*"Redump/Commodore - Amiga CD") core="puae_libretro"; ext="cue";;
+*"TOSEC-ISO/Commodore/Amiga/CD/Games/[ISO]") core="puae_libretro"; ext="cue";;
+*"TOSEC-ISO/Commodore/Amiga/CD/Applications/[ISO]") core="puae_libretro"; ext="cue";;
+*"TOSEC-ISO/Commodore/Amiga/CD/Multimedia/[ISO]") core="puae_libretro"; ext="cue";;
 *"Redump/Commodore - Amiga CD32") core="puae_libretro"; ext="cue";;
 *"TOSEC-ISO/Commodore/Amiga CD32/Games/[ISO]") core="puae_libretro"; ext="cue";;
 *"TOSEC-ISO/Commodore/Amiga CD32/Applications") core="puae_libretro"; ext="cue";;
