@@ -183,7 +183,7 @@ case "$adresar" in
 *"No-Intro/Nintendo - Game Boy") core="sameboy_libretro";;
 *"TOSEC/Nintendo/Game Boy/Games") core="sameboy_libretro";;
 *"No-Intro/Nintendo - Game Boy Color") core="sameboy_libretro";;
-*"TOSEC/Nintendo/Game Boy Color/Games") core="sameboy_libretro";;
+*"TOSEC/Nintendo/Game Boy Color/Games/[GBC]") core="sameboy_libretro";;
 *"No-Intro/Nintendo - Game Boy Advance") core="mgba_libretro";;
 *"TOSEC/Nintendo/Game Boy Advance/Games") core="sameboy_libretro";;
 *"No-Intro/Nintendo - Nintendo DS (Decrypted)") core="melonds_libretro";;
