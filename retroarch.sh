@@ -193,7 +193,7 @@ case "$adresar" in
 *"No-Intro/Nintendo - Nintendo DSi (Decrypted)") core="melondsds_libretro";;
 *"No-Intro/Nintendo - Nintendo 3DS (Decrypted)") core="citra_libretro"; ext="3ds";;
 *"Redump/Nintendo - Wii U - WUX") core="cemu -g"; ext="wux";;
-*"No-Intro/Sega - SG-1000") core="genesis_plus_gx_libretro";;
+*"No-Intro/Sega - SG-1000 - SC-3000") core="genesis_plus_gx_libretro";;
 *"TOSEC/Sega/Game 1000/Games") core="genesis_plus_gx_libretro";;
 *"No-Intro/Sega - Master System - Mark III") core="genesis_plus_gx_libretro";;
 *"TOSEC/Sega/Mark III & Master System/Games") core="genesis_plus_gx_libretro";;
