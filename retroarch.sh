@@ -133,6 +133,9 @@ case "$adresar" in
 *"TOSEC/Tandy Radio Shack/TRS-80 Color Computer/Games/[ROM]") core="mame coco3 -cart";;
 *"TOSEC/Tandy Radio Shack/TRS-80 Color Computer/Applications/[ROM]") core="mame coco3 -cart";;
 *"Redump/Memorex - Visual Information System") core="mame vis -cdrm"; ext="cue";;
+*"TOSEC-ISO/Memorex/Video Information System/Educational") core="mame vis -cdrm"; ext="cue";;
+*"TOSEC-ISO/Memorex/Video Information System/Games") core="mame vis -cdrm"; ext="cue";;
+*"TOSEC-ISO/Memorex/Video Information System/Multimedia") core="mame vis -cdrm"; ext="cue";;
 *"TOSEC/Acorn/Atom/Games/[DSK]") core="mame atom -flop1";;
 *"TOSEC/Acorn/BBC/Games/[SSD]") core="mame bbcb -flop1";;
 *"TOSEC/Acorn/Electron/Games/[UEF]") core="mame electron64 -cass";;
