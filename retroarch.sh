@@ -216,8 +216,8 @@ case "$adresar" in
 *"TOSEC-ISO/Sega/Dreamcast/Games/US") core="flycast_libretro"; ext="gdi";;
 *"TOSEC-ISO/Sega/Dreamcast/Games/PAL") core="flycast_libretro"; ext="gdi";;
 *"TOSEC-ISO/Sega/Dreamcast/Games/JP") core="flycast_libretro"; ext="gdi";;
-*"No-Intro/Sega - Game Gear") core="genesis_plus_gx_libretro";;
-*"TOSEC/Sega/Game Gear/Games") core="genesis_plus_gx_libretro";;
+*"No-Intro/Sega - Game Gear") core="gearsystem_libretro";;
+*"TOSEC/Sega/Game Gear/Games") core="gearsystem_libretro";;
 *"Redump/Sony - PlayStation") core="pcsx_rearmed_libretro"; ext="cue";;
 *"No-Intro/Non-Redump - Sony - PlayStation") core="pcsx_rearmed_libretro"; ext="cue";;
 *"Redump/Sony - PlayStation 2") core="pcsx2"; ext="iso";;
