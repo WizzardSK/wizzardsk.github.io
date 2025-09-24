@@ -266,6 +266,17 @@ case "$adresar" in
 *"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2011") core="dosbox_pure_libretro";;
 *"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2014") core="dosbox_pure_libretro";;
 *"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2015") core="dosbox_pure_libretro";;
+*"roms/TDC/1991") core="dosbox_pure_libretro";;
+*"roms/TDC/1992") core="dosbox_pure_libretro";;
+*"roms/TDC/1993") core="dosbox_pure_libretro";;
+*"roms/TDC/1994") core="dosbox_pure_libretro";;
+*"roms/TDC/1995") core="dosbox_pure_libretro";;
+*"roms/TDC/1996") core="dosbox_pure_libretro";;
+*"roms/TDC/1997") core="dosbox_pure_libretro";;
+*"roms/TDC/1998") core="dosbox_pure_libretro";;
+*"roms/TDC/1999") core="dosbox_pure_libretro";;
+*"roms/TDC/2000") core="dosbox_pure_libretro";;
+*"roms/TDC/2001") core="dosbox_pure_libretro";;
 *"No-Intro/Microsoft - MSX") core="bluemsx_libretro";;
 *"TOSEC/MSX/MSX/Games/[DSK]") core="bluemsx_libretro";;
 *"No-Intro/Microsoft - MSX2") core="bluemsx_libretro";;
@@ -347,6 +358,12 @@ if [ -n "$ext" ]; then
   rom=$(find ~/iso -type f -name "*.${ext}" | head -n 1)
 else
   rom="$1"
+fi
+
+if [[ "$1" == *.rar ]]; then
+  umount -l ~/iso
+  ratarmount "$1" ~/iso
+  rom=~/iso
 fi
 
 if [[ "$core" == *"mame"* ]]; then
