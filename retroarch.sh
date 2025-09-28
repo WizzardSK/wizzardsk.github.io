@@ -246,7 +246,7 @@ case "$adresar" in
 *"TOSEC-ISO/3DO/3DO Interactive Multiplayer/Applications/[ISO]") core="opera_libretro"; ext="cue";;
 *"TOSEC-ISO/3DO/3DO Interactive Multiplayer/Educational/[ISO]") core="opera_libretro"; ext="cue";;
 *"TOSEC-ISO/3DO/3DO Interactive Multiplayer/Multimedia") core="opera_libretro"; ext="cue";;
-*"roms/MS-DOS eXoDOS") core="dosbox_pure_libretro";;
+*"eXo/eXoDOS/Full Release/eXo/eXoDOS") core="dosbox_pure_libretro";;
 *"TOSEC/IBM/PC Compatibles/Games/[IMG]") core="dosbox_pure_libretro";;
 *"TOSEC-ISO/IBM/PC Compatibles/CD/Games/[ISO]") core="dosbox_pure_libretro";;
 *"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/1982") core="dosbox_pure_libretro";;
