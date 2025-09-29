@@ -44,6 +44,7 @@ case "$adresar" in
 *"TOSEC/Atari/8bit/Educational/[BIN]") core="atari800_libretro";;
 *"TOSEC/Atari/8bit/Educational/[CAS]") core="atari800_libretro";;
 *"TOSEC/Atari/8bit/Educational/[XEX]") core="atari800_libretro";;
+*"roms/XEGS") core="mame xegs -cart";;
 *"No-Intro/Atari - Atari ST") core="hatari_libretro";;
 *"TOSEC/Atari/ST/Games/[ST]") core="hatari_libretro";;
 *"TOSEC/Atari/ST/Games/[STX]") core="hatari_libretro";;
