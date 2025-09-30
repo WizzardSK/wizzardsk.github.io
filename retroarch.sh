@@ -44,7 +44,7 @@ case "$adresar" in
 *"TOSEC/Atari/8bit/Educational/[BIN]") core="atari800_libretro";;
 *"TOSEC/Atari/8bit/Educational/[CAS]") core="atari800_libretro";;
 *"TOSEC/Atari/8bit/Educational/[XEX]") core="atari800_libretro";;
-*"roms/XEGS") core="mame xegs -cart";;
+*"Internet Archive/megaarch1996/Atari-XEGS-Romset") core="mame xegs -cart";;
 *"No-Intro/Atari - Atari ST") core="hatari_libretro";;
 *"TOSEC/Atari/ST/Games/[ST]") core="hatari_libretro";;
 *"TOSEC/Atari/ST/Games/[STX]") core="hatari_libretro";;
@@ -250,23 +250,18 @@ case "$adresar" in
 *"eXo/eXoDOS/Full Release/eXo/eXoDOS") core="dosbox_pure_libretro";;
 *"TOSEC/IBM/PC Compatibles/Games/[IMG]") core="dosbox_pure_libretro";;
 *"TOSEC-ISO/IBM/PC Compatibles/CD/Games/[ISO]") core="dosbox_pure_libretro";;
-*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/1982") core="dosbox_pure_libretro";;
-*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/1983") core="dosbox_pure_libretro";;
-*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/1985") core="dosbox_pure_libretro";;
-*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/1988") core="dosbox_pure_libretro";;
-*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/1990") core="dosbox_pure_libretro";;
-*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/1991") core="dosbox_pure_libretro";;
-*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/1996") core="dosbox_pure_libretro";;
-*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/1997") core="dosbox_pure_libretro";;
-*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/1999") core="dosbox_pure_libretro";;
+*"Total DOS Collection/Games/Files/198x") core="dosbox_pure_libretro";;
+*"Total DOS Collection/Games/Files/1981") core="dosbox_pure_libretro";;
+*"Total DOS Collection/Games/Files/1982") core="dosbox_pure_libretro";;
+*"Total DOS Collection/Games/Files/1983") core="dosbox_pure_libretro";;
+*"Total DOS Collection/Games/Files/1984") core="dosbox_pure_libretro";;
+*"Total DOS Collection/Games/Files/1985") core="dosbox_pure_libretro";;
+*"Total DOS Collection/Games/Files/1986") core="dosbox_pure_libretro";;
+*"Total DOS Collection/Games/Files/1987") core="dosbox_pure_libretro";;
+*"Total DOS Collection/Games/Files/1988") core="dosbox_pure_libretro";;
+*"Total DOS Collection/Games/Files/1989") core="dosbox_pure_libretro";;
+*"Total DOS Collection/Games/Files/1990") core="dosbox_pure_libretro";;
 *"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/199x") core="dosbox_pure_libretro";;
-*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2002") core="dosbox_pure_libretro";;
-*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2003") core="dosbox_pure_libretro";;
-*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2008") core="dosbox_pure_libretro";;
-*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2009") core="dosbox_pure_libretro";;
-*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2011") core="dosbox_pure_libretro";;
-*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2014") core="dosbox_pure_libretro";;
-*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2015") core="dosbox_pure_libretro";;
 *"roms/TDC/1991") core="dosbox_pure_libretro";;
 *"roms/TDC/1992") core="dosbox_pure_libretro";;
 *"roms/TDC/1993") core="dosbox_pure_libretro";;
@@ -278,6 +273,13 @@ case "$adresar" in
 *"roms/TDC/1999") core="dosbox_pure_libretro";;
 *"roms/TDC/2000") core="dosbox_pure_libretro";;
 *"roms/TDC/2001") core="dosbox_pure_libretro";;
+*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2002") core="dosbox_pure_libretro";;
+*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2003") core="dosbox_pure_libretro";;
+*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2008") core="dosbox_pure_libretro";;
+*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2009") core="dosbox_pure_libretro";;
+*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2011") core="dosbox_pure_libretro";;
+*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2014") core="dosbox_pure_libretro";;
+*"Internet Archive/sketch_the_cow/Total_DOS_Collection_Release_16_March_2019/Games/Files/2015") core="dosbox_pure_libretro";;
 *"TOSEC/Commodore/PET/Games/[PRG]") core="vice_xpet_libretro";;
 *"No-Intro/Commodore - Plus-4") core="vice_xplus4_libretro";;
 *"TOSEC/Commodore/C16, C116 & Plus-4/Games/[PRG]") core="vice_xplus4_libretro";;
@@ -344,13 +346,14 @@ case "$adresar" in
 *"Internet Archive/chadmaster/mame-merged/mame-merged") core="mame";;
 *"Internet Archive/chadmaster/fbnarcade-fullnonmerged/arcade") core="fbneo_libretro";;
 *"Internet Archive/chadmaster/segamodel3/ROMs") core="supermodel";;
+*"Internet Archive/megaarch1996/neo-geo-aes-romset") core="fbneo_libretro";;
+*"Internet Archive/megaarch1996/neo-geo-mvs-romset") core="fbneo_libretro";;
 *"Redump/SNK - Neo Geo CD") core="neocd_libretro"; ext="cue";;
 *"TOSEC-ISO/SNK/Neo-Geo CD/Games/[ISO]") core="neocd_libretro"; ext="cue";;
 *"No-Intro/SNK - NeoGeo Pocket") core="mednafen_ngp_libretro";;
 *"TOSEC/SNK/Neo-Geo Pocket/Games") core="mednafen_ngp_libretro";;
 *"No-Intro/SNK - NeoGeo Pocket Color") core="mednafen_ngp_libretro";;
 *"TOSEC/SNK/Neo-Geo Pocket Color/Games") core="mednafen_ngp_libretro";;
-*"Neo Geo") core="fbneo_libretro";;
 esac
 
 if [ -n "$ext" ]; then
