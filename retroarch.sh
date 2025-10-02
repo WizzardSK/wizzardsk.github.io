@@ -361,8 +361,10 @@ case "$adresar" in
 *"TOSEC/Sharp/X1/Games/[D88]") core="x1_libretro";;
 *"TOSEC/Sharp/X68000/Games/[DIM]") core="px68k_libretro";;
 *"TOSEC/Sharp/X68000/Applications") core="px68k_libretro";;
-*"Internet Archive/chadmaster/mame-merged/mame-merged") core="mame";;
-*"Internet Archive/chadmaster/fbnarcade-fullnonmerged/arcade") core="fbneo_libretro";;
+*"MAME/ROMs (merged)") core="mame";;
+*"MAME/ROMs (non-merged)") core="mame";;
+*"MAME/ROMs (split)") core="mame";;
+*"FinalBurn Neo/arcade") core="fbneo_libretro";;
 *"Internet Archive/chadmaster/segamodel3/ROMs") core="supermodel";;
 *"Internet Archive/megaarch1996/neo-geo-aes-romset") core="fbneo_libretro";;
 *"Internet Archive/megaarch1996/neo-geo-mvs-romset") core="fbneo_libretro";;
