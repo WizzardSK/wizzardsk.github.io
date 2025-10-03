@@ -157,7 +157,7 @@ case "$adresar" in
 *"TOSEC/VTech/Laser 200/Games/[VZ]") core="mame laser310 -dump";;
 *"TOSEC/VTech/Laser 200/Applications") core="mame laser310 -dump";;
 *"TOSEC/VTech/Laser 310/Applications") core="mame laser310 -dump";;
-*"roms/Socrates") core="mame socrates -cart";;
+*"MAME/Software List ROMs (merged)/socrates") core="mame socrates -cart";;
 *"roms/TI99") core="mame ti99_4a -cart";;
 *"TOSEC/Thomson/MO5/Games/[K7]") core="theodore_libretro";;
 *"TOSEC/Thomson/MO6/Games") core="theodore_libretro";;
@@ -366,8 +366,8 @@ case "$adresar" in
 *"MAME/ROMs (split)") core="mame";;
 *"FinalBurn Neo/arcade") core="fbneo_libretro";;
 *"Internet Archive/chadmaster/segamodel3/ROMs") core="supermodel";;
-*"Internet Archive/megaarch1996/neo-geo-aes-romset") core="fbneo_libretro";;
-*"Internet Archive/megaarch1996/neo-geo-mvs-romset") core="fbneo_libretro";;
+*"MAME/Software List ROMs (merged)/neogeo") core="fbneo_libretro";;
+*"MAME/Software List ROMs (split)/neogeo") core="fbneo_libretro";;
 *"Redump/SNK - Neo Geo CD") core="neocd_libretro"; ext="cue";;
 *"TOSEC-ISO/SNK/Neo-Geo CD/Games/[ISO]") core="neocd_libretro"; ext="cue";;
 *"No-Intro/SNK - NeoGeo Pocket") core="mednafen_ngp_libretro";;
