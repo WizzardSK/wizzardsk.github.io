@@ -10,7 +10,7 @@ case "$adresar" in
 *"Voxatron") core="vox";;
 *"MAME/Software List ROMs (merged)/uzebox") core="mame uzebox -cart";;
 *"MAME/Software List ROMs (split)/uzebox") core="mame uzebox -cart";;
-*"roms/Vircon32") core="vircon32_libretro";;
+*"Internet Archive/joyrider3774/all_vircon32_roms_and_media/all_vircon32_roms_and_media") core="vircon32_libretro";;
 *"Miscellaneous/Atari Mania/Atari-2600-VCS-ROM-Collection/ROMS") core="stella_libretro";;
 *"No-Intro/Atari - Atari 2600") core="stella_libretro";;
 *"TOSEC/Atari/2600 & VCS/Games") core="stella_libretro";;
