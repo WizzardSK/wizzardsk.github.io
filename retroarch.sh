@@ -11,7 +11,7 @@ case "$adresar" in
 *"MAME/Software List ROMs (merged)/uzebox") core="mame uzebox -cart";;
 *"MAME/Software List ROMs (split)/uzebox") core="mame uzebox -cart";;
 *"roms/Vircon32") core="vircon32_libretro";;
-*"roms/Atari 2600 ROMS") core="stella_libretro";;
+*"Miscellaneous/Atari Mania/Atari-2600-VCS-ROM-Collection/ROMS") core="stella_libretro";;
 *"No-Intro/Atari - Atari 2600") core="stella_libretro";;
 *"TOSEC/Atari/2600 & VCS/Games") core="stella_libretro";;
 *"TOSEC/Atari/2600 & VCS/Homebrew/Games/[BIN]") core="stella_libretro";;
