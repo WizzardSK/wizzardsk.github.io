@@ -6,9 +6,10 @@ case "$adresar" in
 *"TIC-80") core="tic80_libretro";;
 *"WASM-4") core="wasm4_libretro";;
 *"LowresNX") core="lowresnx_libretro";;
-*"Uzebox") core="uzem_libretro";;
 *"PICO-8") core="pico8 -run";;
 *"Voxatron") core="vox";;
+*"MAME/Software List ROMs (merged)/uzebox") core="mame uzebox -cart";;
+*"MAME/Software List ROMs (split)/uzebox") core="mame uzebox -cart";;
 *"roms/Vircon32") core="vircon32_libretro";;
 *"roms/Atari 2600 ROMS") core="stella_libretro";;
 *"No-Intro/Atari - Atari 2600") core="stella_libretro";;
@@ -44,7 +45,8 @@ case "$adresar" in
 *"TOSEC/Atari/8bit/Educational/[BIN]") core="atari800_libretro";;
 *"TOSEC/Atari/8bit/Educational/[CAS]") core="atari800_libretro";;
 *"TOSEC/Atari/8bit/Educational/[XEX]") core="atari800_libretro";;
-*"Internet Archive/megaarch1996/Atari-XEGS-Romset") core="mame xegs -cart";;
+*"MAME/Software List ROMs (merged)/xegs") core="mame xegs -cart";;
+*"MAME/Software List ROMs (split)/xegs") core="mame xegs -cart";;
 *"No-Intro/Atari - Atari ST") core="hatari_libretro";;
 *"TOSEC/Atari/ST/Games/[ST]") core="hatari_libretro";;
 *"TOSEC/Atari/ST/Games/[STX]") core="hatari_libretro";;
@@ -364,6 +366,13 @@ case "$adresar" in
 *"MAME/ROMs (merged)") core="mame";;
 *"MAME/ROMs (non-merged)") core="mame";;
 *"MAME/ROMs (split)") core="mame";;
+*"MAME/Reference Sets/0.37b5 ROMs (non-merged)") core="mame";;
+*"MAME/Reference Sets/0.78 ROMs (non-merged)") core="mame";;
+*"MAME/Reference Sets/0.94 ROMs (non-merged)") core="mame";;
+*"MAME/Reference Sets/0.106 ROMs (non-merged)") core="mame";;
+*"MAME/Reference Sets/0.139 ROMs (non-merged)") core="mame";;
+*"MAME/Reference Sets/0.160 ROMs (non-merged)") core="mame";;
+*"MAME/Reference Sets/0.174 ROMs (non-merged)") core="mame";;
 *"FinalBurn Neo/arcade") core="fbneo_libretro";;
 *"Internet Archive/chadmaster/segamodel3/ROMs") core="supermodel";;
 *"MAME/Software List ROMs (merged)/neogeo") core="fbneo_libretro";;
