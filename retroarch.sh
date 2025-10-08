@@ -374,6 +374,7 @@ case "$adresar" in
 *"MAME/Reference Sets/0.160 ROMs (non-merged)") core="mame";;
 *"MAME/Reference Sets/0.174 ROMs (non-merged)") core="mame";;
 *"FinalBurn Neo/arcade") core="fbneo_libretro";;
+*"Internet Archive/chadmaster/m2emu1.1a/Sega Model 2 Emu 1.1a and Full Romset/Model 2 Romset (Merged)") core="mame";;
 *"Internet Archive/chadmaster/segamodel3/ROMs") core="supermodel";;
 *"MAME/Software List ROMs (merged)/neogeo") core="fbneo_libretro";;
 *"MAME/Software List ROMs (split)/neogeo") core="fbneo_libretro";;
