@@ -112,7 +112,8 @@ case "$adresar" in
 *"TOSEC/MGT/Sam Coupe/Games/[SAD]") core="simcoupe";;
 *"TOSEC/Tangerine/Oric-1 & Oric Atmos/Games/[DSK]") core="clksignal --quickload";;
 *"TOSEC/Tangerine/Oric-1 & Oric Atmos/Games/[TAP]") core="clksignal --quickload";;
-*"TOSEC/Camputers/Lynx/Games/[TAP]") core="mame lynx48k -cass";;
+*"MAME/Software List ROMs (merged)/camplynx_cass") core="mame lynx48k -cass";;
+*"MAME/Software List ROMs (split)/camplynx_cass") core="mame lynx48k -cass";;
 *"No-Intro/Bally - Astrocade") core="mame astrocde -cart";;
 *"TOSEC/Bally/Professional Arcade & Astrocade/Games/[BIN]") core="mame astrocde -cart";;
 *"No-Intro/APF - MP-1000") core="mame apfm1000 -cart";;
