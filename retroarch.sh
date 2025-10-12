@@ -108,10 +108,11 @@ case "$adresar" in
 *"TOSEC/Sinclair/ZX Spectrum/Applications/[Z80]") core="fuse_libretro";;
 *"TOSEC/Spectravideo/SVI-318 & SVI-328/Games/[BIN]") core="bluemsx_libretro";;
 *"TOSEC/Spectravideo/SVI-318 & SVI-328/Various/[CAS]") core="bluemsx_libretro";;
-*"TOSEC/MGT/Sam Coupe/Games/[DSK]") core="simcoupe";;
-*"TOSEC/MGT/Sam Coupe/Games/[SAD]") core="simcoupe";;
-*"TOSEC/Tangerine/Oric-1 & Oric Atmos/Games/[DSK]") core="clksignal --quickload";;
-*"TOSEC/Tangerine/Oric-1 & Oric Atmos/Games/[TAP]") core="clksignal --quickload";;
+*"TOSEC/MGT/Sam Coupe/Games/[DSK]") core="mame samcoupe -flop1";;
+*"MAME/Software List ROMs (merged)/samcoupe_flop") core="mame samcoupe -flop1";;
+*"TOSEC/Tangerine/Oric-1 & Oric Atmos/Games/[TAP]") core="mame orica -cass";;
+*"MAME/Software List ROMs (merged)/oric1_cass") core="mame orica -cass";;
+*"MAME/Software List ROMs (split)/oric1_cass") core="mame orica -cass";;
 *"MAME/Software List ROMs (merged)/camplynx_cass") core="mame lynx48k -cass";;
 *"MAME/Software List ROMs (split)/camplynx_cass") core="mame lynx48k -cass";;
 *"No-Intro/Bally - Astrocade") core="mame astrocde -cart";;
