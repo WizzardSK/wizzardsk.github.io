@@ -162,7 +162,7 @@ case "$adresar" in
 *"TOSEC/VTech/Laser 200/Applications") core="mame laser310 -dump";;
 *"TOSEC/VTech/Laser 310/Applications") core="mame laser310 -dump";;
 *"MAME/Software List ROMs (merged)/socrates") core="mame socrates -cart";;
-*"MAME/Software List ROMs (merged)/ti99_cart") core="mame ti99_4a -cart"; ext="bin";;
+*"MAME/Software List ROMs (merged)/ti99_cart") core="mame ti99_4a";;
 *"TOSEC/Thomson/MO5/Games/[K7]") core="theodore_libretro";;
 *"TOSEC/Thomson/MO6/Games") core="theodore_libretro";;
 *"TOSEC/Thomson/TO7/Games/[K7]") core="theodore_libretro";;
@@ -377,7 +377,7 @@ case "$adresar" in
 *"MAME/Reference Sets/0.174 ROMs (non-merged)") core="mame";;
 *"FinalBurn Neo/arcade") core="fbneo_libretro";;
 *"Internet Archive/chadmaster/m2emu1.1a/Sega Model 2 Emu 1.1a and Full Romset/Model 2 Romset (Merged)") core="mame";;
-*"Internet Archive/chadmaster/segamodel3/ROMs") core="supermodel";;
+*"Internet Archive/chadmaster/segamodel3/ROMs") core="mame";;
 *"MAME/Software List ROMs (merged)/neogeo") core="fbneo_libretro";;
 *"MAME/Software List ROMs (split)/neogeo") core="fbneo_libretro";;
 *"Redump/SNK - Neo Geo CD") core="neocd_libretro"; ext="cue";;
@@ -389,8 +389,7 @@ case "$adresar" in
 esac
 
 if [ -n "$ext" ]; then
-  umount -l ~/iso
-  mount-zip "$1" ~/iso
+  umount -l ~/iso; mount-zip "$1" ~/iso
   rom=$(find ~/iso -type f -name "*.${ext}" | head -n 1)
 else
   rom="$1"
@@ -399,8 +398,7 @@ fi
 if [[ "$1" == *"ti99_cart"* ]]; then rom="$(basename "${1%.*}")"; fi
 
 if [[ "$core" == *"mame"* ]]; then
-  filename="${rom##*/}"
-  basename="${filename%.*}"
+  filename="${rom##*/}"; basename="${filename%.*}"
   ${core} "${rom}" -skip_gameinfo -snapname "${basename}"
   exit
 fi
