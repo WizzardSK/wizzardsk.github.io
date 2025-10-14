@@ -63,6 +63,7 @@ case "$adresar" in
 *"MAME/Software List ROMs (merged)/mac_flop") core="mame maclc3 -flop1";;
 *"MAME/Software List ROMs (merged)/mac_flop_orig") core="mame maclc3 -flop1";;
 *"MAME/Software List ROMs (merged)/mac_flop_clcracked") core="mame maclc3 -flop1";;
+*"MAME/Software List ROMs (merged)/mac_hdflop") core="mame maclc3 -flop1";;
 *"No-Intro/Fairchild - Channel F") core="freechaf_libretro";;
 *"TOSEC/Fairchild/VES & Channel F/Games") core="freechaf_libretro";;
 *"No-Intro/GCE - Vectrex") core="vecx_libretro";;
