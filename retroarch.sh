@@ -60,6 +60,9 @@ case "$adresar" in
 *"TOSEC/Apple/II/Educational/[WOZ]") core="mame apple2ee -flop1";;
 *"TOSEC/Apple/II/Applications/[DSK]") core="mame apple2ee -flop1";;
 *"TOSEC/Apple/II/Applications/[WOZ]") core="mame apple2ee -flop1";;
+*"TOSEC/Apple/IIGS/Games/[2MG]") core="mame apple2gs -flop3";;
+*"TOSEC/Apple/IIGS/Educational/[2MG]") core="mame apple2gs -flop3";;
+*"TOSEC/Apple/IIGS/Applications/[2MG]") core="mame apple2gs -flop3";;
 *"MAME/Software List ROMs (merged)/mac_flop") core="mame maclc3 -flop1";;
 *"MAME/Software List ROMs (merged)/mac_flop_orig") core="mame maclc3 -flop1";;
 *"MAME/Software List ROMs (merged)/mac_flop_clcracked") core="mame maclc3 -flop1";;
