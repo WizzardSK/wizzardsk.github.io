@@ -63,10 +63,9 @@ case "$adresar" in
 *"TOSEC/Apple/IIGS/Games/[2MG]") core="mame apple2gs -flop3";;
 *"TOSEC/Apple/IIGS/Educational/[2MG]") core="mame apple2gs -flop3";;
 *"TOSEC/Apple/IIGS/Applications/[2MG]") core="mame apple2gs -flop3";;
-*"MAME/Software List ROMs (merged)/mac_flop") core="mame maclc3 -flop1";;
-*"MAME/Software List ROMs (merged)/mac_flop_orig") core="mame maclc3 -flop1";;
-*"MAME/Software List ROMs (merged)/mac_flop_clcracked") core="mame maclc3 -flop1";;
-*"MAME/Software List ROMs (merged)/mac_hdflop") core="mame maclc3 -flop1";;
+*"MAME/Software List ROMs (merged)/mac_flop") core="mame macse -flop1";;
+*"MAME/Software List ROMs (merged)/mac_flop_orig") core="mame macse -flop1";;
+*"MAME/Software List ROMs (merged)/mac_flop_clcracked") core="mame macse -flop1";;
 *"No-Intro/Fairchild - Channel F") core="freechaf_libretro";;
 *"TOSEC/Fairchild/VES & Channel F/Games") core="freechaf_libretro";;
 *"No-Intro/GCE - Vectrex") core="vecx_libretro";;
