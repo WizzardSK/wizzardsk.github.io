@@ -11,6 +11,8 @@ case "$adresar" in
 *"MAME/Software List ROMs (merged)/uzebox") core="mame uzebox -cart";;
 *"MAME/Software List ROMs (split)/uzebox") core="mame uzebox -cart";;
 *"Internet Archive/joyrider3774/all_vircon32_roms_and_media/all_vircon32_roms_and_media") core="vircon32_libretro";;
+*"TOSEC/8-Bit Productions/Commander X16/Games/[IMG]") core="x16emu"; ext="img";;
+*"TOSEC/8-Bit Productions/Commander X16/Games/[PRG]") core="x16emu"; ext="prg";;
 *"Miscellaneous/Atari Mania/Atari-2600-VCS-ROM-Collection/ROMS") core="stella_libretro";;
 *"No-Intro/Atari - Atari 2600") core="stella_libretro";;
 *"TOSEC/Atari/2600 & VCS/Games") core="stella_libretro";;
@@ -66,6 +68,7 @@ case "$adresar" in
 *"MAME/Software List ROMs (merged)/mac_flop") core="mame macse -flop1";;
 *"MAME/Software List ROMs (merged)/mac_flop_orig") core="mame macse -flop1";;
 *"MAME/Software List ROMs (merged)/mac_flop_clcracked") core="mame macse -flop1";;
+*"MAME/Software List ROMs (merged)/mac_hdflop") core="mame macse -flop1";;
 *"No-Intro/Fairchild - Channel F") core="freechaf_libretro";;
 *"TOSEC/Fairchild/VES & Channel F/Games") core="freechaf_libretro";;
 *"No-Intro/GCE - Vectrex") core="vecx_libretro";;
