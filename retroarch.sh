@@ -13,6 +13,8 @@ case "$adresar" in
 *"Internet Archive/joyrider3774/all_vircon32_roms_and_media/all_vircon32_roms_and_media") core="vircon32_libretro";;
 *"TOSEC/8-Bit Productions/Commander X16/Games/[IMG]") core="x16emu"; ext="img";;
 *"TOSEC/8-Bit Productions/Commander X16/Games/[PRG]") core="x16emu"; ext="prg";;
+*"MAME/Software List ROMs (merged)/pdp1_ptp") core="mame pdp1 -ptap1";;
+*"MAME/Software List ROMs (merged)/vgmplay") core="mame vgmplay -quik";;
 *"Miscellaneous/Atari Mania/Atari-2600-VCS-ROM-Collection/ROMS") core="stella_libretro";;
 *"No-Intro/Atari - Atari 2600") core="stella_libretro";;
 *"TOSEC/Atari/2600 & VCS/Games") core="stella_libretro";;
