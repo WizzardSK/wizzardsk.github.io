@@ -21,14 +21,20 @@ case "$adresar" in
 *"TOSEC/Atari/2600 & VCS/Homebrew/Games/[BIN]") core="stella_libretro";;
 *"TOSEC/Atari/2600 & VCS/Applications") core="stella_libretro";;
 *"TOSEC/Atari/2600 & VCS/Educational") core="stella_libretro";;
+*"MAME/Software List ROMs (merged)/a2600") core="mame a2600 -cart1";;
+*"MAME/Software List ROMs (split)/a2600") core="mame a2600 -cart1";;
 *"No-Intro/Atari - Atari 5200") core="a5200_libretro";;
 *"TOSEC/Atari/5200/Games") core="a5200_libretro";;
 *"TOSEC/Atari/5200/Homebrew/Games") core="a5200_libretro";;
 *"TOSEC/Atari/5200/Applications") core="a5200_libretro";;
+*"MAME/Software List ROMs (merged)/a5200") core="mame a5200 -cart1";;
+*"MAME/Software List ROMs (split)/a5200") core="mame a5200 -cart1";;
 *"No-Intro/Atari - Atari 7800 (BIN)") core="prosystem_libretro";;
 *"TOSEC/Atari/7800/Games") core="prosystem_libretro";;
 *"TOSEC/Atari/7800/Homebrew/Games") core="prosystem_libretro";;
 *"TOSEC/Atari/7800/Applications") core="prosystem_libretro";;
+*"MAME/Software List ROMs (merged)/a7800") core="mame a7800";;
+*"MAME/Software List ROMs (split)/a7800") core="mame a7800";;
 *"No-Intro/Atari - Atari Jaguar (J64)") core="virtualjaguar_libretro";;
 *"TOSEC/Atari/Jaguar/Games/[J64]") core="virtualjaguar_libretro";;
 *"Redump/Atari - Jaguar CD Interactive Multimedia System") core="bigpemu"; ext="cue";;
@@ -49,6 +55,8 @@ case "$adresar" in
 *"TOSEC/Atari/8bit/Educational/[BIN]") core="atari800_libretro";;
 *"TOSEC/Atari/8bit/Educational/[CAS]") core="atari800_libretro";;
 *"TOSEC/Atari/8bit/Educational/[XEX]") core="atari800_libretro";;
+*"MAME/Software List ROMs (merged)/a800") core="mame a800 -cart1";;
+*"MAME/Software List ROMs (split)/a800") core="mame a800 -cart1";;
 *"MAME/Software List ROMs (merged)/xegs") core="mame xegs -cart";;
 *"MAME/Software List ROMs (split)/xegs") core="mame xegs -cart";;
 *"No-Intro/Atari - Atari ST") core="hatari_libretro";;
@@ -418,7 +426,7 @@ else
   rom="$1"
 fi
 
-if [[ "$1" == *"ti99_cart"* ]]; then rom="$(basename "${1%.*}")"; fi
+if [[ "$1" == *"ti99_cart"* || "$1" == *"a7800"* ]]; then rom="$(basename "${1%.*}")"; fi
 
 if [[ "$core" == *"mame"* ]]; then
   filename="${rom##*/}"; basename="${filename%.*}"
