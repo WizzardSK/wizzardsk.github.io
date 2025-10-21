@@ -37,10 +37,14 @@ case "$adresar" in
 *"MAME/Software List ROMs (split)/a7800") core="mame a7800";;
 *"No-Intro/Atari - Atari Jaguar (J64)") core="virtualjaguar_libretro";;
 *"TOSEC/Atari/Jaguar/Games/[J64]") core="virtualjaguar_libretro";;
+*"MAME/Software List ROMs (merged)/jaguar") core="mame jaguar -cart1";;
+*"MAME/Software List ROMs (split)/jaguar") core="mame jaguar -cart1";;
 *"Redump/Atari - Jaguar CD Interactive Multimedia System") core="bigpemu"; ext="cue";;
 *"No-Intro/Non-Redump - Atari - Atari Jaguar CD") core="bigpemu"; ext="cdi";;
 *"No-Intro/Atari - Atari Lynx (LYX)") core="mednafen_lynx_libretro";;
 *"TOSEC/Atari/Lynx/Games/[LNX]") core="mednafen_lynx_libretro";;
+*"MAME/Software List ROMs (merged)/lynx") core="mame lynx -cart1";;
+*"MAME/Software List ROMs (split)/lynx") core="mame lynx -cart1";;
 *"No-Intro/Atari - 8-bit Family") core="atari800_libretro";;
 *"TOSEC/Atari/8bit/Games/[ATR]") core="atari800_libretro";;
 *"TOSEC/Atari/8bit/Games/[ATX]") core="atari800_libretro";;
@@ -66,6 +70,8 @@ case "$adresar" in
 *"TOSEC/Atari/ST/Applications/[STX]") core="hatari_libretro";;
 *"TOSEC/Atari/ST/Educational/[ST]") core="hatari_libretro";;
 *"TOSEC/Atari/ST/Educational/[STX]") core="hatari_libretro";;
+*"MAME/Software List ROMs (merged)/st_flop") core="mame st -flop1";;
+*"MAME/Software List ROMs (split)/st_flop") core="mame st -flop1";;
 *"TOSEC/Apple/II/Games/[DSK]") core="mame apple2ee -flop1";;
 *"TOSEC/Apple/II/Games/[WOZ]") core="mame apple2ee -flop1";;
 *"TOSEC/Apple/II/Educational/[DSK]") core="mame apple2ee -flop1";;
