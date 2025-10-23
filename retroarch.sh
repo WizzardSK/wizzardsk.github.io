@@ -376,6 +376,12 @@ case "$adresar" in
 *"TOSEC/Commodore/Amiga/Games/SPS") core="puae_libretro";;
 *"TOSEC/Commodore/Amiga/Educational/[ADF]") core="puae_libretro";;
 *"TOSEC/Commodore/Amiga/Applications/[ADF]") core="puae_libretro";;
+*"MAME/Software List ROMs (merged)/amiga_flop") core="mame a500 -flop1";;
+*"MAME/Software List ROMs (split)/amiga_flop") core="mame a500 -flop1";;
+*"MAME/Software List ROMs (merged)/amigaecs_flop") core="mame a500 -flop1";;
+*"MAME/Software List ROMs (split)/amigaecs_flop") core="mame a500 -flop1";;
+*"MAME/Software List ROMs (merged)/amigaocs_flop") core="mame a500 -flop1";;
+*"MAME/Software List ROMs (split)/amigaocs_flop") core="mame a500 -flop1";;
 *"Redump/Commodore - Amiga CD") core="puae_libretro"; ext="cue";;
 *"TOSEC-ISO/Commodore/Amiga/CD/Games/[ISO]") core="puae_libretro"; ext="cue";;
 *"TOSEC-ISO/Commodore/Amiga/CD/Applications/[ISO]") core="puae_libretro"; ext="cue";;
