@@ -134,6 +134,8 @@ case "$adresar" in
 *"TOSEC/Amstrad/CPC/Games/[CDT]") core="cap32_libretro";;
 *"TOSEC/Amstrad/CPC/Games/[SNA]") core="cap32_libretro";;
 *"TOSEC/Amstrad/CPC/Applications/[DSK]") core="cap32_libretro";;
+*"MAME/Software List ROMs (merged)/cpc_flop") core="mame cpc6128 -flop1";;
+*"MAME/Software List ROMs (split)/cpc_flop") core="mame cpc6128 -flop1";;
 *"TOSEC/Amstrad/GX4000/Games") core="cap32_libretro";;
 *"TOSEC/Sinclair/ZX81/Games/[P]") core="81_libretro";;
 *"TOSEC/Sinclair/ZX81/Applications/[P]") core="81_libretro";;
@@ -149,6 +151,8 @@ case "$adresar" in
 *"TOSEC/Sinclair/ZX Spectrum/Applications/[TAP]") core="fuse_libretro";;
 *"TOSEC/Sinclair/ZX Spectrum/Applications/[TZX]") core="fuse_libretro";;
 *"TOSEC/Sinclair/ZX Spectrum/Applications/[Z80]") core="fuse_libretro";;
+*"MAME/Software List ROMs (merged)/spectrum_cass") core="mame spec128 -cass1";;
+*"MAME/Software List ROMs (split)/spectrum_cass") core="mame spec128 -cass1";;
 *"TOSEC/Spectravideo/SVI-318 & SVI-328/Games/[BIN]") core="bluemsx_libretro";;
 *"TOSEC/Spectravideo/SVI-318 & SVI-328/Various/[CAS]") core="bluemsx_libretro";;
 *"TOSEC/MGT/Sam Coupe/Games/[DSK]") core="mame samcoupe -flop1";;
@@ -209,15 +213,21 @@ case "$adresar" in
 *"TOSEC/Thomson/TO8, TO8D, TO9, TO9+/Games/[SAP]") core="theodore_libretro";;
 *"No-Intro/Nintendo - Nintendo Entertainment System (Headered)") core="nestopia_libretro";;
 *"TOSEC/Nintendo/Famicom & Entertainment System/Games/[NES]") core="nestopia_libretro";;
+*"MAME/Software List ROMs (merged)/nes") core="mame nes";;
+*"MAME/Software List ROMs (split)/nes") core="mame nes";;
 *"No-Intro/Nintendo - Family Computer Disk System (FDS)") core="nestopia_libretro";;
 *"TOSEC/Nintendo/Famicom Disk System/Games/[FDS]") core="nestopia_libretro";;
 *"No-Intro/Nintendo - Super Nintendo Entertainment System") core="snes9x_libretro";;
 *"TOSEC/Nintendo/Super Famicom & Super Entertainment System/Games") core="snes9x_libretro";;
+*"MAME/Software List ROMs (merged)/snes") core="mame snes -cart1";;
+*"MAME/Software List ROMs (split)/snes") core="mame snes -cart1";;
 *"No-Intro/Nintendo - Satellaview") core="snes9x_libretro";;
 *"No-Intro/Nintendo - Sufami Turbo") core="snes9x_libretro";;
 *"TOSEC/Nintendo/Sufami Turbo/Games") core="snes9x_libretro";;
 *"No-Intro/Nintendo - Nintendo 64 (ByteSwapped)") core="mupen64plus_next_libretro";;
 *"TOSEC/Nintendo/64/Games") core="mupen64plus_next_libretro";;
+*"MAME/Software List ROMs (merged)/n64") core="mame n64 -cart1";;
+*"MAME/Software List ROMs (split)/n64") core="mame n64 -cart1";;
 *"Redump/Nintendo - GameCube - NKit RVZ [zstd-19-128k]") core="dolphin_libretro"; ext="rvz";;
 *"TOSEC-ISO/Nintendo/GameCube/Games") core="dolphin_libretro"; ext="iso";;
 *"No-Intro/Unofficial - Nintendo - Wii (Digital) (Deprecated) (WAD)") core="dolphin_libretro"; ext="wad";;
@@ -228,10 +238,16 @@ case "$adresar" in
 *"TOSEC/Nintendo/Virtual Boy/Games") core="mednafen_vb_libretro";;
 *"No-Intro/Nintendo - Game Boy") core="sameboy_libretro";;
 *"TOSEC/Nintendo/Game Boy/Games") core="sameboy_libretro";;
+*"MAME/Software List ROMs (merged)/gameboy") core="mame gameboy -cart1";;
+*"MAME/Software List ROMs (split)/gameboy") core="mame gameboy -cart1";;
 *"No-Intro/Nintendo - Game Boy Color") core="sameboy_libretro";;
 *"TOSEC/Nintendo/Game Boy Color/Games/[GBC]") core="sameboy_libretro";;
+*"MAME/Software List ROMs (merged)/gbcolor") core="mame gbcolor -cart1";;
+*"MAME/Software List ROMs (split)/gbcolor") core="mame gbcolor -cart1";;
 *"No-Intro/Nintendo - Game Boy Advance") core="mgba_libretro";;
 *"TOSEC/Nintendo/Game Boy Advance/Games") core="sameboy_libretro";;
+*"MAME/Software List ROMs (merged)/gba") core="mame gba -cart1";;
+*"MAME/Software List ROMs (split)/gba") core="mame gba -cart1";;
 *"No-Intro/Nintendo - Nintendo DS (Decrypted)") core="melonds_libretro";;
 *"No-Intro/Nintendo - Nintendo DS (Download Play)") core="melonds_libretro";;
 *"TOSEC/Nintendo/DS/Games") core="melonds_libretro";;
@@ -450,7 +466,7 @@ else
   rom="$1"
 fi
 
-if [[ "$1" == *"ti99_cart"* || "$1" == *"a7800"* ]]; then rom="$(basename "${1%.*}")"; fi
+if [[ "$1" == *"/ti99_cart/"* || "$1" == *"/a7800/"* || "$1" == *"/nes/"* ]]; then rom="$(basename "${1%.*}")"; fi
 
 if [[ "$core" == *"mame"* ]]; then
   filename="${rom##*/}"; basename="${filename%.*}"
