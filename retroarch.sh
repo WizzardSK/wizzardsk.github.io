@@ -139,6 +139,8 @@ case "$adresar" in
 *"TOSEC/Amstrad/GX4000/Games") core="cap32_libretro";;
 *"TOSEC/Sinclair/ZX81/Games/[P]") core="81_libretro";;
 *"TOSEC/Sinclair/ZX81/Applications/[P]") core="81_libretro";;
+*"MAME/Software List ROMs (merged)/zx81_cass") core="mame zx81 -cass1";;
+*"MAME/Software List ROMs (split)/zx81_cass") core="mame zx81 -cass1";;
 *"TOSEC/Sinclair/ZX Spectrum/Games/[DSK]") core="fuse_libretro";;
 *"TOSEC/Sinclair/ZX Spectrum/Games/[SCL]") core="fuse_libretro";;
 *"TOSEC/Sinclair/ZX Spectrum/Games/[TAP]") core="fuse_libretro";;
@@ -155,6 +157,8 @@ case "$adresar" in
 *"MAME/Software List ROMs (split)/spectrum_cass") core="mame spec128 -cass1";;
 *"TOSEC/Spectravideo/SVI-318 & SVI-328/Games/[BIN]") core="bluemsx_libretro";;
 *"TOSEC/Spectravideo/SVI-318 & SVI-328/Various/[CAS]") core="bluemsx_libretro";;
+*"MAME/Software List ROMs (merged)/svi318_cass") core="mame svi328 -cass1";;
+*"MAME/Software List ROMs (split)/svi318_cass") core="mame svi328 -cass1";;
 *"TOSEC/MGT/Sam Coupe/Games/[DSK]") core="mame samcoupe -flop1";;
 *"MAME/Software List ROMs (merged)/samcoupe_flop") core="mame samcoupe -flop1";;
 *"TOSEC/Tangerine/Oric-1 & Oric Atmos/Games/[TAP]") core="mame orica -cass";;
@@ -221,6 +225,8 @@ case "$adresar" in
 *"TOSEC/Nintendo/Super Famicom & Super Entertainment System/Games") core="snes9x_libretro";;
 *"MAME/Software List ROMs (merged)/snes") core="mame snes -cart1";;
 *"MAME/Software List ROMs (split)/snes") core="mame snes -cart1";;
+*"T-En Collection/Nintendo - Super Famicom - MSU1") core="snes9x_libretro";;
+*"T-En Collection/Nintendo - Super Famicom - MSU1 [roms only]") core="snes9x_libretro";;
 *"No-Intro/Nintendo - Satellaview") core="snes9x_libretro";;
 *"No-Intro/Nintendo - Sufami Turbo") core="snes9x_libretro";;
 *"TOSEC/Nintendo/Sufami Turbo/Games") core="snes9x_libretro";;
@@ -394,6 +400,8 @@ case "$adresar" in
 *"TOSEC/Commodore/C64/Games/Strategy/[D64]") core="vice_x64sc_libretro";;
 *"TOSEC/Commodore/C64/Educational/[D64]") core="vice_x64sc_libretro";;
 *"TOSEC/Commodore/C64/Applications/[D64]") core="vice_x64sc_libretro";;
+*"MAME/Software List ROMs (merged)/c64_cass") core="mame c64 -cass1";;
+*"MAME/Software List ROMs (split)/c64_cass") core="mame c64 -cass1";;
 *"TOSEC/Commodore/C128/Games/[D64]") core="vice_x128_libretro";;
 *"TOSEC/Commodore/C128/Games/[PRG]") core="vice_x128_libretro";;
 *"TOSEC/Commodore/C128/Applications/[D64]") core="vice_x128_libretro";;
