@@ -272,6 +272,7 @@ case "$adresar" in
 *"TOSEC/Sega/Mega Drive & Genesis/Games/[BIN]") core="genesis_plus_gx_libretro";;
 *"MAME/Software List ROMs (merged)/megadriv") core="mame megadrij -cart1";;
 *"MAME/Software List ROMs (split)/megadriv") core="mame megadrij -cart1";;
+*"Internet Archive/chadmaster/SegaMD-Enhanced-ROMs/ROMs/Sega - Mega Drive - MSU-MD") core="picodrive_libretro"; ext="cue";;
 *"No-Intro/Sega - PICO") core="picodrive_libretro";;
 *"TOSEC/Sega/Pico/Educational") core="picodrive_libretro";;
 *"MAME/Software List ROMs (merged)/pico") core="mame pico -cart1";;
