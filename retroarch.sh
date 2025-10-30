@@ -230,6 +230,8 @@ case "$adresar" in
 *"No-Intro/Nintendo - Satellaview") core="snes9x_libretro";;
 *"No-Intro/Nintendo - Sufami Turbo") core="snes9x_libretro";;
 *"TOSEC/Nintendo/Sufami Turbo/Games") core="snes9x_libretro";;
+*"No-Intro/Nintendo - Game Boy") core="mesen-s_libretro";;
+*"TOSEC/Nintendo/Game Boy/Games") core="mesen-s_libretro";;
 *"No-Intro/Nintendo - Nintendo 64 (ByteSwapped)") core="mupen64plus_next_libretro";;
 *"TOSEC/Nintendo/64/Games") core="mupen64plus_next_libretro";;
 *"MAME/Software List ROMs (merged)/n64") core="mame n64 -cart1";;
@@ -272,7 +274,7 @@ case "$adresar" in
 *"TOSEC/Sega/Mega Drive & Genesis/Games/[BIN]") core="genesis_plus_gx_libretro";;
 *"MAME/Software List ROMs (merged)/megadriv") core="mame megadrij -cart1";;
 *"MAME/Software List ROMs (split)/megadriv") core="mame megadrij -cart1";;
-*"Internet Archive/chadmaster/SegaMD-Enhanced-ROMs/ROMs/Sega - Mega Drive - MSU-MD") core="picodrive_libretro"; ext="cue";;
+*"Internet Archive/chadmaster/SegaMD-Enhanced-ROMs/ROMs/Sega - Mega Drive - MSU-MD") core="genesis_plus_gx_libretro"; ext="md";;
 *"No-Intro/Sega - PICO") core="picodrive_libretro";;
 *"TOSEC/Sega/Pico/Educational") core="picodrive_libretro";;
 *"MAME/Software List ROMs (merged)/pico") core="mame pico -cart1";;
