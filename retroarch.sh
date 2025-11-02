@@ -43,8 +43,8 @@ case "$adresar" in
 *"No-Intro/Non-Redump - Atari - Atari Jaguar CD") core="bigpemu"; ext="cdi";;
 *"No-Intro/Atari - Atari Lynx (LYX)") core="mednafen_lynx_libretro";;
 *"TOSEC/Atari/Lynx/Games/[LNX]") core="mednafen_lynx_libretro";;
-*"MAME/Software List ROMs (merged)/lynx") core="mednafen_lynx_libretro";;
-*"MAME/Software List ROMs (split)/lynx") core="mednafen_lynx_libretro";;
+*"MAME/Software List ROMs (merged)/lynx") core="mednafen_lynx_libretro"; ext="bin";;
+*"MAME/Software List ROMs (split)/lynx") core="mednafen_lynx_libretro"; ext="bin";;
 *"No-Intro/Atari - 8-bit Family") core="atari800_libretro";;
 *"TOSEC/Atari/8bit/Games/[ATR]") core="atari800_libretro";;
 *"TOSEC/Atari/8bit/Games/[ATX]") core="atari800_libretro";;
@@ -262,14 +262,14 @@ case "$adresar" in
 *"No-Intro/Nintendo - Nintendo DSi (Decrypted)") core="melondsds_libretro";;
 *"No-Intro/Nintendo - Nintendo 3DS (Decrypted)") core="citra_libretro"; ext="3ds";;
 *"Redump/Nintendo - Wii U - WUX") core="cemu -g"; ext="wux";;
-*"No-Intro/Sega - SG-1000 - SC-3000") core="genesis_plus_gx_libretro";;
-*"TOSEC/Sega/Game 1000/Games") core="genesis_plus_gx_libretro";;
-*"MAME/Software List ROMs (merged)/sg1000") core="genesis_plus_gx_libretro";;
-*"MAME/Software List ROMs (split)/sg1000") core="genesis_plus_gx_libretro";;
-*"No-Intro/Sega - Master System - Mark III") core="genesis_plus_gx_libretro";;
-*"TOSEC/Sega/Mark III & Master System/Games") core="genesis_plus_gx_libretro";;
-*"MAME/Software List ROMs (merged)/sms") core="genesis_plus_gx_libretro";;
-*"MAME/Software List ROMs (split)/sms") core="genesis_plus_gx_libretro";;
+*"No-Intro/Sega - SG-1000 - SC-3000") core="gearsystem_libretro";;
+*"TOSEC/Sega/Game 1000/Games") core="gearsystem_libretro";;
+*"MAME/Software List ROMs (merged)/sg1000") core="gearsystem_libretro";;
+*"MAME/Software List ROMs (split)/sg1000") core="gearsystem_libretro";;
+*"No-Intro/Sega - Master System - Mark III") core="gearsystem_libretro";;
+*"TOSEC/Sega/Mark III & Master System/Games") core="gearsystem_libretro";;
+*"MAME/Software List ROMs (merged)/sms") core="gearsystem_libretro";;
+*"MAME/Software List ROMs (split)/sms") core="gearsystem_libretro";;
 *"No-Intro/Sega - Mega Drive - Genesis") core="genesis_plus_gx_libretro";;
 *"TOSEC/Sega/Mega Drive & Genesis/Games/[BIN]") core="genesis_plus_gx_libretro";;
 *"MAME/Software List ROMs (merged)/megadriv") core="genesis_plus_gx_libretro";;
@@ -421,6 +421,8 @@ case "$adresar" in
 *"MAME/Software List ROMs (split)/amigaecs_flop") core="puae_libretro";;
 *"MAME/Software List ROMs (merged)/amigaocs_flop") core="puae_libretro";;
 *"MAME/Software List ROMs (split)/amigaocs_flop") core="puae_libretro";;
+*"MAME/Software List ROMs (merged)/amigaaga_flop") core="puae_libretro";;
+*"MAME/Software List ROMs (split)/amigaaga_flop") core="puae_libretro";;
 *"Redump/Commodore - Amiga CD") core="puae_libretro"; ext="cue";;
 *"TOSEC-ISO/Commodore/Amiga/CD/Games/[ISO]") core="puae_libretro"; ext="cue";;
 *"TOSEC-ISO/Commodore/Amiga/CD/Applications/[ISO]") core="puae_libretro"; ext="cue";;
@@ -477,7 +479,7 @@ else
   rom="$1"
 fi
 
-if [[ "$1" == *"/ti99_cart/"* || "$1" == *"/a7800/"* || "$1" == *"/nes/"* ]]; then rom="$(basename "${1%.*}")"; fi
+if [[ "$1" == *"/ti99_cart/"* ]]; then rom="$(basename "${1%.*}")"; fi
 
 if [[ "$core" == *"mame"* ]]; then
   filename="${rom##*/}"; basename="${filename%.*}"
