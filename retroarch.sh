@@ -115,10 +115,10 @@ case "$adresar" in
 *"TOSEC/Mattel/Intellivision/Games/[BIN]") core="freeintv_libretro";;
 *"MAME/Software List ROMs (merged)/intv") core="freeintv_libretro";;
 *"MAME/Software List ROMs (split)/intv") core="freeintv_libretro";;
-*"No-Intro/Coleco - ColecoVision") core="bluemsx_libretro";;
-*"TOSEC/Coleco/ColecoVision/Games") core="bluemsx_libretro";;
-*"MAME/Software List ROMs (merged)/coleco") core="bluemsx_libretro";;
-*"MAME/Software List ROMs (split)/coleco") core="bluemsx_libretro";;
+*"No-Intro/Coleco - ColecoVision") core="gearcoleco_libretro";;
+*"TOSEC/Coleco/ColecoVision/Games") core="gearcoleco_libretro";;
+*"MAME/Software List ROMs (merged)/coleco") core="gearcoleco_libretro";;
+*"MAME/Software List ROMs (split)/coleco") core="gearcoleco_libretro";;
 *"No-Intro/Epoch - Super Cassette Vision") core="emuscv_libretro";;
 *"TOSEC/Epoch/Super Cassette Vision/Games") core="emuscv_libretro";;
 *"MAME/Software List ROMs (merged)/scv") core="emuscv_libretro";;
@@ -262,6 +262,8 @@ case "$adresar" in
 *"TOSEC/Nintendo/Sufami Turbo/Games") core="snes9x_libretro";;
 *"No-Intro/Nintendo - Game Boy") core="mesen-s_libretro";;
 *"TOSEC/Nintendo/Game Boy/Games") core="mesen-s_libretro";;
+*"MAME/Software List ROMs (merged)/gameboy") core="mesen-s_libretro";;
+*"MAME/Software List ROMs (split)/gameboy") core="mesen-s_libretro";;
 *"No-Intro/Nintendo - Nintendo 64 (ByteSwapped)") core="mupen64plus_next_libretro";;
 *"TOSEC/Nintendo/64/Games") core="mupen64plus_next_libretro";;
 *"MAME/Software List ROMs (merged)/n64") core="mupen64plus_next_libretro";;
