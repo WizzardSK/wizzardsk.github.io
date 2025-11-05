@@ -124,8 +124,11 @@ case "$adresar" in
 *"MAME/Software List ROMs (merged)/scv") core="emuscv_libretro";;
 *"MAME/Software List ROMs (split)/scv") core="emuscv_libretro";;
 *"No-Intro/Epoch - Game Pocket Computer") core="mame gamepock -cart";;
+*"MAME/Software List ROMs (merged)/gamepock") core="mame gamepock -cart";;
 *"No-Intro/Watara - Supervision") core="potator_libretro";;
 *"TOSEC/Watara/Supervision/Games") core="potator_libretro";;
+*"MAME/Software List ROMs (merged)/svision") core="potator_libretro";;
+*"MAME/Software List ROMs (split)/svision") core="potator_libretro";;
 *"No-Intro/Bandai - WonderSwan") core="mednafen_wswan_libretro";;
 *"TOSEC/Bandai/WonderSwan/Games") core="mednafen_wswan_libretro";;
 *"No-Intro/Benesse - Pocket Challenge V2") core="mednafen_wswan_libretro";;
