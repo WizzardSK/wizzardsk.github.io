@@ -541,11 +541,13 @@ case "$adresar/" in
 *"TOSEC-ISO/Commodore/Amiga CDTV/Applications/[ISO]/"*) core="puae_libretro"; ext="cue";;
 *"TOSEC-ISO/Commodore/Amiga CDTV/Educational/[ISO]/"*) core="puae_libretro"; ext="cue";;
 *"TOSEC-ISO/Commodore/Amiga CDTV/Multimedia/[ISO]/"*) core="puae_libretro"; ext="cue";;
+*"MAME/Software List CHDs (merged)/cdtv/"*) core="puae_libretro";;
 *"Redump/Commodore - Amiga CD32/"*) core="puae_libretro"; ext="cue";;
 *"TOSEC-ISO/Commodore/Amiga CD32/Games/[ISO]/"*) core="puae_libretro"; ext="cue";;
 *"TOSEC-ISO/Commodore/Amiga CD32/Applications/"*) core="puae_libretro"; ext="cue";;
 *"TOSEC-ISO/Commodore/Amiga CD32/Educational/[ISO]/"*) core="puae_libretro"; ext="cue";;
 *"TOSEC-ISO/Commodore/Amiga CD32/Multimedia/[ISO]/"*) core="puae_libretro"; ext="cue";;
+*"MAME/Software List CHDs (merged)/cd32/"*) core="puae_libretro";;
 *"No-Intro/Microsoft - MSX/"*) core="bluemsx_libretro";;
 *"TOSEC/MSX/MSX/Games/[DSK]/"*) core="bluemsx_libretro";;
 *"MAME/Software List ROMs (merged)/msx1_cart/"*) core="bluemsx_libretro";;
