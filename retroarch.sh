@@ -428,6 +428,7 @@ case "$adresar/" in
 *"TOSEC-ISO/Philips/CD-i/Applications/"*) core="same_cdi_libretro"; ext="cue";;
 *"TOSEC-ISO/Philips/CD-i/Educational/"*) core="same_cdi_libretro"; ext="cue";;
 *"TOSEC-ISO/Philips/CD-i/Multimedia/"*) core="same_cdi_libretro"; ext="cue";;
+*"MAME/Software List CHDs (merged)/cdi/"*) core="same_cdi_libretro";;
 *"Redump/Panasonic - 3DO Interactive Multiplayer/"*) core="opera_libretro"; ext="cue";;
 *"No-Intro/Non-Redump - Panasonic - 3DO Interactive Multiplayer/"*) core="opera_libretro"; ext="cue";;
 *"TOSEC-ISO/3DO/3DO Interactive Multiplayer/Games/"*) core="opera_libretro"; ext="cue";;
