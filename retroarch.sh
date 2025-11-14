@@ -277,6 +277,7 @@ case "$adresar/" in
 *"Redump/Fujitsu - FM-Towns/"*) core="mame fmtmarty -cdrm";;
 *"MAME/Software List ROMs (merged)/fmtowns_cd/"*) core="mame fmtmarty -cdrm";;
 *"MAME/Software List ROMs (split)/fmtowns_cd/"*) core="mame fmtmarty -cdrm";;
+*"MAME/Software List CHDs (merged)/fmtowns_cd/"*) core="mame fmtmarty -cdrm";;
 *"TOSEC/Tomy/Tutor & Pyuuta/Games/"*) core="mame tutor -cart";;
 *"MAME/Software List ROMs (merged)/tutor/"*) core="mame tutor -cart";;
 *"MAME/Software List ROMs (split)/tutor/"*) core="mame tutor -cart";;
