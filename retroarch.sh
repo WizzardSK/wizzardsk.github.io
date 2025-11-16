@@ -576,6 +576,7 @@ case "$adresar/" in
 *"TOSEC/NEC/PC-9801/Games/[FDD]/"*) core="np2kai_libretro";;
 *"MAME/Software List ROMs (merged)/pc98/"*) core="np2kai_libretro";;
 *"MAME/Software List ROMs (split)/pc98/"*) core="np2kai_libretro";;
+*"MAME/Software List CHDs (merged)/pc98_cd/"*) core="mame pc9821 -cdrm";;
 *"TOSEC/Sharp/X1/Games/[2D]/"*) core="x1_libretro";;
 *"TOSEC/Sharp/X1/Games/[D88]/"*) core="x1_libretro";;
 *"MAME/Software List ROMs (merged)/x1_cass/"*) core="x1_libretro";;
@@ -603,6 +604,7 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/neogeo/"*) core="fbneo_libretro";;
 *"Redump/SNK - Neo Geo CD/"*) core="neocd_libretro"; ext="cue";;
 *"TOSEC-ISO/SNK/Neo-Geo CD/Games/[ISO]/"*) core="neocd_libretro"; ext="cue";;
+*"MAME/Software List CHDs (merged)/neocd/"*) core="neocd_libretro";;
 *"No-Intro/SNK - NeoGeo Pocket/"*) core="mednafen_ngp_libretro";;
 *"TOSEC/SNK/Neo-Geo Pocket/Games/"*) core="mednafen_ngp_libretro";;
 *"MAME/Software List ROMs (merged)/ngp/"*) core="mednafen_ngp_libretro"; ext="bin";;
