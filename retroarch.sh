@@ -340,6 +340,8 @@ case "$adresar/" in
 *"TOSEC/Nintendo/Game Boy/Games/"*) core="mesen-s_libretro";;
 *"MAME/Software List ROMs (merged)/gameboy/"*) core="mesen-s_libretro";;
 *"MAME/Software List ROMs (split)/gameboy/"*) core="mesen-s_libretro";;
+*"T-En Collection/Nintendo - Super Famicom - MSU1/"*) core="bsnes_libretro";;
+*"T-En Collection/Nintendo - Super Famicom - MSU1 [roms only]/"*) core="bsnes_libretro";;
 *"No-Intro/Nintendo - Nintendo 64 (ByteSwapped)/"*) core="mupen64plus_next_libretro";;
 *"TOSEC/Nintendo/64/Games/"*) core="mupen64plus_next_libretro";;
 *"MAME/Software List ROMs (merged)/n64/"*) core="mupen64plus_next_libretro";;
