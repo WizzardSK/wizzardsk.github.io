@@ -174,9 +174,13 @@ case "$adresar/" in
 *"TOSEC/Amstrad/CPC/Games/[CDT]/"*) core="cap32_libretro";;
 *"TOSEC/Amstrad/CPC/Games/[SNA]/"*) core="cap32_libretro";;
 *"TOSEC/Amstrad/CPC/Applications/[DSK]/"*) core="cap32_libretro";;
+*"MAME/Software List ROMs (merged)/cpc_cass/"*) core="cap32_libretro";;
+*"MAME/Software List ROMs (split)/cpc_cass/"*) core="cap32_libretro";;
 *"MAME/Software List ROMs (merged)/cpc_flop/"*) core="cap32_libretro";;
 *"MAME/Software List ROMs (split)/cpc_flop/"*) core="cap32_libretro";;
 *"TOSEC/Amstrad/GX4000/Games/"*) core="cap32_libretro";;
+*"MAME/Software List ROMs (merged)/gx4000/"*) core="cap32_libretro";;
+*"MAME/Software List ROMs (split)/gx4000/"*) core="cap32_libretro";;
 *"TOSEC/Sinclair/ZX81/Games/[P]/"*) core="81_libretro";;
 *"TOSEC/Sinclair/ZX81/Applications/[P]/"*) core="81_libretro";;
 *"MAME/Software List ROMs (merged)/zx81_cass/"*) core="81_libretro";;
