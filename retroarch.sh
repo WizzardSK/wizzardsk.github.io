@@ -200,6 +200,8 @@ case "$adresar/" in
 *"MAME/Software List ROMs (merged)/spectrum_cass/"*) core="fuse_libretro";;
 *"MAME/Software List ROMs (split)/spectrum_cass/"*) core="fuse_libretro";;
 *"FinalBurn Neo/spectrum/"*) core="fuse_libretro";;
+*"MAME/Software List ROMs (merged)/specpls3_flop/"*) core="fuse_libretro";;
+*"MAME/Software List ROMs (split)/specpls3_flop/"*) core="fuse_libretro";;
 *"TOSEC/Spectravideo/SVI-318 & SVI-328/Games/[BIN]/"*) core="bluemsx_libretro";;
 *"TOSEC/Spectravideo/SVI-318 & SVI-328/Various/[CAS]/"*) core="bluemsx_libretro";;
 *"MAME/Software List ROMs (merged)/svi318_cass/"*) core="bluemsx_libretro";;
@@ -537,7 +539,11 @@ case "$adresar/" in
 *"TOSEC/Commodore/C64/Games/Sports/[D64]/"*) core="vice_x64sc_libretro";;
 *"TOSEC/Commodore/C64/Games/Strategy/[D64]/"*) core="vice_x64sc_libretro";;
 *"TOSEC/Commodore/C64/Educational/[D64]/"*) core="vice_x64sc_libretro";;
+*"TOSEC/Commodore/C64/Educational/[PRG]/"*) core="vice_x64sc_libretro";;
+*"TOSEC/Commodore/C64/Educational/[T64]/"*) core="vice_x64sc_libretro";;
 *"TOSEC/Commodore/C64/Applications/[D64]/"*) core="vice_x64sc_libretro";;
+*"TOSEC/Commodore/C64/Applications/[PRG]/"*) core="vice_x64sc_libretro";;
+*"TOSEC/Commodore/C64/Applications/[T64]/"*) core="vice_x64sc_libretro";;
 *"MAME/Software List ROMs (merged)/c64_cass/"*) core="vice_x64sc_libretro";;
 *"MAME/Software List ROMs (split)/c64_cass/"*) core="vice_x64sc_libretro";;
 *"TOSEC/Commodore/C128/Games/[D64]/"*) core="vice_x128_libretro";;
