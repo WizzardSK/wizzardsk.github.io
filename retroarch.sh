@@ -581,7 +581,9 @@ case "$adresar/" in
 *"TOSEC-ISO/Commodore/Amiga CD32/Multimedia/[ISO]/"*) core="puae_libretro"; ext="cue";;
 *"MAME/Software List CHDs (merged)/cd32/"*) core="puae_libretro";;
 *"No-Intro/Microsoft - MSX/"*) core="bluemsx_libretro";;
+*"TOSEC/MSX/MSX/Games/[CAS]/"*) core="bluemsx_libretro";;
 *"TOSEC/MSX/MSX/Games/[DSK]/"*) core="bluemsx_libretro";;
+*"TOSEC/MSX/MSX/Games/[ROM]/"*) core="bluemsx_libretro";;
 *"MAME/Software List ROMs (merged)/msx1_cart/"*) core="bluemsx_libretro";;
 *"MAME/Software List ROMs (split)/msx1_cart/"*) core="bluemsx_libretro";;
 *"MAME/Software List ROMs (merged)/msx1_cass/"*) core="bluemsx_libretro";;
@@ -591,6 +593,7 @@ case "$adresar/" in
 *"FinalBurn Neo/msx/"*) core="bluemsx_libretro";;
 *"No-Intro/Microsoft - MSX2/"*) core="bluemsx_libretro";;
 *"TOSEC/MSX/MSX2/Games/[DSK]/"*) core="bluemsx_libretro";;
+*"TOSEC/MSX/MSX2/Games/[ROM]/"*) core="bluemsx_libretro";;
 *"MAME/Software List ROMs (merged)/msx2_cart/"*) core="bluemsx_libretro";;
 *"MAME/Software List ROMs (split)/msx2_cart/"*) core="bluemsx_libretro";;
 *"MAME/Software List ROMs (merged)/msx2_flop/"*) core="bluemsx_libretro";;
