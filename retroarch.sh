@@ -574,6 +574,7 @@ case "$adresar/" in
 *"TOSEC/Commodore/Amiga/Games/SPS/"*) core="puae_libretro";;
 *"TOSEC/Commodore/Amiga/Educational/[ADF]/"*) core="puae_libretro";;
 *"TOSEC/Commodore/Amiga/Applications/[ADF]/"*) core="puae_libretro";;
+*"TOSEC/Commodore/Amiga/Applications/Public Domain/[ADF]/"*) core="puae_libretro";;
 *"MAME/Software List ROMs (merged)/amiga_flop/"*) core="puae_libretro";;
 *"MAME/Software List ROMs (split)/amiga_flop/"*) core="puae_libretro";;
 *"MAME/Software List ROMs (merged)/amigaecs_flop/"*) core="puae_libretro";;
