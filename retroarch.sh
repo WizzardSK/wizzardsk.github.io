@@ -111,7 +111,7 @@ case "$adresar/" in
 *"No-Intro/GCE - Vectrex/"*) core="vecx_libretro";;
 *"TOSEC/GCE/Vectrex/Games/"*) core="vecx_libretro";;
 *"MAME/Software List ROMs (merged)/vectrex/"*) core="vecx_libretro";;
-*"MAME/Software List ROMs (split)/vectrex/"*) core="vecx_libretro  ";;
+*"MAME/Software List ROMs (split)/vectrex/"*) core="vecx_libretro";;
 *"No-Intro/Magnavox - Odyssey 2/"*) core="o2em_libretro";;
 *"TOSEC/Magnavox/Odyssey2/Games/"*) core="o2em_libretro";;
 *"MAME/Software List ROMs (merged)/videopac/"*) core="o2em_libretro";;
@@ -301,9 +301,9 @@ case "$adresar/" in
 *"TOSEC/Thomson/MO6/Games/"*) core="theodore_libretro";;
 *"TOSEC/Thomson/TO7/Games/[K7]/"*) core="theodore_libretro";;
 *"TOSEC/Thomson/TO7/Games/[M7]/"*) core="theodore_libretro";;
-*"TOSEC/Thomson/TO8, TO8D, TO9, TO9+/Games/[FD]/"*) core="theodore_libretro";;
-*"TOSEC/Thomson/TO8, TO8D, TO9, TO9+/Games/[K7]/"*) core="theodore_libretro";;
-*"TOSEC/Thomson/TO8, TO8D, TO9, TO9+/Games/[SAP]/"*) core="theodore_libretro";;
+*"TOSEC/Thomson/TO8%2C TO8D%2C TO9%2C TO9+/Games/[FD]/"*) core="theodore_libretro";;
+*"TOSEC/Thomson/TO8%2C TO8D%2C TO9%2C TO9+/Games/[K7]/"*) core="theodore_libretro";;
+*"TOSEC/Thomson/TO8%2C TO8D%2C TO9%2C TO9+/Games/[SAP]/"*) core="theodore_libretro";;
 *"MAME/Software List ROMs (merged)/mo5_cart/"*) core="theodore_libretro";;
 *"MAME/Software List ROMs (split)/mo5_cart/"*) core="theodore_libretro";;
 *"MAME/Software List ROMs (merged)/mo5_cass/"*) core="theodore_libretro";;
@@ -531,9 +531,9 @@ case "$adresar/" in
 *"Total DOS Collection/Games/Images/CD/2018/"*) core="dosbox_pure_libretro";;
 *"TOSEC/Commodore/PET/Games/[PRG]/"*) core="vice_xpet_libretro";;
 *"No-Intro/Commodore - Plus-4/"*) core="vice_xplus4_libretro";;
-*"TOSEC/Commodore/C16, C116 & Plus-4/Games/[PRG]/"*) core="vice_xplus4_libretro";;
-*"TOSEC/Commodore/C16, C116 & Plus-4/Games/[TAP]/"*) core="vice_xplus4_libretro";;
-*"TOSEC/Commodore/C16, C116 & Plus-4/Utilities/[PRG]/"*) core="vice_xplus4_libretro";;
+*"TOSEC/Commodore/C16%2C C116 & Plus-4/Games/[PRG]/"*) core="vice_xplus4_libretro";;
+*"TOSEC/Commodore/C16%2C C116 & Plus-4/Games/[TAP]/"*) core="vice_xplus4_libretro";;
+*"TOSEC/Commodore/C16%2C C116 & Plus-4/Utilities/[PRG]/"*) core="vice_xplus4_libretro";;
 *"No-Intro/Commodore - VIC-20/"*) core="vice_xvic_libretro";;
 *"TOSEC/Commodore/VIC20/Games/[CRT]/Singlepart/"*) core="vice_xvic_libretro";;
 *"TOSEC/Commodore/VIC20/Games/[D64]/"*) core="vice_xvic_libretro";;
