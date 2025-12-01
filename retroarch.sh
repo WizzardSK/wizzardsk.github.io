@@ -294,6 +294,7 @@ case "$adresar/" in
 *"TOSEC/VTech/Laser 200/Applications/"*) core="mame laser310 -dump";;
 *"TOSEC/VTech/Laser 310/Applications/"*) core="mame laser310 -dump";;
 *"MAME/Software List ROMs (merged)/vz_snap/"*) core="mame laser310 -dump";;
+*"MAME/Software List ROMs (split)/vz_snap/"*) core="mame laser310 -dump";;
 *"MAME/Software List ROMs (merged)/socrates/"*) core="mame socrates -cart";;
 *"MAME/Software List ROMs (merged)/ti99_cart/"*) core="mame ti99_4a";;
 *"MAME/Software List ROMs (split)/ti99_cart/"*) core="mame ti99_4a";;
@@ -358,8 +359,12 @@ case "$adresar/" in
 *"Redump/Nintendo - Wii - NKit RVZ [zstd-19-128k]/"*) core="dolphin_libretro"; ext="rvz";;
 *"No-Intro/Nintendo - Pokemon Mini/"*) core="pokemini_libretro";;
 *"TOSEC/Nintendo/Pokemon Mini/Games/"*) core="pokemini_libretro";;
+*"MAME/Software List ROMs (merged)/pokemini/"*) core="pokemini_libretro";;
+*"MAME/Software List ROMs (split)/pokemini/"*) core="pokemini_libretro";;
 *"No-Intro/Nintendo - Virtual Boy/"*) core="mednafen_vb_libretro";;
 *"TOSEC/Nintendo/Virtual Boy/Games/"*) core="mednafen_vb_libretro";;
+*"MAME/Software List ROMs (merged)/vboy/"*) core="mednafen_vb_libretro";;
+*"MAME/Software List ROMs (split)/vboy/"*) core="mednafen_vb_libretro";;
 *"No-Intro/Nintendo - Game Boy/"*) core="sameboy_libretro";;
 *"TOSEC/Nintendo/Game Boy/Games/"*) core="sameboy_libretro";;
 *"MAME/Software List ROMs (merged)/gameboy/"*) core="sameboy_libretro";;
