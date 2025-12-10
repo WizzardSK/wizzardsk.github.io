@@ -29,7 +29,9 @@ function bgImage(platform) { document.write(`<style> figure { background-image: 
 
 function generateTicLinks(romPath, imagePath) {
     document.write("<div class=\"figureList\">");
-    if (location.protocol !== "file:" && romPath.includes("roms/TIC-80")) { romPath = romPath.replace("roms/TIC-80", "https://tic80.com/play?cart="); web = true; } else { romPath = `../${romPath}/`; web = false; }
+    //if (location.protocol !== "file:" && romPath.includes("roms/TIC-80")) {
+    romPath = romPath.replace("roms/TIC-80", "https://tic80.com/play?cart="); web = true;
+    //} else { romPath = `../${romPath}/`; web = false; }
     fileNames.forEach(fileName => {
         let [id, hash, nazov] = fileName.split('\t'); if (web) { cart = `${id}`; } else { cart = `${hash}.tic`; }
         document.write(`<a href="${romPath}${cart}" target="main">
@@ -39,7 +41,9 @@ function generateTicLinks(romPath, imagePath) {
 
 function generateWasmLinks(romPath, imagePath) {
     document.write("<div class=\"figureList\">");
-    if (location.protocol !== "file:" && romPath.includes("roms/WASM-4")) { romPath = romPath.replace("roms/WASM-4", "https://wasm4.org/play"); wasm = ``; } else { romPath = `../${romPath}`; wasm = `.wasm`; }
+    //if (location.protocol !== "file:" && romPath.includes("roms/WASM-4")) {
+    romPath = romPath.replace("roms/WASM-4", "https://wasm4.org/play"); wasm = ``;
+    //} else { romPath = `../${romPath}`; wasm = `.wasm`; }
     fileNames.forEach(fileName => {
         const [subor, nazov] = fileName.split('\t');
         document.write(`<a href="${romPath}/${encodeURIComponent(subor)}${wasm}" target="main">
@@ -49,7 +53,9 @@ function generateWasmLinks(romPath, imagePath) {
 
 function generateLrNXLinks(romPath, imagePath) {
     document.write("<div class=\"figureList\">");
-    if (location.protocol !== "file:" && romPath.includes("roms/LowresNX")) { romPath = romPath.replace("roms/LowresNX", "https://lowresnx.inutilis.com/topic.php?id="); web = true; } else { romPath = `../${romPath}/`; web = false; }
+    //if (location.protocol !== "file:" && romPath.includes("roms/LowresNX")) {
+    romPath = romPath.replace("roms/LowresNX", "https://lowresnx.inutilis.com/topic.php?id="); web = true;
+    //} else { romPath = `../${romPath}/`; web = false; }
     fileNames.forEach(fileName => {
         let [subor, obrazok, nazov, id] = fileName.split('\t'); if (web) { subor = `${id}`; }
         document.write(`<a href="${romPath}${encodeURIComponent(subor)}" target="main">
@@ -74,18 +80,6 @@ function generateVoxLinks(romPath, imagePath) {
         let cart = kart.replace(/^cpost/, ""); cart = cart.replace(/\.png$/, "");
         document.write(`<a href="https://www.lexaloffle.com/bbs/?pid=${cart}#p" target="main">
         <figure><img loading="lazy" src="https://www.lexaloffle.com/bbs/thumbs/${screen}" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
-    }); document.write("</div>");
-}
-
-function generateUzeLinks(romPath, imagePath) {
-    document.write("<div class=\"figureList\">");
-    if (location.protocol !== "file:" && romPath.includes("roms/Uzebox")) { romPath = romPath.replace("roms/Uzebox", "https://nicksen782.net/UAM/APP_emu/emu.php?gameid="); web = true; } else { romPath = `../${romPath}/`; web = false; }
-    fileNames.forEach(fileName => {
-        let [id, subor, nazov] = fileName.split('\t'); 
-        const nameWithoutExt = subor.slice(0, subor.lastIndexOf(".")) || subor; 
-        if (web) { cart = `${id}`; } else { cart = `${subor}`; }
-        document.write(`<a href="${romPath}${encodeURIComponent(cart)}" target="main">
-        <figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(nameWithoutExt)}.png" alt="${nazov}"><figcaption>${nazov}</figcaption></figure></a>`);
     }); document.write("</div>");
 }
 
