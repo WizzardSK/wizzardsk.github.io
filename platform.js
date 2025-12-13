@@ -79,7 +79,7 @@ function generateFileLinks(romPath, imagePath) {
     if (location.protocol !== "file:") {
         if (romPath.includes("2600")) { romPath = romPath.replace("myrient", "https://javatari.org/?rom=https://myrient.erista.me/files"); }
         else if (romPath.startsWith("myrient/")) { romPath = romPath.replace("myrient", "https://myrient.erista.me/files"); }
-        rompath = ${encodeURIComponent(rompath)};
+        rompath = encodeURIComponent(rompath);
     } else { romPath = "../" + romPath }
     fileNames.forEach(fileName => {
         const subor = fileName.includes("\t") ? fileName.split("\t")[0] : fileName;
@@ -90,4 +90,5 @@ function generateFileLinks(romPath, imagePath) {
         <figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(nameWithoutBrackets)}.png" alt="${nameWithoutExt}"><figcaption>${nazov}</figcaption></figure></a>`);
     }); document.write("</div>");
 }
+
 
