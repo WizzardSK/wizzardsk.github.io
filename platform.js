@@ -85,7 +85,14 @@ function generateFileLinks(romPath, imagePath) {
         const nameWithoutExt = subor.includes(".") ? subor.slice(0, subor.lastIndexOf(".")) : subor;
         const nameWithoutBrackets = nameWithoutExt.replace(/^([^)]*\([^)]*\)).*$/, "$1");
         const nazov = fileName.includes("\t") ? fileName.split("\t")[1] : fileName.replace(/\.[^.]+$/, "");
-        const href = romPath.includes('2600') ? "https://javatari.org/?rom=" + encodeURIComponent(romPath + '/' + subor) : encodeURI(romPath + '/' + subor);
-        document.write(`<a href="${href}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(nameWithoutBrackets)}.png" alt="${nameWithoutExt}"><figcaption>${nazov}</figcaption></figure></a>`);
+        const href = romPath.includes('2600') 
+            ? "https://javatari.org/?rom=" + encodeURIComponent(romPath + '/' + subor) 
+            : encodeURI(romPath + '/' + subor);
+        document.write(`<a href="${href}" target="main">
+            <figure>
+                <img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(nameWithoutBrackets)}.png" alt="${nameWithoutExt}">
+                <figcaption>${nazov}</figcaption>
+            </figure>
+        </a>`);
     }); document.write("</div>");
 }
