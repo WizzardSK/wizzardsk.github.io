@@ -85,17 +85,13 @@ function generateFileLinks(romPath, imagePath) {
         const nameWithoutExt = subor.includes(".") ? subor.slice(0, subor.lastIndexOf(".")) : subor;
         const nameWithoutBrackets = nameWithoutExt.replace(/^([^)]*\([^)]*\)).*$/, "$1");
         const nazov = fileName.includes("\t") ? fileName.split("\t")[1] : fileName.replace(/\.[^.]+$/, "");
-        let href; if (romPath.includes('2600')) {
-            const domainEnd = romPath.indexOf("/files") + "/files".length; 
-            const baseUrl = romPath.slice(0, domainEnd); // https://myrient.erista.me/files
-            const pathToFile = romPath.slice(domainEnd) + '/' + subor; // cesta a názov súboru
-            href = "https://javatari.org/?rom=" + baseUrl + encodeURIComponent(pathToFile);
-        } else { href = encodeURI(romPath + '/' + subor); }
+        const href = encodeURI(romPath + '/' + subor);
         document.write(`<a href="${href}" target="main">
             <figure>
                 <img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(nameWithoutBrackets)}.png" alt="${nameWithoutExt}">
                 <figcaption>${nazov}</figcaption>
             </figure>
         </a>`);
-    }); document.write("</div>");
+    });
+    document.write("</div>");
 }
