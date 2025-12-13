@@ -77,17 +77,15 @@ function generateVoxLinks(romPath, imagePath) {
 function generateFileLinks(romPath, imagePath) {
     document.write("<div class=\"figureList\">");
     if (location.protocol !== "file:") {
-        if (romPath.includes("2600")) { romPath = romPath.replace("myrient", "https://myrient.erista.me/files"); }
-        else if (romPath.startsWith("myrient/")) { romPath = romPath.replace("myrient", "https://myrient.erista.me/files"); }
-    } else { romPath = "../" + romPath }
+        if (romPath.includes("2600")) { romPath = romPath.replace("myrient", "https://myrient.erista.me/files"); 
+        } else if (romPath.startsWith("myrient/")) { romPath = romPath.replace("myrient", "https://myrient.erista.me/files"); }
+    } else { romPath = "../" + romPath; }
     fileNames.forEach(fileName => {
         const subor = fileName.includes("\t") ? fileName.split("\t")[0] : fileName;
         const nameWithoutExt = subor.includes(".") ? subor.slice(0, subor.lastIndexOf(".")) : subor;
         const nameWithoutBrackets = nameWithoutExt.replace(/^([^)]*\([^)]*\)).*$/, "$1");
         const nazov = fileName.includes("\t") ? fileName.split("\t")[1] : fileName.replace(/\.[^.]+$/, "");
-        const href = romPath.includes('2600') ? "https://javatari.org/?rom=" + encodeURIComponent(romPath + '/' + subor) : romPath + '/' + encodeURIComponent(subor);
-        document.write(`<a href="${href}" target="main">
-        <figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(nameWithoutBrackets)}.png" alt="${nameWithoutExt}"><figcaption>${nazov}</figcaption></figure></a>`);
-    }); 
-    document.write("</div>");
+        const href = romPath.includes('2600') ? "https://javatari.org/?rom=" + encodeURIComponent(romPath + '/' + subor) : encodeURI(romPath + '/' + subor);
+        document.write(`<a href="${href}" target="main"><figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(nameWithoutBrackets)}.png" alt="${nameWithoutExt}"><figcaption>${nazov}</figcaption></figure></a>`);
+    }); document.write("</div>");
 }
