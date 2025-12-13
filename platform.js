@@ -77,17 +77,15 @@ function generateVoxLinks(romPath, imagePath) {
 function generateFileLinks(romPath, imagePath) {
     document.write("<div class=\"figureList\">");
     if (location.protocol !== "file:") {
-        if (romPath.includes("2600")) { 
-            const basePath = romPath.replace("myrient", "https://myrient.erista.me/files");
-            romPath = "https://javatari.org/?rom=" + encodeURI(basePath);
-        } else if (romPath.startsWith("myrient/")) { romPath = romPath.replace("myrient", "https://myrient.erista.me/files"); }
+        if (romPath.includes("2600")) { romPath = romPath.replace("myrient", "https://javatari.org/?rom=https://myrient.erista.me/files"); }
+        else if (romPath.startsWith("myrient/")) { romPath = romPath.replace("myrient", "https://myrient.erista.me/files"); }
     } else { romPath = "../" + romPath }
     fileNames.forEach(fileName => {
         const subor = fileName.includes("\t") ? fileName.split("\t")[0] : fileName;
         const nameWithoutExt = subor.includes(".") ? subor.slice(0, subor.lastIndexOf(".")) : subor;
         const nameWithoutBrackets = nameWithoutExt.replace(/^([^)]*\([^)]*\)).*$/, "$1");
         const nazov = fileName.includes("\t") ? fileName.split("\t")[1] : fileName.replace(/\.[^.]+$/, "");
-        document.write(`<a href="${romPath}/${encodeURIComponent(subor)}" target="main">
+        document.write(`<a href="${encodeURI(romPath)}/${encodeURIComponent(subor)}" target="main">
         <figure><img loading="lazy" src="https://raw.githubusercontent.com/WizzardSK/${imagePath}/master/Named_Snaps/${encodeURIComponent(nameWithoutBrackets)}.png" alt="${nameWithoutExt}"><figcaption>${nazov}</figcaption></figure></a>`);
     }); document.write("</div>");
 }
