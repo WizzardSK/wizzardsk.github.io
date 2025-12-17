@@ -1,5 +1,7 @@
 let text = `<div id=\"topbar\"><link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\" />
-<input type=\"text\" id=\"filterInput\" placeholder=\"Filter...\"><span id=\"pocet\"></span>
+<a href="main.html"><img align=left style="margin-right:5px;padding:0px;height:50px;width:200px;"
+src="https://github.com/fabricecaruso/es-theme-carbon/raw/refs/heads/master/art/logos/${location.pathname.split('/').pop().replace(/\.html?$/, '')}.svg"></a>
+<input type=\"text\" id=\"filterInput\" placeholder=\"Filter...\">
 <input type=\"radio\" name=\"thumbtype\" id=\"Snaps\" value=\"Snaps\" checked onclick=\"snaps()\"><label for=\"Snaps\">Snaps</label>
 <input type=\"radio\" name=\"thumbtype\" id=\"Titles\" value=\"Titles\" onclick=\"titles()\"><label for=\"Titles\">Titles</label>
 <input type=\"radio\" name=\"thumbtype\" id=\"Boxarts\" value=\"Boxarts\" onclick=\"boxarts()\"><label for=\"Boxarts\">Boxarts</label>
@@ -10,6 +12,7 @@ let text = `<div id=\"topbar\"><link rel=\"stylesheet\" type=\"text/css\" href=\
 <input type=\"radio\" name=\"size\" id=\"240px\" value=\"240px\" onclick=\"change240()\"><label for=\"240px\">240px</label>
 <input type=\"radio\" name=\"size\" id=\"320px\" value=\"320px\" onclick=\"change320()\"><label for=\"320px\">320px</label>
 <br />
+<span id=\"pocet\"></span>
 <input type=\"checkbox\" id=\"showHideProto\" checked><label for=\"showHideProto\">Proto</label>
 <input type=\"checkbox\" id=\"showHideProgram\" checked><label for=\"showHideProgram\">Program</label>
 <input type=\"checkbox\" id=\"showHideAlfa\"><label for=\"showHideAlfa\">Alpha</label>
@@ -21,7 +24,7 @@ let text = `<div id=\"topbar\"><link rel=\"stylesheet\" type=\"text/css\" href=\
 <input type=\"checkbox\" id=\"showHideAlt\"><label for=\"showHideAlt\">Alt</label>
 <input type=\"checkbox\" id=\"showHidePirate\"><label for=\"showHidePirate\">Pirate</label>
 <input type=\"checkbox\" id=\"showHideBrackets\"><label for=\"showHideBrackets\">[a][b]</label>
-<input type=\"checkbox\" id=\"showHideDisk\"><label for=\"showHideDisk\">[disk 2]</label>
+<input type=\"checkbox\" id=\"showHideDisk\"><label for=\"showHideDisk\">[disk2]</label>
 <br /><br /></div><br /><br /><br />`;
 
 document.write(text);
