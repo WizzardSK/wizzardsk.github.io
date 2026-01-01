@@ -250,6 +250,10 @@ case "$adresar/" in
 *"TOSEC/Casio/PV-1000/Games/"*) core="mame pv1000 -cart";;
 *"MAME/Software List ROMs (merged)/pv1000/"*) core="mame pv1000 -cart";;
 *"MAME/Software List ROMs (split)/pv1000/"*) core="mame pv1000 -cart";;
+*"No-Intro/Casio - Loopy (LittleEndian)/"*) core="mame casloopy -cart";;
+*"TOSEC/Casio/Loopy/Games/[BIN]/"*) core="mame casloopy -cart";;
+*"MAME/Software List ROMs (merged)/casloopy/"*) core="mame casloopy -cart";;
+*"MAME/Software List ROMs (split)/casloopy/"*) core="mame casloopy -cart";;
 *"No-Intro/Funtech - Super Acan/"*) core="mame supracan -cart";;
 *"TOSEC/Funtech/Super A'can/Games/"*) core="mame supracan -cart";;
 *"MAME/Software List ROMs (merged)/supracan/"*) core="mame supracan -cart";;
