@@ -172,6 +172,12 @@ case "$adresar/" in
 *"TOSEC/Game Park/GP32/Games/[SMC]/"*) core="mame gp32 -memc";;
 *"MAME/Software List ROMs (merged)/gp32/"*) core="mame gp32 -memc";;
 *"MAME/Software List ROMs (split)/gp32/"*) core="mame gp32 -memc";;
+*"TOSEC/Enterprise/64 & 128/Games/[BAS]/"*) core="ep128emu_core_libretro";;
+*"TOSEC/Enterprise/64 & 128/Games/[COM]/"*) core="ep128emu_core_libretro";;
+*"TOSEC/Enterprise/64 & 128/Games/[DTF]/"*) core="ep128emu_core_libretro";;
+*"TOSEC/Enterprise/64 & 128/Games/[Multipart]/"*) core="ep128emu_core_libretro";;
+*"MAME/Software List ROMs (merged)/ep64_flop/"*) core="ep128emu_core_libretro";;
+*"MAME/Software List ROMs (split)/ep64_flop/"*) core="ep128emu_core_libretro";;
 *"TOSEC/Amstrad/CPC/Games/[DSK]/"*) core="cap32_libretro";;
 *"TOSEC/Amstrad/CPC/Games/[CDT]/"*) core="cap32_libretro";;
 *"TOSEC/Amstrad/CPC/Games/[SNA]/"*) core="cap32_libretro";;
