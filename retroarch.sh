@@ -482,6 +482,8 @@ case "$adresar/" in
 *"TOSEC/MSX/TurboR/Games/"*) core="bluemsx_libretro";;
 *"MAME/Software List ROMs (merged)/msxr_flop/"*) core="bluemsx_libretro";;
 *"MAME/Software List ROMs (split)/msxr_flop/"*) core="bluemsx_libretro";;
+*"MAME/Software List ROMs (merged)/pc6001_cart/"*) core="mame pc6001 -cart1";;
+*"MAME/Software List ROMs (split)/pc6001_cart/"*) core="mame pc6001 -cart1";;
 *"TOSEC/NEC/PC-8801/Games/[D88]/"*) core="quasi88_libretro";;
 *"MAME/Software List ROMs (merged)/pc8001_flop/"*) core="quasi88_libretro";;
 *"MAME/Software List ROMs (split)/pc8001_flop/"*) core="quasi88_libretro";;
