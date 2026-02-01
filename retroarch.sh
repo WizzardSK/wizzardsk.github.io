@@ -182,6 +182,9 @@ case "$adresar/" in
 *"TOSEC/Enterprise/64 & 128/Games/[Multipart]/"*) core="ep128emu_core_libretro";;
 *"MAME/Software List ROMs (merged)/ep64_flop/"*) core="ep128emu_core_libretro";;
 *"MAME/Software List ROMs (split)/ep64_flop/"*) core="ep128emu_core_libretro";;
+*"TOSEC/Videoton/TV-Computer/Games/[CAS]/"*) core="ep128emu_core_libretro";;
+*"MAME/Software List ROMs (merged)/tvc_flop/"*) core="ep128emu_core_libretro";;
+*"MAME/Software List ROMs (split)/tvc_flop/"*) core="ep128emu_core_libretro";;
 *"TOSEC/Amstrad/CPC/Games/[DSK]/"*) core="cap32_libretro";;
 *"TOSEC/Amstrad/CPC/Games/[CDT]/"*) core="cap32_libretro";;
 *"TOSEC/Amstrad/CPC/Games/[SNA]/"*) core="cap32_libretro";;
