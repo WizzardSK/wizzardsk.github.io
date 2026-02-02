@@ -263,6 +263,9 @@ case "$adresar/" in
 *"TOSEC/Casio/PV-1000/Games/"*) core="mame pv1000 -cart";;
 *"MAME/Software List ROMs (merged)/pv1000/"*) core="mame pv1000 -cart";;
 *"MAME/Software List ROMs (split)/pv1000/"*) core="mame pv1000 -cart";;
+*"TOSEC/Casio/PV-2000/Games/"*) core="mame pv2000 -cart";;
+*"MAME/Software List ROMs (merged)/pv2000/"*) core="mame pv2000 -cart";;
+*"MAME/Software List ROMs (split)/pv2000/"*) core="mame pv2000 -cart";;
 *"No-Intro/Casio - Loopy (LittleEndian)/"*) core="mame casloopy -cart";;
 *"TOSEC/Casio/Loopy/Games/[BIN]/"*) core="mame casloopy -cart";;
 *"MAME/Software List ROMs (merged)/casloopy/"*) core="mame casloopy -cart";;
@@ -275,6 +278,10 @@ case "$adresar/" in
 *"MAME/Software List ROMs (merged)/vc4000/"*) core="mame vc4000 -cart";;
 *"MAME/Software List ROMs (split)/vc4000/"*) core="mame vc4000 -cart";;
 *"TOSEC/Tsukuda Original/Othello Multivision/Games/"*) core="gearsystem_libretro";;
+*"TOSEC/Tandy Radio Shack/TRS-80 Model III/Games/[CMD]/"*) core="mame trs80m3 -quik";;
+*"TOSEC/Tandy Radio Shack/TRS-80 Model 4/Games/[CMD]/"*) core="mame trs80m3 -quik";;
+*"MAME/Software List ROMs (merged)/trs80_quik/"*) core="mame trs80m3 -quik";;
+*"MAME/Software List ROMs (split)/trs80_quik/"*) core="mame trs80m3 -quik";;
 *"TOSEC/Tandy Radio Shack/TRS-80 Color Computer/Games/[ROM]/"*) core="mame coco3 -cart";;
 *"TOSEC/Tandy Radio Shack/TRS-80 Color Computer/Applications/[ROM]/"*) core="mame coco3 -cart";;
 *"MAME/Software List ROMs (merged)/coco_cart/"*) core="mame coco3 -cart";;
