@@ -142,6 +142,8 @@ case "$adresar/" in
 *"TOSEC/Watara/Supervision/Games/"*) core="potator_libretro";;
 *"MAME/Software List ROMs (merged)/svision/"*) core="potator_libretro";;
 *"MAME/Software List ROMs (split)/svision/"*) core="potator_libretro";;
+*"MAME/Software List ROMs (merged)/sv8000/"*) core="mame sv8000 -cart";;
+*"MAME/Software List ROMs (split)/sv8000/"*) core="mame sv8000 -cart";;
 *"No-Intro/Bandai - WonderSwan/"*) core="mednafen_wswan_libretro";;
 *"TOSEC/Bandai/WonderSwan/Games/"*) core="mednafen_wswan_libretro";;
 *"MAME/Software List ROMs (merged)/wswan/"*) core="mednafen_wswan_libretro";;
