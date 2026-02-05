@@ -135,6 +135,8 @@ case "$adresar/" in
 *"TOSEC/Epoch/Super Cassette Vision/Games/"*) core="emuscv_libretro";;
 *"MAME/Software List ROMs (merged)/scv/"*) core="emuscv_libretro";;
 *"MAME/Software List ROMs (split)/scv/"*) core="emuscv_libretro";;
+*"MAME/Software List ROMs (merged)/ctvboy/"*) core="mame ctvboy -cart";;
+*"MAME/Software List ROMs (split)/ctvboy/"*) core="mame ctvboy -cart";;
 *"No-Intro/Epoch - Game Pocket Computer/"*) core="mame gamepock -cart";;
 *"MAME/Software List ROMs (merged)/gamepock/"*) core="mame gamepock -cart";;
 *"MAME/Software List ROMs (split)/gamepock/"*) core="mame gamepock -cart";;
