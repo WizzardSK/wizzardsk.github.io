@@ -421,6 +421,13 @@ case "$adresar/" in
 *"MAME/Software List ROMs (merged)/sg1000/"*) core="gearsystem_libretro";;
 *"MAME/Software List ROMs (split)/sg1000/"*) core="gearsystem_libretro";;
 *"FinalBurn Neo/sg1000/"*) core="gearsystem_libretro";;
+*"TOSEC/Sega/Computer 3000/Applications/"*) core="mame sc3000 -cart";;
+*"TOSEC/Sega/Computer 3000/Educational/"*) core="mame sc3000 -cart";;
+*"TOSEC/Sega/Computer 3000/Games/[WAV]/"*) core="mame sc3000 -cass";;
+*"MAME/Software List ROMs (merged)/sc3000_cart/"*) core="mame sc3000 -cart";;
+*"MAME/Software List ROMs (split)/sc3000_cart/"*) core="mame sc3000 -cart";;
+*"MAME/Software List ROMs (merged)/sc3000_cass/"*) core="mame sc3000 -cass";;
+*"MAME/Software List ROMs (split)/sc3000_cass/"*) core="mame sc3000 -cass";;
 *"No-Intro/Sega - Master System - Mark III/"*) core="gearsystem_libretro";;
 *"TOSEC/Sega/Mark III & Master System/Games/"*) core="gearsystem_libretro";;
 *"MAME/Software List ROMs (merged)/sms/"*) core="gearsystem_libretro";;
