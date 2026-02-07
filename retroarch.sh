@@ -290,6 +290,9 @@ case "$adresar/" in
 *"TOSEC/Tandy Radio Shack/TRS-80 Color Computer/Applications/[ROM]/"*) core="mame coco3 -cart";;
 *"MAME/Software List ROMs (merged)/coco_cart/"*) core="mame coco3 -cart";;
 *"MAME/Software List ROMs (split)/coco_cart/"*) core="mame coco3 -cart";;
+*"TOSEC/Tandy Radio Shack/TRS-80 MC-10/Various/"*) core="mame mc10 -cass";;
+*"MAME/Software List ROMs (merged)/mc10/"*) core="mame mc10 -cass";;
+*"MAME/Software List ROMs (split)/mc10/"*) core="mame mc10 -cass";;
 *"TOSEC/Dragon Data/Dragon/Games/[CAS]/"*) core="mame dragon64 -cass";;
 *"MAME/Software List ROMs (merged)/dragon_cass/"*) core="mame dragon64 -cass";;
 *"MAME/Software List ROMs (split)/dragon_cass/"*) core="mame dragon64 -cass";;
