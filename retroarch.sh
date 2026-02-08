@@ -146,6 +146,12 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/svision/"*) core="potator_libretro";;
 *"MAME/Software List ROMs (merged)/sv8000/"*) core="mame sv8000 -cart";;
 *"MAME/Software List ROMs (split)/sv8000/"*) core="mame sv8000 -cart";;
+*"No-Intro/Bandai - Gundam RX-78/"*) core="mame rx78 -cart";;
+*"TOSEC/Bandai/Gundam RX-78/Games/[BIN]/"*) core="mame rx78 -cart";;
+*"MAME/Software List ROMs (merged)/rx78_cart/"*) core="mame rx78 -cart";;
+*"MAME/Software List ROMs (split)/rx78_cart/"*) core="mame rx78 -cart";;
+*"MAME/Software List ROMs (merged)/rx78_cass/"*) core="mame rx78 -cass";;
+*"MAME/Software List ROMs (split)/rx78_cass/"*) core="mame rx78 -cass";;
 *"No-Intro/Bandai - WonderSwan/"*) core="mednafen_wswan_libretro";;
 *"TOSEC/Bandai/WonderSwan/Games/"*) core="mednafen_wswan_libretro";;
 *"MAME/Software List ROMs (merged)/wswan/"*) core="mednafen_wswan_libretro";;
@@ -428,6 +434,8 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/sc3000_cart/"*) core="mame sc3000 -cart";;
 *"MAME/Software List ROMs (merged)/sc3000_cass/"*) core="mame sc3000 -cass";;
 *"MAME/Software List ROMs (split)/sc3000_cass/"*) core="mame sc3000 -cass";;
+*"MAME/Software List ROMs (merged)/segaai/"*) core="mame segaai -card";;
+*"MAME/Software List ROMs (split)/segaai/"*) core="mame segaai -card";;
 *"No-Intro/Sega - Master System - Mark III/"*) core="gearsystem_libretro";;
 *"TOSEC/Sega/Mark III & Master System/Games/"*) core="gearsystem_libretro";;
 *"MAME/Software List ROMs (merged)/sms/"*) core="gearsystem_libretro";;
@@ -443,6 +451,10 @@ case "$adresar/" in
 *"TOSEC/Sega/Pico/Educational/"*) core="picodrive_libretro";;
 *"MAME/Software List ROMs (merged)/pico/"*) core="picodrive_libretro";;
 *"MAME/Software List ROMs (split)/pico/"*) core="picodrive_libretro";;
+*"No-Intro/Sega - Beena/"*) core="mame beena -cart";;
+*"TOSEC/Sega/Advanced Pico Beena/Educational/"*) core="mame beena -cart";;
+*"MAME/Software List ROMs (merged)/sega_beena_cart/"*) core="mame beena -cart";;
+*"MAME/Software List ROMs (split)/sega_beena_cart/"*) core="mame beena -cart";;
 *"No-Intro/Sega - 32X/"*) core="picodrive_libretro";;
 *"TOSEC/Sega/32X/Games/"*) core="picodrive_libretro";;
 *"MAME/Software List ROMs (merged)/32x/"*) core="picodrive_libretro";;
