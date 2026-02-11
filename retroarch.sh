@@ -206,6 +206,8 @@ case "$adresar/" in
 *"TOSEC/Amstrad/GX4000/Games/"*) core="cap32_libretro";;
 *"MAME/Software List ROMs (merged)/gx4000/"*) core="mame gx4000 -cart";;
 *"MAME/Software List ROMs (split)/gx4000/"*) core="mame gx4000 -cart";;
+*"MAME/Software List ROMs (merged)/pcw/"*) core="mame pcw8256 -flop";;
+*"MAME/Software List ROMs (split)/pcw/"*) core="mame pcw8256 -flop";;
 *"TOSEC/Sinclair/ZX81/Games/[P]/"*) core="81_libretro";;
 *"TOSEC/Sinclair/ZX81/Applications/[P]/"*) core="81_libretro";;
 *"MAME/Software List ROMs (merged)/zx81_cass/"*) core="mame zx81 -cass";;
