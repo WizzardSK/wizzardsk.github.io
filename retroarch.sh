@@ -224,6 +224,8 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/gx4000/"*) core="mame gx4000 -cart";;
 *"MAME/Software List ROMs (merged)/pcw/"*) core="mame pcw8256 -flop";;
 *"MAME/Software List ROMs (split)/pcw/"*) core="mame pcw8256 -flop";;
+*"MAME/Software List ROMs (merged)/zx80_cass/"*) core="mame zx80 -autoboot_command 'W\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/zx80_cass/"*) core="mame zx80 -autoboot_command 'W\n' -autoboot_delay 3 -cass";;
 *"TOSEC/Sinclair/ZX81/Games/[P]/"*) core="81_libretro";;
 *"TOSEC/Sinclair/ZX81/Applications/[P]/"*) core="81_libretro";;
 *"MAME/Software List ROMs (merged)/zx81_cass/"*) core="mame zx81 -autoboot_command 'J\"\"\n' -autoboot_delay 3 -cass";;
@@ -754,6 +756,8 @@ case "$adresar/" in
 *"TOSEC/Commodore/C16, C116 & Plus-4/Utilities/[PRG]/"*) core="vice_xplus4_libretro";;
 *"MAME/Software List ROMs (merged)/plus4_cart/"*) core="mame c16 -cart";;
 *"MAME/Software List ROMs (split)/plus4_cart/"*) core="mame c16 -cart";;
+*"MAME/Software List ROMs (merged)/vic10/"*) core="mame vic10";;
+*"MAME/Software List ROMs (split)/vic10/"*) core="mame vic10";;
 *"No-Intro/Commodore - VIC-20/"*) core="vice_xvic_libretro";;
 *"TOSEC/Commodore/VIC20/Games/[CRT]/Singlepart/"*) core="vice_xvic_libretro";;
 *"TOSEC/Commodore/VIC20/Games/[D64]/"*) core="vice_xvic_libretro";;
@@ -762,8 +766,6 @@ case "$adresar/" in
 *"TOSEC/Commodore/VIC20/Applications/[PRG]/Singlepart/"*) core="vice_xvic_libretro";;
 *"MAME/Software List ROMs (merged)/vic1001_cart/"*) core="mame vic20 -cart";;
 *"MAME/Software List ROMs (split)/vic1001_cart/"*) core="mame vic20 -cart";;
-*"MAME/Software List ROMs (merged)/vic10/"*) core="mame vic10 -cart";;
-*"MAME/Software List ROMs (split)/vic10/"*) core="mame vic10 -cart";;
 *"No-Intro/Commodore - Commodore 64/"*) core="vice_x64sc_libretro";;
 *"No-Intro/Commodore - Commodore 64 (PP)/"*) core="vice_x64sc_libretro";;
 *"No-Intro/Commodore - Commodore 64 (Tapes)/"*) core="vice_x64sc_libretro";;
@@ -894,7 +896,7 @@ else
   rom="$1"
 fi
 
-if [[ "$1" == *"/ti99_cart/"* ]]; then rom="$(basename "${1%.*}")"; fi
+case "$1" in */ti99_cart/*|*/vic10/*) rom="$(basename "${1%.*}")";; esac
 
 if [[ "$core" == *"mame"* ]]; then
   filename="${rom##*/}"; basename="${filename%.*}"
