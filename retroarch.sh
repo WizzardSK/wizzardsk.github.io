@@ -889,6 +889,22 @@ case "$adresar/" in
 *"TOSEC/SNK/Neo-Geo Pocket Color/Games/"*) core="mednafen_ngp_libretro";;
 *"MAME/Software List ROMs (merged)/ngpc/"*) core="mame ngpc -cart"; ext="bin";;
 *"MAME/Software List ROMs (split)/ngpc/"*) core="mame ngpc -cart"; ext="bin";;
+*"MAME/Software List ROMs (merged)/monon_color/"*) core="mame mononcol -cart";;
+*"MAME/Software List ROMs (split)/monon_color/"*) core="mame mononcol -cart";;
+*"MAME/Software List ROMs (merged)/gameking/"*) core="mame gameking -cart";;
+*"MAME/Software List ROMs (split)/gameking/"*) core="mame gameking -cart";;
+*"MAME/Software List ROMs (merged)/gameking3/"*) core="mame gamekin3 -cart";;
+*"MAME/Software List ROMs (split)/gameking3/"*) core="mame gamekin3 -cart";;
+*"MAME/Software List ROMs (merged)/vidbrain/"*) core="mame vidbrain -cart";;
+*"MAME/Software List ROMs (split)/vidbrain/"*) core="mame vidbrain -cart";;
+*"MAME/Software List ROMs (merged)/unichamp/"*) core="mame unichamp -cart";;
+*"MAME/Software List ROMs (split)/unichamp/"*) core="mame unichamp -cart";;
+*"MAME/Software List ROMs (merged)/myvision/"*) core="mame myvision -cart";;
+*"MAME/Software List ROMs (split)/myvision/"*) core="mame myvision -cart";;
+*"MAME/Software List ROMs (merged)/entex_sag/"*) core="mame sag -cart";;
+*"MAME/Software List ROMs (split)/entex_sag/"*) core="mame sag -cart";;
+*"MAME/Software List ROMs (merged)/vii/"*) core="mame vii -cart";;
+*"MAME/Software List ROMs (split)/vii/"*) core="mame vii -cart";;
 esac
 
 if [ -n "$ext" ]; then
@@ -898,7 +914,7 @@ else
   rom="$1"
 fi
 
-case "$1" in */ti99_cart/*|*/vic10/*|*/stv/*) rom="$(basename "${1%.*}")";; esac
+case "$1" in */ti99_cart/*|*/vic10/*|*/stv/*|*/myvision/*) rom="$(basename "${1%.*}")";; esac
 
 if [[ "$core" == *"mame"* ]]; then
   filename="${rom##*/}"; basename="${filename%.*}"
