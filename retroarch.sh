@@ -473,8 +473,8 @@ case "$adresar/" in
 *"TOSEC/Nintendo/64/Games/"*) core="mupen64plus_next_libretro";;
 *"MAME/Software List ROMs (merged)/n64/"*) core="mame n64 -cart";;
 *"MAME/Software List ROMs (split)/n64/"*) core="mame n64 -cart";;
-*"MAME/Software List ROMs (merged)/n64dd/"*) core="mame n64dd -disk";;
-*"MAME/Software List ROMs (split)/n64dd/"*) core="mame n64dd -disk";;
+*"MAME/Software List ROMs (merged)/n64dd/"*) core="mame n64dd -hard";;
+*"MAME/Software List ROMs (split)/n64dd/"*) core="mame n64dd -hard";;
 *"Redump/Nintendo - GameCube - NKit RVZ [zstd-19-128k]/"*) core="dolphin_libretro"; ext="rvz";;
 *"TOSEC-ISO/Nintendo/GameCube/Games/"*) core="dolphin_libretro"; ext="iso";;
 *"No-Intro/Unofficial - Nintendo - Wii (Digital) (Deprecated) (WAD)/"*) core="dolphin_libretro"; ext="wad";;
@@ -553,6 +553,8 @@ case "$adresar/" in
 *"No-Intro/Non-Redump - Sega - Sega Saturn/"*) core="yabasanshiro_libretro"; ext="cue";;
 *"TOSEC-ISO/Sega/Saturn/Games/[ISO]/"*) core="yabasanshiro_libretro"; ext="cue";;
 *"MAME/Software List CHDs (merged)/saturn/"*) core="mame saturn -cdrm";;
+*"MAME/Software List ROMs (merged)/stv/"*) core="mame stvbios";;
+*"MAME/Software List ROMs (split)/stv/"*) core="mame stvbios";;
 *"Redump/Sega - Dreamcast/"*) core="flycast_libretro"; ext="cue";;
 *"No-Intro/Non-Redump - Sega - Dreamcast/"*) core="flycast_libretro"; ext="gdi";;
 *"TOSEC-ISO/Sega/Dreamcast/Games/US/"*) core="flycast_libretro"; ext="gdi";;
@@ -896,7 +898,7 @@ else
   rom="$1"
 fi
 
-case "$1" in */ti99_cart/*|*/vic10/*) rom="$(basename "${1%.*}")";; esac
+case "$1" in */ti99_cart/*|*/vic10/*|*/stv/*) rom="$(basename "${1%.*}")";; esac
 
 if [[ "$core" == *"mame"* ]]; then
   filename="${rom##*/}"; basename="${filename%.*}"
