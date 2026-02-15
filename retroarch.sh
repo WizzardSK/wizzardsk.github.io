@@ -882,13 +882,13 @@ case "$adresar/" in
 *"MAME/Software List CHDs (merged)/neocd/"*) core="mame neocdz -cdrm";;
 *"No-Intro/SNK - NeoGeo Pocket/"*) core="mednafen_ngp_libretro";;
 *"TOSEC/SNK/Neo-Geo Pocket/Games/"*) core="mednafen_ngp_libretro";;
-*"MAME/Software List ROMs (merged)/ngp/"*) core="mame ngp -cart"; ext="bin";;
-*"MAME/Software List ROMs (split)/ngp/"*) core="mame ngp -cart"; ext="bin";;
+*"MAME/Software List ROMs (merged)/ngp/"*) core="mame ngp -cart";;
+*"MAME/Software List ROMs (split)/ngp/"*) core="mame ngp -cart";;
 *"FinalBurn Neo/ngp/"*) core="mednafen_ngp_libretro"; ext="bin";;
 *"No-Intro/SNK - NeoGeo Pocket Color/"*) core="mednafen_ngp_libretro";;
 *"TOSEC/SNK/Neo-Geo Pocket Color/Games/"*) core="mednafen_ngp_libretro";;
-*"MAME/Software List ROMs (merged)/ngpc/"*) core="mame ngpc -cart"; ext="bin";;
-*"MAME/Software List ROMs (split)/ngpc/"*) core="mame ngpc -cart"; ext="bin";;
+*"MAME/Software List ROMs (merged)/ngpc/"*) core="mame ngpc -cart";;
+*"MAME/Software List ROMs (split)/ngpc/"*) core="mame ngpc -cart";;
 *"MAME/Software List ROMs (merged)/monon_color/"*) core="mame mononcol -cart";;
 *"MAME/Software List ROMs (split)/monon_color/"*) core="mame mononcol -cart";;
 *"MAME/Software List ROMs (merged)/gameking/"*) core="mame gameking -cart";;
