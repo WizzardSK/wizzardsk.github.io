@@ -78,6 +78,10 @@ case "$adresar/" in
 *"TOSEC/Atari/ST/Educational/[STX]/"*) core="hatari_libretro";;
 *"MAME/Software List ROMs (merged)/st_flop/"*) core="mame st -flop";;
 *"MAME/Software List ROMs (split)/st_flop/"*) core="mame st -flop";;
+*"TOSEC/Apple/1/Games/"*) core="mame apple1 -cass";;
+*"TOSEC/Apple/1/Applications/"*) core="mame apple1 -cass";;
+*"MAME/Software List ROMs (merged)/apple1/"*) core="mame apple1 -cass";;
+*"MAME/Software List ROMs (split)/apple1/"*) core="mame apple1 -cass";;
 *"TOSEC/Apple/II/Games/[DSK]/"*) core="mame apple2ee -flop1";;
 *"TOSEC/Apple/II/Games/[WOZ]/"*) core="mame apple2ee -flop1";;
 *"TOSEC/Apple/II/Educational/[DSK]/"*) core="mame apple2ee -flop1";;
@@ -101,6 +105,16 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/apple2gs_flop_misc/"*) core="mame apple2gs -flop3";;
 *"MAME/Software List ROMs (merged)/apple2gs_flop_orig/"*) core="mame apple2gs -flop3";;
 *"MAME/Software List ROMs (split)/apple2gs_flop_orig/"*) core="mame apple2gs -flop3";;
+*"TOSEC/Apple/III/Games/"*) core="mame apple3 -flop1";;
+*"TOSEC/Apple/III/Applications/[DSK]/"*) core="mame apple3 -flop1";;
+*"TOSEC/Apple/III/Applications/[PO]/"*) core="mame apple3 -flop1";;
+*"TOSEC/Apple/III/Collections/WAP III SIG Public Domain Library/"*) core="mame apple3 -flop1";;
+*"MAME/Software List ROMs (merged)/apple3/"*) core="mame apple3 -flop1";;
+*"MAME/Software List ROMs (split)/apple3/"*) core="mame apple3 -flop1";;
+*"TOSEC/Apple/Lisa/Applications/[IMAGE]/"*) core="mame lisa -flop1";;
+*"TOSEC/Apple/Lisa/Applications/[A2R]/"*) core="mame lisa -flop1";;
+*"MAME/Software List ROMs (merged)/lisa/"*) core="mame lisa -flop1";;
+*"MAME/Software List ROMs (split)/lisa/"*) core="mame lisa -flop1";;
 *"MAME/Software List ROMs (merged)/mac_flop/"*) core="mame macse -flop1";;
 *"MAME/Software List ROMs (split)/mac_flop/"*) core="mame macse -flop1";;
 *"MAME/Software List ROMs (merged)/mac_flop_orig/"*) core="mame macse -flop1";;
@@ -109,6 +123,8 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/mac_flop_clcracked/"*) core="mame macse -flop1";;
 *"MAME/Software List ROMs (merged)/mac_hdflop/"*) core="mame macse -flop1";;
 *"MAME/Software List ROMs (split)/mac_hdflop/"*) core="mame macse -flop1";;
+*"TOSEC/Apple/Macintosh/Games/[DSK]/"*) core="mame macse -flop1";;
+*"TOSEC/Apple/Macintosh/Games/[IMG]/"*) core="mame macse -flop1";;
 *"No-Intro/Fairchild - Channel F/"*) core="freechaf_libretro";;
 *"TOSEC/Fairchild/VES & Channel F/Games/"*) core="freechaf_libretro";;
 *"MAME/Software List ROMs (merged)/channelf/"*) core="mame channelf -cart";;
@@ -128,6 +144,8 @@ case "$adresar/" in
 *"TOSEC/Mattel/Intellivision/Games/[BIN]/"*) core="freeintv_libretro";;
 *"MAME/Software List ROMs (merged)/intv/"*) core="mame intv -cart";;
 *"MAME/Software List ROMs (split)/intv/"*) core="mame intv -cart";;
+*"MAME/Software List ROMs (merged)/intvecs/"*) core="mame intvecs -cart";;
+*"MAME/Software List ROMs (split)/intvecs/"*) core="mame intvecs -cart";;
 *"No-Intro/Coleco - ColecoVision/"*) core="gearcoleco_libretro";;
 *"TOSEC/Coleco/ColecoVision/Games/"*) core="gearcoleco_libretro";;
 *"MAME/Software List ROMs (merged)/coleco/"*) core="mame coleco -cart";;
@@ -204,6 +222,8 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/ep64_flop/"*) core="mame ep128 -flop";;
 *"MAME/Software List ROMs (merged)/ep64_cart/"*) core="mame ep128 -cart";;
 *"MAME/Software List ROMs (split)/ep64_cart/"*) core="mame ep128 -cart";;
+*"MAME/Software List ROMs (merged)/ep64_cass/"*) core="mame ep128 -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/ep64_cass/"*) core="mame ep128 -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass";;
 *"TOSEC/Videoton/TV-Computer/Games/[CAS]/"*) core="ep128emu_core_libretro";;
 *"MAME/Software List ROMs (merged)/tvc_flop/"*) core="mame tvc64p -flop1";;
 *"MAME/Software List ROMs (split)/tvc_flop/"*) core="mame tvc64p -flop1";;
@@ -257,6 +277,17 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/spectrum_cart/"*) core="mame specpls3 -cart";;
 *"MAME/Software List ROMs (merged)/spectrum_mgt_flop/"*) core="mame spec128 -flop";;
 *"MAME/Software List ROMs (split)/spectrum_mgt_flop/"*) core="mame spec128 -flop";;
+*"TOSEC/Sinclair/QL/Games/[BAS]/"*) core="mame ql -autoboot_command 'BOOT\n' -autoboot_delay 5 -utap1";;
+*"TOSEC/Sinclair/QL/Games/[OUT]/"*) core="mame ql -autoboot_command 'BOOT\n' -autoboot_delay 5 -utap1";;
+*"TOSEC/Sinclair/QL/Applications/"*) core="mame ql -autoboot_command 'BOOT\n' -autoboot_delay 5 -utap1";;
+*"TOSEC/Sinclair/QL/Demos/[BAS]/"*) core="mame ql -autoboot_command 'BOOT\n' -autoboot_delay 5 -utap1";;
+*"TOSEC/Sinclair/QL/Demos/[MDV]/"*) core="mame ql -autoboot_command 'BOOT\n' -autoboot_delay 5 -utap1";;
+*"MAME/Software List ROMs (merged)/ql_cass/"*) core="mame ql -autoboot_command 'BOOT\n' -autoboot_delay 5 -utap1";;
+*"MAME/Software List ROMs (split)/ql_cass/"*) core="mame ql -autoboot_command 'BOOT\n' -autoboot_delay 5 -utap1";;
+*"MAME/Software List ROMs (merged)/ql_cart/"*) core="mame ql -cart";;
+*"MAME/Software List ROMs (split)/ql_cart/"*) core="mame ql -cart";;
+*"MAME/Software List ROMs (merged)/ql_flop/"*) core="mame ql -exp trump -flop";;
+*"MAME/Software List ROMs (split)/ql_flop/"*) core="mame ql -exp trump -flop";;
 *"TOSEC/Spectravideo/SVI-318 & SVI-328/Games/[BIN]/"*) core="bluemsx_libretro";;
 *"TOSEC/Spectravideo/SVI-318 & SVI-328/Various/[CAS]/"*) core="bluemsx_libretro";;
 *"MAME/Software List ROMs (merged)/svi318_cass/"*) core="mame svi318 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
@@ -264,6 +295,8 @@ case "$adresar/" in
 *"TOSEC/MGT/Sam Coupe/Games/[DSK]/"*) core="mame samcoupe -flop1";;
 *"MAME/Software List ROMs (merged)/samcoupe_flop/"*) core="mame samcoupe -flop1";;
 *"MAME/Software List ROMs (split)/samcoupe_flop/"*) core="mame samcoupe -flop1";;
+*"MAME/Software List ROMs (merged)/samcoupe_cass/"*) core="mame samcoupe -autoboot_command 'LOAD \"\"\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/samcoupe_cass/"*) core="mame samcoupe -autoboot_command 'LOAD \"\"\n' -autoboot_delay 3 -cass";;
 *"TOSEC/Tangerine/Oric-1 & Oric Atmos/Games/[TAP]/"*) core="mame orica -autoboot_command 'CLOAD\"\"\n' -autoboot_delay 4 -cass";;
 *"MAME/Software List ROMs (merged)/oric1_cass/"*) core="mame orica -autoboot_command 'CLOAD\"\"\n' -autoboot_delay 4 -cass";;
 *"MAME/Software List ROMs (split)/oric1_cass/"*) core="mame orica -autoboot_command 'CLOAD\"\"\n' -autoboot_delay 4 -cass";;
@@ -333,6 +366,8 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/trs80_quik/"*) core="mame trs80m3 -quik";;
 *"MAME/Software List ROMs (merged)/trs80_cass/"*) core="mame trs80m3 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 2 -cass";;
 *"MAME/Software List ROMs (split)/trs80_cass/"*) core="mame trs80m3 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 2 -cass";;
+*"MAME/Software List ROMs (merged)/trs80_flop/"*) core="mame trs80m3 -flop1";;
+*"MAME/Software List ROMs (split)/trs80_flop/"*) core="mame trs80m3 -flop1";;
 *"TOSEC/Tandy Radio Shack/TRS-80 Color Computer/Games/[ROM]/"*) core="mame coco3 -cart";;
 *"TOSEC/Tandy Radio Shack/TRS-80 Color Computer/Applications/[ROM]/"*) core="mame coco3 -cart";;
 *"MAME/Software List ROMs (merged)/coco_cart/"*) core="mame coco3 -cart";;
@@ -399,6 +434,7 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/fm8_cass/"*) core="mame fm8 -autoboot_command 'RUN\"\"\n' -autoboot_delay 5 -cass";;
 *"MAME/Software List ROMs (merged)/fm77av/"*) core="mame fm77av -flop1";;
 *"MAME/Software List ROMs (split)/fm77av/"*) core="mame fm77av -flop1";;
+*"TOSEC/Fujitsu/FM77-AV/Games/[D77]/"*) core="mame fm77av -flop1";;
 *"Redump/Fujitsu - FM-Towns/"*) core="mame fmtmarty -cdrm";;
 *"MAME/Software List ROMs (merged)/fmtowns_cd/"*) core="mame fmtmarty -cdrm";;
 *"MAME/Software List ROMs (split)/fmtowns_cd/"*) core="mame fmtmarty -cdrm";;
@@ -407,6 +443,10 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/fmtowns_flop_orig/"*) core="mame fmtowns -flop1";;
 *"MAME/Software List ROMs (merged)/fmtowns_flop_misc/"*) core="mame fmtowns -flop1";;
 *"MAME/Software List ROMs (split)/fmtowns_flop_misc/"*) core="mame fmtowns -flop1";;
+*"TOSEC/Fujitsu/FM Towns/Games/[BIN]/"*) core="mame fmtmarty -cdrm";;
+*"TOSEC/Fujitsu/FM Towns/Games/[D77]/"*) core="mame fmtowns -flop1";;
+*"TOSEC/Fujitsu/FM Towns/Games/[D88]/"*) core="mame fmtowns -flop1";;
+*"TOSEC/Fujitsu/FM Towns/Games/[HDM]/"*) core="mame fmtowns -flop1";;
 *"TOSEC/Tomy/Tutor & Pyuuta/Games/"*) core="mame tutor -cart";;
 *"MAME/Software List ROMs (merged)/tutor/"*) core="mame tutor -cart";;
 *"MAME/Software List ROMs (split)/tutor/"*) core="mame tutor -cart";;
@@ -475,6 +515,7 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/n64/"*) core="mame n64 -cart";;
 *"MAME/Software List ROMs (merged)/n64dd/"*) core="mame n64dd -hard";;
 *"MAME/Software List ROMs (split)/n64dd/"*) core="mame n64dd -hard";;
+*"TOSEC/Nintendo/64DD/Games/[BIN]/"*) core="mame n64dd -hard";;
 *"Redump/Nintendo - GameCube - NKit RVZ [zstd-19-128k]/"*) core="dolphin_libretro"; ext="rvz";;
 *"TOSEC-ISO/Nintendo/GameCube/Games/"*) core="dolphin_libretro"; ext="iso";;
 *"No-Intro/Unofficial - Nintendo - Wii (Digital) (Deprecated) (WAD)/"*) core="dolphin_libretro"; ext="wad";;
@@ -503,6 +544,7 @@ case "$adresar/" in
 *"No-Intro/Nintendo - Nintendo DS (Download Play)/"*) core="melonds_libretro";;
 *"TOSEC/Nintendo/DS/Games/"*) core="melonds_libretro";;
 *"No-Intro/Nintendo - Nintendo DSi (Decrypted)/"*) core="melondsds_libretro";;
+*"TOSEC/Nintendo/DSi/Games/"*) core="melondsds_libretro";;
 *"No-Intro/Nintendo - Nintendo 3DS (Decrypted)/"*) core="citra_libretro"; ext="3ds";;
 *"Redump/Nintendo - Wii U - WUX/"*) core="cemu -g"; ext="wux";;
 *"No-Intro/Sega - SG-1000 - SC-3000/"*) core="gearsystem_libretro";;
@@ -548,6 +590,7 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/32x/"*) core="mame 32x -cart";;
 *"Redump/Sega - Mega CD & Sega CD/"*) core="picodrive_libretro"; ext="cue";;
 *"TOSEC-ISO/Sega/Mega-CD & Sega CD/CD/Games/[ISO]/"*) core="picodrive_libretro"; ext="cue";;
+*"No-Intro/Non-Redump - Sega - Sega Mega CD + Sega CD/"*) core="picodrive_libretro"; ext="cue";;
 *"MAME/Software List CHDs (merged)/megacd/"*) core="mame segacd -cdrm";;
 *"Redump/Sega - Saturn/"*) core="yabasanshiro_libretro"; ext="cue";;
 *"No-Intro/Non-Redump - Sega - Sega Saturn/"*) core="yabasanshiro_libretro"; ext="cue";;
@@ -608,7 +651,11 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/msx2_cart/"*) core="mame hbf1xd -cart1";;
 *"MAME/Software List ROMs (merged)/msx2_flop/"*) core="mame hbf1xd -flop";;
 *"MAME/Software List ROMs (split)/msx2_flop/"*) core="mame hbf1xd -flop";;
+*"MAME/Software List ROMs (merged)/msx2_cass/"*) core="mame hbf1xd -autoboot_command 'RUN\"CAS:\"\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/msx2_cass/"*) core="mame hbf1xd -autoboot_command 'RUN\"CAS:\"\n' -autoboot_delay 3 -cass";;
 *"TOSEC/MSX/MSX2+/Games/"*) core="bluemsx_libretro";;
+*"MAME/Software List ROMs (merged)/msx2p_cart/"*) core="mame fsa1wsx -cart1";;
+*"MAME/Software List ROMs (split)/msx2p_cart/"*) core="mame fsa1wsx -cart1";;
 *"MAME/Software List ROMs (merged)/msx2p_flop/"*) core="mame fsa1wsx -flop";;
 *"MAME/Software List ROMs (split)/msx2p_flop/"*) core="mame fsa1wsx -flop";;
 *"TOSEC/MSX/TurboR/Games/"*) core="bluemsx_libretro";;
@@ -629,6 +676,7 @@ case "$adresar/" in
 *"MAME/Software List CHDs (merged)/pc98_cd/"*) core="mame pc9821 -cdrm";;
 *"MAME/Software List ROMs (merged)/pc98_cd/"*) core="mame pc9821 -cdrm";;
 *"MAME/Software List ROMs (split)/pc98_cd/"*) core="mame pc9821 -cdrm";;
+*"TOSEC/NEC/PC-9821/Games/[FDD]/"*) core="np2kai_libretro";;
 *"No-Intro/NEC - PC Engine - TurboGrafx-16/"*) core="mednafen_pce_fast_libretro";;
 *"TOSEC/NEC/PC-Engine & TurboGrafx-16/Games/"*) core="mednafen_pce_fast_libretro";;
 *"MAME/Software List ROMs (merged)/pce/"*) core="mame pce -cart";;
@@ -646,6 +694,7 @@ case "$adresar/" in
 *"FinalBurn Neo/sgx/"*) core="mednafen_supergrafx_libretro";;
 *"Redump/NEC - PC Engine CD & TurboGrafx CD/"*) core="mednafen_pce_fast_libretro"; ext="cue";;
 *"TOSEC-ISO/NEC/PC-Engine CD & TurboGrafx-16 CD/Games/[IMG]/"*) core="mednafen_pce_fast_libretro"; ext="cue";;
+*"No-Intro/Non-Redump - NEC - PC Engine CD + TurboGrafx CD/"*) core="mednafen_pce_fast_libretro"; ext="cue";;
 *"MAME/Software List CHDs (merged)/pcecd/"*) core="mame pce -cdrm";;
 *"Redump/NEC - PC-FX & PC-FXGA/"*) core="mednafen_pcfx_libretro"; ext="cue";;
 *"TOSEC-ISO/NEC/PC-FX/Games/"*) core="mednafen_pcfx_libretro"; ext="cue";;
@@ -745,6 +794,14 @@ case "$adresar/" in
 *"Total DOS Collection/Applications/Files/2005/"*) core="dosbox_pure_libretro";;
 *"Total DOS Collection/Applications/Files/2006/"*) core="dosbox_pure_libretro";;
 *"Total DOS Collection/Applications/Files/2009/"*) core="dosbox_pure_libretro";;
+*"MAME/Software List ROMs (merged)/ibm5150/"*) core="mame ibm5150 -hard1 ibm5150_hdd:freedos13_8086";;
+*"MAME/Software List ROMs (split)/ibm5150/"*) core="mame ibm5150 -hard1 ibm5150_hdd:freedos13_8086";;
+*"MAME/Software List ROMs (merged)/ibm5170/"*) core="mame ibm5170 -hard1 ibm5170_hdd:freedos13";;
+*"MAME/Software List ROMs (split)/ibm5170/"*) core="mame ibm5170 -hard1 ibm5170_hdd:freedos13";;
+*"MAME/Software List ROMs (merged)/ibmpcjr_cart/"*) core="mame ibmpcjr";;
+*"MAME/Software List ROMs (split)/ibmpcjr_cart/"*) core="mame ibmpcjr";;
+*"MAME/Software List ROMs (merged)/ibmpcjr_flop/"*) core="mame ibmpcjr -hard1 ibm5150_hdd:freedos13_8086";;
+*"MAME/Software List ROMs (split)/ibmpcjr_flop/"*) core="mame ibmpcjr -hard1 ibm5150_hdd:freedos13_8086";;
 *"TOSEC/Commodore/PET/Games/[PRG]/"*) core="vice_xpet_libretro";;
 *"MAME/Software List ROMs (merged)/pet_cass/"*) core="mame pet2001n -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass";;
 *"MAME/Software List ROMs (split)/pet_cass/"*) core="mame pet2001n -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass";;
@@ -758,6 +815,10 @@ case "$adresar/" in
 *"TOSEC/Commodore/C16, C116 & Plus-4/Utilities/[PRG]/"*) core="vice_xplus4_libretro";;
 *"MAME/Software List ROMs (merged)/plus4_cart/"*) core="mame c16 -cart";;
 *"MAME/Software List ROMs (split)/plus4_cart/"*) core="mame c16 -cart";;
+*"MAME/Software List ROMs (merged)/plus4_flop/"*) core="mame c16 -flop";;
+*"MAME/Software List ROMs (split)/plus4_flop/"*) core="mame c16 -flop";;
+*"MAME/Software List ROMs (merged)/plus4_cass/"*) core="mame c16 -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/plus4_cass/"*) core="mame c16 -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass";;
 *"MAME/Software List ROMs (merged)/vic10/"*) core="mame vic10";;
 *"MAME/Software List ROMs (split)/vic10/"*) core="mame vic10";;
 *"No-Intro/Commodore - VIC-20/"*) core="vice_xvic_libretro";;
@@ -768,6 +829,10 @@ case "$adresar/" in
 *"TOSEC/Commodore/VIC20/Applications/[PRG]/Singlepart/"*) core="vice_xvic_libretro";;
 *"MAME/Software List ROMs (merged)/vic1001_cart/"*) core="mame vic20 -cart";;
 *"MAME/Software List ROMs (split)/vic1001_cart/"*) core="mame vic20 -cart";;
+*"MAME/Software List ROMs (merged)/cbm2_cart/"*) core="mame cbm610 -cart";;
+*"MAME/Software List ROMs (split)/cbm2_cart/"*) core="mame cbm610 -cart";;
+*"MAME/Software List ROMs (merged)/cbm2_flop/"*) core="mame cbm610 -autoboot_command 'DLOAD\"\"*\"\"\nRUN\n' -autoboot_delay 5 -flop1";;
+*"MAME/Software List ROMs (split)/cbm2_flop/"*) core="mame cbm610 -autoboot_command 'DLOAD\"\"*\"\"\nRUN\n' -autoboot_delay 5 -flop1";;
 *"No-Intro/Commodore - Commodore 64/"*) core="vice_x64sc_libretro";;
 *"No-Intro/Commodore - Commodore 64 (PP)/"*) core="vice_x64sc_libretro";;
 *"No-Intro/Commodore - Commodore 64 (Tapes)/"*) core="vice_x64sc_libretro";;
@@ -862,6 +927,10 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/mz2000_cass/"*) core="mame mz2000 -autoboot_command 'C' -autoboot_delay 5 -cass";;
 *"MAME/Software List ROMs (merged)/mz2500_flop/"*) core="mame mz2500 -flop1";;
 *"MAME/Software List ROMs (split)/mz2500_flop/"*) core="mame mz2500 -flop1";;
+*"MAME/Software List ROMs (merged)/spc1000_cass/"*) core="mame spc1000 -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/spc1000_cass/"*) core="mame spc1000 -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (merged)/spc1500_cass/"*) core="mame spc1500 -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/spc1500_cass/"*) core="mame spc1500 -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass";;
 *"MAME/ROMs (merged)/"*) core="mame";;
 *"MAME/ROMs (non-merged)/"*) core="mame";;
 *"MAME/ROMs (split)/"*) core="mame";;
@@ -914,7 +983,7 @@ else
   rom="$1"
 fi
 
-case "$1" in */ti99_cart/*|*/vic10/*|*/stv/*|*/myvision/*) rom="$(basename "${1%.*}")";; esac
+case "$1" in */ti99_cart/*|*/vic10/*|*/stv/*|*/myvision/*|*/ibm5150/*|*/ibm5170/*|*/ibmpcjr_cart/*|*/ibmpcjr_flop/*) rom="$(basename "${1%.*}")";; esac
 
 if [[ "$core" == *"mame"* ]]; then
   filename="${rom##*/}"; basename="${filename%.*}"
