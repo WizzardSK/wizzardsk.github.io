@@ -231,6 +231,24 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/tvc_cass/"*) core="mame tvc64p -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass";;
 *"MAME/Software List ROMs (merged)/tvc_cart/"*) core="mame tvc64p -cart";;
 *"MAME/Software List ROMs (split)/tvc_cart/"*) core="mame tvc64p -cart";;
+*"MAME/Software List ROMs (merged)/pmd85_cass/"*) core="mame pmd851 -autoboot_command 'MGLD 00\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/pmd85_cass/"*) core="mame pmd851 -autoboot_command 'MGLD 00\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (merged)/pecom_cass/"*) core="mame pecom64 -autoboot_command 'PLOAD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/pecom_cass/"*) core="mame pecom64 -autoboot_command 'PLOAD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (merged)/galaxy/"*) core="mame galaxy -autoboot_command 'OLD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/galaxy/"*) core="mame galaxy -autoboot_command 'OLD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (merged)/apogee/"*) core="mame apogee -autoboot_command 'I\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/apogee/"*) core="mame apogee -autoboot_command 'I\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (merged)/radio86_cass/"*) core="mame radio86 -autoboot_command 'I\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/radio86_cass/"*) core="mame radio86 -autoboot_command 'I\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (merged)/mikrosha_cass/"*) core="mame mikrosha -autoboot_command 'I\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/mikrosha_cass/"*) core="mame mikrosha -autoboot_command 'I\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (merged)/orion_flop/"*) core="mame orion128 -flop1";;
+*"MAME/Software List ROMs (split)/orion_flop/"*) core="mame orion128 -flop1";;
+*"MAME/Software List ROMs (merged)/vector06_flop/"*) core="mame vector06 -flop1";;
+*"MAME/Software List ROMs (split)/vector06_flop/"*) core="mame vector06 -flop1";;
+*"MAME/Software List ROMs (merged)/lviv/"*) core="mame lviv -autoboot_command 'CLOAD \"\"\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/lviv/"*) core="mame lviv -autoboot_command 'CLOAD \"\"\nRUN\n' -autoboot_delay 3 -cass";;
 *"TOSEC/Amstrad/CPC/Games/[DSK]/"*) core="cap32_libretro";;
 *"TOSEC/Amstrad/CPC/Games/[CDT]/"*) core="cap32_libretro";;
 *"TOSEC/Amstrad/CPC/Games/[SNA]/"*) core="cap32_libretro";;
@@ -304,6 +322,14 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/camplynx_cass/"*) core="mame lynx48k -autoboot_command 'mload\"\"\n' -autoboot_delay 2 -cass";;
 *"MAME/Software List ROMs (merged)/camplynx_flop/"*) core="mame lynx128k -flop1";;
 *"MAME/Software List ROMs (split)/camplynx_flop/"*) core="mame lynx128k -flop1";;
+*"MAME/Software List ROMs (merged)/mtx_cart/"*) core="mame mtx512 -cart1";;
+*"MAME/Software List ROMs (split)/mtx_cart/"*) core="mame mtx512 -cart1";;
+*"MAME/Software List ROMs (merged)/mtx_cass/"*) core="mame mtx512 -autoboot_command 'LOAD \"\"\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/mtx_cass/"*) core="mame mtx512 -autoboot_command 'LOAD \"\"\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (merged)/mtx_flop/"*) core="mame mtx512 -exp_ext sdxbas -flop1";;
+*"MAME/Software List ROMs (split)/mtx_flop/"*) core="mame mtx512 -exp_ext sdxbas -flop1";;
+*"MAME/Software List ROMs (merged)/mtx_rom/"*) core="mame mtx512 -rom";;
+*"MAME/Software List ROMs (split)/mtx_rom/"*) core="mame mtx512 -rom";;
 *"No-Intro/Bally - Astrocade/"*) core="mame astrocde -cart";;
 *"TOSEC/Bally/Professional Arcade & Astrocade/Games/[BIN]/"*) core="mame astrocde -cart";;
 *"MAME/Software List ROMs (merged)/astrocde/"*) core="mame astrocde -cart";;
@@ -485,6 +511,8 @@ case "$adresar/" in
 *"TOSEC/Nintendo/Famicom & Entertainment System/Games/[NES]/"*) core="nestopia_libretro";;
 *"MAME/Software List ROMs (merged)/nes/"*) core="mame nes -cart";;
 *"MAME/Software List ROMs (split)/nes/"*) core="mame nes -cart";;
+*"MAME/Software List ROMs (merged)/nes_ade/"*) core="mame nes -cart";;
+*"MAME/Software List ROMs (split)/nes_ade/"*) core="mame nes -cart";;
 *"FinalBurn Neo/nes/"*) core="nestopia_libretro";;
 *"No-Intro/Nintendo - Family Computer Disk System (FDS)/"*) core="nestopia_libretro";;
 *"TOSEC/Nintendo/Famicom Disk System/Games/[FDS]/"*) core="nestopia_libretro";;
@@ -611,6 +639,8 @@ case "$adresar/" in
 *"MAME/Software List ROMs (merged)/gamegear/"*) core="mame gamegear -cart";;
 *"MAME/Software List ROMs (split)/gamegear/"*) core="mame gamegear -cart";;
 *"FinalBurn Neo/gamegear/"*) core="gearsystem_libretro";;
+*"MAME/Software List ROMs (merged)/smc777/"*) core="mame smc777 -flop1";;
+*"MAME/Software List ROMs (split)/smc777/"*) core="mame smc777 -flop1";;
 *"Redump/Sony - PlayStation/"*) core="pcsx_rearmed_libretro"; ext="cue";;
 *"No-Intro/Non-Redump - Sony - PlayStation/"*) core="pcsx_rearmed_libretro"; ext="cue";;
 *"MAME/Software List CHDs (merged)/psx/"*) core="mame psu -cdrm";;
@@ -974,6 +1004,16 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/entex_sag/"*) core="mame sag -cart";;
 *"MAME/Software List ROMs (merged)/vii/"*) core="mame vii -cart";;
 *"MAME/Software List ROMs (split)/vii/"*) core="mame vii -cart";;
+*"MAME/Software List ROMs (merged)/einstein/"*) core="mame einstein -flop1";;
+*"MAME/Software List ROMs (split)/einstein/"*) core="mame einstein -flop1";;
+*"MAME/Software List ROMs (merged)/m5_cart/"*) core="mame m5 -cart1";;
+*"MAME/Software List ROMs (split)/m5_cart/"*) core="mame m5 -cart1";;
+*"MAME/Software List ROMs (merged)/m5_cass/"*) core="mame m5 -cart1 m5_cart:basici -autoboot_command 'CHAIN\n' -autoboot_delay 5 -cass";;
+*"MAME/Software List ROMs (split)/m5_cass/"*) core="mame m5 -cart1 m5_cart:basici -autoboot_command 'CHAIN\n' -autoboot_delay 5 -cass";;
+*"MAME/Software List ROMs (merged)/aquarius_cart/"*) core="mame aquarius -cart1";;
+*"MAME/Software List ROMs (split)/aquarius_cart/"*) core="mame aquarius -cart1";;
+*"MAME/Software List ROMs (merged)/aquarius_cass/"*) core="mame aquarius -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/aquarius_cass/"*) core="mame aquarius -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
 esac
 
 if [ -n "$ext" ]; then
