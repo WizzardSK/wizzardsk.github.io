@@ -514,6 +514,8 @@ case "$adresar/" in
 *"MAME/Software List ROMs (merged)/nes_ade/"*) core="mame nes -cart";;
 *"MAME/Software List ROMs (split)/nes_ade/"*) core="mame nes -cart";;
 *"FinalBurn Neo/nes/"*) core="nestopia_libretro";;
+*"MAME/Software List ROMs (merged)/nes_ntbrom/"*) core="mame nes -cart1 nes:nantbb -cart2";;
+*"MAME/Software List ROMs (split)/nes_ntbrom/"*) core="mame nes -cart1 nes:nantbb -cart2";;
 *"No-Intro/Nintendo - Family Computer Disk System (FDS)/"*) core="nestopia_libretro";;
 *"TOSEC/Nintendo/Famicom Disk System/Games/[FDS]/"*) core="nestopia_libretro";;
 *"MAME/Software List ROMs (merged)/famicom_flop/"*) core="mame fds -flop";;
@@ -526,6 +528,8 @@ case "$adresar/" in
 *"MAME/Software List ROMs (merged)/snes/"*) core="mame snes -cart";;
 *"MAME/Software List ROMs (split)/snes/"*) core="mame snes -cart";;
 *"FinalBurn Neo/snes/"*) core="snes9x_libretro";;
+*"MAME/Software List ROMs (merged)/snes_strom/"*) core="mame snes -cart1 snes:sufami -cart2";;
+*"MAME/Software List ROMs (split)/snes_strom/"*) core="mame snes -cart1 snes:sufami -cart2";;
 *"T-En Collection/Nintendo - Super Famicom - MSU1/"*) core="snes9x_libretro";;
 *"T-En Collection/Nintendo - Super Famicom - MSU1 [roms only]/"*) core="snes9x_libretro";;
 *"No-Intro/Nintendo - Satellaview/"*) core="snes9x_libretro";;
@@ -1014,6 +1018,34 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/aquarius_cart/"*) core="mame aquarius -cart1";;
 *"MAME/Software List ROMs (merged)/aquarius_cass/"*) core="mame aquarius -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
 *"MAME/Software List ROMs (split)/aquarius_cass/"*) core="mame aquarius -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (merged)/sorcerer_cart/"*) core="mame sorcerer -cart";;
+*"MAME/Software List ROMs (split)/sorcerer_cart/"*) core="mame sorcerer -cart";;
+*"MAME/Software List ROMs (merged)/sorcerer_cass/"*) core="mame sorcerer -cart sorcerer_cart:basicpac -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 5 -cass1";;
+*"MAME/Software List ROMs (split)/sorcerer_cass/"*) core="mame sorcerer -cart sorcerer_cart:basicpac -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 5 -cass1";;
+*"MAME/Software List ROMs (merged)/sorcerer_flop/"*) core="mame sorcererd -flop1";;
+*"MAME/Software List ROMs (split)/sorcerer_flop/"*) core="mame sorcererd -flop1";;
+*"MAME/Software List ROMs (merged)/sol20_cass/"*) core="mame sol20 -cass1";;
+*"MAME/Software List ROMs (split)/sol20_cass/"*) core="mame sol20 -cass1";;
+*"MAME/Software List ROMs (merged)/interact/"*) core="mame interact -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/interact/"*) core="mame interact -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (merged)/rainbow/"*) core="mame rainbow -flop1";;
+*"MAME/Software List ROMs (split)/rainbow/"*) core="mame rainbow -flop1";;
+*"MAME/Software List ROMs (merged)/phc25_cass/"*) core="mame phc25 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/phc25_cass/"*) core="mame phc25 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (merged)/jupace_cass/"*) core="mame jupace -cass";;
+*"MAME/Software List ROMs (split)/jupace_cass/"*) core="mame jupace -cass";;
+*"MAME/Software List ROMs (merged)/alice32/"*) core="mame alice32 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/alice32/"*) core="mame alice32 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (merged)/alice90/"*) core="mame alice90 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/alice90/"*) core="mame alice90 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (merged)/tiki100/"*) core="mame tiki100 -flop1";;
+*"MAME/Software List ROMs (split)/tiki100/"*) core="mame tiki100 -flop1";;
+*"MAME/Software List ROMs (merged)/pencil2/"*) core="mame pencil2 -cart";;
+*"MAME/Software List ROMs (split)/pencil2/"*) core="mame pencil2 -cart";;
+*"MAME/Software List ROMs (merged)/super80_cass/"*) core="mame super80 -cass";;
+*"MAME/Software List ROMs (split)/super80_cass/"*) core="mame super80 -cass";;
+*"MAME/Software List ROMs (merged)/super80_flop/"*) core="mame super80r -flop1";;
+*"MAME/Software List ROMs (split)/super80_flop/"*) core="mame super80r -flop1";;
 esac
 
 if [ -n "$ext" ]; then
