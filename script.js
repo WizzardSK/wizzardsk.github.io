@@ -1,125 +1,137 @@
 const filterInput = document.getElementById('filterInput');
-const figureList = document.getElementsByClassName('figureList');
 const figures = document.querySelectorAll('.figureList figure');
-var size = 160;
+const pocetEl = document.getElementById('pocet');
 filterInput.focus();
-let timerId;
-filterInput.addEventListener('input', function () {
-    clearTimeout(timerId);
-    const filterText = filterInput.value.toLowerCase();
-    timerId = setTimeout(function() {
-        for (let i = 0; i < figures.length; i++) {
-            const caption = figures[i].getElementsByTagName('figcaption')[0];
-            const captionText = caption.textContent.toLowerCase();
-            if (captionText.includes(filterText)) { figures[i].style.display = ''; } else { figures[i].style.display = 'none'; }
-        }
-        showHideProto.dispatchEvent(new Event('change'));
-        showHideProgram.dispatchEvent(new Event('change'));
-        showHideAlfa.dispatchEvent(new Event('change'));
-        showHideBeta.dispatchEvent(new Event('change'));
-        showHideDemo.dispatchEvent(new Event('change'));
-        showHideAftermarket.dispatchEvent(new Event('change'));
-        showHideUnl.dispatchEvent(new Event('change'));
-        showHideAlt.dispatchEvent(new Event('change'));
-        showHidePirate.dispatchEvent(new Event('change'));
-        showHideBrackets.dispatchEvent(new Event('change'));
-        showHidePrerelease.dispatchEvent(new Event('change'));
-        showHideDisk.dispatchEvent(new Event('change'));
-    }, 1000);
-});
 
-function handleCheckboxChange(checkbox, filterText) {
-    checkbox.addEventListener('change', function () {
-        for (let i = 0; i < figures.length; i++) {
-            const caption = figures[i].getElementsByTagName('figcaption')[0];
-            const captionText = caption.textContent.toLowerCase();
-            if ((new RegExp(filterText).test(captionText)) && (new RegExp(filterInput.value.toLowerCase()).test(captionText))) { figures[i].style.display = checkbox.checked ? '' : 'none'; }
-        }
-        displayedCount = 0;
-        for (let i = 0; i < figures.length; i++) { if (figures[i].style.display !== 'none') { displayedCount++; } }
-        document.getElementById('pocet').innerHTML = displayedCount + "/" + figures.length;
+// Cache figcaption texts for faster filtering
+var captionTexts = new Array(figures.length);
+for (var i = 0; i < figures.length; i++) {
+    captionTexts[i] = figures[i].getElementsByTagName('figcaption')[0].textContent.toLowerCase();
+}
+
+// Navlinks
+var navlinksDiv = document.getElementById('navlinks');
+var sectionHeaders = document.querySelectorAll('.section-header');
+
+if (sectionHeaders.length > 1 && navlinksDiv) {
+    sectionHeaders.forEach(function(header) {
+        var link = document.createElement('a');
+        link.href = '#';
+        link.textContent = header.id;
+        link.className = 'navlink';
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var topbarHeight = document.getElementById('topbar').offsetHeight;
+            var headerTop = header.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({ top: headerTop - topbarHeight, behavior: 'smooth' });
+        });
+        navlinksDiv.appendChild(link);
     });
 }
 
-handleCheckboxChange(showHideProto, "\\(proto\\)");
-handleCheckboxChange(showHideProgram, "\\(program\\)");
-handleCheckboxChange(showHideAlfa, "\\(alpha( [0-9]+)?\\)");
-handleCheckboxChange(showHideBeta, "\\(beta( [0-9]+)?\\)");
-handleCheckboxChange(showHideDemo, "\\(demo( [0-9]+)?\\)");
-handleCheckboxChange(showHideAftermarket, "\\(aftermarket\\)");
-handleCheckboxChange(showHideUnl, "\\(unl\\)");
-handleCheckboxChange(showHideAlt, "\\(alt|alternate\\)");
-handleCheckboxChange(showHidePirate, "\\(pirate\\)");
-handleCheckboxChange(showHidePrerelease, "\\(pre-release\\)");
-handleCheckboxChange(showHideBrackets, "\\[(bios|a[0-9]{0,2}|b[0-9]{0,2}|c|f|[Hh] [^\\]]*|o ?.*|p ?.*|t ?.*|cr ?.*)\\]");
-handleCheckboxChange(showHideDisk, "\\((disk|side)( [2-9b-z].*)\\)");
+// Push first content below the fixed topbar (after navlinks are added)
+var topbarHeight = document.getElementById('topbar').offsetHeight + 'px';
+if (sectionHeaders.length > 0) {
+    sectionHeaders[0].style.marginTop = topbarHeight;
+} else {
+    var firstList = document.querySelector('.figureList');
+    if (firstList) firstList.style.marginTop = topbarHeight;
+}
 
+// Checkbox definitions
+var checkboxes = [
+    [showHideProto, /\(proto\)/],
+    [showHideProgram, /\(program\)/],
+    [showHideAlfa, /\(alpha( [0-9]+)?\)/],
+    [showHideBeta, /\(beta( [0-9]+)?\)/],
+    [showHideDemo, /\(demo( [0-9]+)?\)/],
+    [showHideAftermarket, /\(aftermarket\)/],
+    [showHideUnl, /\(unl\)/],
+    [showHideAlt, /\(alt|alternate\)/],
+    [showHidePirate, /\(pirate\)/],
+    [showHidePrerelease, /\(pre-release\)/],
+    [showHideBrackets, /\[(bios|a[0-9]{0,2}|b[0-9]{0,2}|c|f|[Hh] [^\]]*|o ?.*|p ?.*|t ?.*|cr ?.*)\]/],
+    [showHideDisk, /\((disk|side)( [2-9b-z].*)\)/]
+];
+
+// Single-pass filter: applies text filter + all checkbox rules at once
+function applyFilters() {
+    var filterText = filterInput.value.toLowerCase();
+    var count = 0;
+    for (var i = 0; i < figures.length; i++) {
+        var text = captionTexts[i];
+        var visible = text.includes(filterText);
+        if (visible) {
+            for (var c = 0; c < checkboxes.length; c++) {
+                if (!checkboxes[c][0].checked && checkboxes[c][1].test(text)) {
+                    visible = false;
+                    break;
+                }
+            }
+        }
+        figures[i].style.display = visible ? '' : 'none';
+        if (visible) count++;
+    }
+    pocetEl.innerHTML = count + "/" + figures.length;
+}
+
+// Filter input with debounce
+var timerId;
+filterInput.addEventListener('input', function () {
+    clearTimeout(timerId);
+    timerId = setTimeout(applyFilters, 1000);
+});
+
+// Checkbox change triggers refilter
+for (var c = 0; c < checkboxes.length; c++) {
+    checkboxes[c][0].addEventListener('change', applyFilters);
+}
+
+// Escape key resets filter
 document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
         filterInput.value = '';
-        filterInput.dispatchEvent(new Event('input'));
-        showHideProto.dispatchEvent(new Event('change'));
-        showHideProgram.dispatchEvent(new Event('change'));
-        showHideAlfa.dispatchEvent(new Event('change'));
-        showHideBeta.dispatchEvent(new Event('change'));
-        showHideDemo.dispatchEvent(new Event('change'));
-        showHideAftermarket.dispatchEvent(new Event('change'));
-        showHideUnl.dispatchEvent(new Event('change'));
-        showHideAlt.dispatchEvent(new Event('change'));
-        showHidePirate.dispatchEvent(new Event('change'));
-        showHideBrackets.dispatchEvent(new Event('change'));
-        showHidePrerelease.dispatchEvent(new Event('change'));
-        showHideDisk.dispatchEvent(new Event('change'));
+        applyFilters();
     } else { filterInput.focus(); }
 });
 
+// Size change
 function changeSize(size) {
-    var obrazky = document.getElementsByTagName('img');
-    var figurky = document.getElementsByTagName('figure');
-    for (var i = 0; i < obrazky.length; i++) {
-        obrazky[i].style.width = size;
-        obrazky[i].style.height = (size / 1.333) + 'px';
+    var figurky = document.querySelectorAll('.figureList figure');
+    var h = (size / 1.333) + 'px';
+    var fs = Math.round(size / 13.3) + 'px';
+    for (var i = 0; i < figurky.length; i++) {
         figurky[i].style.width = size;
         figurky[i].style.height = size + 'px';
-        figurky[i].style.fontSize = Math.round(size / 13.3) + 'px';
+        figurky[i].style.fontSize = fs;
+        figurky[i].querySelector('img').style.width = size;
+        figurky[i].querySelector('img').style.height = h;
     }
 }
-function change80() { changeSize(80); }
-function change120() { changeSize(120); }
-function change160() { changeSize(160); }
-function change240() { changeSize(240); }
-function change320() { changeSize(320); }
 
+// Image type switching
+var replaceMap = {
+    'boxarts': { from: /_Snaps|_Titles|_Logos/g, to: '_Boxarts' },
+    'snaps': { from: /_Boxarts|_Titles|_Logos/g, to: '_Snaps' },
+    'titles': { from: /_Snaps|_Boxarts|_Logos/g, to: '_Titles' },
+    'logos': { from: /_Snaps|_Boxarts|_Titles/g, to: '_Logos' }
+};
 function processImages(operation) {
     var obrazky = document.getElementsByTagName('img');
-    var replaceMap = {
-        'boxarts': { from: /_Snaps|_Titles|_Logos/g, to: '_Boxarts' },
-        'snaps': { from: /_Boxarts|_Titles|_Logos/g, to: '_Snaps' },
-        'titles': { from: /_Snaps|_Boxarts|_Logos/g, to: '_Titles' },
-        'logos': { from: /_Snaps|_Boxarts|_Titles/g, to: '_Logos' }
-    };
+    var map = replaceMap[operation];
     for (var i = 0; i < obrazky.length; i++) {
         obrazky[i].style.visibility = "visible";
-        obrazky[i].src = obrazky[i].src.replace(replaceMap[operation].from, replaceMap[operation].to);
+        obrazky[i].src = obrazky[i].src.replace(map.from, map.to);
     }
 }
-function boxarts() { processImages('boxarts'); }
-function snaps() { processImages('snaps'); }
-function titles() { processImages('titles'); }
-function logos() { processImages('logos'); }
-function imgonerror(image) { image.onerror = function() { this.style.visibility = "hidden"; } }
 
+// Image error handling + loaded class
 var obrazky = document.querySelectorAll("img");
-for (var i = 0; i < obrazky.length; i++) { obrazky[i].onerror = function() { imgonerror(this); }; }
-showHideProto.dispatchEvent(new Event('change'));
-showHideProgram.dispatchEvent(new Event('change'));
-showHideAlfa.dispatchEvent(new Event('change'));
-showHideBeta.dispatchEvent(new Event('change'));
-showHideDemo.dispatchEvent(new Event('change'));
-showHideAftermarket.dispatchEvent(new Event('change'));
-showHideUnl.dispatchEvent(new Event('change'));
-showHideAlt.dispatchEvent(new Event('change'));
-showHidePirate.dispatchEvent(new Event('change'));
-showHideBrackets.dispatchEvent(new Event('change'));
-showHidePrerelease.dispatchEvent(new Event('change'));
-showHideDisk.dispatchEvent(new Event('change'));
+for (var i = 0; i < obrazky.length; i++) {
+    obrazky[i].onerror = function() { this.style.visibility = "hidden"; };
+    if (obrazky[i].complete) { obrazky[i].classList.add('loaded'); }
+    else { obrazky[i].addEventListener('load', function() { this.classList.add('loaded'); }); }
+}
+
+// Initial filter
+applyFilters();
