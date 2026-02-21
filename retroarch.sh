@@ -992,28 +992,38 @@ case "$adresar/" in
 *"TOSEC/SNK/Neo-Geo Pocket Color/Games/"*) core="mednafen_ngp_libretro";;
 *"MAME/Software List ROMs (merged)/ngpc/"*) core="mame ngpc -cart";;
 *"MAME/Software List ROMs (split)/ngpc/"*) core="mame ngpc -cart";;
+*"MAME/Software List ROMs (merged)/myvision/"*) core="mame myvision -cart";;
+*"MAME/Software List ROMs (split)/myvision/"*) core="mame myvision -cart";;
+*"MAME/Software List ROMs (merged)/m5_cart/"*) core="mame m5 -cart1";;
+*"MAME/Software List ROMs (split)/m5_cart/"*) core="mame m5 -cart1";;
+*"MAME/Software List ROMs (merged)/m5_cass/"*) core="mame m5 -cart1 m5_cart:basici -autoboot_command 'CHAIN\n' -autoboot_delay 5 -cass";;
+*"MAME/Software List ROMs (split)/m5_cass/"*) core="mame m5 -cart1 m5_cart:basici -autoboot_command 'CHAIN\n' -autoboot_delay 5 -cass";;
+*"MAME/Software List ROMs (merged)/phc25_cass/"*) core="mame phc25 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/phc25_cass/"*) core="mame phc25 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
 *"MAME/Software List ROMs (merged)/monon_color/"*) core="mame mononcol -cart";;
 *"MAME/Software List ROMs (split)/monon_color/"*) core="mame mononcol -cart";;
 *"MAME/Software List ROMs (merged)/gameking/"*) core="mame gameking -cart";;
 *"MAME/Software List ROMs (split)/gameking/"*) core="mame gameking -cart";;
 *"MAME/Software List ROMs (merged)/gameking3/"*) core="mame gamekin3 -cart";;
 *"MAME/Software List ROMs (split)/gameking3/"*) core="mame gamekin3 -cart";;
-*"MAME/Software List ROMs (merged)/vidbrain/"*) core="mame vidbrain -cart";;
-*"MAME/Software List ROMs (split)/vidbrain/"*) core="mame vidbrain -cart";;
-*"MAME/Software List ROMs (merged)/unichamp/"*) core="mame unichamp -cart";;
-*"MAME/Software List ROMs (split)/unichamp/"*) core="mame unichamp -cart";;
-*"MAME/Software List ROMs (merged)/myvision/"*) core="mame myvision -cart";;
-*"MAME/Software List ROMs (split)/myvision/"*) core="mame myvision -cart";;
-*"MAME/Software List ROMs (merged)/entex_sag/"*) core="mame sag -cart";;
-*"MAME/Software List ROMs (split)/entex_sag/"*) core="mame sag -cart";;
 *"MAME/Software List ROMs (merged)/vii/"*) core="mame vii -cart";;
 *"MAME/Software List ROMs (split)/vii/"*) core="mame vii -cart";;
 *"MAME/Software List ROMs (merged)/einstein/"*) core="mame einstein -flop1";;
 *"MAME/Software List ROMs (split)/einstein/"*) core="mame einstein -flop1";;
-*"MAME/Software List ROMs (merged)/m5_cart/"*) core="mame m5 -cart1";;
-*"MAME/Software List ROMs (split)/m5_cart/"*) core="mame m5 -cart1";;
-*"MAME/Software List ROMs (merged)/m5_cass/"*) core="mame m5 -cart1 m5_cart:basici -autoboot_command 'CHAIN\n' -autoboot_delay 5 -cass";;
-*"MAME/Software List ROMs (split)/m5_cass/"*) core="mame m5 -cart1 m5_cart:basici -autoboot_command 'CHAIN\n' -autoboot_delay 5 -cass";;
+*"MAME/Software List ROMs (merged)/unichamp/"*) core="mame unichamp -cart";;
+*"MAME/Software List ROMs (split)/unichamp/"*) core="mame unichamp -cart";;
+*"MAME/Software List ROMs (merged)/jupace_cass/"*) core="mame jupace -cass";;
+*"MAME/Software List ROMs (split)/jupace_cass/"*) core="mame jupace -cass";;
+*"MAME/Software List ROMs (merged)/alice32/"*) core="mame alice32 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/alice32/"*) core="mame alice32 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (merged)/alice90/"*) core="mame alice90 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/alice90/"*) core="mame alice90 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (merged)/tiki100/"*) core="mame tiki100 -flop1";;
+*"MAME/Software List ROMs (split)/tiki100/"*) core="mame tiki100 -flop1";;
+*"MAME/Software List ROMs (merged)/vidbrain/"*) core="mame vidbrain -cart";;
+*"MAME/Software List ROMs (split)/vidbrain/"*) core="mame vidbrain -cart";;
+*"MAME/Software List ROMs (merged)/entex_sag/"*) core="mame sag -cart";;
+*"MAME/Software List ROMs (split)/entex_sag/"*) core="mame sag -cart";;
 *"MAME/Software List ROMs (merged)/aquarius_cart/"*) core="mame aquarius -cart1";;
 *"MAME/Software List ROMs (split)/aquarius_cart/"*) core="mame aquarius -cart1";;
 *"MAME/Software List ROMs (merged)/aquarius_cass/"*) core="mame aquarius -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
@@ -1030,16 +1040,6 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/interact/"*) core="mame interact -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
 *"MAME/Software List ROMs (merged)/rainbow/"*) core="mame rainbow -flop1";;
 *"MAME/Software List ROMs (split)/rainbow/"*) core="mame rainbow -flop1";;
-*"MAME/Software List ROMs (merged)/phc25_cass/"*) core="mame phc25 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
-*"MAME/Software List ROMs (split)/phc25_cass/"*) core="mame phc25 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
-*"MAME/Software List ROMs (merged)/jupace_cass/"*) core="mame jupace -cass";;
-*"MAME/Software List ROMs (split)/jupace_cass/"*) core="mame jupace -cass";;
-*"MAME/Software List ROMs (merged)/alice32/"*) core="mame alice32 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
-*"MAME/Software List ROMs (split)/alice32/"*) core="mame alice32 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
-*"MAME/Software List ROMs (merged)/alice90/"*) core="mame alice90 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
-*"MAME/Software List ROMs (split)/alice90/"*) core="mame alice90 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
-*"MAME/Software List ROMs (merged)/tiki100/"*) core="mame tiki100 -flop1";;
-*"MAME/Software List ROMs (split)/tiki100/"*) core="mame tiki100 -flop1";;
 *"MAME/Software List ROMs (merged)/pencil2/"*) core="mame pencil2 -cart";;
 *"MAME/Software List ROMs (split)/pencil2/"*) core="mame pencil2 -cart";;
 *"MAME/Software List ROMs (merged)/super80_cass/"*) core="mame super80 -cass";;
@@ -1055,12 +1055,13 @@ else
   rom="$1"
 fi
 
-case "$1" in */ti99_cart/*|*/vic10/*|*/stv/*|*/myvision/*|*/ibm5150/*|*/ibm5170/*|*/ibmpcjr_cart/*|*/ibmpcjr_flop/*) rom="$(basename "${1%.*}")";; esac
+case "$1" in */ti99_cart/*|*/vic10/*|*/stv/*|*/myvision/*|*/ibm5150/*|*/ibm5170/*|*/ibmpcjr_cart/*|*/ibmpcjr_flop/*) rompath="$(dirname "$1");$HOME/share/bios"; rom="$(basename "${1%.*}")";; esac
 
 if [[ "$core" == *"mame"* ]]; then
+  core=$(echo "$core" | sed -E 's|(-hard[0-9]+) ([a-z0-9_]+):([a-z0-9_]+)|\1 '"$HOME"'/share/bios/\2/\3/\3.chd|g')
   filename="${rom##*/}"; basename="${filename%.*}"
   eval "cmd=($core)"
-  "${cmd[@]}" "${rom}" -skip_gameinfo -snapname "${basename}"
+  "${cmd[@]}" "${rom}" ${rompath:+-rompath "$rompath"} -skip_gameinfo -snapname "${basename}"
   exit
 fi
 
