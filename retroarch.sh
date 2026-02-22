@@ -161,6 +161,8 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/adam_cass/"*) core="mame adam -cass";;
 *"MAME/Software List ROMs (merged)/adam_cart/"*) core="mame adam -cart1";;
 *"MAME/Software List ROMs (split)/adam_cart/"*) core="mame adam -cart1";;
+*"MAME/Software List ROMs (merged)/cassvisn_cart/"*) core="mame cassvisn";;
+*"MAME/Software List ROMs (split)/cassvisn_cart/"*) core="mame cassvisn";;
 *"No-Intro/Epoch - Super Cassette Vision/"*) core="emuscv_libretro";;
 *"TOSEC/Epoch/Super Cassette Vision/Games/"*) core="emuscv_libretro";;
 *"MAME/Software List ROMs (merged)/scv/"*) core="mame scv -cart";;
@@ -1055,7 +1057,7 @@ else
   rom="$1"
 fi
 
-case "$1" in */ti99_cart/*|*/vic10/*|*/stv/*|*/myvision/*|*/ibm5150/*|*/ibm5170/*|*/ibmpcjr_cart/*|*/ibmpcjr_flop/*) rompath="$(dirname "$1");$HOME/share/bios"; rom="$(basename "${1%.*}")";; esac
+case "$1" in */ti99_cart/*|*/vic10/*|*/stv/*|*/myvision/*|*/ibm5150/*|*/ibm5170/*|*/ibmpcjr_cart/*|*/ibmpcjr_flop/*|*/cassvisn_cart/*) rompath="$(dirname "$1");$HOME/share/bios"; rom="$(basename "${1%.*}")";; esac
 
 if [[ "$core" == *"mame"* ]]; then
   core=$(echo "$core" | sed -E 's|(-hard[0-9]+) ([a-z0-9_]+):([a-z0-9_]+)|\1 '"$HOME"'/share/bios/\2/\3/\3.chd|g')
