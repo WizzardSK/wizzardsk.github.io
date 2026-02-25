@@ -178,6 +178,9 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/svision/"*) core="mame svision -cart";;
 *"MAME/Software List ROMs (merged)/sv8000/"*) core="mame sv8000 -cart";;
 *"MAME/Software List ROMs (split)/sv8000/"*) core="mame sv8000 -cart";;
+*"TOSEC/Sega/Visual Memory System/Games/"*) core="mame svmu -quik";;
+*"MAME/Software List ROMs (merged)/svmu/"*) core="mame svmu -quik";;
+*"MAME/Software List ROMs (split)/svmu/"*) core="mame svmu -quik";;
 *"No-Intro/Bandai - Gundam RX-78/"*) core="mame rx78 -cart";;
 *"TOSEC/Bandai/Gundam RX-78/Games/[BIN]/"*) core="mame rx78 -cart";;
 *"MAME/Software List ROMs (merged)/rx78_cart/"*) core="mame rx78 -cart";;
