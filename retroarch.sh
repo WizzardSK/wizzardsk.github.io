@@ -181,6 +181,7 @@ case "$adresar/" in
 *"TOSEC/Sega/Visual Memory System/Games/"*) core="mame svmu -quik";;
 *"MAME/Software List ROMs (merged)/svmu/"*) core="mame svmu -quik";;
 *"MAME/Software List ROMs (split)/svmu/"*) core="mame svmu -quik";;
+*"TOSEC/Sony/PocketStation/Various/"*) core="mame pockstat -cart";;
 *"No-Intro/Bandai - Gundam RX-78/"*) core="mame rx78 -cart";;
 *"TOSEC/Bandai/Gundam RX-78/Games/[BIN]/"*) core="mame rx78 -cart";;
 *"MAME/Software List ROMs (merged)/rx78_cart/"*) core="mame rx78 -cart";;
