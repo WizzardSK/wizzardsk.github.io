@@ -1052,6 +1052,8 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/super80_cass/"*) core="mame super80 -cass";;
 *"MAME/Software List ROMs (merged)/super80_flop/"*) core="mame super80r -flop1";;
 *"MAME/Software List ROMs (split)/super80_flop/"*) core="mame super80r -flop1";;
+*"No-Intro/Mobile - J2ME/"*) core="freej2me_libretro"; ext="jar";;
+*"No-Intro/Mobile - Palm OS (Digital)/"*) core="mu_libretro"; ext="prc";;
 esac
 
 if [ -n "$ext" ]; then
