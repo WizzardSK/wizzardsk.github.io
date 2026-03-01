@@ -167,21 +167,17 @@ case "$adresar/" in
 *"TOSEC/Epoch/Super Cassette Vision/Games/"*) core="emuscv_libretro";;
 *"MAME/Software List ROMs (merged)/scv/"*) core="mame scv -cart";;
 *"MAME/Software List ROMs (split)/scv/"*) core="mame scv -cart";;
-*"MAME/Software List ROMs (merged)/ctvboy/"*) core="mame ctvboy -cart";;
-*"MAME/Software List ROMs (split)/ctvboy/"*) core="mame ctvboy -cart";;
 *"No-Intro/Epoch - Game Pocket Computer/"*) core="mame gamepock -cart";;
 *"MAME/Software List ROMs (merged)/gamepock/"*) core="mame gamepock -cart";;
 *"MAME/Software List ROMs (split)/gamepock/"*) core="mame gamepock -cart";;
+*"MAME/Software List ROMs (merged)/ctvboy/"*) core="mame ctvboy -cart";;
+*"MAME/Software List ROMs (split)/ctvboy/"*) core="mame ctvboy -cart";;
 *"No-Intro/Watara - Supervision/"*) core="potator_libretro";;
 *"TOSEC/Watara/Supervision/Games/"*) core="potator_libretro";;
 *"MAME/Software List ROMs (merged)/svision/"*) core="mame svision -cart";;
 *"MAME/Software List ROMs (split)/svision/"*) core="mame svision -cart";;
 *"MAME/Software List ROMs (merged)/sv8000/"*) core="mame sv8000 -cart";;
 *"MAME/Software List ROMs (split)/sv8000/"*) core="mame sv8000 -cart";;
-*"TOSEC/Sega/Visual Memory System/Games/"*) core="mame svmu -quik";;
-*"MAME/Software List ROMs (merged)/svmu/"*) core="mame svmu -quik";;
-*"MAME/Software List ROMs (split)/svmu/"*) core="mame svmu -quik";;
-*"TOSEC/Sony/PocketStation/Various/"*) core="mame pockstat -cart";;
 *"No-Intro/Bandai - Gundam RX-78/"*) core="mame rx78 -cart";;
 *"TOSEC/Bandai/Gundam RX-78/Games/[BIN]/"*) core="mame rx78 -cart";;
 *"MAME/Software List ROMs (merged)/rx78_cart/"*) core="mame rx78 -cart";;
@@ -197,6 +193,10 @@ case "$adresar/" in
 *"TOSEC/Bandai/WonderSwan Color/Games/"*) core="mednafen_wswan_libretro";;
 *"MAME/Software List ROMs (merged)/wscolor/"*) core="mame wscolor -cart";;
 *"MAME/Software List ROMs (split)/wscolor/"*) core="mame wscolor -cart";;
+*"TOSEC/Sega/Visual Memory System/Games/"*) core="mame svmu -quik";;
+*"MAME/Software List ROMs (merged)/svmu/"*) core="mame svmu -quik";;
+*"MAME/Software List ROMs (split)/svmu/"*) core="mame svmu -quik";;
+*"TOSEC/Sony/PocketStation/Various/"*) core="mame pockstat -cart";;
 *"No-Intro/Welback - Mega Duck/"*) core="mame megaduck -cart";;
 *"MAME/Software List ROMs (merged)/megaduck/"*) core="mame megaduck -cart";;
 *"MAME/Software List ROMs (split)/megaduck/"*) core="mame megaduck -cart";;
@@ -409,6 +409,11 @@ case "$adresar/" in
 *"TOSEC/Tandy Radio Shack/TRS-80 MC-10/Various/"*) core="mame mc10 -cass";;
 *"MAME/Software List ROMs (merged)/mc10/"*) core="mame mc10 -cass";;
 *"MAME/Software List ROMs (split)/mc10/"*) core="mame mc10 -cass";;
+*"Redump/Memorex - Visual Information System/"*) core="mame vis -cdrm"; ext="cue";;
+*"TOSEC-ISO/Memorex/Video Information System/Educational/"*) core="mame vis -cdrm"; ext="cue";;
+*"TOSEC-ISO/Memorex/Video Information System/Games/"*) core="mame vis -cdrm"; ext="cue";;
+*"TOSEC-ISO/Memorex/Video Information System/Multimedia/"*) core="mame vis -cdrm"; ext="cue";;
+*"MAME/Software List CHDs (merged)/vis/"*) core="mame vis -cdrm";;
 *"TOSEC/Dragon Data/Dragon/Games/[CAS]/"*) core="mame dragon64 -autoboot_command 'CLOAD\n' -autoboot_delay 4 -cass";;
 *"MAME/Software List ROMs (merged)/dragon_cass/"*) core="mame dragon64 -autoboot_command 'CLOAD\n' -autoboot_delay 4 -cass";;
 *"MAME/Software List ROMs (split)/dragon_cass/"*) core="mame dragon64 -autoboot_command 'CLOAD\n' -autoboot_delay 4 -cass";;
@@ -416,11 +421,6 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/dragon_flop/"*) core="mame dragon64 -flop1";;
 *"MAME/Software List ROMs (merged)/dragon_cart/"*) core="mame dragon64 -cart";;
 *"MAME/Software List ROMs (split)/dragon_cart/"*) core="mame dragon64 -cart";;
-*"Redump/Memorex - Visual Information System/"*) core="mame vis -cdrm"; ext="cue";;
-*"TOSEC-ISO/Memorex/Video Information System/Educational/"*) core="mame vis -cdrm"; ext="cue";;
-*"TOSEC-ISO/Memorex/Video Information System/Games/"*) core="mame vis -cdrm"; ext="cue";;
-*"TOSEC-ISO/Memorex/Video Information System/Multimedia/"*) core="mame vis -cdrm"; ext="cue";;
-*"MAME/Software List CHDs (merged)/vis/"*) core="mame vis -cdrm";;
 *"TOSEC/Acorn/Atom/Games/[DSK]/"*) core="mame atom -flop1";;
 *"MAME/Software List ROMs (merged)/atom_flop/"*) core="mame atom -flop1";;
 *"MAME/Software List ROMs (split)/atom_flop/"*) core="mame atom -flop1";;
@@ -1052,6 +1052,8 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/super80_cass/"*) core="mame super80 -cass";;
 *"MAME/Software List ROMs (merged)/super80_flop/"*) core="mame super80r -flop1";;
 *"MAME/Software List ROMs (split)/super80_flop/"*) core="mame super80r -flop1";;
+*"MAME/Software List ROMs (merged)/mc1000_cass/"*) core="mame mc1000 -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass";;
+*"MAME/Software List ROMs (split)/mc1000_cass/"*) core="mame mc1000 -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass";;
 *"No-Intro/Mobile - J2ME/"*) core="freej2me_libretro"; ext="jar";;
 *"No-Intro/Mobile - Palm OS (Digital)/"*) core="mu_libretro"; ext="prc";;
 esac
