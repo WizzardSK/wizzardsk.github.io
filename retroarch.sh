@@ -117,8 +117,6 @@ case "$adresar/" in
 *"TOSEC/Apple/Lisa/Applications/[A2R]/"*) core="mame lisa -flop1";;
 *"MAME/Software List ROMs (merged)/lisa/"*) core="mame lisa -flop1";;
 *"MAME/Software List ROMs (split)/lisa/"*) core="mame lisa -flop1";;
-*"MAME/Software List ROMs (merged)/pippin_flop/"*) core="mame pippin -flop1";;
-*"MAME/Software List ROMs (split)/pippin_flop/"*) core="mame pippin -flop1";;
 *"MAME/Software List ROMs (merged)/mac_flop/"*) core="mame macse -flop1";;
 *"MAME/Software List ROMs (split)/mac_flop/"*) core="mame macse -flop1";;
 *"MAME/Software List ROMs (merged)/mac_flop_orig/"*) core="mame macse -flop1";;
@@ -359,8 +357,6 @@ case "$adresar/" in
 *"TOSEC/Nintendo/DS/Games/"*) core="melonds_libretro";;
 *"No-Intro/Nintendo - Nintendo DSi (Decrypted)/"*) core="melondsds_libretro";;
 *"TOSEC/Nintendo/DSi/Games/"*) core="melondsds_libretro";;
-*"MAME/Software List ROMs (merged)/famibox/"*) core="mame famibox";;
-*"MAME/Software List ROMs (split)/famibox/"*) core="mame famibox";;
 *"No-Intro/Nintendo - Nintendo 3DS (Decrypted)/"*) core="citra_libretro"; ext="3ds";;
 *"Redump/Nintendo - Wii U - WUX/"*) core="cemu -g"; ext="wux";;
 *"TOSEC/Sega/Visual Memory System/Games/"*) core="mame svmu -quik";;
@@ -647,8 +643,8 @@ case "$adresar/" in
 *"TOSEC/Emerson/Arcadia 2001/Games/"*) core="mame arcadia -cart";;
 *"MAME/Software List ROMs (merged)/arcadia/"*) core="mame arcadia -cart";;
 *"MAME/Software List ROMs (split)/arcadia/"*) core="mame arcadia -cart";;
-*"MAME/Software List ROMs (merged)/hyperscan_card/"*) core="mame hyprscan -cart";;
-*"MAME/Software List ROMs (split)/hyperscan_card/"*) core="mame hyprscan -cart";;
+*"MAME/Software List ROMs (merged)/hyperscan/"*) core="mame hyprscan -cdrom";;
+*"MAME/Software List ROMs (split)/hyperscan/"*) core="mame hyprscan -cdrom";;
 *"No-Intro/Funtech - Super Acan/"*) core="mame supracan -cart";;
 *"TOSEC/Funtech/Super A'can/Games/"*) core="mame supracan -cart";;
 *"MAME/Software List ROMs (merged)/supracan/"*) core="mame supracan -cart";;
@@ -695,8 +691,8 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/osborne1/"*) core="mame osborne1 -flop1";;
 *"MAME/Software List ROMs (merged)/jupace_cass/"*) core="mame jupace -cass";;
 *"MAME/Software List ROMs (split)/jupace_cass/"*) core="mame jupace -cass";;
-*"MAME/Software List ROMs (merged)/nascom_snap/"*) core="mame nascom2 -snap";;
-*"MAME/Software List ROMs (split)/nascom_snap/"*) core="mame nascom2 -snap";;
+*"MAME/Software List ROMs (merged)/nascom_snap/"*) core="mame nascom2 -dump1";;
+*"MAME/Software List ROMs (split)/nascom_snap/"*) core="mame nascom2 -dump1";;
 *"MAME/Software List ROMs (merged)/nascom_flop/"*) core="mame nascom2 -flop1";;
 *"MAME/Software List ROMs (split)/nascom_flop/"*) core="mame nascom2 -flop1";;
 *"MAME/Software List ROMs (merged)/abc80_flop/"*) core="mame abc80 -flop1";;
@@ -705,8 +701,6 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/abc80_cass/"*) core="mame abc80 -cass";;
 *"MAME/Software List ROMs (merged)/abc80_rom/"*) core="mame abc80 -cart";;
 *"MAME/Software List ROMs (split)/abc80_rom/"*) core="mame abc80 -cart";;
-*"MAME/Software List ROMs (merged)/zorba/"*) core="mame zorba -flop1";;
-*"MAME/Software List ROMs (split)/zorba/"*) core="mame zorba -flop1";;
 *"MAME/Software List ROMs (merged)/kaypro/"*) core="mame kaypro2x -flop1";;
 *"MAME/Software List ROMs (split)/kaypro/"*) core="mame kaypro2x -flop1";;
 *"MAME/Software List ROMs (merged)/galaxy/"*) core="mame galaxy -autoboot_command 'OLD\nRUN\n' -autoboot_delay 3 -cass";;
@@ -1019,10 +1013,6 @@ case "$adresar/" in
 *"TOSEC-ISO/NEC/PC-Engine CD & TurboGrafx-16 CD/Games/[IMG]/"*) core="mednafen_pce_fast_libretro"; ext="cue";;
 *"No-Intro/Non-Redump - NEC - PC Engine CD + TurboGrafx CD/"*) core="mednafen_pce_fast_libretro"; ext="cue";;
 *"MAME/Software List CHDs (merged)/pcecd/"*) core="mame pce -cdrm";;
-*"MAME/Software List ROMs (merged)/pc88va/"*) core="mame pc88va -flop1";;
-*"MAME/Software List ROMs (split)/pc88va/"*) core="mame pc88va -flop1";;
-*"MAME/Software List ROMs (merged)/apc/"*) core="mame apc -flop1";;
-*"MAME/Software List ROMs (split)/apc/"*) core="mame apc -flop1";;
 *"Redump/NEC - PC-FX & PC-FXGA/"*) core="mednafen_pcfx_libretro"; ext="cue";;
 *"TOSEC-ISO/NEC/PC-FX/Games/"*) core="mednafen_pcfx_libretro"; ext="cue";;
 *"No-Intro/Fujitsu - FM-7 (Sector)/"*) core="mame fm7 -flop1";;
@@ -1160,10 +1150,8 @@ case "$adresar/" in
 *"TOSEC/Bit Corporation/Gamate/Games/"*) core="mame gamate -cart";;
 *"MAME/Software List ROMs (merged)/gamate/"*) core="mame gamate -cart";;
 *"MAME/Software List ROMs (split)/gamate/"*) core="mame gamate -cart";;
-*"MAME/Software List ROMs (merged)/pockchalw/"*) core="mame pockchal -cart";;
-*"MAME/Software List ROMs (split)/pockchalw/"*) core="mame pockchal -cart";;
-*"MAME/Software List ROMs (merged)/juicebox/"*) core="mame juicebox -memcard";;
-*"MAME/Software List ROMs (split)/juicebox/"*) core="mame juicebox -memcard";;
+*"MAME/Software List ROMs (merged)/juicebox/"*) core="mame juicebox";;
+*"MAME/Software List ROMs (split)/juicebox/"*) core="mame juicebox";;
 *"No-Intro/Hartung - Game Master/"*) core="mame gmaster -cart";;
 *"TOSEC/Hartung/Game Master/Games/"*) core="mame gmaster -cart";;
 *"MAME/Software List ROMs (merged)/gmaster/"*) core="mame gmaster -cart";;
@@ -1197,7 +1185,7 @@ else
   rom="$1"
 fi
 
-case "$1" in */ti99_cart/*|*/vic10/*|*/stv/*|*/myvision/*|*/ibm5150/*|*/ibm5170/*|*/ibmpcjr_cart/*|*/ibmpcjr_flop/*|*/cassvisn_cart/*) rompath="$(dirname "$1");$HOME/share/bios"; rom="$(basename "${1%.*}")";; esac
+case "$1" in */ti99_cart/*|*/vic10/*|*/stv/*|*/myvision/*|*/ibm5150/*|*/ibm5170/*|*/ibmpcjr_cart/*|*/ibmpcjr_flop/*|*/cassvisn_cart/*|*/juicebox/*) rompath="$(dirname "$1");$HOME/share/bios"; rom="$(basename "${1%.*}")";; esac
 
 if [[ "$core" == *"mame"* ]]; then
   core=$(echo "$core" | sed -E 's|(-hard[0-9]+) ([a-z0-9_]+):([a-z0-9_]+)|\1 '"$HOME"'/share/bios/\2/\3/\3.chd|g')
