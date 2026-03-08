@@ -175,6 +175,8 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/ql_cart/"*) core="mame ql -cart";;
 *"MAME/Software List ROMs (merged)/ql_flop/"*) core="mame ql -exp trump -flop";;
 *"MAME/Software List ROMs (split)/ql_flop/"*) core="mame ql -exp trump -flop";;
+*"MAME/Software List ROMs (merged)/z88_cart/"*) core="mame z88 -cart1";;
+*"MAME/Software List ROMs (split)/z88_cart/"*) core="mame z88 -cart1";;
 *"TOSEC/Amstrad/CPC/Games/[DSK]/"*) core="cap32_libretro";;
 *"TOSEC/Amstrad/CPC/Games/[CDT]/"*) core="cap32_libretro";;
 *"TOSEC/Amstrad/CPC/Games/[SNA]/"*) core="cap32_libretro";;
@@ -636,7 +638,6 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/vsmile_cart/"*) core="mame vsmile -cart";;
 *"MAME/Software List ROMs (merged)/vsmilem_cart/"*) core="mame vsmilem -cart";;
 *"MAME/Software List ROMs (split)/vsmilem_cart/"*) core="mame vsmilem -cart";;
-*"MAME/Software List CHDs (merged)/vsmile_cd/"*) core="mame vsmile -cdrm";;
 *"MAME/Software List ROMs (merged)/vsmileb_cart/"*) core="mame vsmileb -cart";;
 *"MAME/Software List ROMs (split)/vsmileb_cart/"*) core="mame vsmileb -cart";;
 *"No-Intro/Emerson - Arcadia 2001/"*) core="mame arcadia -cart";;
@@ -759,10 +760,10 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/orao/"*) core="mame orao -cass";;
 *"MAME/Software List ROMs (merged)/vg5k/"*) core="mame vg5k -cass";;
 *"MAME/Software List ROMs (split)/vg5k/"*) core="mame vg5k -cass";;
-*"MAME/Software List ROMs (merged)/pegasus_cart/"*) core="mame pegasus -cart";;
-*"MAME/Software List ROMs (split)/pegasus_cart/"*) core="mame pegasus -cart";;
-*"MAME/Software List ROMs (merged)/juku/"*) core="mame juku -flop";;
-*"MAME/Software List ROMs (split)/juku/"*) core="mame juku -flop";;
+*"MAME/Software List ROMs (merged)/pegasus_cart/"*) core="mame pegasus -rom1";;
+*"MAME/Software List ROMs (split)/pegasus_cart/"*) core="mame pegasus -rom1";;
+*"MAME/Software List ROMs (merged)/juku/"*) core="mame juku -flop1";;
+*"MAME/Software List ROMs (split)/juku/"*) core="mame juku -flop1";;
 *"MAME/Software List ROMs (merged)/x07_cass/"*) core="mame x07 -cass";;
 *"MAME/Software List ROMs (split)/x07_cass/"*) core="mame x07 -cass";;
 *"MAME/Software List ROMs (merged)/alice32/"*) core="mame alice32 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass";;
@@ -876,8 +877,6 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/exl100/"*) core="mame exl100 -cart";;
 *"MAME/Software List ROMs (merged)/compclr2_flop/"*) core="mame compclr2 -flop1";;
 *"MAME/Software List ROMs (split)/compclr2_flop/"*) core="mame compclr2 -flop1";;
-*"MAME/Software List ROMs (merged)/z88_cart/"*) core="mame z88 -cart";;
-*"MAME/Software List ROMs (split)/z88_cart/"*) core="mame z88 -cart";;
 *"MAME/Software List ROMs (merged)/myvision/"*) core="mame myvision -cart";;
 *"MAME/Software List ROMs (split)/myvision/"*) core="mame myvision -cart";;
 *"MAME/Software List ROMs (merged)/einstein/"*) core="mame einstein -flop1";;
