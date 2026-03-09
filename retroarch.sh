@@ -160,15 +160,9 @@ case "$adresar/" in
 *"MAME/Software List ROMs (split)/spectrum_cart/"*) core="mame specpls3 -cart";;
 *"MAME/Software List ROMs (merged)/spectrum_mgt_flop/"*) core="mame spec128 -flop";;
 *"MAME/Software List ROMs (split)/spectrum_mgt_flop/"*) core="mame spec128 -flop";;
-*"MAME/Software List ROMs (merged)/spectrum_microdrive/"*) core="mame spec128 -mdrv1";;
-*"MAME/Software List ROMs (split)/spectrum_microdrive/"*) core="mame spec128 -mdrv1";;
 *"MAME/Software List ROMs (merged)/specpls3_flop/"*) core="mame specpls3 -flop";;
 *"MAME/Software List ROMs (split)/specpls3_flop/"*) core="mame specpls3 -flop";;
-*"TOSEC/Sinclair/QL/Games/[BAS]/"*) core="mame ql -autoboot_command 'BOOT\n' -autoboot_delay 5 -utap1";;
-*"TOSEC/Sinclair/QL/Games/[OUT]/"*) core="mame ql -autoboot_command 'BOOT\n' -autoboot_delay 5 -utap1";;
-*"TOSEC/Sinclair/QL/Applications/"*) core="mame ql -autoboot_command 'BOOT\n' -autoboot_delay 5 -utap1";;
-*"TOSEC/Sinclair/QL/Demos/[BAS]/"*) core="mame ql -autoboot_command 'BOOT\n' -autoboot_delay 5 -utap1";;
-*"TOSEC/Sinclair/QL/Demos/[MDV]/"*) core="mame ql -autoboot_command 'BOOT\n' -autoboot_delay 5 -utap1";;
+*"TOSEC/Sinclair/QL/Demos/[MDV]/"*) core="mame ql -autoboot_command 'BOOT\n' -autoboot_delay 5 -utap1"; ext="mdv";;
 *"MAME/Software List ROMs (merged)/ql_cass/"*) core="mame ql -autoboot_command 'BOOT\n' -autoboot_delay 5 -utap1";;
 *"MAME/Software List ROMs (split)/ql_cass/"*) core="mame ql -autoboot_command 'BOOT\n' -autoboot_delay 5 -utap1";;
 *"MAME/Software List ROMs (merged)/ql_cart/"*) core="mame ql -cart";;
@@ -644,8 +638,7 @@ case "$adresar/" in
 *"TOSEC/Emerson/Arcadia 2001/Games/"*) core="mame arcadia -cart";;
 *"MAME/Software List ROMs (merged)/arcadia/"*) core="mame arcadia -cart";;
 *"MAME/Software List ROMs (split)/arcadia/"*) core="mame arcadia -cart";;
-*"MAME/Software List ROMs (merged)/hyperscan/"*) core="mame hyprscan -cdrom";;
-*"MAME/Software List ROMs (split)/hyperscan/"*) core="mame hyprscan -cdrom";;
+*"MAME/Software List CHDs (merged)/hyperscan/"*) core="mame hyprscan -cdrom";;
 *"No-Intro/Funtech - Super Acan/"*) core="mame supracan -cart";;
 *"TOSEC/Funtech/Super A'can/Games/"*) core="mame supracan -cart";;
 *"MAME/Software List ROMs (merged)/supracan/"*) core="mame supracan -cart";;
