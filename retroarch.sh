@@ -386,7 +386,6 @@ case "$adresar/" in
 *"FinalBurn Neo/megadrive/"*) core="genesis_plus_gx_libretro";;
 *"MAME/Software List ROMs (merged)/megatech/"*) core="mame megatech -cart";;
 *"MAME/Software List ROMs (split)/megatech/"*) core="mame megatech -cart";;
-*"T-En Collection/Sega - Mega Drive - MSU-MD/"*) core="genesis_plus_gx_libretro"; ext="md";;
 *"No-Intro/Sega - PICO/"*) core="picodrive_libretro";;
 *"TOSEC/Sega/Pico/Educational/"*) core="picodrive_libretro";;
 *"MAME/Software List ROMs (merged)/pico/"*) core="mame pico -cart";;
