@@ -15,7 +15,7 @@ case "$adresar/" in
 *"archive:tosec-main/8-Bit Productions/Commander X16/Games/[PRG]/"*) core="x16emu"; ext="prg";;
 *"archive:all_vircon32_roms_and_media/all_vircon32_roms_and_media/"*) core="vircon32_libretro";;
 *"archive:mame-sl/mame-sl/chip8_quik.zip/"*) core="mame d6800 -quik";;
-*"https://www.atarimania.com/roms/Atari-2600-VCS-ROM-Collection.zip/"*) core="stella_libretro";;
+*"https://www.atarimania.com/roms/Atari-2600-VCS-ROM-Collection.zip#ROMS/"*) core="stella_libretro";;
 *"archive:ni-roms/roms/Atari - 2600.zip/"*) core="stella_libretro";;
 *"archive:tosec-main/Atari/2600 & VCS/Games/"*) core="stella_libretro";;
 *"archive:tosec-main/Atari/2600 & VCS/Homebrew/Games/[BIN]/"*) core="stella_libretro";;
