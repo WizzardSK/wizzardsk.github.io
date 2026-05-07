@@ -1,4 +1,4 @@
-name: 0:2 Gamelists updater
+name: Gamelists updater
 
 on:
   schedule:
