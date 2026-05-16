@@ -333,8 +333,11 @@ case "$adresar/" in
 *"/dos/TDC 1988/"*) core="dosbox_pure_libretro";;
 *"/dos/TDC 1990/"*) core="dosbox_pure_libretro";;
 *"/dos/TDC 1991/"*) core="dosbox_pure_libretro";;
+*"/dos/TDC 1994/"*) core="dosbox_pure_libretro";;
+*"/dos/TDC 1995/"*) core="dosbox_pure_libretro";;
 *"/dos/TDC 1996/"*) core="dosbox_pure_libretro";;
 *"/dos/TDC 1997/"*) core="dosbox_pure_libretro";;
+*"/dos/TDC 1998/"*) core="dosbox_pure_libretro";;
 *"/dos/TDC 1999/"*) core="dosbox_pure_libretro";;
 *"/dos/TDC 199x/"*) core="dosbox_pure_libretro";;
 *"/dos/TDC 2002/"*) core="dosbox_pure_libretro";;
