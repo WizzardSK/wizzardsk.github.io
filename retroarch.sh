@@ -748,16 +748,8 @@ case "$adresar/" in
 esac
 
 if [ -n "$ext" ]; then
-  umount -l ~/iso
-  if [[ "$1" == *.rar ]]; then
-    ratarmount "$1" ~/iso
-  else
-    mount-zip "$1" ~/iso
-  fi
+  umount -l ~/iso; mount-zip "$1" ~/iso
   rom=$(find ~/iso -type f -name "*.${ext}" | head -n 1)
-elif [[ "$1" == *.rar ]]; then
-  umount -l ~/iso; ratarmount "$1" ~/iso
-  rom=~/iso
 else
   rom="$1"
 fi
