@@ -1,4 +1,9 @@
 #!/bin/bash
+# Strip play:// URL scheme + URL-decode
+arg="$1"
+[[ "$arg" == play://* ]] && arg="${arg#play://}"
+arg=$(printf '%b' "${arg//%/\\x}")
+set -- "$arg" "${@:2}"
 head "$1"
 adresar=$(dirname "$1")
 adresar2="${adresar##*/}"
@@ -514,7 +519,7 @@ case "$adresar/" in
 *"/bbcmicro/Master Flop MAME/"*) core="mame bbcm -flop1";;
 *"/bbcmicro/Master Compact Flop MAME/"*) core="mame bbcmc -flop1";;
 *"/ti99/MAME/"*) core="mame ti99_4a";;
-*"/mbee/Cart MAME/"*) core="mame mbee -cart";;
+*"/mbee/Cart MAME/"*) core="mame mbee -rom2";;
 *"/mbee/Quik MAME/"*) core="mame mbee -quik";;
 *"/mbee/Flop MAME/"*) core="mame mbee56 -flop1";;
 *"/m5/Cart MAME/"*) core="mame m5 -cart1";;
@@ -748,8 +753,16 @@ case "$adresar/" in
 esac
 
 if [ -n "$ext" ]; then
-  umount -l ~/iso; mount-zip "$1" ~/iso
+  umount -l ~/iso
+  if [[ "$1" == *.rar ]]; then
+    ratarmount "$1" ~/iso
+  else
+    mount-zip "$1" ~/iso
+  fi
   rom=$(find ~/iso -type f -name "*.${ext}" | head -n 1)
+elif [[ "$1" == *.rar ]]; then
+  umount -l ~/iso; ratarmount "$1" ~/iso
+  rom=~/iso
 else
   rom="$1"
 fi
