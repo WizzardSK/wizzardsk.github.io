@@ -767,16 +767,9 @@ else
   rom="$1"
 fi
 
-if [[ "$core" == "mame" || "$core" == "mame "* ]]; then
-  # MAME softlist (core="mame <machine> -<slot>") and arcade ROMset
-  # (core="mame", zip basename IS the machine) both need the same treatment:
-  # convert $1 → shortname + add its dir to -rompath, so MAME can resolve
-  # parent/BIOS deps via its hash files. TOSEC paths already set $ext and
-  # pre-mounted a real disk file into $rom — leave those alone.
-  if [[ -z "$ext" ]]; then
-    rompath="$(dirname "$1");$HOME/share/bios"
-    rom="$(basename "${1%.*}")"
-  fi
+case "$1" in */ti99_cart/*|*/vic10/*|*/stv/*|*/myvision/*|*/ibm5150/*|*/ibm5170/*|*/ibmpcjr_cart/*|*/ibmpcjr_flop/*|*/cassvisn_cart/*|*/juicebox/*) rompath="$(dirname "$1");$HOME/share/bios"; rom="$(basename "${1%.*}")";; esac
+
+if [[ "$core" == *"mame"* ]]; then
   core=$(echo "$core" | sed -E 's|(-hard[0-9]+) ([a-z0-9_]+):([a-z0-9_]+)|\1 '"$HOME"'/share/bios/\2/\3/\3.chd|g')
   filename="${rom##*/}"; basename="${filename%.*}"
   eval "cmd=($core)"
