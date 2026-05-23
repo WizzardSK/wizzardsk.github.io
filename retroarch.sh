@@ -1,8 +1,12 @@
 #!/bin/bash
-# Strip play:// URL scheme + URL-decode
+# Strip play:// URL scheme + URL-decode. New gameflix HTML emits a relative
+# path like /atari2600/NoIntro/foo.zip which we resolve under ~/share/roms;
+# old HTML with the full absolute path is detected via existence and used
+# as-is.
 arg="$1"
 [[ "$arg" == play://* ]] && arg="${arg#play://}"
 arg=$(printf '%b' "${arg//%/\\x}")
+[[ -e "$arg" ]] || arg="$HOME/share/roms$arg"
 set -- "$arg" "${@:2}"
 head "$1"
 adresar=$(dirname "$1")
@@ -767,9 +771,16 @@ else
   rom="$1"
 fi
 
-case "$1" in */ti99_cart/*|*/vic10/*|*/stv/*|*/myvision/*|*/ibm5150/*|*/ibm5170/*|*/ibmpcjr_cart/*|*/ibmpcjr_flop/*|*/cassvisn_cart/*|*/juicebox/*) rompath="$(dirname "$1");$HOME/share/bios"; rom="$(basename "${1%.*}")";; esac
-
-if [[ "$core" == *"mame"* ]]; then
+if [[ "$core" == "mame" || "$core" == "mame "* ]]; then
+  # MAME softlist (core="mame <machine> -<slot>") and arcade ROMset
+  # (core="mame", zip basename IS the machine) both need the same treatment:
+  # convert $1 → shortname + add its dir to -rompath, so MAME can resolve
+  # parent/BIOS deps via its hash files. TOSEC paths already set $ext and
+  # pre-mounted a real disk file into $rom — leave those alone.
+  if [[ -z "$ext" ]]; then
+    rompath="$(dirname "$1");$HOME/share/bios"
+    rom="$(basename "${1%.*}")"
+  fi
   core=$(echo "$core" | sed -E 's|(-hard[0-9]+) ([a-z0-9_]+):([a-z0-9_]+)|\1 '"$HOME"'/share/bios/\2/\3/\3.chd|g')
   filename="${rom##*/}"; basename="${filename%.*}"
   eval "cmd=($core)"
