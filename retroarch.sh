@@ -1,8 +1,4 @@
 #!/bin/bash
-# Strip play:// URL scheme + URL-decode. New gameflix HTML emits a relative
-# path like /atari2600/NoIntro/foo.zip which we resolve under ~/share/roms;
-# old HTML with the full absolute path is detected via existence and used
-# as-is.
 arg="$1"
 [[ "$arg" == play://* ]] && arg="${arg#play://}"
 arg=$(printf '%b' "${arg//%/\\x}")
@@ -553,10 +549,10 @@ case "$adresar/" in
 *"/vectrex/Demo Slideshows/"*) core="vecx_libretro"; src="https://archive.org/download/tosec-main/GCE/Vectrex/Demos/Slideshows/GCE%20Vectrex%20-%20Demos%20-%20Slideshows%20%28TOSEC-v2012-02-27%29.zip/";;
 *"/vectrex/Demo Various/"*) core="vecx_libretro"; src="https://archive.org/download/tosec-main/GCE/Vectrex/Demos/Various/GCE%20Vectrex%20-%20Demos%20-%20Various%20%28TOSEC-v2025-01-15%29.zip/";;
 *"/vectrex/MAME/"*) core="mame_libretro vectrex -cart"; src="https://archive.org/download/mame-sl/mame-sl/vectrex.zip/vectrex/";;
-*"/o2em/NoIntro/"*) core="o2em_libretro"; src="https://archive.org/download/ni-roms/roms/Magnavox%20-%20Odyssey%202.zip/";;
-*"/o2em/TOSEC/"*) core="o2em_libretro"; src="https://archive.org/download/tosec-main/Magnavox/Odyssey2/Games/Magnavox%20Odyssey2%20-%20Games%20%28TOSEC-v2021-07-25%29.zip/";;
-*"/o2em/Edu/"*) core="o2em_libretro"; src="https://archive.org/download/tosec-main/Magnavox/Odyssey2/Educational/Magnavox%20Odyssey2%20-%20Educational%20%28TOSEC-v2011-02-22%29.zip/";;
-*"/o2em/MAME/"*) core="mame_libretro videopac -cart"; src="https://archive.org/download/mame-sl/mame-sl/videopac.zip/videopac/";;
+*"/odyssey2/NoIntro/"*) core="o2em_libretro"; src="https://archive.org/download/ni-roms/roms/Magnavox%20-%20Odyssey%202.zip/";;
+*"/odyssey2/TOSEC/"*) core="o2em_libretro"; src="https://archive.org/download/tosec-main/Magnavox/Odyssey2/Games/Magnavox%20Odyssey2%20-%20Games%20%28TOSEC-v2021-07-25%29.zip/";;
+*"/odyssey2/Edu/"*) core="o2em_libretro"; src="https://archive.org/download/tosec-main/Magnavox/Odyssey2/Educational/Magnavox%20Odyssey2%20-%20Educational%20%28TOSEC-v2011-02-22%29.zip/";;
+*"/odyssey2/MAME/"*) core="mame_libretro videopac -cart"; src="https://archive.org/download/mame-sl/mame-sl/videopac.zip/videopac/";;
 *"/videopacplus/NoIntro/"*) core="o2em_libretro"; src="https://archive.org/download/ni-roms/roms/Philips%20-%20Videopac%2B.zip/";;
 *"/videopacplus/TOSEC/"*) core="o2em_libretro"; src="https://archive.org/download/tosec-main/Philips/Videopac%2B/Games/Philips%20Videopac%2B%20-%20Games%20%28TOSEC-v2021-12-11%29.zip/";;
 *"/videopacplus/Demo/"*) core="o2em_libretro"; src="https://archive.org/download/tosec-main/Philips/Videopac%2B/Demos/Philips%20Videopac%2B%20-%20Demos%20%28TOSEC-v2023-08-29%29.zip/";;
@@ -993,26 +989,10 @@ case "$adresar/" in
 *"/palm/NoIntro/"*) core="mu_libretro"; ext="prc"; src="https://archive.org/download/ni-roms/roms/Mobile%20-%20Palm%20OS%20%28Digital%29.zip/";;
 esac
 
-# On-demand fetch: pull just the requested game when it's not cached locally.
-# The case clause sets $src to a fully URL-encoded archive.org download URL
-# prefix ending in '/'; concatenating with the URL-encoded filename yields the
-# per-file download URL. archive.org performs server-side extraction when the
-# prefix points inside a zip (e.g. .../uzebox.zip/uzebox/) so only one file is
-# transferred, not the whole romset.
-# Restricted IA items (NoIntro/MAME-SL/TOSEC) require IA's LOW S3-key auth
-# header read from ~/.config/rclone/rclone.conf; --location-trusted preserves
-# it across IA's cross-host CDN redirect.
 if [[ -n "$src" && ! -e "$1" ]]; then
   mkdir -p "$(dirname "$1")"
-  # Compute the inner path relative to ~/share/roms/<platform>/<foldername>/.
-  # Most ROMs are flat (one file per pick) so $inner == basename, but TOSEC zips
-  # sometimes nest each game in its own subdir (gamename/gamename.ext) — we
-  # need to preserve those subdirs in the URL.
   relpath="${1#$HOME/share/roms/}"
   inner="${relpath#*/}"; inner="${inner#*/}"
-  # URL-encode the inner path, preserving '/' between segments. LC_ALL=C forces
-  # byte-by-byte iteration so UTF-8 multibyte chars (e.g. 'í' = 0xC3 0xAD) get
-  # encoded as %C3%AD (what archive.org expects), not %ED (Unicode codepoint).
   urlenc() { local LC_ALL=C s="$1" i c e=""; for ((i=0;i<${#s};i++)); do c="${s:i:1}"; case "$c" in [/a-zA-Z0-9._~-]) e+="$c";; *) printf -v c '%%%02X' "'$c"; e+="$c";; esac; done; printf '%s' "$e"; }
   enc=$(urlenc "$inner")
   fname="${1##*/}"
@@ -1046,31 +1026,16 @@ else
 fi
 
 if [[ "$core" == "mame_libretro" || "$core" == "mame_libretro "* ]]; then
-  # MAME via libretro core. mame_libretro supports .cmd files as content
-  # (see supported_extensions = "cmd|zip|7z" in mame_libretro.info): the
-  # file's text is parsed as MAME command-line args. Same args we'd pass
-  # to standalone MAME — just routed through the libretro frontend.
-  # Bare "mame_libretro" = arcade ROMset (zip basename IS the machine);
-  # "mame_libretro <driver> ..." = softlist or system-with-media.
   if [[ -z "$ext" ]]; then
     rompath="$(dirname "$1");$HOME/share/bios"
     rom="$(basename "${1%.*}")"
   fi
-  # Model 2/3: the gameflix listing comes from an ElSemi-format archive
-  # (m2emu1.1a / segamodel3) whose zips MAME can't read. The zip basenames
-  # match MAME driver shortnames though, so point rompath at MAME's merged
-  # romset — MAME finds the right ROMs there (including the model2 BIOS).
-  # ElSemi-format dir is omitted entirely; it would only mask the MAME zips.
   case "$1" in
     */model2/*|*/model3/*) rompath="$HOME/share/roms/mame/MAME;$HOME/share/bios" ;;
   esac
   core=$(echo "$core" | sed -E 's|(-hard[0-9]+) ([a-z0-9_]+):([a-z0-9_]+)|\1 '"$HOME"'/share/bios/\2/\3/\3.chd|g')
   mame_args="${core#mame_libretro}"; mame_args="${mame_args# }"
   filename="${rom##*/}"; basename="${filename%.*}"
-  # mame_libretro's bundled softlist is older than standalone MAME's hash files,
-  # so games like a2600 "3dzapper" exist in the IA-fed romset but not in the core's
-  # internal list (MAME prints "approximately matches" then aborts). Point at the
-  # system MAME hash dir if installed so the lookup hits the current softlists.
   hashpath_opt=""
   [[ -d /usr/share/games/mame/hash ]] && hashpath_opt=" -hashpath /usr/share/games/mame/hash"
   cmd_file=$(mktemp --suffix=.cmd)
@@ -1081,10 +1046,6 @@ if [[ "$core" == "mame_libretro" || "$core" == "mame_libretro "* ]]; then
 fi
 
 if [[ "$core" == "mame" || "$core" == "mame "* ]]; then
-  # Standalone MAME — only model2/model3 still routed here. Arcade ROMset
-  # (core="mame", zip basename IS the machine) gets shortname + -rompath
-  # treatment so MAME can resolve parent/BIOS deps via its hash files.
-  # TOSEC paths already set $ext and pre-mounted a real disk file into $rom.
   if [[ -z "$ext" ]]; then
     rompath="$(dirname "$1");$HOME/share/bios"
     rom="$(basename "${1%.*}")"

@@ -539,10 +539,10 @@ Voxatron/	vox
 /vectrex/Demo Slideshows/	vecx_libretro		https://archive.org/download/tosec-main/GCE/Vectrex/Demos/Slideshows/GCE%20Vectrex%20-%20Demos%20-%20Slideshows%20%28TOSEC-v2012-02-27%29.zip/
 /vectrex/Demo Various/	vecx_libretro		https://archive.org/download/tosec-main/GCE/Vectrex/Demos/Various/GCE%20Vectrex%20-%20Demos%20-%20Various%20%28TOSEC-v2025-01-15%29.zip/
 /vectrex/MAME/	mame_libretro vectrex -cart		https://archive.org/download/mame-sl/mame-sl/vectrex.zip/vectrex/
-/o2em/NoIntro/	o2em_libretro		https://archive.org/download/ni-roms/roms/Magnavox%20-%20Odyssey%202.zip/
-/o2em/TOSEC/	o2em_libretro		https://archive.org/download/tosec-main/Magnavox/Odyssey2/Games/Magnavox%20Odyssey2%20-%20Games%20%28TOSEC-v2021-07-25%29.zip/
-/o2em/Edu/	o2em_libretro		https://archive.org/download/tosec-main/Magnavox/Odyssey2/Educational/Magnavox%20Odyssey2%20-%20Educational%20%28TOSEC-v2011-02-22%29.zip/
-/o2em/MAME/	mame_libretro videopac -cart		https://archive.org/download/mame-sl/mame-sl/videopac.zip/videopac/
+/odyssey2/NoIntro/	o2em_libretro		https://archive.org/download/ni-roms/roms/Magnavox%20-%20Odyssey%202.zip/
+/odyssey2/TOSEC/	o2em_libretro		https://archive.org/download/tosec-main/Magnavox/Odyssey2/Games/Magnavox%20Odyssey2%20-%20Games%20%28TOSEC-v2021-07-25%29.zip/
+/odyssey2/Edu/	o2em_libretro		https://archive.org/download/tosec-main/Magnavox/Odyssey2/Educational/Magnavox%20Odyssey2%20-%20Educational%20%28TOSEC-v2011-02-22%29.zip/
+/odyssey2/MAME/	mame_libretro videopac -cart		https://archive.org/download/mame-sl/mame-sl/videopac.zip/videopac/
 /videopacplus/NoIntro/	o2em_libretro		https://archive.org/download/ni-roms/roms/Philips%20-%20Videopac%2B.zip/
 /videopacplus/TOSEC/	o2em_libretro		https://archive.org/download/tosec-main/Philips/Videopac%2B/Games/Philips%20Videopac%2B%20-%20Games%20%28TOSEC-v2021-12-11%29.zip/
 /videopacplus/Demo/	o2em_libretro		https://archive.org/download/tosec-main/Philips/Videopac%2B/Demos/Philips%20Videopac%2B%20-%20Demos%20%28TOSEC-v2023-08-29%29.zip/
