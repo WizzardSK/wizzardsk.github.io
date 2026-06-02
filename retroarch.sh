@@ -43,6 +43,7 @@ case "$adresar/" in
 *"/atari7800/Homebrew/"*) core="prosystem_libretro"; src="https://archive.org/download/tosec-main/Atari/7800/Homebrew/Games/Atari%207800%20-%20Homebrew%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/";;
 *"/atari7800/App/"*) core="prosystem_libretro"; src="https://archive.org/download/tosec-main/Atari/7800/Applications/Atari%207800%20-%20Applications%20%28TOSEC-v2024-07-03%29.zip/";;
 *"/atari7800/MAME/"*) core="mame_libretro a7800 -cart"; src="https://archive.org/download/mame-sl/mame-sl/a7800.zip/a7800/";;
+*"/atari7800/NoIntro A78/"*) core="prosystem_libretro"; src="https://archive.org/download/ni-roms/roms/Atari%20-%207800%20%28A78%29.zip/";;
 *"/jaguar/NoIntro/"*) core="virtualjaguar_libretro"; src="https://archive.org/download/ni-roms/roms/Atari%20-%20Jaguar%20%28J64%29.zip/";;
 *"/jaguar/Games J64/"*) core="virtualjaguar_libretro"; src="https://archive.org/download/tosec-main/Atari/Jaguar/Games/%5BJ64%5D/Atari%20Jaguar%20-%20Games%20-%20%5BJ64%5D%20%28TOSEC-v2024-01-15%29.zip/";;
 *"/jaguar/Games ROM/"*) core="virtualjaguar_libretro"; src="https://archive.org/download/tosec-main/Atari/Jaguar/Games/%5BROM%5D/Atari%20Jaguar%20-%20Games%20-%20%5BROM%5D%20%28TOSEC-v2024-01-15%29.zip/";;
@@ -52,6 +53,10 @@ case "$adresar/" in
 *"/jaguar/Demo [JAG]/"*) core="virtualjaguar_libretro"; src="https://archive.org/download/tosec-main/Atari/Jaguar/Demos/%5BJAG%5D/Atari%20Jaguar%20-%20Demos%20-%20%5BJAG%5D%20%28TOSEC-v2024-01-15%29.zip/";;
 *"/jaguar/Demo [ROM]/"*) core="virtualjaguar_libretro"; src="https://archive.org/download/tosec-main/Atari/Jaguar/Demos/%5BROM%5D/Atari%20Jaguar%20-%20Demos%20-%20%5BROM%5D%20%28TOSEC-v2024-07-03%29.zip/";;
 *"/jaguar/MAME/"*) core="mame_libretro jaguar -cart"; src="https://archive.org/download/mame-sl/mame-sl/jaguar.zip/jaguar/";;
+*"/jaguar/NoIntro ABS/"*) core="virtualjaguar_libretro"; src="https://archive.org/download/ni-roms/roms/Atari%20-%20Jaguar%20%28ABS%29.zip/";;
+*"/jaguar/NoIntro COF/"*) core="virtualjaguar_libretro"; src="https://archive.org/download/ni-roms/roms/Atari%20-%20Jaguar%20%28COF%29.zip/";;
+*"/jaguar/NoIntro JAG/"*) core="virtualjaguar_libretro"; src="https://archive.org/download/ni-roms/roms/Atari%20-%20Jaguar%20%28JAG%29.zip/";;
+*"/jaguar/NoIntro ROM/"*) core="virtualjaguar_libretro"; src="https://archive.org/download/ni-roms/roms/Atari%20-%20Jaguar%20%28ROM%29.zip/";;
 *"/jaguarcd/Redump/"*) core="bigpemu"; ext="cue"; src="https://archive.org/download/atari-jaguarcd-redump/";;
 *"/jaguarcd/NonRedump/"*) core="bigpemu"; ext="cdi"; src="https://archive.org/download/non-redump_atari-jaguar-cd/";;
 *"/lynx/NoIntro/"*) core="mednafen_lynx_libretro"; src="https://archive.org/download/ni-roms/roms/Atari%20-%20Lynx%20%28LYX%29.zip/";;
@@ -59,6 +64,7 @@ case "$adresar/" in
 *"/lynx/Demo [LNX]/"*) core="mednafen_lynx_libretro"; src="https://archive.org/download/tosec-main/Atari/Lynx/Demos/%5BLNX%5D/Atari%20Lynx%20-%20Demos%20-%20%5BLNX%5D%20%28TOSEC-v2025-01-15%29.zip/";;
 *"/lynx/Demo [Multipart]/"*) core="mednafen_lynx_libretro"; src="https://archive.org/download/tosec-main/Atari/Lynx/Demos/%5BMultipart%5D/Atari%20Lynx%20-%20Demos%20-%20%5BMultipart%5D%20%28TOSEC-v2025-01-15%29.zip/";;
 *"/lynx/MAME/"*) core="mame_libretro lynx -cart"; ext="bin"; src="https://archive.org/download/mame-sl/mame-sl/lynx.zip/lynx/";;
+*"/lynx/NoIntro LNX/"*) core="mednafen_lynx_libretro"; src="https://archive.org/download/ni-roms/roms/Atari%20-%20Lynx%20%28LNX%29.zip/";;
 *"/atari800/NoIntro/"*) core="atari800_libretro"; src="https://archive.org/download/ni-roms/roms/Atari%20-%208-bit%20Family.zip/";;
 *"/atari800/Games ATR/"*) core="atari800_libretro"; src="https://archive.org/download/tosec-main/Atari/8bit/Games/%5BATR%5D/Atari%208bit%20-%20Games%20-%20%5BATR%5D%20%28TOSEC-v2025-01-15%29.zip/";;
 *"/atari800/Games XEX/"*) core="atari800_libretro"; src="https://archive.org/download/tosec-main/Atari/8bit/Games/%5BXEX%5D/Atari%208bit%20-%20Games%20-%20%5BXEX%5D%20%28TOSEC-v2025-01-15%29.zip/";;
@@ -98,6 +104,7 @@ case "$adresar/" in
 *"/atarist/Edu [STX]/"*) core="hatari_libretro"; src="https://archive.org/download/tosec-main/Atari/ST/Educational/%5BSTX%5D/Atari%20ST%20-%20Educational%20-%20%5BSTX%5D%20%28TOSEC-v2023-11-07%29.zip/";;
 *"/atarist/Edu [ST]/"*) core="hatari_libretro"; src="https://archive.org/download/tosec-main/Atari/ST/Educational/%5BST%5D/Atari%20ST%20-%20Educational%20-%20%5BST%5D%20%28TOSEC-v2023-11-07%29.zip/";;
 *"/atarist/MAME/"*) core="mame_libretro st -flop"; src="https://archive.org/download/mame-sl/mame-sl/st_flop.zip/st_flop/";;
+*"/atarist/Cart MAME/"*) core="mame_libretro st -rom"; src="https://archive.org/download/mame-sl/mame-sl/st_cart.zip/st_cart/";;
 *"/apple1/TOSEC/"*) core="mame_libretro apple1 -cass"; src="https://archive.org/download/tosec-main/Apple/1/Games/Apple%201%20-%20Games%20%28TOSEC-v2023-08-29%29.zip/";;
 *"/apple1/App/"*) core="mame_libretro apple1 -cass"; src="https://archive.org/download/tosec-main/Apple/1/Applications/Apple%201%20-%20Applications%20%28TOSEC-v2023-08-29%29.zip/";;
 *"/apple1/Demo/"*) core="mame_libretro apple1 -cass"; src="https://archive.org/download/tosec-main/Apple/1/Demos/Apple%201%20-%20Demos%20%28TOSEC-v2023-08-29%29.zip/";;
@@ -215,6 +222,7 @@ case "$adresar/" in
 *"/pet/MAME/"*) core="mame_libretro pet2001n -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass"; src="https://archive.org/download/mame-sl/mame-sl/pet_cass.zip/pet_cass/";;
 *"/pet/Flop MAME/"*) core="mame_libretro pet2001n -flop1"; src="https://archive.org/download/mame-sl/mame-sl/pet_flop.zip/pet_flop/";;
 *"/pet/ROM MAME/"*) core="mame_libretro pet2001n -rom"; src="https://archive.org/download/mame-sl/mame-sl/pet_rom.zip/pet_rom/";;
+*"/pet/Quik MAME/"*) core="mame_libretro pet2001n -quik"; src="https://archive.org/download/mame-sl/mame-sl/pet_quik.zip/pet_quik/";;
 *"/cplus4/NoIntro/"*) core="vice_xplus4_libretro"; src="https://archive.org/download/ni-roms/roms/Commodore%20-%20Plus-4.zip/";;
 *"/cplus4/PRG/"*) core="vice_xplus4_libretro";;
 *"/cplus4/TAP/"*) core="vice_xplus4_libretro";;
@@ -233,6 +241,7 @@ case "$adresar/" in
 *"/c20/Demo [PRG]/"*) core="vice_xvic_libretro"; src="https://archive.org/download/tosec-main/Commodore/VIC20/Demos/%5BPRG%5D/Singlepart/Commodore%20VIC20%20-%20Demos%20-%20%5BPRG%5D%20-%20Singlepart%20%28TOSEC-v2017-10-23%29.zip/";;
 *"/c20/Edu [TAP]/"*) core="vice_xvic_libretro"; src="https://archive.org/download/tosec-main/Commodore/VIC20/Educational/%5BTAP%5D/Commodore%20VIC20%20-%20Educational%20-%20%5BTAP%5D%20%28TOSEC-v2018-03-24%29.zip/";;
 *"/c20/MAME/"*) core="mame_libretro vic20 -cart"; src="https://archive.org/download/mame-sl/mame-sl/vic1001_cart.zip/vic1001_cart/";;
+*"/c20/Cass MAME/"*) core="mame_libretro vic20 -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass"; src="https://archive.org/download/mame-sl/mame-sl/vic1001_cass.zip/vic1001_cass/";;
 *"/cbm2/Cart MAME/"*) core="mame_libretro cbm610 -cart"; src="https://archive.org/download/mame-sl/mame-sl/cbm2_cart.zip/cbm2_cart/";;
 *"/cbm2/Flop MAME/"*) core="mame_libretro cbm610 -autoboot_command 'DLOAD\"\"*\"\"\nRUN\n' -autoboot_delay 5 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/cbm2_flop.zip/cbm2_flop/";;
 *"/c64/NoIntro/"*) core="vice_x64sc_libretro"; src="https://archive.org/download/ni-roms/roms/Commodore%20-%20Commodore%2064.zip/";;
@@ -323,6 +332,10 @@ case "$adresar/" in
 *"/amiga500/ECS Flop MAME/"*) core="mame_libretro a600 -flop"; src="https://archive.org/download/mame-sl/mame-sl/amigaecs_flop.zip/amigaecs_flop/";;
 *"/amiga500/OCS Flop MAME/"*) core="mame_libretro a500 -flop"; src="https://archive.org/download/mame-sl/mame-sl/amigaocs_flop.zip/amigaocs_flop/";;
 *"/amiga500/AGA Flop MAME/"*) core="mame_libretro a1200 -flop"; src="https://archive.org/download/mame-sl/mame-sl/amigaaga_flop.zip/amigaaga_flop/";;
+*"/amiga500/Apps MAME/"*) core="mame_libretro a500 -flop"; src="https://archive.org/download/mame-sl/mame-sl/amiga_apps.zip/amiga_apps/";;
+*"/amiga500/Demos MAME/"*) core="mame_libretro a500 -flop"; src="https://archive.org/download/mame-sl/mame-sl/amiga_demos.zip/amiga_demos/";;
+*"/amiga500/Workbench MAME/"*) core="mame_libretro a500 -flop"; src="https://archive.org/download/mame-sl/mame-sl/amiga_workbench.zip/amiga_workbench/";;
+*"/amiga500/Hardware MAME/"*) core="mame_libretro a500 -flop"; src="https://archive.org/download/mame-sl/mame-sl/amiga_hardware.zip/amiga_hardware/";;
 *"/amiga1200/Redump/"*) core="puae_libretro"; ext="cue"; src="https://archive.org/download/noaen-redump-commodore-amiga-cd/";;
 *"/amiga1200/ISO/"*) core="puae_libretro"; ext="cue"; src="https://archive.org/download/tosec-iso-commodore/Amiga/CD/Games/%5BISO%5D/";;
 *"/amiga1200/App/"*) core="puae_libretro"; ext="cue"; src="https://archive.org/download/tosec-iso-commodore/Amiga/CD/Applications/%5BISO%5D/";;
@@ -369,6 +382,7 @@ case "$adresar/" in
 *"/n64/Demo/"*) core="mupen64plus_next_libretro"; src="https://archive.org/download/tosec-main/Nintendo/64/Demos/Nintendo%2064%20-%20Demos%20%28TOSEC-v2025-01-15%29.zip/";;
 *"/n64/Edu/"*) core="mupen64plus_next_libretro"; src="https://archive.org/download/tosec-main/Nintendo/64/Educational/Nintendo%2064%20-%20Educational%20%28TOSEC-v2011-08-13%29.zip/";;
 *"/n64/MAME/"*) core="mame_libretro n64 -cart"; src="https://archive.org/download/mame-sl/mame-sl/n64.zip/n64/";;
+*"/n64/NoIntro BigEndian/"*) core="mupen64plus_next_libretro"; src="https://archive.org/download/ni-roms/roms/Nintendo%20-%20Nintendo%2064%20%28BigEndian%29.zip/";;
 *"/n64dd/MAME/"*) core="mame_libretro n64dd -hard"; src="https://archive.org/download/mame-sl/mame-sl/n64dd.zip/n64dd/";;
 *"/n64dd/Games NDD/"*) core="mame_libretro n64dd -hard"; src="https://archive.org/download/tosec-main/Nintendo/64DD/Games/%5BNDD%5D/Nintendo%2064DD%20-%20Games%20-%20%5BNDD%5D%20%28TOSEC-v2021-07-25%29.zip/";;
 *"/gamecube/ISO/"*) core="dolphin_libretro"; ext="iso"; src="https://archive.org/download/gamecubecollectionbyblopez/";;
@@ -395,6 +409,7 @@ case "$adresar/" in
 *"/gba/Demo/"*) core="mgba_libretro"; src="https://archive.org/download/tosec-main/Nintendo/Game%20Boy%20Advance/Demos/Nintendo%20Game%20Boy%20Advance%20-%20Demos%20%28TOSEC-v2025-01-15%29.zip/";;
 *"/gba/MAME/"*) core="mame_libretro gba -cart"; src="https://archive.org/download/mame-sl/mame-sl/gba.zip/gba/";;
 *"/gba/e-Reader MAME/"*) core="mame_libretro gba -cart"; src="https://archive.org/download/mame-sl/mame-sl/gba_ereader.zip/gba_ereader/";;
+*"/gba/NoIntro Video/"*) core="mgba_libretro"; src="https://archive.org/download/ni-roms/roms/Nintendo%20-%20Game%20Boy%20Advance%20%28Video%29.zip/";;
 *"/nds/DS NoIntro/"*) core="melonds_libretro"; src="https://archive.org/download/ni-n-ds-dec_202401/";;
 *"/nds/DS Download/"*) core="melonds_libretro"; src="https://archive.org/download/ni-roms/roms/Nintendo%20-%20Nintendo%20DS%20%28Download%20Play%29.zip/";;
 *"/nds/DS TOSEC/"*) core="melonds_libretro"; src="https://archive.org/download/tosec-main/Nintendo/DS/Games/Nintendo%20DS%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/";;
@@ -522,6 +537,7 @@ case "$adresar/" in
 *"/msx1/Cart MAME/"*) core="mame_libretro expert11 -cart1"; src="https://archive.org/download/mame-sl/mame-sl/msx1_cart.zip/msx1_cart/";;
 *"/msx1/Cass MAME/"*) core="mame_libretro expert11 -autoboot_command 'RUN\"CAS:\"\n' -autoboot_delay 3 -cass"; src="https://archive.org/download/mame-sl/mame-sl/msx1_cass.zip/msx1_cass/";;
 *"/msx1/Flop MAME/"*) core="mame_libretro svi738 -flop"; src="https://archive.org/download/mame-sl/mame-sl/msx1_flop.zip/msx1_flop/";;
+*"/msx1/Flop 5.25 MAME/"*) core="mame_libretro svi738 -flop"; src="https://archive.org/download/mame-sl/mame-sl/msx1_flop_525.zip/msx1_flop_525/";;
 *"/msx2/NoIntro/"*) core="bluemsx_libretro"; src="https://archive.org/download/ni-roms/roms/Microsoft%20-%20MSX2.zip/";;
 *"/msx2/Games/"*) core="bluemsx_libretro"; src="https://archive.org/download/tosec-main/MSX/MSX2/Games/%5BCAS%5D/MSX%20MSX2%20-%20Games%20-%20%5BCAS%5D%20%28TOSEC-v2012-04-15%29.zip/";;
 *"/msx2/Demo [COM]/"*) core="bluemsx_libretro"; src="https://archive.org/download/tosec-main/MSX/MSX2/Demos/%5BCOM%5D/MSX%20MSX2%20-%20Demos%20-%20%5BCOM%5D%20%28TOSEC-v2025-01-15%29.zip/";;
@@ -641,8 +657,10 @@ case "$adresar/" in
 *"/z80ne/Flop MAME/"*) core="mame_libretro z80netf -flop1"; src="https://archive.org/download/mame-sl/mame-sl/z80ne_flop.zip/z80ne_flop/";;
 *"/osborne1/MAME/"*) core="mame_libretro osborne1 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/osborne1.zip/osborne1/";;
 *"/jupace/MAME/"*) core="mame_libretro jupace -cass"; src="https://archive.org/download/mame-sl/mame-sl/jupace_cass.zip/jupace_cass/";;
+*"/jupace/Snap MAME/"*) core="mame_libretro jupace -dump"; src="https://archive.org/download/mame-sl/mame-sl/jupace_snap.zip/jupace_snap/";;
 *"/nascom/Snap MAME/"*) core="mame_libretro nascom2 -dump1"; src="https://archive.org/download/mame-sl/mame-sl/nascom_snap.zip/nascom_snap/";;
 *"/nascom/Flop MAME/"*) core="mame_libretro nascom2 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/nascom_flop.zip/nascom_flop/";;
+*"/nascom/ROM MAME/"*) core="mame_libretro nascom2 -rom1"; src="https://archive.org/download/mame-sl/mame-sl/nascom_socket.zip/nascom_socket/";;
 *"/abc80/Flop MAME/"*) core="mame_libretro abc80 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/abc80_flop.zip/abc80_flop/";;
 *"/abc80/Cass MAME/"*) core="mame_libretro abc80 -cass"; src="https://archive.org/download/mame-sl/mame-sl/abc80_cass.zip/abc80_cass/";;
 *"/abc80/ROM MAME/"*) core="mame_libretro abc80 -cart"; src="https://archive.org/download/mame-sl/mame-sl/abc80_rom.zip/abc80_rom/";;
@@ -653,6 +671,7 @@ case "$adresar/" in
 *"/apogee/MAME/"*) core="mame_libretro apogee -autoboot_command 'I\n' -autoboot_delay 3 -cass"; src="https://archive.org/download/mame-sl/mame-sl/apogee.zip/apogee/";;
 *"/radio86/MAME/"*) core="mame_libretro radio86 -autoboot_command 'I\n' -autoboot_delay 3 -cass"; src="https://archive.org/download/mame-sl/mame-sl/radio86_cass.zip/radio86_cass/";;
 *"/mikrosha/MAME/"*) core="mame_libretro mikrosha -autoboot_command 'I\n' -autoboot_delay 3 -cass"; src="https://archive.org/download/mame-sl/mame-sl/mikrosha_cass.zip/mikrosha_cass/";;
+*"/mikrosha/Cart MAME/"*) core="mame_libretro mikrosha -cart"; src="https://archive.org/download/mame-sl/mame-sl/mikrosha_cart.zip/mikrosha_cart/";;
 *"/partner/Cass MAME/"*) core="mame_libretro partner -cass"; src="https://archive.org/download/mame-sl/mame-sl/partner_cass.zip/partner_cass/";;
 *"/partner/Flop MAME/"*) core="mame_libretro partner -flop1"; src="https://archive.org/download/mame-sl/mame-sl/partner_flop.zip/partner_flop/";;
 *"/korvet/MAME/"*) core="mame_libretro korvet -flop1"; src="https://archive.org/download/mame-sl/mame-sl/korvet_flop.zip/korvet_flop/";;
@@ -688,6 +707,7 @@ case "$adresar/" in
 *"/pegasus/MAME/"*) core="mame_libretro pegasus -rom1"; src="https://archive.org/download/mame-sl/mame-sl/pegasus_cart.zip/pegasus_cart/";;
 *"/juku/MAME/"*) core="mame_libretro juku -flop1"; src="https://archive.org/download/mame-sl/mame-sl/juku.zip/juku/";;
 *"/x07/MAME/"*) core="mame_libretro x07 -cass"; src="https://archive.org/download/mame-sl/mame-sl/x07_cass.zip/x07_cass/";;
+*"/x07/Card MAME/"*) core="mame_libretro x07 -cart"; src="https://archive.org/download/mame-sl/mame-sl/x07_card.zip/x07_card/";;
 *"/alice/A32 MAME/"*) core="mame_libretro alice32 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass"; src="https://archive.org/download/mame-sl/mame-sl/alice32.zip/alice32/";;
 *"/alice/A90 MAME/"*) core="mame_libretro alice90 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass"; src="https://archive.org/download/mame-sl/mame-sl/alice90.zip/alice90/";;
 *"/mc10/TOSEC/"*) core="mame_libretro mc10 -cass"; src="https://archive.org/download/tosec-main/Tandy%20Radio%20Shack/TRS-80%20MC-10/Various/Tandy%20Radio%20Shack%20TRS-80%20MC-10%20-%20Various%20%28TOSEC-v2014-05-29%29.zip/";;
@@ -715,6 +735,7 @@ case "$adresar/" in
 *"/spc1500/MAME/"*) core="mame_libretro spc1500 -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass"; src="https://archive.org/download/mame-sl/mame-sl/spc1500_cass.zip/spc1500_cass/";;
 *"/orion128/MAME/"*) core="mame_libretro orion128 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/orion_flop.zip/orion_flop/";;
 *"/orion128/Cass MAME/"*) core="mame_libretro orion128 -cass"; src="https://archive.org/download/mame-sl/mame-sl/orion_cass.zip/orion_cass/";;
+*"/orion128/Cart MAME/"*) core="mame_libretro orion128 -cart"; src="https://archive.org/download/mame-sl/mame-sl/orion_cart.zip/orion_cart/";;
 *"/videobrain/MAME/"*) core="mame_libretro vidbrain -cart"; src="https://archive.org/download/mame-sl/mame-sl/vidbrain.zip/vidbrain/";;
 *"/super80/Cass MAME/"*) core="mame_libretro super80 -cass"; src="https://archive.org/download/mame-sl/mame-sl/super80_cass.zip/super80_cass/";;
 *"/super80/Flop MAME/"*) core="mame_libretro super80r -flop1"; src="https://archive.org/download/mame-sl/mame-sl/super80_flop.zip/super80_flop/";;
@@ -732,6 +753,15 @@ case "$adresar/" in
 *"/bbcmicro/Master Cart MAME/"*) core="mame_libretro bbcm -cart"; src="https://archive.org/download/mame-sl/mame-sl/bbcm_cart.zip/bbcm_cart/";;
 *"/bbcmicro/Master Flop MAME/"*) core="mame_libretro bbcm -flop1"; src="https://archive.org/download/mame-sl/mame-sl/bbcm_flop.zip/bbcm_flop/";;
 *"/bbcmicro/Master Compact Flop MAME/"*) core="mame_libretro bbcmc -flop1"; src="https://archive.org/download/mame-sl/mame-sl/bbcmc_flop.zip/bbcmc_flop/";;
+*"/bbcmicro/US Flop MAME/"*) core="mame_libretro bbcb -flop1"; src="https://archive.org/download/mame-sl/mame-sl/bbcb_flop_us.zip/bbcb_flop_us/";;
+*"/bbcmicro/ARM Flop MAME/"*) core="mame_libretro bbcb -flop1"; src="https://archive.org/download/mame-sl/mame-sl/bbc_flop_arm.zip/bbc_flop_arm/";;
+*"/bbcmicro/Hybrid Flop MAME/"*) core="mame_libretro bbcb -flop1"; src="https://archive.org/download/mame-sl/mame-sl/bbc_flop_hybrid.zip/bbc_flop_hybrid/";;
+*"/bbcmicro/Torch Flop MAME/"*) core="mame_libretro bbcb -flop1"; src="https://archive.org/download/mame-sl/mame-sl/bbc_flop_torch.zip/bbc_flop_torch/";;
+*"/bbcmicro/Z80 Flop MAME/"*) core="mame_libretro bbcb -flop1"; src="https://archive.org/download/mame-sl/mame-sl/bbc_flop_z80.zip/bbc_flop_z80/";;
+*"/bbcmicro/32016 Flop MAME/"*) core="mame_libretro bbcb -flop1"; src="https://archive.org/download/mame-sl/mame-sl/bbc_flop_32016.zip/bbc_flop_32016/";;
+*"/bbcmicro/6502 Flop MAME/"*) core="mame_libretro bbcb -flop1"; src="https://archive.org/download/mame-sl/mame-sl/bbc_flop_6502.zip/bbc_flop_6502/";;
+*"/bbcmicro/68000 Flop MAME/"*) core="mame_libretro bbcb -flop1"; src="https://archive.org/download/mame-sl/mame-sl/bbc_flop_68000.zip/bbc_flop_68000/";;
+*"/bbcmicro/80186 Flop MAME/"*) core="mame_libretro bbcb -flop1"; src="https://archive.org/download/mame-sl/mame-sl/bbc_flop_80186.zip/bbc_flop_80186/";;
 *"/ti99/MAME/"*) core="mame_libretro ti99_4a"; src="https://archive.org/download/mame-sl/mame-sl/ti99_cart.zip/ti99_cart/";;
 *"/mbee/Cart MAME/"*) core="mame_libretro mbee -rom2"; src="https://archive.org/download/mame-sl/mame-sl/mbee_cart.zip/mbee_cart/";;
 *"/mbee/Quik MAME/"*) core="mame_libretro mbee -quik"; src="https://archive.org/download/mame-sl/mame-sl/mbee_quik.zip/mbee_quik/";;
@@ -749,6 +779,7 @@ case "$adresar/" in
 *"/spectravideo/Games/"*) core="bluemsx_libretro"; src="https://archive.org/download/tosec-main/Spectravideo/SVI-318%20%26%20SVI-328/Games/%5BBIN%5D/Spectravideo%20SVI-318%20%26%20SVI-328%20-%20Games%20-%20%5BBIN%5D%20%28TOSEC-v2025-01-15%29.zip/";;
 *"/spectravideo/Various/"*) core="bluemsx_libretro"; src="https://archive.org/download/tosec-main/Spectravideo/SVI-318%20%26%20SVI-328/Various/%5BBIN%5D/Spectravideo%20SVI-318%20%26%20SVI-328%20-%20Various%20-%20%5BBIN%5D%20%28TOSEC-v2014-05-29%29.zip/";;
 *"/spectravideo/MAME/"*) core="mame_libretro svi318 -autoboot_command 'CLOAD\nRUN\n' -autoboot_delay 3 -cass"; src="https://archive.org/download/mame-sl/mame-sl/svi318_cass.zip/svi318_cass/";;
+*"/spectravideo/Cart MAME/"*) core="mame_libretro svi318 -cart"; src="https://archive.org/download/mame-sl/mame-sl/svi318_cart.zip/svi318_cart/";;
 *"/mtx/Cart MAME/"*) core="mame_libretro mtx512 -cart1"; src="https://archive.org/download/mame-sl/mame-sl/mtx_cart.zip/mtx_cart/";;
 *"/mtx/Cass MAME/"*) core="mame_libretro mtx512 -autoboot_command 'LOAD \"\"\n' -autoboot_delay 3 -cass"; src="https://archive.org/download/mame-sl/mame-sl/mtx_cass.zip/mtx_cass/";;
 *"/mtx/Flop MAME/"*) core="mame_libretro mtx512 -exp_ext sdxbas -flop1"; src="https://archive.org/download/mame-sl/mame-sl/mtx_flop.zip/mtx_flop/";;
@@ -769,6 +800,7 @@ case "$adresar/" in
 *"/compclr2/MAME/"*) core="mame_libretro compclr2 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/compclr2_flop.zip/compclr2_flop/";;
 *"/myvision/MAME/"*) core="mame_libretro myvision -cart"; src="https://archive.org/download/mame-sl/mame-sl/myvision.zip/myvision/";;
 *"/einstein/MAME/"*) core="mame_libretro einstein -flop1"; src="https://archive.org/download/mame-sl/mame-sl/einstein.zip/einstein/";;
+*"/einstein/ROM MAME/"*) core="mame_libretro einstein -rom"; src="https://archive.org/download/mame-sl/mame-sl/einstein_rom.zip/einstein_rom/";;
 *"/kc85/Cass MAME/"*) core="mame_libretro kc85_4 -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass"; src="https://archive.org/download/mame-sl/mame-sl/kc_cass.zip/kc_cass/";;
 *"/kc85/Cart MAME/"*) core="mame_libretro kc85_4 -cart"; src="https://archive.org/download/mame-sl/mame-sl/kc_cart.zip/kc_cart/";;
 *"/kc85/Flop MAME/"*) core="mame_libretro kc85_4 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/kc_flop.zip/kc_flop/";;
@@ -802,6 +834,7 @@ case "$adresar/" in
 *"/enterprise/Cart MAME/"*) core="mame_libretro ep128 -cart"; src="https://archive.org/download/mame-sl/mame-sl/ep64_cart.zip/ep64_cart/";;
 *"/enterprise/Cass MAME/"*) core="mame_libretro ep128 -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass"; src="https://archive.org/download/mame-sl/mame-sl/ep64_cass.zip/ep64_cass/";;
 *"/vector06/MAME/"*) core="mame_libretro vector06 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/vector06_flop.zip/vector06_flop/";;
+*"/vector06/Cart MAME/"*) core="mame_libretro vector06 -cart"; src="https://archive.org/download/mame-sl/mame-sl/vector06_cart.zip/vector06_cart/";;
 *"/socrates/VTech Socrates/"*) core="mame_libretro socrates -cart"; src="https://archive.org/download/mame-sl/mame-sl/socrates.zip/socrates/";;
 *"/thomson/MO5 K7/"*) core="theodore_libretro"; src="https://archive.org/download/tosec-main/Thomson/MO5/Compilations/Games/Thomson%20MO5%20-%20Compilations%20-%20Games%20%28TOSEC-v2012-08-27%29.zip/";;
 *"/thomson/MO6 K7/"*) core="theodore_libretro"; src="https://archive.org/download/tosec-main/Thomson/MO6/Games/Thomson%20MO6%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/";;
@@ -828,6 +861,7 @@ case "$adresar/" in
 *"/thomson/TO8 Cass MAME/"*) core="mame_libretro to8 -autoboot_command '2\nRUN\"\"\n' -autoboot_delay 5 -cass"; src="https://archive.org/download/mame-sl/mame-sl/to8_cass.zip/to8_cass/";;
 *"/thomson/MO5 QD MAME/"*) core="mame_libretro mo5 -flop"; src="https://archive.org/download/mame-sl/mame-sl/mo5_qd.zip/mo5_qd/";;
 *"/thomson/TO7 QD MAME/"*) core="mame_libretro to7 -flop"; src="https://archive.org/download/mame-sl/mame-sl/to7_qd.zip/to7_qd/";;
+*"/thomson/TO8 QD MAME/"*) core="mame_libretro to8 -flop"; src="https://archive.org/download/mame-sl/mame-sl/to8_qd.zip/to8_qd/";;
 *"/rainbow/MAME/"*) core="mame_libretro rainbow -flop1"; src="https://archive.org/download/mame-sl/mame-sl/rainbow.zip/rainbow/";;
 *"/tiki100/MAME/"*) core="mame_libretro tiki100 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/tiki100.zip/tiki100/";;
 *"/pro128/Cass MAME/"*) core="mame_libretro pro128 -autoboot_command 'RUN\"CASS:\"\n' -autoboot_delay 8 -cass"; src="https://archive.org/download/mame-sl/mame-sl/pro128_cass.zip/pro128_cass/";;
@@ -884,6 +918,7 @@ case "$adresar/" in
 *"/fmtowns/Flop Orig MAME/"*) core="mame_libretro fmtowns -flop1"; src="https://archive.org/download/mame-sl/mame-sl/fmtowns_flop_orig.zip/fmtowns_flop_orig/";;
 *"/fmtowns/Flop Misc MAME/"*) core="mame_libretro fmtowns -flop1"; src="https://archive.org/download/mame-sl/mame-sl/fmtowns_flop_misc.zip/fmtowns_flop_misc/";;
 *"/fmtowns/Games/"*) core="mame_libretro fmtmarty -cdrm"; src="https://archive.org/download/tosec-main/Fujitsu/FM%20Towns/Games/%5BBIN%5D/Fujitsu%20FM%20Towns%20-%20Games%20-%20%5BBIN%5D%20%28TOSEC-v2020-07-12%29.zip/";;
+*"/fmtowns/Cracked MAME/"*) core="mame_libretro fmtowns -flop1"; src="https://archive.org/download/mame-sl/mame-sl/fmtowns_flop_cracked.zip/fmtowns_flop_cracked/";;
 *"/x1/Games/"*) core="x1_libretro"; src="https://archive.org/download/tosec-main/Sharp/X1/Games/%5B2D%5D/Sharp%20X1%20-%20Games%20-%20%5B2D%5D%20%28TOSEC-v2021-07-25%29.zip/";;
 *"/x1/Cass MAME/"*) core="mame_libretro x1 -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass"; src="https://archive.org/download/mame-sl/mame-sl/x1_cass.zip/x1_cass/";;
 *"/x1/Flop MAME/"*) core="mame_libretro x1 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/x1_flop.zip/x1_flop/";;
@@ -897,6 +932,7 @@ case "$adresar/" in
 *"/mz800/MAME/"*) core="mame_libretro mz800 -autoboot_command 'L\n' -autoboot_delay 3 -cass"; src="https://archive.org/download/mame-sl/mame-sl/mz800_cass.zip/mz800_cass/";;
 *"/mz2000/MZT/"*) core="mame_libretro mz2000 -autoboot_command 'C' -autoboot_delay 5 -cass"; src="https://archive.org/download/tosec-main/Sharp/MZ-2000%20%26%20MZ-2200/Games/%5BMTW%5D/Sharp%20MZ-2000%20%26%20MZ-2200%20-%20Games%20-%20%5BMTW%5D%20%28TOSEC-v2024-01-15%29.zip/";;
 *"/mz2000/MAME/"*) core="mame_libretro mz2000 -autoboot_command 'C' -autoboot_delay 5 -cass"; src="https://archive.org/download/mame-sl/mame-sl/mz2000_cass.zip/mz2000_cass/";;
+*"/mz2000/Flop MAME/"*) core="mame_libretro mz2000 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/mz2000_flop.zip/mz2000_flop/";;
 *"/mz2500/MAME/"*) core="mame_libretro mz2500 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/mz2500.zip/mz2500/";;
 *"/pv1000/NoIntro/"*) core="mame_libretro pv1000 -cart"; src="https://archive.org/download/ni-roms/roms/Casio%20-%20PV-1000.zip/";;
 *"/pv1000/TOSEC/"*) core="mame_libretro pv1000 -cart"; src="https://archive.org/download/tosec-main/Casio/PV-1000/Games/Casio%20PV-1000%20-%20Games%20%28TOSEC-v2023-10-03%29.zip/";;
