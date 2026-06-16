@@ -941,6 +941,7 @@ gameflix_lookup_src() { src=""; case "$1" in
   *"/3do/App/"*) src="https://archive.org/download/tosec-iso-3do/3DO%20Interactive%20Multiplayer/Applications/%5BISO%5D/";;
   *"/3do/Edu/"*) src="https://archive.org/download/tosec-iso-3do/3DO%20Interactive%20Multiplayer/Educational/%5BISO%5D/";;
   *"/3do/Multimedia/"*) src="https://archive.org/download/tosec-iso-3do/3DO%20Interactive%20Multiplayer/Multimedia/";;
+  *"/nuon/Redump/"*) src="https://archive.org/download/vm_labs_nuon/";;
   *"/vis/Edu/"*) src="https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Educational/";;
   *"/vis/Games/"*) src="https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Games/";;
   *"/vis/Multimedia/"*) src="https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Multimedia/";;

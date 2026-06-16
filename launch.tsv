@@ -951,6 +951,7 @@ Voxatron/	vox
 /3do/App/	opera_libretro	cue	https://archive.org/download/tosec-iso-3do/3DO%20Interactive%20Multiplayer/Applications/%5BISO%5D/
 /3do/Edu/	opera_libretro	cue	https://archive.org/download/tosec-iso-3do/3DO%20Interactive%20Multiplayer/Educational/%5BISO%5D/
 /3do/Multimedia/	opera_libretro	cue	https://archive.org/download/tosec-iso-3do/3DO%20Interactive%20Multiplayer/Multimedia/
+/nuon/Redump/	nuance_libretro	iso	https://archive.org/download/vm_labs_nuon/
 /vis/Edu/	mame_libretro vis -cdrm	cue	https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Educational/
 /vis/Games/	mame_libretro vis -cdrm	cue	https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Games/
 /vis/Multimedia/	mame_libretro vis -cdrm	cue	https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Multimedia/

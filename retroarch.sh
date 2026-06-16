@@ -961,6 +961,7 @@ case "$adresar/" in
 *"/3do/App/"*) core="opera_libretro"; ext="cue"; src="https://archive.org/download/tosec-iso-3do/3DO%20Interactive%20Multiplayer/Applications/%5BISO%5D/";;
 *"/3do/Edu/"*) core="opera_libretro"; ext="cue"; src="https://archive.org/download/tosec-iso-3do/3DO%20Interactive%20Multiplayer/Educational/%5BISO%5D/";;
 *"/3do/Multimedia/"*) core="opera_libretro"; ext="cue"; src="https://archive.org/download/tosec-iso-3do/3DO%20Interactive%20Multiplayer/Multimedia/";;
+*"/nuon/Redump/"*) core="nuance_libretro"; ext="iso"; src="https://archive.org/download/vm_labs_nuon/";;
 *"/vis/Edu/"*) core="mame_libretro vis -cdrm"; ext="cue"; src="https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Educational/";;
 *"/vis/Games/"*) core="mame_libretro vis -cdrm"; ext="cue"; src="https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Games/";;
 *"/vis/Multimedia/"*) core="mame_libretro vis -cdrm"; ext="cue"; src="https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Multimedia/";;
