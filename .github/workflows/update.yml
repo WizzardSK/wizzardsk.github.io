@@ -2,8 +2,8 @@ name: Gamelists updater
 
 on:
   schedule:
-    # Every Sunday at 02:00 UTC
-    - cron: '0 2 * * 0'
+    # Every Sunday at 06:00 UTC, after the gameflix build (02:00) has produced gameflix.zip
+    - cron: '0 6 * * 0'
   workflow_dispatch: 
 
 jobs:
