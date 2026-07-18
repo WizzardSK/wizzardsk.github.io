@@ -477,12 +477,12 @@ case "$adresar/" in
 *"/psx/CHD JAP/"*) core="pcsx_rearmed_libretro"; src="https://archive.org/download/PS1_JP_CHD_Arquivista/";;
 *"/psx/CHD USA/"*) core="pcsx_rearmed_libretro"; src="https://archive.org/download/PS1_US_CHD_Arquivista/";;
 *"/psx/NonRedump/"*) core="pcsx_rearmed_libretro"; ext="cue"; src="https://archive.org/download/non-redump_sony_playstation/";;
-*"/ps2/CHD 1/"*) core="pcsx2"; src="https://archive.org/download/PS2-part1-CHD-Arquivista/";;
-*"/ps2/CHD 2/"*) core="pcsx2"; src="https://archive.org/download/PS2-part2-CHD-Arquivista/";;
-*"/ps2/CHD 3/"*) core="pcsx2"; src="https://archive.org/download/PS2-part3-CHD-Arquivista/";;
-*"/ps2/NonRedump A-G/"*) core="pcsx2"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation2_part1/";;
-*"/ps2/NonRedump H-Q/"*) core="pcsx2"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation2_part2/";;
-*"/ps2/NonRedump R-Z/"*) core="pcsx2"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation2_part3/";;
+*"/ps2/CHD 1/"*) core="pcsx2_libretro"; src="https://archive.org/download/PS2-part1-CHD-Arquivista/";;
+*"/ps2/CHD 2/"*) core="pcsx2_libretro"; src="https://archive.org/download/PS2-part2-CHD-Arquivista/";;
+*"/ps2/CHD 3/"*) core="pcsx2_libretro"; src="https://archive.org/download/PS2-part3-CHD-Arquivista/";;
+*"/ps2/NonRedump A-G/"*) core="pcsx2_libretro"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation2_part1/";;
+*"/ps2/NonRedump H-Q/"*) core="pcsx2_libretro"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation2_part2/";;
+*"/ps2/NonRedump R-Z/"*) core="pcsx2_libretro"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation2_part3/";;
 *"/psp/Redump/"*) core="ppsspp_libretro"; ext="iso"; src="https://archive.org/download/playstation-portable-redump/";;
 *"/psp/NonRedump/"*) core="ppsspp_libretro"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation_portable/";;
 *"/psp/TOSEC/"*) core="ppsspp_libretro"; ext="iso"; src="https://archive.org/download/tosec-iso-sony/PlayStation%20Portable/Games/%5BISO%5D/";;
