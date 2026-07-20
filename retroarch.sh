@@ -21,15 +21,15 @@ case "$adresar/" in
 *"/commanderx16/Demo/"*) core="x16emu"; ext="img"; src="https://archive.org/download/tosec-main/8-Bit%20Productions/Commander%20X16/Demos/8-Bit%20Productions%20Commander%20X16%20-%20Demos%20%28TOSEC-v2023-08-29%29.zip/";;
 *"/vircon32/Vircon32/"*) core="vircon32_libretro"; src="https://archive.org/download/all_vircon32_roms_and_media/all_vircon32_roms_and_media/";;
 *"/chip8/MAME/"*) core="mame_libretro d6800 -quik"; src="https://archive.org/download/mame-sl/mame-sl/chip8_quik.zip/chip8_quik/";;
-*"/atari2600/ROMS/"*) core="stella_libretro"; src="https://archive.org/download/atari-2600-vcs-roms/ROMS/";;
-*"/atari2600/NoIntro/"*) core="stella_libretro"; src="https://archive.org/download/ni-roms/roms/Atari%20-%202600.zip/";;
-*"/atari2600/TOSEC/"*) core="stella_libretro"; src="https://archive.org/download/tosec-main/Atari/2600%20%26%20VCS/Games/Atari%202600%20%26%20VCS%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/";;
-*"/atari2600/Homebrew/"*) core="stella_libretro"; src="https://archive.org/download/tosec-main/Atari/2600%20%26%20VCS/Homebrew/Games/AtariAge%20Design%20Contest/Atari%202600%20%26%20VCS%20-%20Homebrew%20-%20Games%20-%20AtariAge%20Design%20Contest%20%28TOSEC-v2024-07-03%29.zip/";;
-*"/atari2600/Applications/"*) core="stella_libretro"; src="https://archive.org/download/tosec-main/Atari/2600%20%26%20VCS/Applications/Atari%202600%20%26%20VCS%20-%20Applications%20%28TOSEC-v2024-07-03%29.zip/";;
-*"/atari2600/Educational/"*) core="stella_libretro"; src="https://archive.org/download/tosec-main/Atari/2600%20%26%20VCS/Educational/Atari%202600%20%26%20VCS%20-%20Educational%20%28TOSEC-v2025-01-15%29.zip/";;
-*"/atari2600/Demo [A26]/"*) core="stella_libretro"; src="https://archive.org/download/tosec-main/Atari/2600%20%26%20VCS/Demos/%5BA26%5D/Atari%202600%20%26%20VCS%20-%20Demos%20-%20%5BA26%5D%20%28TOSEC-v2024-01-15%29.zip/";;
-*"/atari2600/Demo [BIN]/"*) core="stella_libretro"; src="https://archive.org/download/tosec-main/Atari/2600%20%26%20VCS/Demos/%5BBIN%5D/Atari%202600%20%26%20VCS%20-%20Demos%20-%20%5BBIN%5D%20%28TOSEC-v2025-01-15%29.zip/";;
-*"/atari2600/Demo [MP3]/"*) core="stella_libretro"; src="https://archive.org/download/tosec-main/Atari/2600%20%26%20VCS/Demos/%5BMP3%5D/Atari%202600%20%26%20VCS%20-%20Demos%20-%20%5BMP3%5D%20%28TOSEC-v2024-01-15%29.zip/";;
+*"/atari2600/ROMS/"*) core="tia_libretro"; src="https://archive.org/download/atari-2600-vcs-roms/ROMS/";;
+*"/atari2600/NoIntro/"*) core="tia_libretro"; src="https://archive.org/download/ni-roms/roms/Atari%20-%202600.zip/";;
+*"/atari2600/TOSEC/"*) core="tia_libretro"; src="https://archive.org/download/tosec-main/Atari/2600%20%26%20VCS/Games/Atari%202600%20%26%20VCS%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/";;
+*"/atari2600/Homebrew/"*) core="tia_libretro"; src="https://archive.org/download/tosec-main/Atari/2600%20%26%20VCS/Homebrew/Games/AtariAge%20Design%20Contest/Atari%202600%20%26%20VCS%20-%20Homebrew%20-%20Games%20-%20AtariAge%20Design%20Contest%20%28TOSEC-v2024-07-03%29.zip/";;
+*"/atari2600/Applications/"*) core="tia_libretro"; src="https://archive.org/download/tosec-main/Atari/2600%20%26%20VCS/Applications/Atari%202600%20%26%20VCS%20-%20Applications%20%28TOSEC-v2024-07-03%29.zip/";;
+*"/atari2600/Educational/"*) core="tia_libretro"; src="https://archive.org/download/tosec-main/Atari/2600%20%26%20VCS/Educational/Atari%202600%20%26%20VCS%20-%20Educational%20%28TOSEC-v2025-01-15%29.zip/";;
+*"/atari2600/Demo [A26]/"*) core="tia_libretro"; src="https://archive.org/download/tosec-main/Atari/2600%20%26%20VCS/Demos/%5BA26%5D/Atari%202600%20%26%20VCS%20-%20Demos%20-%20%5BA26%5D%20%28TOSEC-v2024-01-15%29.zip/";;
+*"/atari2600/Demo [BIN]/"*) core="tia_libretro"; src="https://archive.org/download/tosec-main/Atari/2600%20%26%20VCS/Demos/%5BBIN%5D/Atari%202600%20%26%20VCS%20-%20Demos%20-%20%5BBIN%5D%20%28TOSEC-v2025-01-15%29.zip/";;
+*"/atari2600/Demo [MP3]/"*) core="tia_libretro"; src="https://archive.org/download/tosec-main/Atari/2600%20%26%20VCS/Demos/%5BMP3%5D/Atari%202600%20%26%20VCS%20-%20Demos%20-%20%5BMP3%5D%20%28TOSEC-v2024-01-15%29.zip/";;
 *"/atari2600/MAME/"*) core="mame_libretro a2600 -cart"; src="https://archive.org/download/mame-sl/mame-sl/a2600.zip/a2600/";;
 *"/atari2600/Cass MAME/"*) core="mame_libretro a2600 scharger -cass"; src="https://archive.org/download/mame-sl/mame-sl/a2600_cass.zip/a2600_cass/";;
 *"/atari5200/NoIntro/"*) core="a5200_libretro"; src="https://archive.org/download/ni-roms/roms/Atari%20-%205200.zip/";;
@@ -477,12 +477,12 @@ case "$adresar/" in
 *"/psx/CHD JAP/"*) core="pcsx_rearmed_libretro"; src="https://archive.org/download/PS1_JP_CHD_Arquivista/";;
 *"/psx/CHD USA/"*) core="pcsx_rearmed_libretro"; src="https://archive.org/download/PS1_US_CHD_Arquivista/";;
 *"/psx/NonRedump/"*) core="pcsx_rearmed_libretro"; ext="cue"; src="https://archive.org/download/non-redump_sony_playstation/";;
-*"/ps2/CHD 1/"*) core="pcsx2"; src="https://archive.org/download/PS2-part1-CHD-Arquivista/";;
-*"/ps2/CHD 2/"*) core="pcsx2"; src="https://archive.org/download/PS2-part2-CHD-Arquivista/";;
-*"/ps2/CHD 3/"*) core="pcsx2"; src="https://archive.org/download/PS2-part3-CHD-Arquivista/";;
-*"/ps2/NonRedump A-G/"*) core="pcsx2"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation2_part1/";;
-*"/ps2/NonRedump H-Q/"*) core="pcsx2"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation2_part2/";;
-*"/ps2/NonRedump R-Z/"*) core="pcsx2"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation2_part3/";;
+*"/ps2/CHD 1/"*) core="pcsx2_libretro"; src="https://archive.org/download/PS2-part1-CHD-Arquivista/";;
+*"/ps2/CHD 2/"*) core="pcsx2_libretro"; src="https://archive.org/download/PS2-part2-CHD-Arquivista/";;
+*"/ps2/CHD 3/"*) core="pcsx2_libretro"; src="https://archive.org/download/PS2-part3-CHD-Arquivista/";;
+*"/ps2/NonRedump A-G/"*) core="pcsx2_libretro"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation2_part1/";;
+*"/ps2/NonRedump H-Q/"*) core="pcsx2_libretro"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation2_part2/";;
+*"/ps2/NonRedump R-Z/"*) core="pcsx2_libretro"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation2_part3/";;
 *"/psp/Redump/"*) core="ppsspp_libretro"; ext="iso"; src="https://archive.org/download/playstation-portable-redump/";;
 *"/psp/NonRedump/"*) core="ppsspp_libretro"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation_portable/";;
 *"/psp/TOSEC/"*) core="ppsspp_libretro"; ext="iso"; src="https://archive.org/download/tosec-iso-sony/PlayStation%20Portable/Games/%5BISO%5D/";;
@@ -900,7 +900,7 @@ case "$adresar/" in
 *"/pcfx/Redump/"*) core="mednafen_pcfx_libretro"; ext="cue"; src="https://archive.org/download/nec-pc-fx-pc-fxga-redump/";;
 *"/pcfx/ISO/"*) core="mednafen_pcfx_libretro"; ext="cue"; src="https://archive.org/download/tosec-iso-nec/PC-FX/Games/";;
 *"/fm7/NoIntro/"*) core="mame_libretro fm7 -flop1"; src="https://archive.org/download/ni-roms/roms/Fujitsu%20-%20FM-7%20%28Sector%29.zip/";;
-*"/fm7/Games T77/"*) core="mame_libretro fm7 -autoboot_command 'RUN\\n' -autoboot_delay 5 -cass,"; ext="Fujitsu - Micro 7"; src="https://archive.org/download/tosec-main/Fujitsu/FM-7/Games/%5BT77%5D/Fujitsu%20FM-7%20-%20Games%20-%20%5BT77%5D%20%28TOSEC-v2024-01-15%29.zip/";;
+*"/fm7/Games T77/"*) core="mame_libretro fm7 -autoboot_command 'RUN\"\"\n' -autoboot_delay 5 -cass"; src="https://archive.org/download/tosec-main/Fujitsu/FM-7/Games/%5BT77%5D/Fujitsu%20FM-7%20-%20Games%20-%20%5BT77%5D%20%28TOSEC-v2024-01-15%29.zip/";;
 *"/fm7/Games D77/"*) core="mame_libretro fm7 -flop1"; src="https://archive.org/download/tosec-main/Fujitsu/FM-7/Games/%5BD77%5D/Fujitsu%20FM-7%20-%20Games%20-%20%5BD77%5D%20%28TOSEC-v2011-02-07%29.zip/";;
 *"/fm7/MAME/"*) core="mame_libretro fm7 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/fm7_disk.zip/fm7_disk/";;
 *"/fm7/FM-7 Cass MAME/"*) core="mame_libretro fm7 -autoboot_command 'RUN\"\"\n' -autoboot_delay 5 -cass"; src="https://archive.org/download/mame-sl/mame-sl/fm7_cass.zip/fm7_cass/";;
@@ -1060,6 +1060,50 @@ else
   rom="$1"
 fi
 
+# Ensure the libretro core exists locally: look in the native and flatpak
+# cores directories, fetch from the libretro buildbot if missing, and as a
+# last resort fall back to an installed core with the same name stem
+# (e.g. stella -> stella2014 on arches the buildbot doesn't cover).
+if [[ "$core" == *libretro* ]]; then
+  corebin="${core%% *}"
+  # Flatpak cores dir first: on flatpak-RetroArch machines a same-named core
+  # in ~/.config may be built against the wrong libc for the sandbox.
+  coredirs=()
+  [[ -d "$HOME/.var/app/org.libretro.RetroArch/config/retroarch/cores" ]] && coredirs+=("$HOME/.var/app/org.libretro.RetroArch/config/retroarch/cores")
+  coredirs+=("$HOME/.config/retroarch/cores")
+  corepath=""
+  for d in "${coredirs[@]}"; do [[ -e "$d/$corebin.so" ]] && { corepath="$d/$corebin.so"; break; }; done
+  if [[ -z "$corepath" ]]; then
+    case "$(uname -m)" in
+      x86_64) barch="x86_64";;
+      aarch64|arm64) barch="aarch64";;
+      armv7l|armv6l) barch="armhf";;
+      *) barch="";;
+    esac
+    if [[ -n "$barch" ]]; then
+      echo "Fetching core $corebin ($barch) from the libretro buildbot ..." >&2
+      dl="${coredirs[0]}"
+      mkdir -p "$dl"
+      tmpz=$(mktemp)
+      if curl -sfL "https://buildbot.libretro.com/nightly/linux/${barch}/latest/${corebin}.so.zip" -o "$tmpz" && unzip -oq "$tmpz" -d "$dl"; then
+        corepath="$dl/$corebin.so"
+      fi
+      rm -f "$tmpz"
+    fi
+  fi
+  if [[ -z "$corepath" ]]; then
+    stem="${corebin%_libretro}"
+    for d in "${coredirs[@]}"; do
+      alt=$(ls "$d" 2>/dev/null | grep -E "^${stem}[^/]*_libretro\.so$" | head -n 1)
+      [[ -n "$alt" ]] && { corepath="$d/$alt"; echo "Core $corebin unavailable; using ${alt%.so} instead" >&2; break; }
+    done
+  fi
+  if [[ -z "$corepath" ]]; then
+    echo "Core $corebin is not installed and the buildbot has no build for this system; install it via RetroArch's Online Updater." >&2
+    exit 1
+  fi
+fi
+
 if [[ "$core" == "mame_libretro" || "$core" == "mame_libretro "* ]]; then
   if [[ -z "$ext" ]]; then
     rompath="$(dirname "$1");$HOME/share/bios"
@@ -1073,9 +1117,9 @@ if [[ "$core" == "mame_libretro" || "$core" == "mame_libretro "* ]]; then
   filename="${rom##*/}"; basename="${filename%.*}"
   hashpath_opt=""
   [[ -d /usr/share/games/mame/hash ]] && hashpath_opt=" -hashpath /usr/share/games/mame/hash"
-  cmd_file=$(mktemp --suffix=.cmd)
+  cmd_file=$(mktemp).cmd
   echo "${mame_args:+$mame_args }$rom${rompath:+ -rompath \"$rompath\"}$hashpath_opt -skip_gameinfo -snapname \"$basename\"" > "$cmd_file"
-  retroarch -L ~/.config/retroarch/cores/mame_libretro.so "$cmd_file"
+  retroarch -L "$corepath" "$cmd_file"
   rm -f "$cmd_file"
   exit
 fi
@@ -1093,7 +1137,7 @@ if [[ "$core" == "mame" || "$core" == "mame "* ]]; then
 fi
 
 if [[ "$core" == *"libretro"* ]]; then
-  retroarch -L ~/.config/retroarch/cores/${core}.so "${rom}"
+  retroarch -L "$corepath" "${rom}"
 else
   ${core} "${rom}"
 fi
