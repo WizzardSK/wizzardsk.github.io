@@ -418,7 +418,7 @@ case "$adresar/" in
 *"/dsi/NoIntro/"*) core="melondsds_libretro"; src="https://archive.org/download/ni-roms/roms/Nintendo%20-%20Nintendo%20DSi%20%28Decrypted%29.zip/";;
 *"/dsi/TOSEC/"*) core="melondsds_libretro"; src="https://archive.org/download/tosec-main/Nintendo/DSi/Games/Nintendo%20DSi%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/";;
 *"/3ds/NoIntro/"*) core="citra_libretro"; ext="3ds"; src="https://archive.org/download/nintendo-nintendo-3ds-games-decrypted/Nintendo%20-%20Nintendo%203DS/";;
-*"/wiiu/Redump/"*) core="cemu -g"; src="https://archive.org/download/wii-u-retail-nus-usa/";;
+*"/wiiu/Redump/"*) core="cemu_libretro"; ext="tmd"; src="https://archive.org/download/wii-u-retail-nus-usa/";;
 *"/svmu/TOSEC/"*) core="mame_libretro svmu -quik"; src="https://archive.org/download/tosec-main/Sega/Visual%20Memory%20System/Games/Sega%20Visual%20Memory%20System%20-%20Games%20%28TOSEC-v2023-08-29%29.zip/";;
 *"/svmu/Demo/"*) core="mame_libretro svmu -quik"; src="https://archive.org/download/tosec-main/Sega/Visual%20Memory%20System/Demos/Sega%20Visual%20Memory%20System%20-%20Demos%20%28TOSEC-v2023-08-29%29.zip/";;
 *"/svmu/MAME/"*) core="mame_libretro svmu -quik"; src="https://archive.org/download/mame-sl/mame-sl/svmu.zip/svmu/";;
@@ -486,6 +486,9 @@ case "$adresar/" in
 *"/psp/Redump/"*) core="ppsspp_libretro"; ext="iso"; src="https://archive.org/download/playstation-portable-redump/";;
 *"/psp/NonRedump/"*) core="ppsspp_libretro"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation_portable/";;
 *"/psp/TOSEC/"*) core="ppsspp_libretro"; ext="iso"; src="https://archive.org/download/tosec-iso-sony/PlayStation%20Portable/Games/%5BISO%5D/";;
+*"/xbox/XISO 0-M/"*) core="xemu -dvd_path"; src="https://archive.org/download/metal-gear-solid-2-substance-usa/";;
+*"/xbox/XISO M-Z/"*) core="xemu -dvd_path"; src="https://archive.org/download/microsoft-xbox-xemu.xisoready-software-collection-part-2/";;
+*"/xbox/XISO Extra/"*) core="xemu -dvd_path"; src="https://archive.org/download/microsoft-xbox-xemu-ready-software-collection-part-3/";;
 *"/dos/eXoDOS/"*) core="dosbox_pure_libretro"; src="https://archive.org/download/exodos-full/eXoDOS/eXo/eXoDOS/";;
 *"/dos/TOSEC/"*) core="dosbox_pure_libretro"; src="https://archive.org/download/tosec-main/IBM/PC%20Compatibles/Compilations/Games/%5BIMG%5D/IBM%20PC%20Compatibles%20-%20Compilations%20-%20Games%20-%20%5BIMG%5D%20%28TOSEC-v2024-04-20%29.zip/";;
 *"/dos/App TOSEC/"*) core="dosbox_pure_libretro"; src="https://archive.org/download/tosec-main/IBM/PC%20Compatibles/Applications/Addons%20%26%20Patches/IBM%20PC%20Compatibles%20-%20Applications%20-%20Addons%20%26%20Patches%20%28TOSEC-v2023-11-07%29.zip/";;
@@ -1047,13 +1050,15 @@ fi
 
 if [ -n "$ext" ]; then
   umount -l ~/iso
-  if [[ "$1" == *.rar ]]; then
+  # mount-zip reads zips only; .rar and .7z (Wii U NUS titles ship as .7z) go
+  # through ratarmount, which handles both.
+  if [[ "$1" == *.rar || "$1" == *.7z ]]; then
     ratarmount "$1" ~/iso
   else
     mount-zip "$1" ~/iso
   fi
   rom=$(find ~/iso -type f -name "*.${ext}" | head -n 1)
-elif [[ "$1" == *.rar ]]; then
+elif [[ "$1" == *.rar || "$1" == *.7z ]]; then
   umount -l ~/iso; ratarmount "$1" ~/iso
   rom=~/iso
 else
