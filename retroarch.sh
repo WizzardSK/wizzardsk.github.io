@@ -8,7 +8,7 @@ head "$1"
 adresar=$(dirname "$1")
 adresar2="${adresar##*/}"
 case "$adresar/" in
-*"TIC-80/"*) core="tic80_libretro";;
+*"/TIC-80/"*) core="tic80_libretro"; src="https://tic80.com/cart/";;
 *"LowresNX/"*) core="lowresnx_libretro";;
 *"/wasm4/"*) core="wasm4_libretro";;
 *"PICO-8/"*) core="pico8 -run";;

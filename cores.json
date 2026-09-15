@@ -1,5 +1,10 @@
 [
  {
+  "pattern": "/TIC-80/",
+  "core": "tic80_libretro",
+  "src": "https://tic80.com/cart/"
+ },
+ {
   "pattern": "/wasm4/",
   "core": "wasm4_libretro"
  },
