@@ -1027,6 +1027,290 @@ case "$adresar/" in
 *"/palm/NoIntro/"*) core="mu_libretro"; ext="prc"; src="https://archive.org/download/ni-roms/roms/Mobile%20-%20Palm%20OS%20%28Digital%29.zip/";;
 esac
 
+# RetroArch's system directory, where every core looks for its firmware. The
+# flatpak build has its own and cannot see the native one.
+sysdir="$HOME/.config/retroarch/system"
+[[ -d "$HOME/.var/app/org.libretro.RetroArch/config/retroarch/system" ]] && sysdir="$HOME/.var/app/org.libretro.RetroArch/config/retroarch/system"
+
+# Firmware. A core that needs a BIOS says which files in its .info, and a
+# missing one is not an error message - it is a black screen, or a core that
+# exits without drawing anything. Since the ROM is fetched on demand there is
+# no reason the firmware should not be.
+#
+# The list comes from the core's own .info (firmwareN_path, relative to the
+# system directory); the files come out of a RetroArch BIOS pack on the
+# Internet Archive, which is laid out as a system folder, so a name from the
+# .info is a path in the pack. Anything the pack does not have is named on
+# stderr rather than passed over in silence, because that is the one case
+# where the user has to do something.
+bios_pack_url="https://archive.org/download/retroarch_bios_pack/extract_to_sytem_folder.zip"
+mame_rom_url="https://archive.org/download/mame-merged/mame-merged"
+system_zip_url="https://buildbot.libretro.com/assets/system"
+
+# An Internet Archive S3 session, when rclone has one configured: restricted
+# items - the merged MAME set among them - answer 401 without it. The header
+# has to survive the redirect to the data node, hence --location-trusted at
+# every call site.
+gameflix_ia_auth() {
+  ia_auth=""
+  [[ -f ~/.config/rclone/rclone.conf ]] || return 0
+  local k s2
+  k=$(awk '/^\[archive\]/{f=1;next} /^\[/{f=0} f && /access_key_id/{print $3;exit}' ~/.config/rclone/rclone.conf)
+  s2=$(awk '/^\[archive\]/{f=1;next} /^\[/{f=0} f && /secret_access_key/{print $3;exit}' ~/.config/rclone/rclone.conf)
+  [[ -n "$k" && -n "$s2" ]] && ia_auth="LOW ${k}:${s2}"
+  return 0
+}
+
+gameflix_bios_index() {
+  local cache="${XDG_CACHE_HOME:-$HOME/.cache}/gameflix"
+  bios_index="$cache/bios_pack.index"
+  # A month is arbitrary but the pack does not change; this is only so a
+  # listing that was fetched half-written does not stay wrong forever.
+  if [[ -s "$bios_index" ]] && [[ -z "$(find "$bios_index" -mtime +30 2>/dev/null)" ]]; then
+    return 0
+  fi
+  mkdir -p "$cache"
+  local html
+  html=$(curl -sfL --max-time 60 "$bios_pack_url/") || return 1
+  : > "$bios_index"
+  # Each row links one file inside the zip; the href is already percent-encoded
+  # (directories as %2F), which is exactly the form the download URL wants, so
+  # it is stored as it came and only the key is decoded for matching.
+  printf '%s' "$html" | grep -o 'extract_to_sytem_folder\.zip/[^"]*"' | sed 's|.*extract_to_sytem_folder\.zip/||; s|"$||' | while IFS= read -r href; do
+    [[ -z "$href" ]] && continue
+    local decoded
+    decoded=$(printf '%b' "${href//%/\\x}")
+    printf '%s\t%s\n' "${decoded,,}" "$href" >> "$bios_index"
+  done
+  [[ -s "$bios_index" ]]
+}
+
+gameflix_fetch_firmware() {
+  local corebin="$1" infofile="" line path key href missing=0
+  local cache="${XDG_CACHE_HOME:-$HOME/.cache}/gameflix"
+
+  # The .info usually sits next to the core; RetroArch also keeps a copy in its
+  # info directory. Neither exists on a machine where the core was fetched by
+  # the block above, so fall back to the buildbot's info bundle, once.
+  for d in "${coredirs[@]}" "$HOME/.config/retroarch/info" "$HOME/.var/app/org.libretro.RetroArch/config/retroarch/info" "$cache/info"; do
+    [[ -f "$d/$corebin.info" ]] && { infofile="$d/$corebin.info"; break; }
+  done
+  if [[ -z "$infofile" ]]; then
+    local tmpz="$cache/info.zip"
+    mkdir -p "$cache/info"
+    if curl -sfL --max-time 120 -o "$tmpz" "https://buildbot.libretro.com/assets/frontend/info.zip" &&
+       unzip -oq "$tmpz" "$corebin.info" -d "$cache/info" 2>/dev/null; then
+      infofile="$cache/info/$corebin.info"
+    fi
+    rm -f "$tmpz"
+  fi
+  [[ -f "$infofile" ]] || return 0
+
+  # Collect what is required and not already there. Optional entries are taken
+  # too when the pack has them: "optional" in a .info means the core starts
+  # without it, not that the game runs - a Mega CD title is a black screen
+  # without bios_CD_E.bin, and that entry is marked optional.
+  local -a wanted=()
+  while IFS= read -r line; do
+    path="${line#*= \"}"; path="${path%\"}"
+    [[ -z "$path" || "$path" == "$line" ]] && continue
+    [[ -e "$sysdir/$path" ]] && continue
+    wanted+=("$path")
+  done < <(grep -E '^firmware[0-9]+_path[[:space:]]*=' "$infofile")
+  [[ ${#wanted[@]} -eq 0 ]] && return 0
+
+  # One first-party zip can cover the whole list, so it goes first and the list
+  # is taken again afterwards rather than fetched over.
+  if gameflix_system_zip "$corebin"; then
+    local -a left=()
+    for path in "${wanted[@]}"; do [[ -e "$sysdir/$path" ]] || left+=("$path"); done
+    wanted=("${left[@]}")
+    [[ ${#wanted[@]} -eq 0 ]] && return 0
+  fi
+
+  gameflix_bios_index || { echo "Firmware missing for $corebin and the BIOS pack listing could not be fetched: ${wanted[*]}" >&2; return 0; }
+
+  for path in "${wanted[@]}"; do
+    key="${path,,}"
+    href=$(awk -F'\t' -v k="$key" '$1==k{print $2; exit}' "$bios_index")
+    # The pack lays some files out flat that a core wants in a subdirectory
+    # (dc/dc_boot.bin), so fall back to the file name alone when it is
+    # unambiguous.
+    if [[ -z "$href" ]]; then
+      local base="${key##*/}" hits
+      hits=$(awk -F'\t' -v b="$base" '$1==b || substr($1, length($1)-length(b)) == "/" b {print $2}' "$bios_index")
+      [[ $(printf '%s\n' "$hits" | grep -c .) -eq 1 ]] && href="$hits"
+    fi
+    local url=""
+    if [[ -n "$href" ]]; then
+      url="$bios_pack_url/$href"
+    elif [[ "$path" == *.zip ]]; then
+      # A .zip in a firmware list is a MAME system ROM set, not a file the
+      # BIOS pack would carry - flycast's Naomi and Atomiswave boards, for one.
+      # Those come from the merged romset, by the same name.
+      url="$mame_rom_url/${path##*/}"
+    fi
+    if [[ -z "$url" ]]; then
+      # Last try before giving up: the machine's own MAME set, which keeps its
+      # ROMs under the names they had (5200.rom, exec.bin, iplrom.dat).
+      if gameflix_from_mame_set "$corebin" "${path##*/}" "$sysdir/$path"; then
+        echo "Fetched firmware $path from the MAME set" >&2
+        continue
+      fi
+      echo "Firmware $path is not in the BIOS pack - put it in $sysdir/$path yourself" >&2
+      missing=1
+      continue
+    fi
+    echo "Fetching firmware $path ..." >&2
+    mkdir -p "$(dirname "$sysdir/$path")"
+    gameflix_ia_auth
+    if ! curl -sfL --location-trusted --max-time 300 ${ia_auth:+-H "Authorization: $ia_auth"} -o "$sysdir/$path" "$url"; then
+      rm -f "$sysdir/$path"
+      echo "Firmware not found: $path - put it in $sysdir/$path yourself" >&2
+      missing=1
+    fi
+  done
+  return $missing
+}
+
+# Whether a core is a build for this machine. The buildbot has shipped an
+# x86-64 binary in the aarch64 slot before now (stella, 15 September 2026), and
+# dlopen answers that with "cannot open shared object file: No such file or
+# directory" naming the core - a file that is plainly there - because what is
+# missing is the loader it asks for. Nothing in that message says "wrong
+# architecture", so it is worth one read of the ELF header before handing the
+# path to RetroArch.
+gameflix_core_arch_ok() {
+  local f="$1" want machine
+  [[ -r "$f" ]] || return 1
+  case "$(uname -m)" in
+    x86_64)        want=62 ;;   # EM_X86_64
+    aarch64|arm64) want=183 ;;  # EM_AARCH64
+    armv7l|armv6l) want=40 ;;   # EM_ARM
+    i?86)          want=3 ;;    # EM_386
+    riscv64)       want=243 ;;  # EM_RISCV
+    *)             return 0 ;;  # unknown host: do not second-guess it
+  esac
+  # e_machine is two little-endian bytes at offset 18, after the magic this
+  # also confirms.
+  [[ "$(od -An -tx1 -N4 "$f" | tr -d ' ')" == "7f454c46" ]] || return 1
+  machine=$(od -An -tu2 -j18 -N2 "$f" | tr -d ' ')
+  [[ "$machine" == "$want" ]]
+}
+
+# Some cores need support files rather than a console BIOS - Dolphin's
+# codehandler, PPSSPP's atlas, ScummVM's engine data - and libretro publishes
+# those itself, one zip per core, laid out as a system folder. First-party and
+# exact, so it is tried before anything else, and one download usually settles
+# every file a core is missing at once.
+gameflix_system_zip() {
+  local corebin="$1" stem norm line name href best="" cache tmpz
+  cache="${XDG_CACHE_HOME:-$HOME/.cache}/gameflix"
+  stem="${corebin%_libretro}"
+  norm=$(printf '%s' "${stem,,}" | tr -cd 'a-z0-9')
+  local index="$cache/system_zips.index"
+  if [[ ! -s "$index" ]] || [[ -n "$(find "$index" -mtime +30 2>/dev/null)" ]]; then
+    mkdir -p "$cache"
+    local html
+    html=$(curl -sfL --max-time 60 "$system_zip_url/") || return 1
+    : > "$index"
+    printf '%s' "$html" | grep -o 'href="/assets/system/[^"]*\.zip"' | sed 's|href="/assets/system/||; s|"$||' | while IFS= read -r href; do
+      name=$(printf '%b' "${href//%/\\x}")
+      name="${name%.zip}"
+      printf '%s\t%s\n' "$(printf '%s' "${name,,}" | tr -cd 'a-z0-9')" "$href" >> "$index"
+    done
+  fi
+  [[ -s "$index" ]] || return 1
+  # Exact first: "mame2003" must not take "MAME 2003-Plus.zip", which a prefix
+  # match on its own would hand it.
+  best=$(awk -F'\t' -v k="$norm" '$1==k{print $2; exit}' "$index")
+  [[ -z "$best" ]] && best=$(awk -F'\t' -v k="$norm" 'index($1,k)==1{print $2; exit}' "$index")
+  [[ -z "$best" ]] && return 1
+  tmpz=$(mktemp)
+  echo "Fetching support files for $stem from the libretro buildbot ..." >&2
+  if curl -sfL --max-time 300 -o "$tmpz" "$system_zip_url/$best" && unzip -oq "$tmpz" -d "$sysdir"; then
+    rm -f "$tmpz"
+    return 0
+  fi
+  rm -f "$tmpz"
+  return 1
+}
+
+# A machine's BIOS is often in the merged MAME set under the same file name the
+# core asks for - MAME keeps ROMs by their original names - even when the BIOS
+# pack has nothing. The set is named after the MAME driver, which is usually
+# the core's own stem (a5200_libretro -> a5200.zip); where it is not, it is
+# named here, and only for the cases where the file names line up as well.
+gameflix_mame_set_for_core() {
+  case "$1" in
+    freeintv_libretro)     echo intv ;;      # exec.bin, grom.bin
+    o2em_libretro)         echo odyssey2 ;;  # o2rom.bin
+    mednafen_pcfx_libretro) echo pcfx ;;     # pcfx.rom
+    px68k_libretro)        echo x68000 ;;    # iplrom.dat, cgrom.dat
+    *)                     echo "${1%_libretro}" ;;
+  esac
+}
+
+# What the file is called inside the set. Usually the same name the core asks
+# for, because MAME keeps ROMs under their original names - but some machines
+# are stored under the chip they came on, and those are named here. Each of
+# these was read out of the set itself, not guessed.
+gameflix_mame_member_for() {
+  case "$1:$2" in
+    a5200_libretro:5200.rom)              echo "co19156.u8" ;;
+    gearcoleco_libretro:colecovision.rom) echo "313_10031-4005_73108a.u2" ;;
+    mednafen_pcfx_libretro:pcfx.rom)      echo "pcfxbios.bin" ;;
+    *)                                    echo "$2" ;;
+  esac
+}
+
+# Pulls one named file out of a MAME set, downloading the set once per core.
+# Returns non-zero and leaves nothing behind when the set has no such file,
+# which is the common case and not an error.
+gameflix_from_mame_set() {
+  local core="$1" want="$2" dest="$3" set_name cache zip
+  cache="${XDG_CACHE_HOME:-$HOME/.cache}/gameflix"
+  set_name=$(gameflix_mame_set_for_core "$core")
+  [[ -n "$set_name" ]] || return 1
+  zip="$cache/mameset-$set_name.zip"
+  if [[ ! -s "$zip" ]]; then
+    mkdir -p "$cache"
+    gameflix_ia_auth
+    curl -sfL --location-trusted --max-time 600 ${ia_auth:+-H "Authorization: $ia_auth"} \
+      -o "$zip" "$mame_rom_url/$set_name.zip" || { rm -f "$zip"; return 1; }
+  fi
+  local member
+  member=$(gameflix_mame_member_for "$core" "$want")
+  unzip -l "$zip" 2>/dev/null | grep -qF " $member" || return 1
+  mkdir -p "$(dirname "$dest")"
+  unzip -p "$zip" "$member" > "$dest" 2>/dev/null && [[ -s "$dest" ]] && return 0
+  rm -f "$dest"
+  return 1
+}
+
+# MAME wants a system's own ROM set - neogeo.zip, stvbios.zip, sms.zip - in its
+# rompath, and without it the core stops before the first frame. The set is
+# named after the driver, which is the first word of the core arguments, so it
+# can be fetched the same way.
+gameflix_fetch_mame_bios() {
+  local driver="$1" dest="$HOME/share/bios"
+  [[ -z "$driver" || "$driver" == -* ]] && return 0
+  [[ -e "$dest/$driver.zip" ]] && return 0
+  # RetroArch's own system directories are searched too, so a set that is
+  # already there is not fetched again.
+  [[ -e "$sysdir/mame/bios/$driver.zip" || -e "$sysdir/mame/roms/$driver.zip" ]] && return 0
+  mkdir -p "$dest"
+  echo "Fetching MAME system ROMs $driver.zip ..." >&2
+  gameflix_ia_auth
+  if ! curl -sfL --location-trusted --max-time 600 ${ia_auth:+-H "Authorization: $ia_auth"} -o "$dest/$driver.zip" "$mame_rom_url/$driver.zip"; then
+    rm -f "$dest/$driver.zip"
+    # Not every driver has a set of its own - a cartridge machine keeps
+    # everything in the cartridge - so this is a note, not a failure.
+    echo "No MAME system ROMs for $driver in the merged set; continuing" >&2
+  fi
+}
+
+
 if [[ -n "$src" && ! -e "$1" ]]; then
   mkdir -p "$(dirname "$1")"
   relpath="${1#$HOME/share/roms/}"
@@ -1034,12 +1318,7 @@ if [[ -n "$src" && ! -e "$1" ]]; then
   urlenc() { local LC_ALL=C s="$1" i c e=""; for ((i=0;i<${#s};i++)); do c="${s:i:1}"; case "$c" in [/a-zA-Z0-9._~-]) e+="$c";; *) printf -v c '%%%02X' "'$c"; e+="$c";; esac; done; printf '%s' "$e"; }
   enc=$(urlenc "$inner")
   fname="${1##*/}"
-  ia_auth=""
-  if [[ -f ~/.config/rclone/rclone.conf ]]; then
-    ia_key=$(awk '/^\[archive\]/{f=1;next} /^\[/{f=0} f && /access_key_id/{print $3;exit}' ~/.config/rclone/rclone.conf)
-    ia_sec=$(awk '/^\[archive\]/{f=1;next} /^\[/{f=0} f && /secret_access_key/{print $3;exit}' ~/.config/rclone/rclone.conf)
-    [[ -n "$ia_key" && -n "$ia_sec" ]] && ia_auth="LOW ${ia_key}:${ia_sec}"
-  fi
+  gameflix_ia_auth
   echo "Fetching $fname ..." >&2
   if ! curl -sfL --location-trusted ${ia_auth:+-H "Authorization: $ia_auth"} -o "$1" "${src}${enc}"; then
     rm -f "$1"
@@ -1077,7 +1356,11 @@ if [[ "$core" == *libretro* ]]; then
   [[ -d "$HOME/.var/app/org.libretro.RetroArch/config/retroarch/cores" ]] && coredirs+=("$HOME/.var/app/org.libretro.RetroArch/config/retroarch/cores")
   coredirs+=("$HOME/.config/retroarch/cores")
   corepath=""
-  for d in "${coredirs[@]}"; do [[ -e "$d/$corebin.so" ]] && { corepath="$d/$corebin.so"; break; }; done
+  for d in "${coredirs[@]}"; do
+    [[ -e "$d/$corebin.so" ]] || continue
+    if gameflix_core_arch_ok "$d/$corebin.so"; then corepath="$d/$corebin.so"; break; fi
+    echo "Core $d/$corebin.so is not a build for $(uname -m); ignoring it" >&2
+  done
   if [[ -z "$corepath" ]]; then
     case "$(uname -m)" in
       x86_64) barch="x86_64";;
@@ -1091,7 +1374,14 @@ if [[ "$core" == *libretro* ]]; then
       mkdir -p "$dl"
       tmpz=$(mktemp)
       if curl -sfL "https://buildbot.libretro.com/nightly/linux/${barch}/latest/${corebin}.so.zip" -o "$tmpz" && unzip -oq "$tmpz" -d "$dl"; then
-        corepath="$dl/$corebin.so"
+        if gameflix_core_arch_ok "$dl/$corebin.so"; then
+          corepath="$dl/$corebin.so"
+        else
+          # The download worked and the file is wrong. Keeping it would mean
+          # fetching it again on every launch and failing the same way.
+          echo "The buildbot's $barch build of $corebin is not a $barch binary; falling back" >&2
+          rm -f "$dl/$corebin.so"
+        fi
       fi
       rm -f "$tmpz"
     fi
@@ -1099,14 +1389,21 @@ if [[ "$core" == *libretro* ]]; then
   if [[ -z "$corepath" ]]; then
     stem="${corebin%_libretro}"
     for d in "${coredirs[@]}"; do
-      alt=$(ls "$d" 2>/dev/null | grep -E "^${stem}[^/]*_libretro\.so$" | head -n 1)
-      [[ -n "$alt" ]] && { corepath="$d/$alt"; echo "Core $corebin unavailable; using ${alt%.so} instead" >&2; break; }
+      while IFS= read -r alt; do
+        [[ -z "$alt" ]] && continue
+        gameflix_core_arch_ok "$d/$alt" || continue
+        corepath="$d/$alt"; echo "Core $corebin unavailable; using ${alt%.so} instead" >&2; break
+      done < <(ls "$d" 2>/dev/null | grep -E "^${stem}[^/]*_libretro\.so$")
+      [[ -n "$corepath" ]] && break
     done
   fi
   if [[ -z "$corepath" ]]; then
     echo "Core $corebin is not installed and the buildbot has no build for this system; install it via RetroArch's Online Updater." >&2
     exit 1
   fi
+  # Whatever core we ended up with - the one asked for, the one fetched, or the
+  # near-name fallback - it is the one whose firmware has to be there.
+  gameflix_fetch_firmware "$(basename "$corepath" .so)"
 fi
 
 if [[ "$core" == "mame_libretro" || "$core" == "mame_libretro "* ]]; then
@@ -1119,6 +1416,7 @@ if [[ "$core" == "mame_libretro" || "$core" == "mame_libretro "* ]]; then
   esac
   core=$(echo "$core" | sed -E 's|(-hard[0-9]+) ([a-z0-9_]+):([a-z0-9_]+)|\1 '"$HOME"'/share/bios/\2/\3/\3.chd|g')
   mame_args="${core#mame_libretro}"; mame_args="${mame_args# }"
+  gameflix_fetch_mame_bios "${mame_args%% *}"
   filename="${rom##*/}"; basename="${filename%.*}"
   hashpath_opt=""
   if [[ -d /usr/share/games/mame/hash ]]; then
@@ -1128,8 +1426,6 @@ if [[ "$core" == "mame_libretro" || "$core" == "mame_libretro "* ]]; then
     # looks for it in <system>/mame/hash and ships none, so without it the core
     # dies before drawing a frame -- no error, just a black screen (gameflix#12).
     list="${BASH_REMATCH[1]}"
-    sysdir="$HOME/.config/retroarch/system"
-    [[ -d "$HOME/.var/app/org.libretro.RetroArch/config/retroarch/system" ]] && sysdir="$HOME/.var/app/org.libretro.RetroArch/config/retroarch/system"
     mkdir -p "$sysdir/mame/hash"
     if [[ -f "$sysdir/mame/hash/$list.xml" ]] || curl -sfL -o "$sysdir/mame/hash/$list.xml" \
          "https://raw.githubusercontent.com/libretro/mame/master/hash/$list.xml"; then
@@ -1159,6 +1455,8 @@ if [[ "$core" == "mame" || "$core" == "mame "* ]]; then
     rompath="$(dirname "$1");$HOME/share/bios"
     rom="$(basename "${1%.*}")"
   fi
+  mame_args="${core#mame}"; mame_args="${mame_args# }"
+  gameflix_fetch_mame_bios "${mame_args%% *}"
   core=$(echo "$core" | sed -E 's|(-hard[0-9]+) ([a-z0-9_]+):([a-z0-9_]+)|\1 '"$HOME"'/share/bios/\2/\3/\3.chd|g')
   filename="${rom##*/}"; basename="${filename%.*}"
   eval "cmd=($core)"
