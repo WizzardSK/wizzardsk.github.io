@@ -14,3 +14,7 @@ a { color: cyan; text-decoration: none }
 .navlink small { color: white }
 .navlink:hover { background-color: #777 }
 #navlinks { margin-top: 3px; clear: left }
+/* Platform pages render only the rows on screen (script.js): .figureList is
+   sized to the whole list and .figureRows holds the visible rows. */
+.figureList { position: relative }
+.figureRows { position: absolute; left: 0; right: 0; display: grid; column-gap: 4px }
