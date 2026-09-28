@@ -57,8 +57,8 @@ case "$adresar/" in
 *"/jaguar/NoIntro COF/"*) core="virtualjaguar_libretro"; src="https://archive.org/download/ni-roms/roms/Atari%20-%20Jaguar%20%28COF%29.zip/";;
 *"/jaguar/NoIntro JAG/"*) core="virtualjaguar_libretro"; src="https://archive.org/download/ni-roms/roms/Atari%20-%20Jaguar%20%28JAG%29.zip/";;
 *"/jaguar/NoIntro ROM/"*) core="virtualjaguar_libretro"; src="https://archive.org/download/ni-roms/roms/Atari%20-%20Jaguar%20%28ROM%29.zip/";;
-*"/jaguarcd/Redump/"*) core="bigpemu"; ext="cue"; src="https://archive.org/download/atari-jaguarcd-redump/";;
-*"/jaguarcd/NonRedump/"*) core="bigpemu"; ext="cdi"; src="https://archive.org/download/non-redump_atari-jaguar-cd/";;
+*"/jaguarcd/Redump/"*) core="virtualjaguar_libretro"; ext="cue"; src="https://archive.org/download/atari-jaguarcd-redump/";;
+*"/jaguarcd/NonRedump/"*) core="virtualjaguar_libretro"; ext="cdi"; src="https://archive.org/download/non-redump_atari-jaguar-cd/";;
 *"/lynx/NoIntro/"*) core="mednafen_lynx_libretro"; src="https://archive.org/download/ni-roms/roms/Atari%20-%20Lynx%20%28LYX%29.zip/";;
 *"/lynx/TOSEC/"*) core="mednafen_lynx_libretro"; src="https://archive.org/download/tosec-main/Atari/Lynx/Compilations/Games/%5BLNX%5D/Atari%20Lynx%20-%20Compilations%20-%20Games%20-%20%5BLNX%5D%20%28TOSEC-v2022-06-08%29.zip/";;
 *"/lynx/Demo [LNX]/"*) core="mednafen_lynx_libretro"; src="https://archive.org/download/tosec-main/Atari/Lynx/Demos/%5BLNX%5D/Atari%20Lynx%20-%20Demos%20-%20%5BLNX%5D%20%28TOSEC-v2025-01-15%29.zip/";;
