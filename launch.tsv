@@ -1013,5 +1013,5 @@ Voxatron/	vox
 /mononcolor/MAME/	mame_libretro mononcol -cart		https://archive.org/download/mame-sl/mame-sl/monon_color.zip/monon_color/
 /gameking/MAME/	mame_libretro gameking -cart		https://archive.org/download/mame-sl/mame-sl/gameking.zip/gameking/
 /gameking3/MAME/	mame_libretro gamekin3 -cart		https://archive.org/download/mame-sl/mame-sl/gameking3.zip/gameking3/
-/j2me/NoIntro/	freej2me_libretro	jar	https://archive.org/download/ni-roms/roms/Mobile%20-%20J2ME.zip/
+/j2me/NoIntro/	squirreljme_libretro	jar	https://archive.org/download/ni-roms/roms/Mobile%20-%20J2ME.zip/
 /palm/NoIntro/	mu_libretro	prc	https://archive.org/download/ni-roms/roms/Mobile%20-%20Palm%20OS%20%28Digital%29.zip/
