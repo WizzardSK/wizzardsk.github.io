@@ -3211,7 +3211,7 @@
  },
  {
   "pattern": "/trs80/Edu [DSK]/",
-  "core": "mame_libretro trs80m3 -flop1",
+  "core": "mame_libretro trs80m3 -quik",
   "src": "https://archive.org/download/tosec-main/Tandy%20Radio%20Shack/TRS-80%20Model%20III/Educational/%5BDSK%5D/Tandy%20Radio%20Shack%20TRS-80%20Model%20III%20-%20Educational%20-%20%5BDSK%5D%20%28TOSEC-v2024-07-03%29.zip/"
  },
  {
