@@ -952,6 +952,7 @@ gameflix_lookup_src() { src=""; case "$1" in
   *"/vis/Edu/"*) src="https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Educational/";;
   *"/vis/Games/"*) src="https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Games/";;
   *"/vis/Multimedia/"*) src="https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Multimedia/";;
+  *"/playdia/Redump/"*) src="https://archive.org/download/bandai_playdia_quick_interactive_system/";;
   *"/mame/Merged/"*) src="https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/";;
   *"/mame/Non-Merged/"*) src="https://archive.org/download/mame-0.264-roms-non-merged/";;
   *"/mame/Split/"*) src="https://archive.org/download/mame-0.260-roms-split_202310/";;

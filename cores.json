@@ -4837,7 +4837,8 @@
  },
  {
   "pattern": "/playdia/Redump/",
-  "core": "playdiaemu_libretro"
+  "core": "playdiaemu_libretro",
+  "src": "https://archive.org/download/bandai_playdia_quick_interactive_system/"
  },
  {
   "pattern": "/mame/Merged/",
