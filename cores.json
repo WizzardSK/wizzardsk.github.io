@@ -4836,6 +4836,10 @@
   "src": "https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Multimedia/"
  },
  {
+  "pattern": "/playdia/Redump/",
+  "core": "playdiaemu_libretro"
+ },
+ {
   "pattern": "/mame/Merged/",
   "core": "mame_libretro",
   "src": "https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/"

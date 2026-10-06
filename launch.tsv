@@ -956,6 +956,7 @@ Voxatron/	vox
 /vis/Edu/	mame_libretro vis -cdrm	cue	https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Educational/
 /vis/Games/	mame_libretro vis -cdrm	cue	https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Games/
 /vis/Multimedia/	mame_libretro vis -cdrm	cue	https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Multimedia/
+/playdia/Redump/	playdiaemu_libretro		
 /mame/Merged/	mame_libretro		https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/
 /mame/Non-Merged/	mame_libretro		https://archive.org/download/mame-0.264-roms-non-merged/
 /mame/Split/	mame_libretro		https://archive.org/download/mame-0.260-roms-split_202310/

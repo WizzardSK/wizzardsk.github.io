@@ -966,6 +966,7 @@ case "$adresar/" in
 *"/vis/Edu/"*) core="mame_libretro vis -cdrm"; ext="cue"; src="https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Educational/";;
 *"/vis/Games/"*) core="mame_libretro vis -cdrm"; ext="cue"; src="https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Games/";;
 *"/vis/Multimedia/"*) core="mame_libretro vis -cdrm"; ext="cue"; src="https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Multimedia/";;
+*"/playdia/Redump/"*) core="playdiaemu_libretro";;
 *"/mame/Merged/"*) core="mame_libretro"; src="https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/";;
 *"/mame/Non-Merged/"*) core="mame_libretro"; src="https://archive.org/download/mame-0.264-roms-non-merged/";;
 *"/mame/Split/"*) core="mame_libretro"; src="https://archive.org/download/mame-0.260-roms-split_202310/";;
