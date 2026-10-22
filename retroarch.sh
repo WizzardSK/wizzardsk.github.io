@@ -486,9 +486,9 @@ case "$adresar/" in
 *"/psp/Redump/"*) core="ppsspp_libretro"; ext="iso"; src="https://archive.org/download/playstation-portable-redump/";;
 *"/psp/NonRedump/"*) core="ppsspp_libretro"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation_portable/";;
 *"/psp/TOSEC/"*) core="ppsspp_libretro"; ext="iso"; src="https://archive.org/download/tosec-iso-sony/PlayStation%20Portable/Games/%5BISO%5D/";;
-*"/xbox/XISO 0-M/"*) core="xemu -dvd_path"; src="https://archive.org/download/metal-gear-solid-2-substance-usa/";;
-*"/xbox/XISO M-Z/"*) core="xemu -dvd_path"; src="https://archive.org/download/microsoft-xbox-xemu.xisoready-software-collection-part-2/";;
-*"/xbox/XISO Extra/"*) core="xemu -dvd_path"; src="https://archive.org/download/microsoft-xbox-xemu-ready-software-collection-part-3/";;
+*"/xbox/XISO 0-M/"*) core="xemu_libretro"; src="https://archive.org/download/metal-gear-solid-2-substance-usa/";;
+*"/xbox/XISO M-Z/"*) core="xemu_libretro"; src="https://archive.org/download/microsoft-xbox-xemu.xisoready-software-collection-part-2/";;
+*"/xbox/XISO Extra/"*) core="xemu_libretro"; src="https://archive.org/download/microsoft-xbox-xemu-ready-software-collection-part-3/";;
 *"/dos/eXoDOS/"*) core="dosbox_pure_libretro"; src="https://archive.org/download/exodos-full/eXoDOS/eXo/eXoDOS/";;
 *"/dos/TOSEC/"*) core="dosbox_pure_libretro"; src="https://archive.org/download/tosec-main/IBM/PC%20Compatibles/Compilations/Games/%5BIMG%5D/IBM%20PC%20Compatibles%20-%20Compilations%20-%20Games%20-%20%5BIMG%5D%20%28TOSEC-v2024-04-20%29.zip/";;
 *"/dos/App TOSEC/"*) core="dosbox_pure_libretro"; src="https://archive.org/download/tosec-main/IBM/PC%20Compatibles/Applications/Addons%20%26%20Patches/IBM%20PC%20Compatibles%20-%20Applications%20-%20Addons%20%26%20Patches%20%28TOSEC-v2023-11-07%29.zip/";;

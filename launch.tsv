@@ -476,9 +476,9 @@ Voxatron/	vox
 /psp/Redump/	ppsspp_libretro	iso	https://archive.org/download/playstation-portable-redump/
 /psp/NonRedump/	ppsspp_libretro	iso	https://archive.org/download/non-redump_sony_playstation_portable/
 /psp/TOSEC/	ppsspp_libretro	iso	https://archive.org/download/tosec-iso-sony/PlayStation%20Portable/Games/%5BISO%5D/
-/xbox/XISO 0-M/	xemu -dvd_path		https://archive.org/download/metal-gear-solid-2-substance-usa/
-/xbox/XISO M-Z/	xemu -dvd_path		https://archive.org/download/microsoft-xbox-xemu.xisoready-software-collection-part-2/
-/xbox/XISO Extra/	xemu -dvd_path		https://archive.org/download/microsoft-xbox-xemu-ready-software-collection-part-3/
+/xbox/XISO 0-M/	xemu_libretro		https://archive.org/download/metal-gear-solid-2-substance-usa/
+/xbox/XISO M-Z/	xemu_libretro		https://archive.org/download/microsoft-xbox-xemu.xisoready-software-collection-part-2/
+/xbox/XISO Extra/	xemu_libretro		https://archive.org/download/microsoft-xbox-xemu-ready-software-collection-part-3/
 /dos/eXoDOS/	dosbox_pure_libretro		https://archive.org/download/exodos-full/eXoDOS/eXo/eXoDOS/
 /dos/TOSEC/	dosbox_pure_libretro		https://archive.org/download/tosec-main/IBM/PC%20Compatibles/Compilations/Games/%5BIMG%5D/IBM%20PC%20Compatibles%20-%20Compilations%20-%20Games%20-%20%5BIMG%5D%20%28TOSEC-v2024-04-20%29.zip/
 /dos/App TOSEC/	dosbox_pure_libretro		https://archive.org/download/tosec-main/IBM/PC%20Compatibles/Applications/Addons%20%26%20Patches/IBM%20PC%20Compatibles%20-%20Applications%20-%20Addons%20%26%20Patches%20%28TOSEC-v2023-11-07%29.zip/
