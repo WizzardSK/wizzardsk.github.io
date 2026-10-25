@@ -2308,6 +2308,11 @@
   "src": "https://archive.org/download/segamodel3/ROMs/"
  },
  {
+  "pattern": "/chihiro/Netboot/",
+  "core": "xemu_libretro",
+  "src": "https://archive.org/download/ChihiroNetboot/"
+ },
+ {
   "pattern": "/gamegear/NoIntro/",
   "core": "gearsystem_libretro",
   "src": "https://archive.org/download/ni-roms/roms/Sega%20-%20Game%20Gear.zip/"
