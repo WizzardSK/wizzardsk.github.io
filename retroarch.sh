@@ -467,6 +467,8 @@ case "$adresar/" in
 *"/dreamcast/JP/"*) core="flycast_libretro"; ext="gdi"; src="https://archive.org/download/tosec-iso-sega/Dreamcast/Games/JP/";;
 *"/model2/Sega Model 2/"*) core="mame_libretro"; src="https://archive.org/download/m2emu1.1a/Sega%20Model%202%20Emu%201.1a%20and%20Full%20Romset/Model%202%20Romset%20%28Merged%29/";;
 *"/model3/Sega Model 3/"*) core="mame_libretro"; src="https://archive.org/download/segamodel3/ROMs/";;
+*"/naomi/MAME 0.255/"*) core="flycast_libretro"; src="https://archive.org/download/sega-naomi-naomi2/Sega%20Naomi/";;
+*"/naomi2/Naomi 2/"*) core="flycast_libretro"; src="https://archive.org/download/naomi-2/";;
 *"/chihiro/Netboot/"*) core="xemu_libretro"; src="https://archive.org/download/ChihiroNetboot/";;
 *"/gamegear/NoIntro/"*) core="gearsystem_libretro"; src="https://archive.org/download/ni-roms/roms/Sega%20-%20Game%20Gear.zip/";;
 *"/gamegear/TOSEC/"*) core="gearsystem_libretro"; src="https://archive.org/download/tosec-main/Sega/Game%20Gear/Games/Sega%20Game%20Gear%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/";;
@@ -1505,6 +1507,27 @@ if [[ -n "$src" && ! -e "$1" ]]; then
     rm -f "$1"
     echo "Download failed: ${src}${enc}" >&2
     exit 1
+  fi
+fi
+
+# A Sega Naomi GD-ROM game: flycast, as MAME, finds its disc in a folder named
+# after the game beside its zip (ikaruga.zip, ikaruga/gdl-0010.chd). The
+# sega-naomi-naomi2 item keeps those folders at its root, beside "Sega Naomi"
+# with the zips; a cartridge game has none, and the listing comes back empty.
+if [[ "$src" == *"/sega-naomi-naomi2/"* && "$1" == *.zip ]]; then
+  game="${1##*/}"; game="${game%.zip}"
+  gddir="$(dirname "$1")/$game"
+  if ! ls "$gddir"/*.chd >/dev/null 2>&1; then
+    gdbase="${src%%/sega-naomi-naomi2/*}/sega-naomi-naomi2/$game/"
+    gameflix_ia_auth
+    listing=$(curl -sfL --location-trusted ${ia_auth:+-H "Authorization: $ia_auth"} "$gdbase") || listing=""
+    while IFS= read -r href; do
+      [[ -z "$href" ]] && continue
+      chd=$(printf '%b' "${href//%/\\x}")
+      mkdir -p "$gddir"
+      echo "Fetching $game/$chd ..." >&2
+      curl -sfL --location-trusted ${ia_auth:+-H "Authorization: $ia_auth"} -o "$gddir/$chd" "$gdbase$href" || rm -f "$gddir/$chd"
+    done < <(printf '%s' "$listing" | grep -o 'href="[^"/?]*\.chd"' | sed 's/^href="//; s/"$//' | sort -u)
   fi
 fi
 
