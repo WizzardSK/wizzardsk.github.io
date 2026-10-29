@@ -2298,6 +2298,11 @@
   "src": "https://archive.org/download/tosec-iso-sega/Dreamcast/Games/JP/"
  },
  {
+  "pattern": "/model1/Sega Model 1/",
+  "core": "mame_libretro",
+  "src": "https://archive.org/download/sega-model-1_202312/roms/"
+ },
+ {
   "pattern": "/model2/Sega Model 2/",
   "core": "mame_libretro",
   "src": "https://archive.org/download/m2emu1.1a/Sega%20Model%202%20Emu%201.1a%20and%20Full%20Romset/Model%202%20Romset%20%28Merged%29/"

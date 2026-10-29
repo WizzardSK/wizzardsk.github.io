@@ -451,6 +451,7 @@ gameflix_lookup_src() { src=""; case "$1" in
   *"/dreamcast/US/"*) src="https://archive.org/download/tosec-iso-sega/Dreamcast/Games/US/";;
   *"/dreamcast/PAL/"*) src="https://archive.org/download/tosec-iso-sega/Dreamcast/Games/PAL/";;
   *"/dreamcast/JP/"*) src="https://archive.org/download/tosec-iso-sega/Dreamcast/Games/JP/";;
+  *"/model1/Sega Model 1/"*) src="https://archive.org/download/sega-model-1_202312/roms/";;
   *"/model2/Sega Model 2/"*) src="https://archive.org/download/m2emu1.1a/Sega%20Model%202%20Emu%201.1a%20and%20Full%20Romset/Model%202%20Romset%20%28Merged%29/";;
   *"/model3/Sega Model 3/"*) src="https://archive.org/download/segamodel3/ROMs/";;
   *"/naomi/MAME 0.255/"*) src="https://archive.org/download/sega-naomi-naomi2/Sega%20Naomi/";;
