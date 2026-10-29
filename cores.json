@@ -2300,7 +2300,7 @@
  {
   "pattern": "/model1/Sega Model 1/",
   "core": "mame_libretro",
-  "src": "https://archive.org/download/sega-model-1_202312/roms/"
+  "src": "https://archive.org/download/Ages_Sega_Model_1/Model1/"
  },
  {
   "pattern": "/model2/Sega Model 2/",

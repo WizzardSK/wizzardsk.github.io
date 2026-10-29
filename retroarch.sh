@@ -465,7 +465,7 @@ case "$adresar/" in
 *"/dreamcast/US/"*) core="flycast_libretro"; ext="gdi"; src="https://archive.org/download/tosec-iso-sega/Dreamcast/Games/US/";;
 *"/dreamcast/PAL/"*) core="flycast_libretro"; ext="gdi"; src="https://archive.org/download/tosec-iso-sega/Dreamcast/Games/PAL/";;
 *"/dreamcast/JP/"*) core="flycast_libretro"; ext="gdi"; src="https://archive.org/download/tosec-iso-sega/Dreamcast/Games/JP/";;
-*"/model1/Sega Model 1/"*) core="mame_libretro"; src="https://archive.org/download/sega-model-1_202312/roms/";;
+*"/model1/Sega Model 1/"*) core="mame_libretro"; src="https://archive.org/download/Ages_Sega_Model_1/Model1/";;
 *"/model2/Sega Model 2/"*) core="mame_libretro"; src="https://archive.org/download/m2emu1.1a/Sega%20Model%202%20Emu%201.1a%20and%20Full%20Romset/Model%202%20Romset%20%28Merged%29/";;
 *"/model3/Sega Model 3/"*) core="mame_libretro"; src="https://archive.org/download/segamodel3/ROMs/";;
 *"/naomi/MAME 0.255/"*) core="flycast_libretro"; src="https://archive.org/download/sega-naomi-naomi2/Sega%20Naomi/";;
