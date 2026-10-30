@@ -2921,6 +2921,12 @@
   "src": "https://archive.org/download/Total_DOS_Collection_Release_16_March_2019/Games/Files/2015/"
  },
  {
+  "pattern": "/scummvm/eXo/",
+  "core": "scummvm_libretro",
+  "ext": "scummvm",
+  "src": "https://archive.org/download/eXoScummVM_v2/eXo/eXoScummVM/"
+ },
+ {
   "pattern": "/ibm5150/MAME/",
   "core": "mame_libretro ibm5150 -hard1 ibm5150_hdd:freedos13_8086",
   "src": "https://archive.org/download/mame-sl/mame-sl/ibm5150.zip/ibm5150/"

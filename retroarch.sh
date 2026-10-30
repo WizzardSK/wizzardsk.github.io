@@ -588,6 +588,7 @@ case "$adresar/" in
 *"/dos/TDC 2011/"*) core="dosbox_pure_libretro"; src="https://archive.org/download/Total_DOS_Collection_Release_16_March_2019/Games/Files/2011/";;
 *"/dos/TDC 2014/"*) core="dosbox_pure_libretro"; src="https://archive.org/download/Total_DOS_Collection_Release_16_March_2019/Games/Files/2014/";;
 *"/dos/TDC 2015/"*) core="dosbox_pure_libretro"; src="https://archive.org/download/Total_DOS_Collection_Release_16_March_2019/Games/Files/2015/";;
+*"/scummvm/eXo/"*) core="scummvm_libretro"; ext="scummvm"; src="https://archive.org/download/eXoScummVM_v2/eXo/eXoScummVM/";;
 *"/ibm5150/MAME/"*) core="mame_libretro ibm5150 -hard1 ibm5150_hdd:freedos13_8086"; src="https://archive.org/download/mame-sl/mame-sl/ibm5150.zip/ibm5150/";;
 *"/ibm5170/MAME/"*) core="mame_libretro ibm5170 -hard1 ibm5170_hdd:freedos13"; src="https://archive.org/download/mame-sl/mame-sl/ibm5170.zip/ibm5170/";;
 *"/ibm5170/CDROM CHD/"*) core="mame_libretro ibm5170 -cdrom"; src="https://archive.org/download/mame-software-list-chds-2/ibm5170_cdrom/";;
@@ -1649,6 +1650,11 @@ elif [ -n "$ext" ]; then
     mount-zip "$1" ~/iso
   fi
   rom=$(gameflix_pick_image ~/iso "$ext")
+  # ScummVM detects the game in the folder of the file it is given: a file
+  # straight inside the game's folder, never one from a subfolder of it
+  if [[ "$core" == scummvm_libretro* ]]; then
+    rom=$(find ~/iso -mindepth 1 -maxdepth 2 -type f -printf '%d\t%s\t%p\n' | sort -t$'\t' -k1,1n -k2,2nr | head -n 1 | cut -f3-)
+  fi
 elif [[ "$1" == *.rar || "$1" == *.7z ]]; then
   umount -l ~/iso; ratarmount "$1" ~/iso
   # A title of many files (Wii U NUS) is started from its folder; a single
