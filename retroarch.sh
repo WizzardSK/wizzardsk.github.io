@@ -487,12 +487,79 @@ case "$adresar/" in
 *"/ps2/NonRedump A-G/"*) core="pcee2_libretro"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation2_part1/";;
 *"/ps2/NonRedump H-Q/"*) core="pcee2_libretro"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation2_part2/";;
 *"/ps2/NonRedump R-Z/"*) core="pcee2_libretro"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation2_part3/";;
+*"/ps3/Redump #/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_numberssymbols/";;
+*"/ps3/Redump A1/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_a_part1/";;
+*"/ps3/Redump A2/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_a_part2/";;
+*"/ps3/Redump A3/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_a_part3/";;
+*"/ps3/Redump B1/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_b_part1/";;
+*"/ps3/Redump B2/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_b_part2/";;
+*"/ps3/Redump B3/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_b_part3/";;
+*"/ps3/Redump C1/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_c_part1/";;
+*"/ps3/Redump C2/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_c_part2/";;
+*"/ps3/Redump C3/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_c_part3/";;
+*"/ps3/Redump D1/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_d_part1/";;
+*"/ps3/Redump D2/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_d_part2/";;
+*"/ps3/Redump D3/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_d_part3/";;
+*"/ps3/Redump D4/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_d_part4/";;
+*"/ps3/Redump D5/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_d_part5/";;
+*"/ps3/Redump E/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_e/";;
+*"/ps3/Redump F1/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_f_part1/";;
+*"/ps3/Redump F2/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_f_part2/";;
+*"/ps3/Redump F3/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_f_part3/";;
+*"/ps3/Redump G1/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_g_part1/";;
+*"/ps3/Redump G2/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_g_part2/";;
+*"/ps3/Redump G3/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_g_part3/";;
+*"/ps3/Redump H1/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_h_part1/";;
+*"/ps3/Redump H2/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_h_part2/";;
+*"/ps3/Redump I/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_i/";;
+*"/ps3/Redump J/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_j/";;
+*"/ps3/Redump K/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_k/";;
+*"/ps3/Redump L1/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_l_part1/";;
+*"/ps3/Redump L2/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_l_part2/";;
+*"/ps3/Redump L3/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_l_part3/";;
+*"/ps3/Redump M1/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_m_part1/";;
+*"/ps3/Redump M2/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_m_part2/";;
+*"/ps3/Redump M3/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_m_part3/";;
+*"/ps3/Redump M4/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_m_part4/";;
+*"/ps3/Redump M5/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_m_part5/";;
+*"/ps3/Redump N1/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_n_part1/";;
+*"/ps3/Redump N2/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_n_part2/";;
+*"/ps3/Redump N3/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_n_part3/";;
+*"/ps3/Redump O1/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_o_part1/";;
+*"/ps3/Redump O2/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_o_part2/";;
+*"/ps3/Redump O3/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_o_part3/";;
+*"/ps3/Redump P1/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_p_part1/";;
+*"/ps3/Redump P2/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_p_part2/";;
+*"/ps3/Redump Q/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_q/";;
+*"/ps3/Redump R1/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_r_part1/";;
+*"/ps3/Redump R2/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_r_part2/";;
+*"/ps3/Redump R3/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_r_part3/";;
+*"/ps3/Redump R4/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_r_part4/";;
+*"/ps3/Redump S1/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_s_part1/";;
+*"/ps3/Redump S2/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_s_part2/";;
+*"/ps3/Redump S3/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_s_part3/";;
+*"/ps3/Redump S4/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_s_part4/";;
+*"/ps3/Redump S5/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_s_part5/";;
+*"/ps3/Redump S6/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_s_part6/";;
+*"/ps3/Redump T1/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_t_part1/";;
+*"/ps3/Redump T2/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_t_part2/";;
+*"/ps3/Redump T3/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_t_part3/";;
+*"/ps3/Redump T4/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_t_part4/";;
+*"/ps3/Redump U1/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_u_part1/";;
+*"/ps3/Redump U2/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_u_part2/";;
+*"/ps3/Redump V/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_v/";;
+*"/ps3/Redump W1/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_w_part1/";;
+*"/ps3/Redump W2/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_w_part2/";;
+*"/ps3/Redump X/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_x/";;
+*"/ps3/Redump Y/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_y/";;
+*"/ps3/Redump Z/"*) core="rpcs3_libretro"; src="https://archive.org/download/sony_playstation3_z/";;
 *"/psp/Redump/"*) core="ppsspp_libretro"; ext="iso"; src="https://archive.org/download/playstation-portable-redump/";;
 *"/psp/NonRedump/"*) core="ppsspp_libretro"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation_portable/";;
 *"/psp/TOSEC/"*) core="ppsspp_libretro"; ext="iso"; src="https://archive.org/download/tosec-iso-sony/PlayStation%20Portable/Games/%5BISO%5D/";;
 *"/xbox/XISO 0-M/"*) core="xemu_libretro"; src="https://archive.org/download/metal-gear-solid-2-substance-usa/";;
 *"/xbox/XISO M-Z/"*) core="xemu_libretro"; src="https://archive.org/download/microsoft-xbox-xemu.xisoready-software-collection-part-2/";;
 *"/xbox/XISO Extra/"*) core="xemu_libretro"; src="https://archive.org/download/microsoft-xbox-xemu-ready-software-collection-part-3/";;
+*"/xbox360/Redump/"*) core="xenia_edge_libretro"; ext="iso"; src="https://archive.org/download/redump-microsoft-xbox-360-games-myrient-unique-files/";;
 *"/dos/eXoDOS/"*) core="dosbox_pure_libretro"; src="https://archive.org/download/exodos-full/eXoDOS/eXo/eXoDOS/";;
 *"/dos/TOSEC/"*) core="dosbox_pure_libretro"; src="https://archive.org/download/tosec-main/IBM/PC%20Compatibles/Compilations/Games/%5BIMG%5D/IBM%20PC%20Compatibles%20-%20Compilations%20-%20Games%20-%20%5BIMG%5D%20%28TOSEC-v2024-04-20%29.zip/";;
 *"/dos/App TOSEC/"*) core="dosbox_pure_libretro"; src="https://archive.org/download/tosec-main/IBM/PC%20Compatibles/Applications/Addons%20%26%20Patches/IBM%20PC%20Compatibles%20-%20Applications%20-%20Addons%20%26%20Patches%20%28TOSEC-v2023-11-07%29.zip/";;
@@ -1208,6 +1275,31 @@ gameflix_chihiro_files() {
   done
 }
 
+# PlayStation 3 (rpcs3_libretro): a Redump disc image is encrypted, and the
+# core reads it only with its disc key, which it looks for in
+# system/rpcs3/data/redump/ under the image's name (.dkey or .key). The keys come from the
+# Euler collection on the archive, a zip per Redump name.
+gameflix_ps3_dkey() {
+  local name="${1##*/}" dir="$sysdir/rpcs3/data/redump" tmpz f k enc="" i c
+  name="${name%.*}"
+  [[ -s "$dir/$name.dkey" || -s "$dir/$name.key" ]] && return
+  mkdir -p "$dir"
+  for ((i=0;i<${#name};i++)); do c="${name:i:1}"; case "$c" in [a-zA-Z0-9._~-]) enc+="$c";; *) printf -v c '%%%02X' "'$c"; enc+="$c";; esac; done
+  tmpz=$(mktemp)
+  echo "Fetching the disc key of $name ..." >&2
+  # the collection's keys are .key files (16 bytes); the core takes .dkey too
+  if curl -sfL --max-time 60 -o "$tmpz" \
+      "https://archive.org/download/sony-playstation-3-disc-keys-dkey-euler-collection/$enc.zip" &&
+     f=$(unzip -Z1 "$tmpz" | grep -i -E '\.d?key$' | head -n 1) && [[ -n "$f" ]]; then
+    k="$dir/$name.${f##*.}"
+    unzip -p "$tmpz" "$f" > "$k"
+    [[ -s "$k" ]] || rm -f "$k"
+  else
+    echo "No disc key found for $name - the core needs it in $dir/$name.dkey" >&2
+  fi
+  rm -f "$tmpz"
+}
+
 # Whether a core is a build for this machine. The buildbot has shipped an
 # x86-64 binary in the aarch64 slot before now (stella, 15 September 2026), and
 # dlopen answers that with "cannot open shared object file: No such file or
@@ -1627,7 +1719,7 @@ if [[ "$core" == *libretro* ]]; then
   # Whatever core we ended up with - the one asked for, the one fetched, or the
   # near-name fallback - it is the one whose firmware has to be there.
   gameflix_fetch_firmware "$(basename "$corepath" .so)"
-  case "$1" in */chihiro/*) gameflix_chihiro_files ;; esac
+  case "$1" in */chihiro/*) gameflix_chihiro_files ;; */ps3/*) LC_ALL=C gameflix_ps3_dkey "$1" ;; esac
 fi
 
 if [[ "$core" == "mame_libretro" || "$core" == "mame_libretro "* ]]; then
