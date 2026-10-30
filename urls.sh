@@ -1,4 +1,5 @@
 gameflix_lookup_src() { src=""; case "$1" in
+  *"/scummvm/eXo/"*) src="https://archive.org/download/eXoScummVM_v2/eXo/eXoScummVM/";;
   *"/arduboy/NoIntro/"*) src="https://archive.org/download/ni-roms/roms/Arduboy%20Inc%20-%20Arduboy.zip/";;
   *"/arduboy/TOSEC/"*) src="https://archive.org/download/tosec-main/Arduboy/Arduboy/Games/%5BARDUBOY%5D/Arduboy%20Arduboy%20-%20Games%20-%20%5BARDUBOY%5D%20%28TOSEC-v2024-01-15%29.zip/";;
   *"/arduboy/Demo/"*) src="https://archive.org/download/tosec-main/Arduboy/Arduboy/Demos/Arduboy%20Arduboy%20-%20Demos%20%28TOSEC-v2024-01-15%29.zip/";;
@@ -574,7 +575,6 @@ gameflix_lookup_src() { src=""; case "$1" in
   *"/dos/TDC 2011/"*) src="https://archive.org/download/Total_DOS_Collection_Release_16_March_2019/Games/Files/2011/";;
   *"/dos/TDC 2014/"*) src="https://archive.org/download/Total_DOS_Collection_Release_16_March_2019/Games/Files/2014/";;
   *"/dos/TDC 2015/"*) src="https://archive.org/download/Total_DOS_Collection_Release_16_March_2019/Games/Files/2015/";;
-  *"/scummvm/eXo/"*) src="https://archive.org/download/eXoScummVM_v2/eXo/eXoScummVM/";;
   *"/ibm5150/MAME/"*) src="https://archive.org/download/mame-sl/mame-sl/ibm5150.zip/ibm5150/";;
   *"/ibm5170/MAME/"*) src="https://archive.org/download/mame-sl/mame-sl/ibm5170.zip/ibm5170/";;
   *"/ibm5170/CDROM CHD/"*) src="https://archive.org/download/mame-software-list-chds-2/ibm5170_cdrom/";;

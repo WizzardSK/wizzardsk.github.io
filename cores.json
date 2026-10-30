@@ -9,6 +9,12 @@
   "core": "wasm4_libretro"
  },
  {
+  "pattern": "/scummvm/eXo/",
+  "core": "scummvm_libretro",
+  "ext": "scummvm",
+  "src": "https://archive.org/download/eXoScummVM_v2/eXo/eXoScummVM/"
+ },
+ {
   "pattern": "/arduboy/NoIntro/",
   "core": "arduous_libretro",
   "src": "https://archive.org/download/ni-roms/roms/Arduboy%20Inc%20-%20Arduboy.zip/"
@@ -2919,12 +2925,6 @@
   "pattern": "/dos/TDC 2015/",
   "core": "dosbox_pure_libretro",
   "src": "https://archive.org/download/Total_DOS_Collection_Release_16_March_2019/Games/Files/2015/"
- },
- {
-  "pattern": "/scummvm/eXo/",
-  "core": "scummvm_libretro",
-  "ext": "scummvm",
-  "src": "https://archive.org/download/eXoScummVM_v2/eXo/eXoScummVM/"
  },
  {
   "pattern": "/ibm5150/MAME/",
