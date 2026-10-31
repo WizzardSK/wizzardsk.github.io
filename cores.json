@@ -480,6 +480,11 @@
   "src": "https://archive.org/download/mame-sl/mame-sl/st_cart.zip/st_cart/"
  },
  {
+  "pattern": "/atarivcs/Store/",
+  "core": "atarivcs",
+  "src": "https://archive.org/download/atari-vcs-complete-store-archive-2026/Atari-VCS-Software/games/"
+ },
+ {
   "pattern": "/apple1/TOSEC/",
   "core": "mame_libretro apple1 -cass",
   "src": "https://archive.org/download/tosec-main/Apple/1/Games/Apple%201%20-%20Games%20%28TOSEC-v2023-08-29%29.zip/"

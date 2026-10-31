@@ -92,6 +92,7 @@ gameflix_lookup_src() { src=""; case "$1" in
   *"/atarist/Edu [ST]/"*) src="https://archive.org/download/tosec-main/Atari/ST/Educational/%5BST%5D/Atari%20ST%20-%20Educational%20-%20%5BST%5D%20%28TOSEC-v2023-11-07%29.zip/";;
   *"/atarist/MAME/"*) src="https://archive.org/download/mame-sl/mame-sl/st_flop.zip/st_flop/";;
   *"/atarist/Cart MAME/"*) src="https://archive.org/download/mame-sl/mame-sl/st_cart.zip/st_cart/";;
+  *"/atarivcs/Store/"*) src="https://archive.org/download/atari-vcs-complete-store-archive-2026/Atari-VCS-Software/games/";;
   *"/apple1/TOSEC/"*) src="https://archive.org/download/tosec-main/Apple/1/Games/Apple%201%20-%20Games%20%28TOSEC-v2023-08-29%29.zip/";;
   *"/apple1/App/"*) src="https://archive.org/download/tosec-main/Apple/1/Applications/Apple%201%20-%20Applications%20%28TOSEC-v2023-08-29%29.zip/";;
   *"/apple1/Demo/"*) src="https://archive.org/download/tosec-main/Apple/1/Demos/Apple%201%20-%20Demos%20%28TOSEC-v2023-08-29%29.zip/";;

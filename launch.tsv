@@ -96,6 +96,7 @@ Voxatron/	vox
 /atarist/Edu [ST]/	hatari_libretro		https://archive.org/download/tosec-main/Atari/ST/Educational/%5BST%5D/Atari%20ST%20-%20Educational%20-%20%5BST%5D%20%28TOSEC-v2023-11-07%29.zip/
 /atarist/MAME/	mame_libretro st -flop		https://archive.org/download/mame-sl/mame-sl/st_flop.zip/st_flop/
 /atarist/Cart MAME/	mame_libretro st -rom		https://archive.org/download/mame-sl/mame-sl/st_cart.zip/st_cart/
+/atarivcs/Store/	atarivcs		https://archive.org/download/atari-vcs-complete-store-archive-2026/Atari-VCS-Software/games/
 /apple1/TOSEC/	mame_libretro apple1 -cass		https://archive.org/download/tosec-main/Apple/1/Games/Apple%201%20-%20Games%20%28TOSEC-v2023-08-29%29.zip/
 /apple1/App/	mame_libretro apple1 -cass		https://archive.org/download/tosec-main/Apple/1/Applications/Apple%201%20-%20Applications%20%28TOSEC-v2023-08-29%29.zip/
 /apple1/Demo/	mame_libretro apple1 -cass		https://archive.org/download/tosec-main/Apple/1/Demos/Apple%201%20-%20Demos%20%28TOSEC-v2023-08-29%29.zip/
