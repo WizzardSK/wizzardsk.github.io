@@ -459,6 +459,7 @@ gameflix_lookup_src() { src=""; case "$1" in
   *"/naomi/MAME 0.255/"*) src="https://archive.org/download/sega-naomi-naomi2/Sega%20Naomi/";;
   *"/naomi2/Naomi 2/"*) src="https://archive.org/download/naomi-2/";;
   *"/chihiro/Netboot/"*) src="https://archive.org/download/ChihiroNetboot/";;
+  *"/lindbergh/Clean Data/"*) src="https://archive.org/download/SegaLindbergh/";;
   *"/gamegear/NoIntro/"*) src="https://archive.org/download/ni-roms/roms/Sega%20-%20Game%20Gear.zip/";;
   *"/gamegear/TOSEC/"*) src="https://archive.org/download/tosec-main/Sega/Game%20Gear/Games/Sega%20Game%20Gear%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/";;
   *"/gamegear/Demo/"*) src="https://archive.org/download/tosec-main/Sega/Game%20Gear/Demos/Sega%20Game%20Gear%20-%20Demos%20%28TOSEC-v2024-01-15%29.zip/";;

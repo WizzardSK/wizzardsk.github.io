@@ -463,6 +463,7 @@ Voxatron/	vox
 /naomi/MAME 0.255/	flycast_libretro		https://archive.org/download/sega-naomi-naomi2/Sega%20Naomi/
 /naomi2/Naomi 2/	flycast_libretro		https://archive.org/download/naomi-2/
 /chihiro/Netboot/	xemu_libretro		https://archive.org/download/ChihiroNetboot/
+/lindbergh/Clean Data/	linuxloader_libretro		https://archive.org/download/SegaLindbergh/
 /gamegear/NoIntro/	gearsystem_libretro		https://archive.org/download/ni-roms/roms/Sega%20-%20Game%20Gear.zip/
 /gamegear/TOSEC/	gearsystem_libretro		https://archive.org/download/tosec-main/Sega/Game%20Gear/Games/Sega%20Game%20Gear%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/
 /gamegear/Demo/	gearsystem_libretro		https://archive.org/download/tosec-main/Sega/Game%20Gear/Demos/Sega%20Game%20Gear%20-%20Demos%20%28TOSEC-v2024-01-15%29.zip/
