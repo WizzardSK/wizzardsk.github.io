@@ -1039,7 +1039,7 @@ case "$adresar/" in
 *"/playdia/Redump/"*) core="playdiaemu_libretro"; src="https://archive.org/download/bandai_playdia_quick_interactive_system/";;
 *"/mame/Merged/"*) core="mame_libretro"; src="https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/";;
 *"/mame/Non-Merged/"*) core="mame_libretro"; src="https://archive.org/download/mame-0.264-roms-non-merged/MAME%200.264%20ROMs%20%28non-merged%29/";;
-*"/mame/Split/"*) core="mame_libretro"; src="https://archive.org/download/mame-0.260-roms-split_202310/MAME%200.260%20ROMs%20%28split%29/";;
+*"/mame/Split/"*) core="mame_libretro"; src="https://archive.org/download/mame-0.260-roms-split_202310/MAME%200.260%20ROMs%20%28split%29/MAME%200.260%20ROMs%20%28split%29/";;
 *"/mame/2000/"*) core="mame2000_libretro"; src="https://archive.org/download/MAME0.37b5_MAME2000_Reference_Set_Update_2_ROMs_Samples/roms/";;
 *"/mame/2003/"*) core="mame2003_libretro"; src="https://archive.org/download/MAME2003_Reference_Set_MAME0.78_ROMs_CHDs_Samples/roms/";;
 *"/mame/2006/"*) core="mame_libretro"; src="https://archive.org/download/MAME0.106-Reference-Set-ROMs-CHDs-Samples/MAME0.106Non-Merged.zip/";;

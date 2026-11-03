@@ -5205,7 +5205,7 @@
  {
   "pattern": "/mame/Split/",
   "core": "mame_libretro",
-  "src": "https://archive.org/download/mame-0.260-roms-split_202310/MAME%200.260%20ROMs%20%28split%29/"
+  "src": "https://archive.org/download/mame-0.260-roms-split_202310/MAME%200.260%20ROMs%20%28split%29/MAME%200.260%20ROMs%20%28split%29/"
  },
  {
   "pattern": "/mame/2000/",
