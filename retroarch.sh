@@ -421,9 +421,6 @@ case "$adresar/" in
 *"/dsi/TOSEC/"*) core="melondsds_libretro"; src="https://archive.org/download/tosec-main/Nintendo/DSi/Games/Nintendo%20DSi%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/";;
 *"/3ds/NoIntro/"*) core="citra_libretro"; ext="3ds"; src="https://archive.org/download/nintendo-nintendo-3ds-games-decrypted/Nintendo%20-%20Nintendo%203DS/";;
 *"/wiiu/Redump/"*) core="cemu_libretro"; ext="tmd"; src="https://archive.org/download/wii-u-retail-nus-usa/";;
-*"/svmu/TOSEC/"*) core="mame_libretro svmu -quik"; src="https://archive.org/download/tosec-main/Sega/Visual%20Memory%20System/Games/Sega%20Visual%20Memory%20System%20-%20Games%20%28TOSEC-v2023-08-29%29.zip/";;
-*"/svmu/Demo/"*) core="mame_libretro svmu -quik"; src="https://archive.org/download/tosec-main/Sega/Visual%20Memory%20System/Demos/Sega%20Visual%20Memory%20System%20-%20Demos%20%28TOSEC-v2023-08-29%29.zip/";;
-*"/svmu/MAME/"*) core="mame_libretro svmu -quik"; src="https://archive.org/download/mame-sl/mame-sl/svmu.zip/svmu/";;
 *"/sg1000/NoIntro/"*) core="gearsystem_libretro"; src="https://archive.org/download/ni-roms/roms/Sega%20-%20SG-1000.zip/";;
 *"/sg1000/TOSEC/"*) core="gearsystem_libretro"; src="https://archive.org/download/tosec-main/Sega/Game%201000/Games/Sega%20Game%201000%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/";;
 *"/sg1000/Demo [BIN]/"*) core="gearsystem_libretro"; src="https://archive.org/download/tosec-main/Sega/Game%201000/Demos/%5BBIN%5D/Sega%20Game%201000%20-%20Demos%20-%20%5BBIN%5D%20%28TOSEC-v2025-01-15%29.zip/";;
@@ -461,12 +458,16 @@ case "$adresar/" in
 *"/megacd/NonRedump/"*) core="picodrive_libretro"; ext="cue"; src="https://archive.org/download/non-redump_sega-mega-cd_sega-cd/";;
 *"/saturn/Redump/"*) core="yabasanshiro_libretro"; ext="cue"; src="https://archive.org/download/redump.sega_saturn/";;
 *"/saturn/NonRedump/"*) core="yabasanshiro_libretro"; ext="cue"; src="https://archive.org/download/non-redump_sega-saturn/";;
-*"/stv/MAME/"*) core="mame_libretro stvbios"; src="https://archive.org/download/mame-sl/mame-sl/stv.zip/stv/";;
 *"/dreamcast/Redump/"*) core="flycast_libretro"; ext="cue"; src="https://archive.org/download/sega-dreamcast-redump/";;
 *"/dreamcast/NonRedump/"*) core="flycast_libretro"; ext="gdi"; src="https://archive.org/download/non-redump_sega-dreamcast/";;
 *"/dreamcast/US/"*) core="flycast_libretro"; ext="gdi"; src="https://archive.org/download/tosec-iso-sega/Dreamcast/Games/US/";;
 *"/dreamcast/PAL/"*) core="flycast_libretro"; ext="gdi"; src="https://archive.org/download/tosec-iso-sega/Dreamcast/Games/PAL/";;
 *"/dreamcast/JP/"*) core="flycast_libretro"; ext="gdi"; src="https://archive.org/download/tosec-iso-sega/Dreamcast/Games/JP/";;
+*"/gamegear/NoIntro/"*) core="gearsystem_libretro"; src="https://archive.org/download/ni-roms/roms/Sega%20-%20Game%20Gear.zip/";;
+*"/gamegear/TOSEC/"*) core="gearsystem_libretro"; src="https://archive.org/download/tosec-main/Sega/Game%20Gear/Games/Sega%20Game%20Gear%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/";;
+*"/gamegear/Demo/"*) core="gearsystem_libretro"; src="https://archive.org/download/tosec-main/Sega/Game%20Gear/Demos/Sega%20Game%20Gear%20-%20Demos%20%28TOSEC-v2024-01-15%29.zip/";;
+*"/gamegear/MAME/"*) core="mame_libretro gamegear -cart"; src="https://archive.org/download/mame-sl/mame-sl/gamegear.zip/gamegear/";;
+*"/stv/MAME/"*) core="mame_libretro stvbios"; src="https://archive.org/download/mame-sl/mame-sl/stv.zip/stv/";;
 *"/model1/Sega Model 1/"*) core="mame_libretro"; src="https://archive.org/download/Ages_Sega_Model_1/Model1/";;
 *"/model2/Sega Model 2/"*) core="mame_libretro"; src="https://archive.org/download/m2emu1.1a/Sega%20Model%202%20Emu%201.1a%20and%20Full%20Romset/Model%202%20Romset%20%28Merged%29/";;
 *"/model3/Sega Model 3/"*) core="mame_libretro"; src="https://archive.org/download/segamodel3/ROMs/";;
@@ -474,11 +475,6 @@ case "$adresar/" in
 *"/naomi2/Naomi 2/"*) core="flycast_libretro"; src="https://archive.org/download/naomi-2/";;
 *"/chihiro/Netboot/"*) core="xemu_libretro"; src="https://archive.org/download/ChihiroNetboot/";;
 *"/lindbergh/Clean Data/"*) core="linuxloader_libretro"; src="https://archive.org/download/SegaLindbergh/";;
-*"/gamegear/NoIntro/"*) core="gearsystem_libretro"; src="https://archive.org/download/ni-roms/roms/Sega%20-%20Game%20Gear.zip/";;
-*"/gamegear/TOSEC/"*) core="gearsystem_libretro"; src="https://archive.org/download/tosec-main/Sega/Game%20Gear/Games/Sega%20Game%20Gear%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/";;
-*"/gamegear/Demo/"*) core="gearsystem_libretro"; src="https://archive.org/download/tosec-main/Sega/Game%20Gear/Demos/Sega%20Game%20Gear%20-%20Demos%20%28TOSEC-v2024-01-15%29.zip/";;
-*"/gamegear/MAME/"*) core="mame_libretro gamegear -cart"; src="https://archive.org/download/mame-sl/mame-sl/gamegear.zip/gamegear/";;
-*"/pockstat/TOSEC/"*) core="mame_libretro pockstat -cart"; src="https://archive.org/download/tosec-main/Sony/PocketStation/Various/Sony%20PocketStation%20-%20Various%20%28TOSEC-v2014-05-29%29.zip/";;
 *"/smc777/MAME/"*) core="mame_libretro smc777 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/smc777.zip/smc777/";;
 *"/psx/CHD EUR/"*) core="pcsx_rearmed_libretro"; src="https://archive.org/download/PS1_EU_CHD_Arquivista/";;
 *"/psx/CHD JAP/"*) core="pcsx_rearmed_libretro"; src="https://archive.org/download/PS1_JP_CHD_Arquivista/";;
@@ -559,6 +555,7 @@ case "$adresar/" in
 *"/psp/Redump/"*) core="ppsspp_libretro"; ext="iso"; src="https://archive.org/download/playstation-portable-redump/";;
 *"/psp/NonRedump/"*) core="ppsspp_libretro"; ext="iso"; src="https://archive.org/download/non-redump_sony_playstation_portable/";;
 *"/psp/TOSEC/"*) core="ppsspp_libretro"; ext="iso"; src="https://archive.org/download/tosec-iso-sony/PlayStation%20Portable/Games/%5BISO%5D/";;
+*"/psvita/USA NoNpDRM/"*) core="vita3k_libretro"; src="https://archive.org/download/sony-playstation-vita-usa-full-set-nonpdrm-format/";;
 *"/xbox/XISO 0-M/"*) core="xemu_libretro"; src="https://archive.org/download/metal-gear-solid-2-substance-usa/";;
 *"/xbox/XISO M-Z/"*) core="xemu_libretro"; src="https://archive.org/download/microsoft-xbox-xemu.xisoready-software-collection-part-2/";;
 *"/xbox/XISO Extra/"*) core="xemu_libretro"; src="https://archive.org/download/microsoft-xbox-xemu-ready-software-collection-part-3/";;
@@ -700,7 +697,6 @@ case "$adresar/" in
 *"/vii/MAME/"*) core="mame_libretro vii -cart"; src="https://archive.org/download/mame-sl/mame-sl/vii.zip/vii/";;
 *"/unichamp/MAME/"*) core="mame_libretro unichamp -cart"; src="https://archive.org/download/mame-sl/mame-sl/unichamp.zip/unichamp/";;
 *"/entexsag/MAME/"*) core="mame_libretro sag -cart"; src="https://archive.org/download/mame-sl/mame-sl/entex_sag.zip/entex_sag/";;
-*"/ekara/MAME/"*) core="mame_libretro ekara -cart"; src="https://archive.org/download/mame-sl/mame-sl/ekara_cart.zip/ekara_cart/";;
 *"/videoart/MAME/"*) core="mame_libretro videoart -cart"; src="https://archive.org/download/mame-sl/mame-sl/videoart.zip/videoart/";;
 *"/pdp1/MAME/"*) core="mame_libretro pdp1 -ptap1"; src="https://archive.org/download/mame-sl/mame-sl/pdp1_ptp.zip/pdp1_ptp/";;
 *"/sol20/MAME/"*) core="mame_libretro sol20 -cass1"; src="https://archive.org/download/mame-sl/mame-sl/sol20_cass.zip/sol20_cass/";;
@@ -1042,8 +1038,8 @@ case "$adresar/" in
 *"/vis/Multimedia/"*) core="mame_libretro vis -cdrm"; ext="cue"; src="https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Multimedia/";;
 *"/playdia/Redump/"*) core="playdiaemu_libretro"; src="https://archive.org/download/bandai_playdia_quick_interactive_system/";;
 *"/mame/Merged/"*) core="mame_libretro"; src="https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/";;
-*"/mame/Non-Merged/"*) core="mame_libretro"; src="https://archive.org/download/mame-0.264-roms-non-merged/";;
-*"/mame/Split/"*) core="mame_libretro"; src="https://archive.org/download/mame-0.260-roms-split_202310/";;
+*"/mame/Non-Merged/"*) core="mame_libretro"; src="https://archive.org/download/mame-0.264-roms-non-merged/MAME%200.264%20ROMs%20%28non-merged%29/";;
+*"/mame/Split/"*) core="mame_libretro"; src="https://archive.org/download/mame-0.260-roms-split_202310/MAME%200.260%20ROMs%20%28split%29/";;
 *"/mame/2000/"*) core="mame2000_libretro"; src="https://archive.org/download/MAME0.37b5_MAME2000_Reference_Set_Update_2_ROMs_Samples/roms/";;
 *"/mame/2003/"*) core="mame2003_libretro"; src="https://archive.org/download/MAME2003_Reference_Set_MAME0.78_ROMs_CHDs_Samples/roms/";;
 *"/mame/2006/"*) core="mame_libretro"; src="https://archive.org/download/MAME0.106-Reference-Set-ROMs-CHDs-Samples/MAME0.106Non-Merged.zip/";;
@@ -1098,6 +1094,11 @@ case "$adresar/" in
 *"/mononcolor/MAME/"*) core="mame_libretro mononcol -cart"; src="https://archive.org/download/mame-sl/mame-sl/monon_color.zip/monon_color/";;
 *"/gameking/MAME/"*) core="mame_libretro gameking -cart"; src="https://archive.org/download/mame-sl/mame-sl/gameking.zip/gameking/";;
 *"/gameking3/MAME/"*) core="mame_libretro gamekin3 -cart"; src="https://archive.org/download/mame-sl/mame-sl/gameking3.zip/gameking3/";;
+*"/svmu/TOSEC/"*) core="mame_libretro svmu -quik"; src="https://archive.org/download/tosec-main/Sega/Visual%20Memory%20System/Games/Sega%20Visual%20Memory%20System%20-%20Games%20%28TOSEC-v2023-08-29%29.zip/";;
+*"/svmu/Demo/"*) core="mame_libretro svmu -quik"; src="https://archive.org/download/tosec-main/Sega/Visual%20Memory%20System/Demos/Sega%20Visual%20Memory%20System%20-%20Demos%20%28TOSEC-v2023-08-29%29.zip/";;
+*"/svmu/MAME/"*) core="mame_libretro svmu -quik"; src="https://archive.org/download/mame-sl/mame-sl/svmu.zip/svmu/";;
+*"/pockstat/TOSEC/"*) core="mame_libretro pockstat -cart"; src="https://archive.org/download/tosec-main/Sony/PocketStation/Various/Sony%20PocketStation%20-%20Various%20%28TOSEC-v2014-05-29%29.zip/";;
+*"/ekara/MAME/"*) core="mame_libretro ekara -cart"; src="https://archive.org/download/mame-sl/mame-sl/ekara_cart.zip/ekara_cart/";;
 *"/j2me/NoIntro/"*) core="squirreljme_libretro"; ext="jar"; src="https://archive.org/download/ni-roms/roms/Mobile%20-%20J2ME.zip/";;
 *"/palm/NoIntro/"*) core="mu_libretro"; ext="prc"; src="https://archive.org/download/ni-roms/roms/Mobile%20-%20Palm%20OS%20%28Digital%29.zip/";;
 esac

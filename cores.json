@@ -2069,21 +2069,6 @@
   "src": "https://archive.org/download/wii-u-retail-nus-usa/"
  },
  {
-  "pattern": "/svmu/TOSEC/",
-  "core": "mame_libretro svmu -quik",
-  "src": "https://archive.org/download/tosec-main/Sega/Visual%20Memory%20System/Games/Sega%20Visual%20Memory%20System%20-%20Games%20%28TOSEC-v2023-08-29%29.zip/"
- },
- {
-  "pattern": "/svmu/Demo/",
-  "core": "mame_libretro svmu -quik",
-  "src": "https://archive.org/download/tosec-main/Sega/Visual%20Memory%20System/Demos/Sega%20Visual%20Memory%20System%20-%20Demos%20%28TOSEC-v2023-08-29%29.zip/"
- },
- {
-  "pattern": "/svmu/MAME/",
-  "core": "mame_libretro svmu -quik",
-  "src": "https://archive.org/download/mame-sl/mame-sl/svmu.zip/svmu/"
- },
- {
   "pattern": "/sg1000/NoIntro/",
   "core": "gearsystem_libretro",
   "src": "https://archive.org/download/ni-roms/roms/Sega%20-%20SG-1000.zip/"
@@ -2274,11 +2259,6 @@
   "src": "https://archive.org/download/non-redump_sega-saturn/"
  },
  {
-  "pattern": "/stv/MAME/",
-  "core": "mame_libretro stvbios",
-  "src": "https://archive.org/download/mame-sl/mame-sl/stv.zip/stv/"
- },
- {
   "pattern": "/dreamcast/Redump/",
   "core": "flycast_libretro",
   "ext": "cue",
@@ -2307,6 +2287,31 @@
   "core": "flycast_libretro",
   "ext": "gdi",
   "src": "https://archive.org/download/tosec-iso-sega/Dreamcast/Games/JP/"
+ },
+ {
+  "pattern": "/gamegear/NoIntro/",
+  "core": "gearsystem_libretro",
+  "src": "https://archive.org/download/ni-roms/roms/Sega%20-%20Game%20Gear.zip/"
+ },
+ {
+  "pattern": "/gamegear/TOSEC/",
+  "core": "gearsystem_libretro",
+  "src": "https://archive.org/download/tosec-main/Sega/Game%20Gear/Games/Sega%20Game%20Gear%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/"
+ },
+ {
+  "pattern": "/gamegear/Demo/",
+  "core": "gearsystem_libretro",
+  "src": "https://archive.org/download/tosec-main/Sega/Game%20Gear/Demos/Sega%20Game%20Gear%20-%20Demos%20%28TOSEC-v2024-01-15%29.zip/"
+ },
+ {
+  "pattern": "/gamegear/MAME/",
+  "core": "mame_libretro gamegear -cart",
+  "src": "https://archive.org/download/mame-sl/mame-sl/gamegear.zip/gamegear/"
+ },
+ {
+  "pattern": "/stv/MAME/",
+  "core": "mame_libretro stvbios",
+  "src": "https://archive.org/download/mame-sl/mame-sl/stv.zip/stv/"
  },
  {
   "pattern": "/model1/Sega Model 1/",
@@ -2342,31 +2347,6 @@
   "pattern": "/lindbergh/Clean Data/",
   "core": "linuxloader_libretro",
   "src": "https://archive.org/download/SegaLindbergh/"
- },
- {
-  "pattern": "/gamegear/NoIntro/",
-  "core": "gearsystem_libretro",
-  "src": "https://archive.org/download/ni-roms/roms/Sega%20-%20Game%20Gear.zip/"
- },
- {
-  "pattern": "/gamegear/TOSEC/",
-  "core": "gearsystem_libretro",
-  "src": "https://archive.org/download/tosec-main/Sega/Game%20Gear/Games/Sega%20Game%20Gear%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/"
- },
- {
-  "pattern": "/gamegear/Demo/",
-  "core": "gearsystem_libretro",
-  "src": "https://archive.org/download/tosec-main/Sega/Game%20Gear/Demos/Sega%20Game%20Gear%20-%20Demos%20%28TOSEC-v2024-01-15%29.zip/"
- },
- {
-  "pattern": "/gamegear/MAME/",
-  "core": "mame_libretro gamegear -cart",
-  "src": "https://archive.org/download/mame-sl/mame-sl/gamegear.zip/gamegear/"
- },
- {
-  "pattern": "/pockstat/TOSEC/",
-  "core": "mame_libretro pockstat -cart",
-  "src": "https://archive.org/download/tosec-main/Sony/PocketStation/Various/Sony%20PocketStation%20-%20Various%20%28TOSEC-v2014-05-29%29.zip/"
  },
  {
   "pattern": "/smc777/MAME/",
@@ -2774,6 +2754,11 @@
   "core": "ppsspp_libretro",
   "ext": "iso",
   "src": "https://archive.org/download/tosec-iso-sony/PlayStation%20Portable/Games/%5BISO%5D/"
+ },
+ {
+  "pattern": "/psvita/USA NoNpDRM/",
+  "core": "vita3k_libretro",
+  "src": "https://archive.org/download/sony-playstation-vita-usa-full-set-nonpdrm-format/"
  },
  {
   "pattern": "/xbox/XISO 0-M/",
@@ -3480,11 +3465,6 @@
   "pattern": "/entexsag/MAME/",
   "core": "mame_libretro sag -cart",
   "src": "https://archive.org/download/mame-sl/mame-sl/entex_sag.zip/entex_sag/"
- },
- {
-  "pattern": "/ekara/MAME/",
-  "core": "mame_libretro ekara -cart",
-  "src": "https://archive.org/download/mame-sl/mame-sl/ekara_cart.zip/ekara_cart/"
  },
  {
   "pattern": "/videoart/MAME/",
@@ -5220,12 +5200,12 @@
  {
   "pattern": "/mame/Non-Merged/",
   "core": "mame_libretro",
-  "src": "https://archive.org/download/mame-0.264-roms-non-merged/"
+  "src": "https://archive.org/download/mame-0.264-roms-non-merged/MAME%200.264%20ROMs%20%28non-merged%29/"
  },
  {
   "pattern": "/mame/Split/",
   "core": "mame_libretro",
-  "src": "https://archive.org/download/mame-0.260-roms-split_202310/"
+  "src": "https://archive.org/download/mame-0.260-roms-split_202310/MAME%200.260%20ROMs%20%28split%29/"
  },
  {
   "pattern": "/mame/2000/",
@@ -5498,6 +5478,31 @@
   "pattern": "/gameking3/MAME/",
   "core": "mame_libretro gamekin3 -cart",
   "src": "https://archive.org/download/mame-sl/mame-sl/gameking3.zip/gameking3/"
+ },
+ {
+  "pattern": "/svmu/TOSEC/",
+  "core": "mame_libretro svmu -quik",
+  "src": "https://archive.org/download/tosec-main/Sega/Visual%20Memory%20System/Games/Sega%20Visual%20Memory%20System%20-%20Games%20%28TOSEC-v2023-08-29%29.zip/"
+ },
+ {
+  "pattern": "/svmu/Demo/",
+  "core": "mame_libretro svmu -quik",
+  "src": "https://archive.org/download/tosec-main/Sega/Visual%20Memory%20System/Demos/Sega%20Visual%20Memory%20System%20-%20Demos%20%28TOSEC-v2023-08-29%29.zip/"
+ },
+ {
+  "pattern": "/svmu/MAME/",
+  "core": "mame_libretro svmu -quik",
+  "src": "https://archive.org/download/mame-sl/mame-sl/svmu.zip/svmu/"
+ },
+ {
+  "pattern": "/pockstat/TOSEC/",
+  "core": "mame_libretro pockstat -cart",
+  "src": "https://archive.org/download/tosec-main/Sony/PocketStation/Various/Sony%20PocketStation%20-%20Various%20%28TOSEC-v2014-05-29%29.zip/"
+ },
+ {
+  "pattern": "/ekara/MAME/",
+  "core": "mame_libretro ekara -cart",
+  "src": "https://archive.org/download/mame-sl/mame-sl/ekara_cart.zip/ekara_cart/"
  },
  {
   "pattern": "/j2me/NoIntro/",

@@ -411,9 +411,6 @@ Voxatron/	vox
 /dsi/TOSEC/	melondsds_libretro		https://archive.org/download/tosec-main/Nintendo/DSi/Games/Nintendo%20DSi%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/
 /3ds/NoIntro/	citra_libretro	3ds	https://archive.org/download/nintendo-nintendo-3ds-games-decrypted/Nintendo%20-%20Nintendo%203DS/
 /wiiu/Redump/	cemu_libretro	tmd	https://archive.org/download/wii-u-retail-nus-usa/
-/svmu/TOSEC/	mame_libretro svmu -quik		https://archive.org/download/tosec-main/Sega/Visual%20Memory%20System/Games/Sega%20Visual%20Memory%20System%20-%20Games%20%28TOSEC-v2023-08-29%29.zip/
-/svmu/Demo/	mame_libretro svmu -quik		https://archive.org/download/tosec-main/Sega/Visual%20Memory%20System/Demos/Sega%20Visual%20Memory%20System%20-%20Demos%20%28TOSEC-v2023-08-29%29.zip/
-/svmu/MAME/	mame_libretro svmu -quik		https://archive.org/download/mame-sl/mame-sl/svmu.zip/svmu/
 /sg1000/NoIntro/	gearsystem_libretro		https://archive.org/download/ni-roms/roms/Sega%20-%20SG-1000.zip/
 /sg1000/TOSEC/	gearsystem_libretro		https://archive.org/download/tosec-main/Sega/Game%201000/Games/Sega%20Game%201000%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/
 /sg1000/Demo [BIN]/	gearsystem_libretro		https://archive.org/download/tosec-main/Sega/Game%201000/Demos/%5BBIN%5D/Sega%20Game%201000%20-%20Demos%20-%20%5BBIN%5D%20%28TOSEC-v2025-01-15%29.zip/
@@ -451,12 +448,16 @@ Voxatron/	vox
 /megacd/NonRedump/	picodrive_libretro	cue	https://archive.org/download/non-redump_sega-mega-cd_sega-cd/
 /saturn/Redump/	yabasanshiro_libretro	cue	https://archive.org/download/redump.sega_saturn/
 /saturn/NonRedump/	yabasanshiro_libretro	cue	https://archive.org/download/non-redump_sega-saturn/
-/stv/MAME/	mame_libretro stvbios		https://archive.org/download/mame-sl/mame-sl/stv.zip/stv/
 /dreamcast/Redump/	flycast_libretro	cue	https://archive.org/download/sega-dreamcast-redump/
 /dreamcast/NonRedump/	flycast_libretro	gdi	https://archive.org/download/non-redump_sega-dreamcast/
 /dreamcast/US/	flycast_libretro	gdi	https://archive.org/download/tosec-iso-sega/Dreamcast/Games/US/
 /dreamcast/PAL/	flycast_libretro	gdi	https://archive.org/download/tosec-iso-sega/Dreamcast/Games/PAL/
 /dreamcast/JP/	flycast_libretro	gdi	https://archive.org/download/tosec-iso-sega/Dreamcast/Games/JP/
+/gamegear/NoIntro/	gearsystem_libretro		https://archive.org/download/ni-roms/roms/Sega%20-%20Game%20Gear.zip/
+/gamegear/TOSEC/	gearsystem_libretro		https://archive.org/download/tosec-main/Sega/Game%20Gear/Games/Sega%20Game%20Gear%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/
+/gamegear/Demo/	gearsystem_libretro		https://archive.org/download/tosec-main/Sega/Game%20Gear/Demos/Sega%20Game%20Gear%20-%20Demos%20%28TOSEC-v2024-01-15%29.zip/
+/gamegear/MAME/	mame_libretro gamegear -cart		https://archive.org/download/mame-sl/mame-sl/gamegear.zip/gamegear/
+/stv/MAME/	mame_libretro stvbios		https://archive.org/download/mame-sl/mame-sl/stv.zip/stv/
 /model1/Sega Model 1/	mame_libretro		https://archive.org/download/Ages_Sega_Model_1/Model1/
 /model2/Sega Model 2/	mame_libretro		https://archive.org/download/m2emu1.1a/Sega%20Model%202%20Emu%201.1a%20and%20Full%20Romset/Model%202%20Romset%20%28Merged%29/
 /model3/Sega Model 3/	mame_libretro		https://archive.org/download/segamodel3/ROMs/
@@ -464,11 +465,6 @@ Voxatron/	vox
 /naomi2/Naomi 2/	flycast_libretro		https://archive.org/download/naomi-2/
 /chihiro/Netboot/	xemu_libretro		https://archive.org/download/ChihiroNetboot/
 /lindbergh/Clean Data/	linuxloader_libretro		https://archive.org/download/SegaLindbergh/
-/gamegear/NoIntro/	gearsystem_libretro		https://archive.org/download/ni-roms/roms/Sega%20-%20Game%20Gear.zip/
-/gamegear/TOSEC/	gearsystem_libretro		https://archive.org/download/tosec-main/Sega/Game%20Gear/Games/Sega%20Game%20Gear%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/
-/gamegear/Demo/	gearsystem_libretro		https://archive.org/download/tosec-main/Sega/Game%20Gear/Demos/Sega%20Game%20Gear%20-%20Demos%20%28TOSEC-v2024-01-15%29.zip/
-/gamegear/MAME/	mame_libretro gamegear -cart		https://archive.org/download/mame-sl/mame-sl/gamegear.zip/gamegear/
-/pockstat/TOSEC/	mame_libretro pockstat -cart		https://archive.org/download/tosec-main/Sony/PocketStation/Various/Sony%20PocketStation%20-%20Various%20%28TOSEC-v2014-05-29%29.zip/
 /smc777/MAME/	mame_libretro smc777 -flop1		https://archive.org/download/mame-sl/mame-sl/smc777.zip/smc777/
 /psx/CHD EUR/	pcsx_rearmed_libretro		https://archive.org/download/PS1_EU_CHD_Arquivista/
 /psx/CHD JAP/	pcsx_rearmed_libretro		https://archive.org/download/PS1_JP_CHD_Arquivista/
@@ -549,6 +545,7 @@ Voxatron/	vox
 /psp/Redump/	ppsspp_libretro	iso	https://archive.org/download/playstation-portable-redump/
 /psp/NonRedump/	ppsspp_libretro	iso	https://archive.org/download/non-redump_sony_playstation_portable/
 /psp/TOSEC/	ppsspp_libretro	iso	https://archive.org/download/tosec-iso-sony/PlayStation%20Portable/Games/%5BISO%5D/
+/psvita/USA NoNpDRM/	vita3k_libretro		https://archive.org/download/sony-playstation-vita-usa-full-set-nonpdrm-format/
 /xbox/XISO 0-M/	xemu_libretro		https://archive.org/download/metal-gear-solid-2-substance-usa/
 /xbox/XISO M-Z/	xemu_libretro		https://archive.org/download/microsoft-xbox-xemu.xisoready-software-collection-part-2/
 /xbox/XISO Extra/	xemu_libretro		https://archive.org/download/microsoft-xbox-xemu-ready-software-collection-part-3/
@@ -690,7 +687,6 @@ Voxatron/	vox
 /vii/MAME/	mame_libretro vii -cart		https://archive.org/download/mame-sl/mame-sl/vii.zip/vii/
 /unichamp/MAME/	mame_libretro unichamp -cart		https://archive.org/download/mame-sl/mame-sl/unichamp.zip/unichamp/
 /entexsag/MAME/	mame_libretro sag -cart		https://archive.org/download/mame-sl/mame-sl/entex_sag.zip/entex_sag/
-/ekara/MAME/	mame_libretro ekara -cart		https://archive.org/download/mame-sl/mame-sl/ekara_cart.zip/ekara_cart/
 /videoart/MAME/	mame_libretro videoart -cart		https://archive.org/download/mame-sl/mame-sl/videoart.zip/videoart/
 /pdp1/MAME/	mame_libretro pdp1 -ptap1		https://archive.org/download/mame-sl/mame-sl/pdp1_ptp.zip/pdp1_ptp/
 /sol20/MAME/	mame_libretro sol20 -cass1		https://archive.org/download/mame-sl/mame-sl/sol20_cass.zip/sol20_cass/
@@ -1032,8 +1028,8 @@ Voxatron/	vox
 /vis/Multimedia/	mame_libretro vis -cdrm	cue	https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Multimedia/
 /playdia/Redump/	playdiaemu_libretro		https://archive.org/download/bandai_playdia_quick_interactive_system/
 /mame/Merged/	mame_libretro		https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/
-/mame/Non-Merged/	mame_libretro		https://archive.org/download/mame-0.264-roms-non-merged/
-/mame/Split/	mame_libretro		https://archive.org/download/mame-0.260-roms-split_202310/
+/mame/Non-Merged/	mame_libretro		https://archive.org/download/mame-0.264-roms-non-merged/MAME%200.264%20ROMs%20%28non-merged%29/
+/mame/Split/	mame_libretro		https://archive.org/download/mame-0.260-roms-split_202310/MAME%200.260%20ROMs%20%28split%29/
 /mame/2000/	mame2000_libretro		https://archive.org/download/MAME0.37b5_MAME2000_Reference_Set_Update_2_ROMs_Samples/roms/
 /mame/2003/	mame2003_libretro		https://archive.org/download/MAME2003_Reference_Set_MAME0.78_ROMs_CHDs_Samples/roms/
 /mame/2006/	mame_libretro		https://archive.org/download/MAME0.106-Reference-Set-ROMs-CHDs-Samples/MAME0.106Non-Merged.zip/
@@ -1088,5 +1084,10 @@ Voxatron/	vox
 /mononcolor/MAME/	mame_libretro mononcol -cart		https://archive.org/download/mame-sl/mame-sl/monon_color.zip/monon_color/
 /gameking/MAME/	mame_libretro gameking -cart		https://archive.org/download/mame-sl/mame-sl/gameking.zip/gameking/
 /gameking3/MAME/	mame_libretro gamekin3 -cart		https://archive.org/download/mame-sl/mame-sl/gameking3.zip/gameking3/
+/svmu/TOSEC/	mame_libretro svmu -quik		https://archive.org/download/tosec-main/Sega/Visual%20Memory%20System/Games/Sega%20Visual%20Memory%20System%20-%20Games%20%28TOSEC-v2023-08-29%29.zip/
+/svmu/Demo/	mame_libretro svmu -quik		https://archive.org/download/tosec-main/Sega/Visual%20Memory%20System/Demos/Sega%20Visual%20Memory%20System%20-%20Demos%20%28TOSEC-v2023-08-29%29.zip/
+/svmu/MAME/	mame_libretro svmu -quik		https://archive.org/download/mame-sl/mame-sl/svmu.zip/svmu/
+/pockstat/TOSEC/	mame_libretro pockstat -cart		https://archive.org/download/tosec-main/Sony/PocketStation/Various/Sony%20PocketStation%20-%20Various%20%28TOSEC-v2014-05-29%29.zip/
+/ekara/MAME/	mame_libretro ekara -cart		https://archive.org/download/mame-sl/mame-sl/ekara_cart.zip/ekara_cart/
 /j2me/NoIntro/	squirreljme_libretro	jar	https://archive.org/download/ni-roms/roms/Mobile%20-%20J2ME.zip/
 /palm/NoIntro/	mu_libretro	prc	https://archive.org/download/ni-roms/roms/Mobile%20-%20Palm%20OS%20%28Digital%29.zip/
