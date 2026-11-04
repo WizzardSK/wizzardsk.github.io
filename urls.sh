@@ -459,6 +459,7 @@ gameflix_lookup_src() { src=""; case "$1" in
   *"/model3/Sega Model 3/"*) src="https://archive.org/download/segamodel3/ROMs/";;
   *"/naomi/MAME 0.255/"*) src="https://archive.org/download/sega-naomi-naomi2/Sega%20Naomi/";;
   *"/naomi2/Naomi 2/"*) src="https://archive.org/download/naomi-2/";;
+  *"/hikaru/Hikaru/"*) src="https://archive.org/download/hikaru_202607/";;
   *"/chihiro/Netboot/"*) src="https://archive.org/download/ChihiroNetboot/";;
   *"/lindbergh/Clean Data/"*) src="https://archive.org/download/SegaLindbergh/";;
   *"/smc777/MAME/"*) src="https://archive.org/download/mame-sl/mame-sl/smc777.zip/smc777/";;

@@ -473,6 +473,7 @@ case "$adresar/" in
 *"/model3/Sega Model 3/"*) core="mame_libretro"; src="https://archive.org/download/segamodel3/ROMs/";;
 *"/naomi/MAME 0.255/"*) core="flycast_libretro"; src="https://archive.org/download/sega-naomi-naomi2/Sega%20Naomi/";;
 *"/naomi2/Naomi 2/"*) core="flycast_libretro"; src="https://archive.org/download/naomi-2/";;
+*"/hikaru/Hikaru/"*) core="odin_libretro"; src="https://archive.org/download/hikaru_202607/";;
 *"/chihiro/Netboot/"*) core="xemu_libretro"; src="https://archive.org/download/ChihiroNetboot/";;
 *"/lindbergh/Clean Data/"*) core="linuxloader_libretro"; src="https://archive.org/download/SegaLindbergh/";;
 *"/smc777/MAME/"*) core="mame_libretro smc777 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/smc777.zip/smc777/";;
@@ -1611,6 +1612,20 @@ if [[ -n "$src" && ! -e "$1" && $lindbergh_unpacked == 0 ]]; then
     rm -f "$1"
     echo "Download failed: ${src}${enc}" >&2
     exit 1
+  fi
+fi
+
+# Sega Hikaru (odin_libretro): a clone's set holds only what differs from its
+# parent (airtrixo, sgnascaro), and Odin reads the parent's zip beside it, so
+# that comes from the same folder of the item too.
+if [[ "$core" == odin_libretro* && -n "$src" && "$1" == *.zip ]]; then
+  case "$(basename "$1" .zip)" in
+    airtrixo) parent=airtrix ;; sgnascaro) parent=sgnascar ;; *) parent="" ;;
+  esac
+  if [[ -n "$parent" && ! -e "$(dirname "$1")/$parent.zip" ]]; then
+    gameflix_ia_auth
+    echo "Fetching $parent.zip (the parent set) ..." >&2
+    curl -sfL --location-trusted ${ia_auth:+-H "Authorization: $ia_auth"} -o "$(dirname "$1")/$parent.zip" "${src}$parent.zip" || rm -f "$(dirname "$1")/$parent.zip"
   fi
 fi
 

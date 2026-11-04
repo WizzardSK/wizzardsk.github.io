@@ -2339,6 +2339,11 @@
   "src": "https://archive.org/download/naomi-2/"
  },
  {
+  "pattern": "/hikaru/Hikaru/",
+  "core": "odin_libretro",
+  "src": "https://archive.org/download/hikaru_202607/"
+ },
+ {
   "pattern": "/chihiro/Netboot/",
   "core": "xemu_libretro",
   "src": "https://archive.org/download/ChihiroNetboot/"
