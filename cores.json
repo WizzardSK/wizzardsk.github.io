@@ -14,6 +14,16 @@
   "src": "https://buildbot.libretro.com/assets/cores/Lutro/"
  },
  {
+  "pattern": "/ChaiLove/",
+  "core": "chailove_libretro",
+  "src": "https://buildbot.libretro.com/assets/cores/ChaiLove/"
+ },
+ {
+  "pattern": "/VaporSpec/",
+  "core": "vaporspec_libretro",
+  "src": "https://buildbot.libretro.com/assets/cores/VaporSpec/"
+ },
+ {
   "pattern": "/scummvm/eXo/",
   "core": "scummvm_libretro",
   "ext": "scummvm",

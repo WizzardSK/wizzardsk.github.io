@@ -14,6 +14,8 @@ case "$adresar/" in
 *"PICO-8/"*) core="pico8 -run";;
 *"Voxatron/"*) core="vox";;
 *"/Lutro/"*) core="lutro_libretro"; src="https://buildbot.libretro.com/assets/cores/Lutro/";;
+*"/ChaiLove/"*) core="chailove_libretro"; src="https://buildbot.libretro.com/assets/cores/ChaiLove/";;
+*"/VaporSpec/"*) core="vaporspec_libretro"; src="https://buildbot.libretro.com/assets/cores/VaporSpec/";;
 *"/scummvm/eXo/"*) core="scummvm_libretro"; ext="scummvm"; src="https://archive.org/download/eXoScummVM_v2/eXo/eXoScummVM/";;
 *"/arduboy/NoIntro/"*) core="arduous_libretro"; src="https://archive.org/download/ni-roms/roms/Arduboy%20Inc%20-%20Arduboy.zip/";;
 *"/arduboy/TOSEC/"*) core="arduous_libretro"; src="https://archive.org/download/tosec-main/Arduboy/Arduboy/Games/%5BARDUBOY%5D/Arduboy%20Arduboy%20-%20Games%20-%20%5BARDUBOY%5D%20%28TOSEC-v2024-01-15%29.zip/";;
