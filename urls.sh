@@ -1035,6 +1035,7 @@ gameflix_lookup_src() { src=""; case "$1" in
   *"/mame/2016/"*) src="https://archive.org/download/MAME_2016_Arcade_Romsets/roms.zip/roms/";;
   *"/vgmplay/MAME/"*) src="https://archive.org/download/mame-sl/mame-sl/vgmplay.zip/vgmplay/";;
   *"/fbneo/FinalBurn Neo/"*) src="https://archive.org/download/FBNEOPACK/";;
+  *"/namco2x6/PCSX2x6/"*) src="https://archive.org/download/pcsx2x6-collection/PCSX2x6%20Arcade%20Collection/roms/";;
   *"/neogeo/MAME/"*) src="https://archive.org/download/mame-sl/mame-sl/neogeo.zip/neogeo/";;
   *"/neogeocd/Redump/"*) src="https://archive.org/download/snk-neo-geo-cd-redump/";;
   *"/neogeocd/ISO/"*) src="https://archive.org/download/tosec-iso-snk/Neo-Geo%20CD/Games/%5BISO%5D/";;

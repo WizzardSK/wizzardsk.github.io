@@ -1052,6 +1052,7 @@ case "$adresar/" in
 *"/mame/2016/"*) core="mame2016_libretro"; src="https://archive.org/download/MAME_2016_Arcade_Romsets/roms.zip/roms/";;
 *"/vgmplay/MAME/"*) core="mame_libretro vgmplay -quik"; src="https://archive.org/download/mame-sl/mame-sl/vgmplay.zip/vgmplay/";;
 *"/fbneo/FinalBurn Neo/"*) core="fbneo_libretro"; src="https://archive.org/download/FBNEOPACK/";;
+*"/namco2x6/PCSX2x6/"*) core="pcee2_libretro"; src="https://archive.org/download/pcsx2x6-collection/PCSX2x6%20Arcade%20Collection/roms/";;
 *"/neogeo/MAME/"*) core="mame_libretro aes -cart"; src="https://archive.org/download/mame-sl/mame-sl/neogeo.zip/neogeo/";;
 *"/neogeocd/Redump/"*) core="neocd_libretro"; ext="cue"; src="https://archive.org/download/snk-neo-geo-cd-redump/";;
 *"/neogeocd/ISO/"*) core="neocd_libretro"; ext="cue"; src="https://archive.org/download/tosec-iso-snk/Neo-Geo%20CD/Games/%5BISO%5D/";;

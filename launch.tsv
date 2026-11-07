@@ -1042,6 +1042,7 @@ Voxatron/	vox
 /mame/2016/	mame2016_libretro		https://archive.org/download/MAME_2016_Arcade_Romsets/roms.zip/roms/
 /vgmplay/MAME/	mame_libretro vgmplay -quik		https://archive.org/download/mame-sl/mame-sl/vgmplay.zip/vgmplay/
 /fbneo/FinalBurn Neo/	fbneo_libretro		https://archive.org/download/FBNEOPACK/
+/namco2x6/PCSX2x6/	pcee2_libretro		https://archive.org/download/pcsx2x6-collection/PCSX2x6%20Arcade%20Collection/roms/
 /neogeo/MAME/	mame_libretro aes -cart		https://archive.org/download/mame-sl/mame-sl/neogeo.zip/neogeo/
 /neogeocd/Redump/	neocd_libretro	cue	https://archive.org/download/snk-neo-geo-cd-redump/
 /neogeocd/ISO/	neocd_libretro	cue	https://archive.org/download/tosec-iso-snk/Neo-Geo%20CD/Games/%5BISO%5D/

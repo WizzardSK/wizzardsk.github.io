@@ -5268,6 +5268,11 @@
   "src": "https://archive.org/download/FBNEOPACK/"
  },
  {
+  "pattern": "/namco2x6/PCSX2x6/",
+  "core": "pcee2_libretro",
+  "src": "https://archive.org/download/pcsx2x6-collection/PCSX2x6%20Arcade%20Collection/roms/"
+ },
+ {
   "pattern": "/neogeo/MAME/",
   "core": "mame_libretro aes -cart",
   "src": "https://archive.org/download/mame-sl/mame-sl/neogeo.zip/neogeo/"
