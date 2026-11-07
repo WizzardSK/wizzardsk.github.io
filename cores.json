@@ -5268,7 +5268,7 @@
   "src": "https://archive.org/download/FBNEOPACK/"
  },
  {
-  "pattern": "/namco2x6/PCSX2x6/",
+  "pattern": "/namco2x6/System 246-256/",
   "core": "pcee2_libretro",
   "src": "https://archive.org/download/pcsx2x6-collection/PCSX2x6%20Arcade%20Collection/roms/"
  },
