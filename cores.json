@@ -9,6 +9,11 @@
   "core": "wasm4_libretro"
  },
  {
+  "pattern": "/Lutro/",
+  "core": "lutro_libretro",
+  "src": "https://buildbot.libretro.com/assets/cores/Lutro/"
+ },
+ {
   "pattern": "/scummvm/eXo/",
   "core": "scummvm_libretro",
   "ext": "scummvm",

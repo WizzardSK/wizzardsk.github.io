@@ -3,6 +3,7 @@ LowresNX/	lowresnx_libretro
 /wasm4/	wasm4_libretro		
 PICO-8/	pico8 -run		
 Voxatron/	vox		
+/Lutro/	lutro_libretro		https://buildbot.libretro.com/assets/cores/Lutro/
 /scummvm/eXo/	scummvm_libretro	scummvm	https://archive.org/download/eXoScummVM_v2/eXo/eXoScummVM/
 /arduboy/NoIntro/	arduous_libretro		https://archive.org/download/ni-roms/roms/Arduboy%20Inc%20-%20Arduboy.zip/
 /arduboy/TOSEC/	arduous_libretro		https://archive.org/download/tosec-main/Arduboy/Arduboy/Games/%5BARDUBOY%5D/Arduboy%20Arduboy%20-%20Games%20-%20%5BARDUBOY%5D%20%28TOSEC-v2024-01-15%29.zip/
