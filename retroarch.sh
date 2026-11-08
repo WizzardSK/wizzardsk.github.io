@@ -477,6 +477,7 @@ case "$adresar/" in
 *"/naomi/MAME 0.255/"*) core="flycast_libretro"; src="https://archive.org/download/sega-naomi-naomi2/Sega%20Naomi/";;
 *"/naomi2/Naomi 2/"*) core="flycast_libretro"; src="https://archive.org/download/naomi-2/";;
 *"/hikaru/Hikaru/"*) core="odin_libretro"; src="https://archive.org/download/hikaru_202607/";;
+*"/gaelco/MAME 0.264/"*) core="odin_libretro"; src="https://archive.org/download/mame-0.264-roms-non-merged/MAME%200.264%20ROMs%20%28non-merged%29/";;
 *"/chihiro/Netboot/"*) core="xemu_libretro"; src="https://archive.org/download/ChihiroNetboot/";;
 *"/lindbergh/Clean Data/"*) core="linuxloader_libretro"; src="https://archive.org/download/SegaLindbergh/";;
 *"/smc777/MAME/"*) core="mame_libretro smc777 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/smc777.zip/smc777/";;

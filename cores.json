@@ -2359,6 +2359,11 @@
   "src": "https://archive.org/download/hikaru_202607/"
  },
  {
+  "pattern": "/gaelco/MAME 0.264/",
+  "core": "odin_libretro",
+  "src": "https://archive.org/download/mame-0.264-roms-non-merged/MAME%200.264%20ROMs%20%28non-merged%29/"
+ },
+ {
   "pattern": "/chihiro/Netboot/",
   "core": "xemu_libretro",
   "src": "https://archive.org/download/ChihiroNetboot/"
