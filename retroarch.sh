@@ -476,6 +476,7 @@ case "$adresar/" in
 *"/model3/Sega Model 3/"*) core="mame_libretro"; src="https://archive.org/download/segamodel3/ROMs/";;
 *"/naomi/MAME 0.255/"*) core="flycast_libretro"; src="https://archive.org/download/sega-naomi-naomi2/Sega%20Naomi/";;
 *"/naomi2/Naomi 2/"*) core="flycast_libretro"; src="https://archive.org/download/naomi-2/";;
+*"/atomiswave/Atomiswave/"*) core="flycast_libretro"; src="https://archive.org/download/atomiswave_202607/";;
 *"/hikaru/Hikaru/"*) core="odin_libretro"; src="https://archive.org/download/hikaru_202607/";;
 *"/gaelco/MAME 0.264/"*) core="odin_libretro"; src="https://archive.org/download/mame-0.264-roms-non-merged/MAME%200.264%20ROMs%20%28non-merged%29/";;
 *"/chihiro/Netboot/"*) core="xemu_libretro"; src="https://archive.org/download/ChihiroNetboot/";;
