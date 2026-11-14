@@ -2857,24 +2857,44 @@
   "src": "https://archive.org/download/tosec-iso-ibm/PC%20Compatibles/CD/Games/%5BISO%5D/"
  },
  {
+  "pattern": "/dos/TDC 1981/",
+  "core": "dosbox_pure_libretro",
+  "src": "https://archive.org/download/tdc-games-1981/"
+ },
+ {
   "pattern": "/dos/TDC 1982/",
   "core": "dosbox_pure_libretro",
-  "src": "https://archive.org/download/Total_DOS_Collection_Release_16_March_2019/Games/Files/1982/"
+  "src": "https://archive.org/download/tdc-games-1982/"
  },
  {
   "pattern": "/dos/TDC 1983/",
   "core": "dosbox_pure_libretro",
-  "src": "https://archive.org/download/Total_DOS_Collection_Release_16_March_2019/Games/Files/1983/"
+  "src": "https://archive.org/download/tdc-games-1983_202602/"
+ },
+ {
+  "pattern": "/dos/TDC 1984/",
+  "core": "dosbox_pure_libretro",
+  "src": "https://archive.org/download/tdc-games-1984/"
  },
  {
   "pattern": "/dos/TDC 1985/",
   "core": "dosbox_pure_libretro",
-  "src": "https://archive.org/download/Total_DOS_Collection_Release_16_March_2019/Games/Files/1985/"
+  "src": "https://archive.org/download/tdc-games-1985_202602/"
+ },
+ {
+  "pattern": "/dos/TDC 1986/",
+  "core": "dosbox_pure_libretro",
+  "src": "https://archive.org/download/tdc-games-1986/"
  },
  {
   "pattern": "/dos/TDC 1988/",
   "core": "dosbox_pure_libretro",
   "src": "https://archive.org/download/Total_DOS_Collection_Release_16_March_2019/Games/Files/1988/"
+ },
+ {
+  "pattern": "/dos/TDC 198x/",
+  "core": "dosbox_pure_libretro",
+  "src": "https://archive.org/download/tdc-games-198x/"
  },
  {
   "pattern": "/dos/TDC 1990/",
@@ -2884,7 +2904,7 @@
  {
   "pattern": "/dos/TDC 1991/",
   "core": "dosbox_pure_libretro",
-  "src": "https://archive.org/download/Total_DOS_Collection_Release_16_March_2019/Games/Files/1991/"
+  "src": "https://archive.org/download/tdc-games-1991/"
  },
  {
   "pattern": "/dos/TDC 1994/",
@@ -2919,7 +2939,12 @@
  {
   "pattern": "/dos/TDC 199x/",
   "core": "dosbox_pure_libretro",
-  "src": "https://archive.org/download/Total_DOS_Collection_Release_16_March_2019/Games/Files/199x/"
+  "src": "https://archive.org/download/tdc-games-199x/"
+ },
+ {
+  "pattern": "/dos/TDC 19xx/",
+  "core": "dosbox_pure_libretro",
+  "src": "https://archive.org/download/tdc-games-19xx/"
  },
  {
   "pattern": "/dos/TDC 2002/",
