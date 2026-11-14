@@ -3327,6 +3327,11 @@
   "src": "https://archive.org/download/mame-sl/mame-sl/coleco_homebrew.zip/coleco_homebrew/"
  },
  {
+  "pattern": "/cassettevision/PD777/",
+  "core": "pd777_libretro",
+  "src": "https://archive.org/download/epoch-cassette-vision-pd777/"
+ },
+ {
   "pattern": "/scv/NoIntro/",
   "core": "emuscv_libretro",
   "src": "https://archive.org/download/ni-roms/roms/Epoch%20-%20Super%20Cassette%20Vision.zip/"

@@ -669,6 +669,7 @@ case "$adresar/" in
 *"/colecovision/Edu/"*) core="gearcoleco_libretro"; src="https://archive.org/download/tosec-main/Coleco/ColecoVision/Educational/Coleco%20ColecoVision%20-%20Educational%20%28TOSEC-v2015-05-07%29.zip/";;
 *"/colecovision/MAME/"*) core="mame_libretro coleco -cart"; src="https://archive.org/download/mame-sl/mame-sl/coleco.zip/coleco/";;
 *"/colecovision/Homebrew MAME/"*) core="mame_libretro coleco -cart"; src="https://archive.org/download/mame-sl/mame-sl/coleco_homebrew.zip/coleco_homebrew/";;
+*"/cassettevision/PD777/"*) core="pd777_libretro"; src="https://archive.org/download/epoch-cassette-vision-pd777/";;
 *"/scv/NoIntro/"*) core="emuscv_libretro"; src="https://archive.org/download/ni-roms/roms/Epoch%20-%20Super%20Cassette%20Vision.zip/";;
 *"/scv/TOSEC/"*) core="emuscv_libretro"; src="https://archive.org/download/tosec-main/Epoch/Super%20Cassette%20Vision/Games/Epoch%20Super%20Cassette%20Vision%20-%20Games%20%28TOSEC-v2022-06-08%29.zip/";;
 *"/scv/MAME/"*) core="mame_libretro scv -cart"; src="https://archive.org/download/mame-sl/mame-sl/scv.zip/scv/";;
