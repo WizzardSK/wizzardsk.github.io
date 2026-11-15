@@ -5,7 +5,7 @@
 site="$PWD"
 git clone -q --depth 1 https://github.com/WizzardSK/gameflix.git ~/gameflix-src
 cd ~/gameflix-src
-bash ./gamelist.sh
+bash ./gamelist.sh || exit 1
 
 cp -r ~/gameflix/. "$site/"
 cp fantasy/lowresnx.zip fantasy/wasm4.zip "$site/"

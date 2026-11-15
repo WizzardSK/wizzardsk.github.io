@@ -16,4 +16,8 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Run script
+        # the token lifts generate.sh's GitHub API calls (the MAME snap
+        # list) out of the anonymous limit the runners share
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash update.sh
