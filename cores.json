@@ -1162,12 +1162,12 @@
   "src": "https://archive.org/download/tosec-main/Commodore/VIC20/Demos/%5BD64%5D/Commodore%20VIC20%20-%20Demos%20-%20%5BD64%5D%20%28TOSEC-v2017-10-23%29.zip/"
  },
  {
-  "pattern": "/c20/Demo [PRG]/",
+  "pattern": "/c20/Demo [PRG] Multi/",
   "core": "vice_xvic_libretro",
   "src": "https://archive.org/download/tosec-main/Commodore/VIC20/Demos/%5BPRG%5D/Multipart/Commodore%20VIC20%20-%20Demos%20-%20%5BPRG%5D%20-%20Multipart%20%28TOSEC-v2017-10-23%29.zip/"
  },
  {
-  "pattern": "/c20/Demo [PRG]/",
+  "pattern": "/c20/Demo [PRG] Single/",
   "core": "vice_xvic_libretro",
   "src": "https://archive.org/download/tosec-main/Commodore/VIC20/Demos/%5BPRG%5D/Singlepart/Commodore%20VIC20%20-%20Demos%20-%20%5BPRG%5D%20-%20Singlepart%20%28TOSEC-v2017-10-23%29.zip/"
  },
@@ -1597,12 +1597,12 @@
   "src": "https://archive.org/download/tosec-main/Commodore/Amiga/Demos/Slideshows/Commodore%20Amiga%20-%20Demos%20-%20Slideshows%20%28TOSEC-v2025-01-16%29.zip/"
  },
  {
-  "pattern": "/amiga500/Demo Various/",
+  "pattern": "/amiga500/Demo Various [ADF]/",
   "core": "puae_libretro",
   "src": "https://archive.org/download/tosec-main/Commodore/Amiga/Demos/Various/%5BADF%5D/Commodore%20Amiga%20-%20Demos%20-%20Various%20-%20%5BADF%5D%20%28TOSEC-v2025-01-18%29.zip/"
  },
  {
-  "pattern": "/amiga500/Demo Various/",
+  "pattern": "/amiga500/Demo Various [EXE]/",
   "core": "puae_libretro",
   "src": "https://archive.org/download/tosec-main/Commodore/Amiga/Demos/Various/%5BEXE%5D/Commodore%20Amiga%20-%20Demos%20-%20Various%20-%20%5BEXE%5D%20%28TOSEC-v2016-12-20%29.zip/"
  },
@@ -3527,12 +3527,12 @@
   "src": "https://archive.org/download/tosec-main/Tandy%20Radio%20Shack/TRS-80%20Model%204/Games/%5BAPP%5D/Tandy%20Radio%20Shack%20TRS-80%20Model%204%20-%20Games%20-%20%5BAPP%5D%20%28TOSEC-v2025-01-15%29.zip/"
  },
  {
-  "pattern": "/trs80/Demo [BAS]/",
+  "pattern": "/trs80/Demo [BAS] M4/",
   "core": "mame_libretro trs80m3 -quik",
   "src": "https://archive.org/download/tosec-main/Tandy%20Radio%20Shack/TRS-80%20Model%204/Demos/%5BBAS%5D/Tandy%20Radio%20Shack%20TRS-80%20Model%204%20-%20Demos%20-%20%5BBAS%5D%20%28TOSEC-v2025-01-15%29.zip/"
  },
  {
-  "pattern": "/trs80/Demo [CMD]/",
+  "pattern": "/trs80/Demo [CMD] M4/",
   "core": "mame_libretro trs80m3 -quik",
   "src": "https://archive.org/download/tosec-main/Tandy%20Radio%20Shack/TRS-80%20Model%204/Demos/%5BCMD%5D/Tandy%20Radio%20Shack%20TRS-80%20Model%204%20-%20Demos%20-%20%5BCMD%5D%20%28TOSEC-v2025-01-15%29.zip/"
  },
@@ -3547,17 +3547,17 @@
   "src": "https://archive.org/download/tosec-main/Tandy%20Radio%20Shack/TRS-80%20Model%204/Demos/%5BGRA%5D/Tandy%20Radio%20Shack%20TRS-80%20Model%204%20-%20Demos%20-%20%5BGRA%5D%20%28TOSEC-v2025-01-15%29.zip/"
  },
  {
-  "pattern": "/trs80/Edu [BAS]/",
+  "pattern": "/trs80/Edu [BAS] M4/",
   "core": "mame_libretro trs80m3 -quik",
   "src": "https://archive.org/download/tosec-main/Tandy%20Radio%20Shack/TRS-80%20Model%204/Educational/%5BBAS%5D/Tandy%20Radio%20Shack%20TRS-80%20Model%204%20-%20Educational%20-%20%5BBAS%5D%20%28TOSEC-v2025-01-15%29.zip/"
  },
  {
-  "pattern": "/trs80/Edu [CMD]/",
+  "pattern": "/trs80/Edu [CMD] M4/",
   "core": "mame_libretro trs80m3 -quik",
   "src": "https://archive.org/download/tosec-main/Tandy%20Radio%20Shack/TRS-80%20Model%204/Educational/%5BCMD%5D/Tandy%20Radio%20Shack%20TRS-80%20Model%204%20-%20Educational%20-%20%5BCMD%5D%20%28TOSEC-v2025-01-15%29.zip/"
  },
  {
-  "pattern": "/trs80/Edu [DSK]/",
+  "pattern": "/trs80/Edu [DSK] M4/",
   "core": "mame_libretro trs80m3 -flop1",
   "src": "https://archive.org/download/tosec-main/Tandy%20Radio%20Shack/TRS-80%20Model%204/Educational/%5BDSK%5D/Tandy%20Radio%20Shack%20TRS-80%20Model%204%20-%20Educational%20-%20%5BDSK%5D%20%28TOSEC-v2025-01-15%29.zip/"
  },
@@ -3572,22 +3572,22 @@
   "src": "https://archive.org/download/tosec-main/Tandy%20Radio%20Shack/TRS-80%20Model%204/Educational/%5BLST%5D/Tandy%20Radio%20Shack%20TRS-80%20Model%204%20-%20Educational%20-%20%5BLST%5D%20%28TOSEC-v2025-01-15%29.zip/"
  },
  {
-  "pattern": "/trs80/Demo [BAS]/",
+  "pattern": "/trs80/Demo [BAS] M3/",
   "core": "mame_libretro trs80m3 -quik",
   "src": "https://archive.org/download/tosec-main/Tandy%20Radio%20Shack/TRS-80%20Model%20III/Demos/%5BBAS%5D/Tandy%20Radio%20Shack%20TRS-80%20Model%20III%20-%20Demos%20-%20%5BBAS%5D%20%28TOSEC-v2024-07-03%29.zip/"
  },
  {
-  "pattern": "/trs80/Demo [CMD]/",
+  "pattern": "/trs80/Demo [CMD] M3/",
   "core": "mame_libretro trs80m3 -quik",
   "src": "https://archive.org/download/tosec-main/Tandy%20Radio%20Shack/TRS-80%20Model%20III/Demos/%5BCMD%5D/Tandy%20Radio%20Shack%20TRS-80%20Model%20III%20-%20Demos%20-%20%5BCMD%5D%20%28TOSEC-v2024-07-03%29.zip/"
  },
  {
-  "pattern": "/trs80/Edu [BAS]/",
+  "pattern": "/trs80/Edu [BAS] M3/",
   "core": "mame_libretro trs80m3 -quik",
   "src": "https://archive.org/download/tosec-main/Tandy%20Radio%20Shack/TRS-80%20Model%20III/Educational/%5BBAS%5D/Tandy%20Radio%20Shack%20TRS-80%20Model%20III%20-%20Educational%20-%20%5BBAS%5D%20%28TOSEC-v2024-07-03%29.zip/"
  },
  {
-  "pattern": "/trs80/Edu [CMD]/",
+  "pattern": "/trs80/Edu [CMD] M3/",
   "core": "mame_libretro trs80m3 -quik",
   "src": "https://archive.org/download/tosec-main/Tandy%20Radio%20Shack/TRS-80%20Model%20III/Educational/%5BCMD%5D/Tandy%20Radio%20Shack%20TRS-80%20Model%20III%20-%20Educational%20-%20%5BCMD%5D%20%28TOSEC-v2024-07-03%29.zip/"
  },
@@ -3597,8 +3597,8 @@
   "src": "https://archive.org/download/tosec-main/Tandy%20Radio%20Shack/TRS-80%20Model%20III/Educational/%5BDMK%5D/Tandy%20Radio%20Shack%20TRS-80%20Model%20III%20-%20Educational%20-%20%5BDMK%5D%20%28TOSEC-v2024-07-03%29.zip/"
  },
  {
-  "pattern": "/trs80/Edu [DSK]/",
-  "core": "mame_libretro trs80m3 -quik",
+  "pattern": "/trs80/Edu [DSK] M3/",
+  "core": "mame_libretro trs80m3 -flop1",
   "src": "https://archive.org/download/tosec-main/Tandy%20Radio%20Shack/TRS-80%20Model%20III/Educational/%5BDSK%5D/Tandy%20Radio%20Shack%20TRS-80%20Model%20III%20-%20Educational%20-%20%5BDSK%5D%20%28TOSEC-v2024-07-03%29.zip/"
  },
  {
@@ -4582,7 +4582,7 @@
   "src": "https://archive.org/download/tosec-main/Thomson/MO5/Educational/%5BFD%5D/Thomson%20MO5%20-%20Educational%20-%20%5BFD%5D%20%28TOSEC-v2012-08-27%29.zip/"
  },
  {
-  "pattern": "/thomson/Edu [K7]/",
+  "pattern": "/thomson/Edu [K7] MO5/",
   "core": "theodore_libretro",
   "src": "https://archive.org/download/tosec-main/Thomson/MO5/Educational/%5BK7%5D/Thomson%20MO5%20-%20Educational%20-%20%5BK7%5D%20%28TOSEC-v2012-08-27%29.zip/"
  },
@@ -4602,7 +4602,7 @@
   "src": "https://archive.org/download/tosec-main/Thomson/TO7/Demos/Thomson%20TO7%20-%20Demos%20%28TOSEC-v2012-08-27%29.zip/"
  },
  {
-  "pattern": "/thomson/Edu [K7]/",
+  "pattern": "/thomson/Edu [K7] TO7/",
   "core": "theodore_libretro",
   "src": "https://archive.org/download/tosec-main/Thomson/TO7/Educational/%5BK7%5D/Thomson%20TO7%20-%20Educational%20-%20%5BK7%5D%20%28TOSEC-v2012-08-27%29.zip/"
  },
