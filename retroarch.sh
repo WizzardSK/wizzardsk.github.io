@@ -247,8 +247,8 @@ case "$adresar/" in
 *"/c20/Edu [TAP]/"*) core="vice_xvic_libretro"; src="https://archive.org/download/tosec-main/Commodore/VIC20/Educational/%5BTAP%5D/Commodore%20VIC20%20-%20Educational%20-%20%5BTAP%5D%20%28TOSEC-v2018-03-24%29.zip/";;
 *"/c20/MAME/"*) core="mame_libretro vic20 -cart"; src="https://archive.org/download/mame-sl/mame-sl/vic1001_cart.zip/vic1001_cart/";;
 *"/c20/Cass MAME/"*) core="mame_libretro vic20 -autoboot_command 'LOAD\n' -autoboot_delay 3 -cass"; src="https://archive.org/download/mame-sl/mame-sl/vic1001_cass.zip/vic1001_cass/";;
-*"/cbm2/Cart MAME/"*) core="mame_libretro cbm610 -cart"; src="https://archive.org/download/mame-sl/mame-sl/cbm2_cart.zip/cbm2_cart/";;
-*"/cbm2/Flop MAME/"*) core="mame_libretro cbm610 -autoboot_command 'DLOAD\"\"*\"\"\nRUN\n' -autoboot_delay 5 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/cbm2_flop.zip/cbm2_flop/";;
+*"/cbm2/Cart MAME/"*) core="mame_libretro b128 -cart"; src="https://archive.org/download/mame-sl/mame-sl/cbm2_cart.zip/cbm2_cart/";;
+*"/cbm2/Flop MAME/"*) core="mame_libretro b128 -autoboot_command 'dload\"*\"\nrun\n' -autoboot_delay 5 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/cbm2_flop.zip/cbm2_flop/";;
 *"/c64/NoIntro/"*) core="vice_x64sc_libretro"; src="https://archive.org/download/ni-roms/roms/Commodore%20-%20Commodore%2064.zip/";;
 *"/c64/PP/"*) core="vice_x64sc_libretro"; src="https://archive.org/download/ni-roms/roms/Commodore%20-%20Commodore%2064%20%28PP%29.zip/";;
 *"/c64/Tapes/"*) core="vice_x64sc_libretro"; src="https://archive.org/download/ni-roms/roms/Commodore%20-%20Commodore%2064%20%28Tapes%29.zip/";;

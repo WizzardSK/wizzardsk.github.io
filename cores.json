@@ -1188,12 +1188,12 @@
  },
  {
   "pattern": "/cbm2/Cart MAME/",
-  "core": "mame_libretro cbm610 -cart",
+  "core": "mame_libretro b128 -cart",
   "src": "https://archive.org/download/mame-sl/mame-sl/cbm2_cart.zip/cbm2_cart/"
  },
  {
   "pattern": "/cbm2/Flop MAME/",
-  "core": "mame_libretro cbm610 -autoboot_command 'DLOAD\"\"*\"\"\\nRUN\\n' -autoboot_delay 5 -flop1",
+  "core": "mame_libretro b128 -autoboot_command 'dload\"*\"\\nrun\\n' -autoboot_delay 5 -flop1",
   "src": "https://archive.org/download/mame-sl/mame-sl/cbm2_flop.zip/cbm2_flop/"
  },
  {
