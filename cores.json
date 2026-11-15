@@ -2104,11 +2104,6 @@
   "src": "https://archive.org/download/mame-sl/mame-sl/sg1000.zip/sg1000/"
  },
  {
-  "pattern": "/multivision/Othello Multivision/",
-  "core": "gearsystem_libretro",
-  "src": "https://archive.org/download/tosec-main/Tsukuda%20Original/Othello%20Multivision/Games/Tsukuda%20Original%20Othello%20Multivision%20-%20Games%20%28TOSEC-v2021-02-12%29.zip/"
- },
- {
   "pattern": "/sc3000/App/",
   "core": "mame_libretro sc3000 -cart",
   "src": "https://archive.org/download/tosec-main/Sega/Computer%203000/Applications/Sega%20Computer%203000%20-%20Applications%20%28TOSEC-v2011-11-01%29.zip/"
@@ -2359,29 +2354,14 @@
   "src": "https://archive.org/download/naomi-2/"
  },
  {
-  "pattern": "/atomiswave/Atomiswave/",
-  "core": "flycast_libretro",
-  "src": "https://archive.org/download/atomiswave_202607/"
- },
- {
   "pattern": "/hikaru/Hikaru/",
   "core": "odin_libretro",
   "src": "https://archive.org/download/hikaru_202607/"
  },
  {
-  "pattern": "/gaelco/MAME 0.264/",
-  "core": "odin_libretro",
-  "src": "https://archive.org/download/mame-0.264-roms-non-merged/MAME%200.264%20ROMs%20%28non-merged%29/"
- },
- {
   "pattern": "/chihiro/Netboot/",
   "core": "xemu_libretro",
   "src": "https://archive.org/download/ChihiroNetboot/"
- },
- {
-  "pattern": "/triforce/Triforce/",
-  "core": "dolphin_libretro",
-  "src": "https://archive.org/download/triforce_namco-sega-nintendo/"
  },
  {
   "pattern": "/lindbergh/Clean Data/",
@@ -2801,25 +2781,194 @@
   "src": "https://archive.org/download/sony-playstation-vita-usa-full-set-nonpdrm-format/"
  },
  {
-  "pattern": "/xbox/XISO 0-M/",
-  "core": "xemu_libretro",
-  "src": "https://archive.org/download/metal-gear-solid-2-substance-usa/"
+  "pattern": "/ibm5150/MAME/",
+  "core": "mame_libretro ibm5150 -hard1 ibm5150_hdd:freedos13_8086",
+  "src": "https://archive.org/download/mame-sl/mame-sl/ibm5150.zip/ibm5150/"
  },
  {
-  "pattern": "/xbox/XISO M-Z/",
-  "core": "xemu_libretro",
-  "src": "https://archive.org/download/microsoft-xbox-xemu.xisoready-software-collection-part-2/"
+  "pattern": "/ibmpcjr/Cart MAME/",
+  "core": "mame_libretro ibmpcjr",
+  "src": "https://archive.org/download/mame-sl/mame-sl/ibmpcjr_cart.zip/ibmpcjr_cart/"
  },
  {
-  "pattern": "/xbox/XISO Extra/",
-  "core": "xemu_libretro",
-  "src": "https://archive.org/download/microsoft-xbox-xemu-ready-software-collection-part-3/"
+  "pattern": "/ibmpcjr/Flop MAME/",
+  "core": "mame_libretro ibmpcjr -hard1 ibm5150_hdd:freedos13_8086",
+  "src": "https://archive.org/download/mame-sl/mame-sl/ibmpcjr_flop.zip/ibmpcjr_flop/"
  },
  {
-  "pattern": "/xbox360/Redump/",
-  "core": "xenia_edge_libretro",
-  "ext": "iso",
-  "src": "https://archive.org/download/redump-microsoft-xbox-360-games-myrient-unique-files/"
+  "pattern": "/ibm5170/MAME/",
+  "core": "mame_libretro ibm5170 -hard1 ibm5170_hdd:freedos13",
+  "src": "https://archive.org/download/mame-sl/mame-sl/ibm5170.zip/ibm5170/"
+ },
+ {
+  "pattern": "/ibm5170/CDROM CHD/",
+  "core": "mame_libretro ibm5170 -cdrom",
+  "src": "https://archive.org/download/mame-software-list-chds-2/ibm5170_cdrom/"
+ },
+ {
+  "pattern": "/ibm5170/CDROM MAME/",
+  "core": "mame_libretro ibm5170 -cdrom",
+  "src": "https://archive.org/download/mame-sl/mame-sl/ibm5170_cdrom.zip/ibm5170_cdrom/"
+ },
+ {
+  "pattern": "/ibm5170/HDD CHD/",
+  "core": "mame_libretro ibm5170 -hard",
+  "src": "https://archive.org/download/mame-software-list-chds-2/ibm5170_hdd/"
+ },
+ {
+  "pattern": "/msx1/NoIntro/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/ni-roms/roms/Microsoft%20-%20MSX.zip/"
+ },
+ {
+  "pattern": "/msx1/Games CAS/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/tosec-main/MSX/MSX/Games/%5BCAS%5D/MSX%20MSX%20-%20Games%20-%20%5BCAS%5D%20%28TOSEC-v2025-01-15%29.zip/"
+ },
+ {
+  "pattern": "/msx1/Games DSK/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/tosec-main/MSX/MSX/Games/%5BDSK%5D/MSX%20MSX%20-%20Games%20-%20%5BDSK%5D%20%28TOSEC-v2025-01-15%29.zip/"
+ },
+ {
+  "pattern": "/msx1/Games ROM/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/tosec-main/MSX/MSX/Games/%5BROM%5D/MSX%20MSX%20-%20Games%20-%20%5BROM%5D%20%28TOSEC-v2025-01-15%29.zip/"
+ },
+ {
+  "pattern": "/msx1/Games WV/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/tosec-main/MSX/MSX/Games/%5BWV%5D/MSX%20MSX%20-%20Games%20-%20%5BWV%5D%20%28TOSEC-v2022-12-21%29.zip/"
+ },
+ {
+  "pattern": "/msx1/Demo [CAS]/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/tosec-main/MSX/MSX/Demos/%5BCAS%5D/MSX%20MSX%20-%20Demos%20-%20%5BCAS%5D%20%28TOSEC-v2012-04-15%29.zip/"
+ },
+ {
+  "pattern": "/msx1/Demo [DSK]/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/tosec-main/MSX/MSX/Demos/%5BDSK%5D/MSX%20MSX%20-%20Demos%20-%20%5BDSK%5D%20%28TOSEC-v2025-01-15%29.zip/"
+ },
+ {
+  "pattern": "/msx1/Demo [ROM]/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/tosec-main/MSX/MSX/Demos/%5BROM%5D/MSX%20MSX%20-%20Demos%20-%20%5BROM%5D%20%28TOSEC-v2025-01-15%29.zip/"
+ },
+ {
+  "pattern": "/msx1/Edu [CAS]/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/tosec-main/MSX/MSX/Educational/%5BCAS%5D/MSX%20MSX%20-%20Educational%20-%20%5BCAS%5D%20%28TOSEC-v2012-04-15%29.zip/"
+ },
+ {
+  "pattern": "/msx1/Edu [DSK]/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/tosec-main/MSX/MSX/Educational/%5BDSK%5D/MSX%20MSX%20-%20Educational%20-%20%5BDSK%5D%20%28TOSEC-v2012-04-15%29.zip/"
+ },
+ {
+  "pattern": "/msx1/Edu [ROM]/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/tosec-main/MSX/MSX/Educational/%5BROM%5D/MSX%20MSX%20-%20Educational%20-%20%5BROM%5D%20%28TOSEC-v2012-04-15%29.zip/"
+ },
+ {
+  "pattern": "/msx1/Cart MAME/",
+  "core": "mame_libretro expert11 -cart1",
+  "src": "https://archive.org/download/mame-sl/mame-sl/msx1_cart.zip/msx1_cart/"
+ },
+ {
+  "pattern": "/msx1/Cass MAME/",
+  "core": "mame_libretro expert11 -autoboot_command 'RUN\"CAS:\"\\n' -autoboot_delay 3 -cass",
+  "src": "https://archive.org/download/mame-sl/mame-sl/msx1_cass.zip/msx1_cass/"
+ },
+ {
+  "pattern": "/msx1/Flop MAME/",
+  "core": "mame_libretro svi738 -flop",
+  "src": "https://archive.org/download/mame-sl/mame-sl/msx1_flop.zip/msx1_flop/"
+ },
+ {
+  "pattern": "/msx1/Flop 5.25 MAME/",
+  "core": "mame_libretro svi738 -flop",
+  "src": "https://archive.org/download/mame-sl/mame-sl/msx1_flop_525.zip/msx1_flop_525/"
+ },
+ {
+  "pattern": "/msx2/NoIntro/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/ni-roms/roms/Microsoft%20-%20MSX2.zip/"
+ },
+ {
+  "pattern": "/msx2/Games/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/tosec-main/MSX/MSX2/Games/%5BCAS%5D/MSX%20MSX2%20-%20Games%20-%20%5BCAS%5D%20%28TOSEC-v2012-04-15%29.zip/"
+ },
+ {
+  "pattern": "/msx2/Demo [COM]/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/tosec-main/MSX/MSX2/Demos/%5BCOM%5D/MSX%20MSX2%20-%20Demos%20-%20%5BCOM%5D%20%28TOSEC-v2025-01-15%29.zip/"
+ },
+ {
+  "pattern": "/msx2/Demo [DSK]/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/tosec-main/MSX/MSX2/Demos/%5BDSK%5D/MSX%20MSX2%20-%20Demos%20-%20%5BDSK%5D%20%28TOSEC-v2024-01-15%29.zip/"
+ },
+ {
+  "pattern": "/msx2/Edu/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/tosec-main/MSX/MSX2/Educational/MSX%20MSX2%20-%20Educational%20%28TOSEC-v2012-04-15%29.zip/"
+ },
+ {
+  "pattern": "/msx2/Cart MAME/",
+  "core": "mame_libretro hbf1xd -cart1",
+  "src": "https://archive.org/download/mame-sl/mame-sl/msx2_cart.zip/msx2_cart/"
+ },
+ {
+  "pattern": "/msx2/Flop MAME/",
+  "core": "mame_libretro hbf1xd -flop",
+  "src": "https://archive.org/download/mame-sl/mame-sl/msx2_flop.zip/msx2_flop/"
+ },
+ {
+  "pattern": "/msx2/Cass MAME/",
+  "core": "mame_libretro hbf1xd -autoboot_command 'RUN\"CAS:\"\\n' -autoboot_delay 3 -cass",
+  "src": "https://archive.org/download/mame-sl/mame-sl/msx2_cass.zip/msx2_cass/"
+ },
+ {
+  "pattern": "/msx2+/TOSEC/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/tosec-main/MSX/MSX2%2B/Games/MSX%20MSX2%2B%20-%20Games%20%28TOSEC-v2012-04-15%29.zip/"
+ },
+ {
+  "pattern": "/msx2+/Demo/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/tosec-main/MSX/MSX2%2B/Demos/MSX%20MSX2%2B%20-%20Demos%20%28TOSEC-v2012-04-15%29.zip/"
+ },
+ {
+  "pattern": "/msx2+/Cart MAME/",
+  "core": "mame_libretro fsa1wsx -cart1",
+  "src": "https://archive.org/download/mame-sl/mame-sl/msx2p_cart.zip/msx2p_cart/"
+ },
+ {
+  "pattern": "/msx2+/Flop MAME/",
+  "core": "mame_libretro fsa1wsx -flop",
+  "src": "https://archive.org/download/mame-sl/mame-sl/msx2p_flop.zip/msx2p_flop/"
+ },
+ {
+  "pattern": "/msxturbor/MSX TurboR/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/tosec-main/MSX/TurboR/Games/MSX%20TurboR%20-%20Games%20%28TOSEC-v2012-04-15%29.zip/"
+ },
+ {
+  "pattern": "/msxturbor/Demo/",
+  "core": "bluemsx_libretro",
+  "src": "https://archive.org/download/tosec-main/MSX/TurboR/Demos/MSX%20TurboR%20-%20Demos%20%28TOSEC-v2012-04-15%29.zip/"
+ },
+ {
+  "pattern": "/msxturbor/Flop MAME/",
+  "core": "mame_libretro fsa1gt -flop1",
+  "src": "https://archive.org/download/mame-sl/mame-sl/msxr_flop.zip/msxr_flop/"
+ },
+ {
+  "pattern": "/msxturbor/Cart MAME/",
+  "core": "mame_libretro fsa1gt -cart1",
+  "src": "https://archive.org/download/mame-sl/mame-sl/msxr_cart.zip/msxr_cart/"
  },
  {
   "pattern": "/dos/eXoDOS/",
@@ -2987,194 +3136,25 @@
   "src": "https://archive.org/download/Total_DOS_Collection_Release_16_March_2019/Games/Files/2015/"
  },
  {
-  "pattern": "/ibm5150/MAME/",
-  "core": "mame_libretro ibm5150 -hard1 ibm5150_hdd:freedos13_8086",
-  "src": "https://archive.org/download/mame-sl/mame-sl/ibm5150.zip/ibm5150/"
+  "pattern": "/xbox/XISO 0-M/",
+  "core": "xemu_libretro",
+  "src": "https://archive.org/download/metal-gear-solid-2-substance-usa/"
  },
  {
-  "pattern": "/ibm5170/MAME/",
-  "core": "mame_libretro ibm5170 -hard1 ibm5170_hdd:freedos13",
-  "src": "https://archive.org/download/mame-sl/mame-sl/ibm5170.zip/ibm5170/"
+  "pattern": "/xbox/XISO M-Z/",
+  "core": "xemu_libretro",
+  "src": "https://archive.org/download/microsoft-xbox-xemu.xisoready-software-collection-part-2/"
  },
  {
-  "pattern": "/ibm5170/CDROM CHD/",
-  "core": "mame_libretro ibm5170 -cdrom",
-  "src": "https://archive.org/download/mame-software-list-chds-2/ibm5170_cdrom/"
+  "pattern": "/xbox/XISO Extra/",
+  "core": "xemu_libretro",
+  "src": "https://archive.org/download/microsoft-xbox-xemu-ready-software-collection-part-3/"
  },
  {
-  "pattern": "/ibm5170/CDROM MAME/",
-  "core": "mame_libretro ibm5170 -cdrom",
-  "src": "https://archive.org/download/mame-sl/mame-sl/ibm5170_cdrom.zip/ibm5170_cdrom/"
- },
- {
-  "pattern": "/ibm5170/HDD CHD/",
-  "core": "mame_libretro ibm5170 -hard",
-  "src": "https://archive.org/download/mame-software-list-chds-2/ibm5170_hdd/"
- },
- {
-  "pattern": "/ibmpcjr/Cart MAME/",
-  "core": "mame_libretro ibmpcjr",
-  "src": "https://archive.org/download/mame-sl/mame-sl/ibmpcjr_cart.zip/ibmpcjr_cart/"
- },
- {
-  "pattern": "/ibmpcjr/Flop MAME/",
-  "core": "mame_libretro ibmpcjr -hard1 ibm5150_hdd:freedos13_8086",
-  "src": "https://archive.org/download/mame-sl/mame-sl/ibmpcjr_flop.zip/ibmpcjr_flop/"
- },
- {
-  "pattern": "/msx1/NoIntro/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/ni-roms/roms/Microsoft%20-%20MSX.zip/"
- },
- {
-  "pattern": "/msx1/Games CAS/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/tosec-main/MSX/MSX/Games/%5BCAS%5D/MSX%20MSX%20-%20Games%20-%20%5BCAS%5D%20%28TOSEC-v2025-01-15%29.zip/"
- },
- {
-  "pattern": "/msx1/Games DSK/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/tosec-main/MSX/MSX/Games/%5BDSK%5D/MSX%20MSX%20-%20Games%20-%20%5BDSK%5D%20%28TOSEC-v2025-01-15%29.zip/"
- },
- {
-  "pattern": "/msx1/Games ROM/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/tosec-main/MSX/MSX/Games/%5BROM%5D/MSX%20MSX%20-%20Games%20-%20%5BROM%5D%20%28TOSEC-v2025-01-15%29.zip/"
- },
- {
-  "pattern": "/msx1/Games WV/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/tosec-main/MSX/MSX/Games/%5BWV%5D/MSX%20MSX%20-%20Games%20-%20%5BWV%5D%20%28TOSEC-v2022-12-21%29.zip/"
- },
- {
-  "pattern": "/msx1/Demo [CAS]/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/tosec-main/MSX/MSX/Demos/%5BCAS%5D/MSX%20MSX%20-%20Demos%20-%20%5BCAS%5D%20%28TOSEC-v2012-04-15%29.zip/"
- },
- {
-  "pattern": "/msx1/Demo [DSK]/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/tosec-main/MSX/MSX/Demos/%5BDSK%5D/MSX%20MSX%20-%20Demos%20-%20%5BDSK%5D%20%28TOSEC-v2025-01-15%29.zip/"
- },
- {
-  "pattern": "/msx1/Demo [ROM]/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/tosec-main/MSX/MSX/Demos/%5BROM%5D/MSX%20MSX%20-%20Demos%20-%20%5BROM%5D%20%28TOSEC-v2025-01-15%29.zip/"
- },
- {
-  "pattern": "/msx1/Edu [CAS]/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/tosec-main/MSX/MSX/Educational/%5BCAS%5D/MSX%20MSX%20-%20Educational%20-%20%5BCAS%5D%20%28TOSEC-v2012-04-15%29.zip/"
- },
- {
-  "pattern": "/msx1/Edu [DSK]/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/tosec-main/MSX/MSX/Educational/%5BDSK%5D/MSX%20MSX%20-%20Educational%20-%20%5BDSK%5D%20%28TOSEC-v2012-04-15%29.zip/"
- },
- {
-  "pattern": "/msx1/Edu [ROM]/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/tosec-main/MSX/MSX/Educational/%5BROM%5D/MSX%20MSX%20-%20Educational%20-%20%5BROM%5D%20%28TOSEC-v2012-04-15%29.zip/"
- },
- {
-  "pattern": "/msx1/Cart MAME/",
-  "core": "mame_libretro expert11 -cart1",
-  "src": "https://archive.org/download/mame-sl/mame-sl/msx1_cart.zip/msx1_cart/"
- },
- {
-  "pattern": "/msx1/Cass MAME/",
-  "core": "mame_libretro expert11 -autoboot_command 'RUN\"CAS:\"\\n' -autoboot_delay 3 -cass",
-  "src": "https://archive.org/download/mame-sl/mame-sl/msx1_cass.zip/msx1_cass/"
- },
- {
-  "pattern": "/msx1/Flop MAME/",
-  "core": "mame_libretro svi738 -flop",
-  "src": "https://archive.org/download/mame-sl/mame-sl/msx1_flop.zip/msx1_flop/"
- },
- {
-  "pattern": "/msx1/Flop 5.25 MAME/",
-  "core": "mame_libretro svi738 -flop",
-  "src": "https://archive.org/download/mame-sl/mame-sl/msx1_flop_525.zip/msx1_flop_525/"
- },
- {
-  "pattern": "/msx2/NoIntro/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/ni-roms/roms/Microsoft%20-%20MSX2.zip/"
- },
- {
-  "pattern": "/msx2/Games/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/tosec-main/MSX/MSX2/Games/%5BCAS%5D/MSX%20MSX2%20-%20Games%20-%20%5BCAS%5D%20%28TOSEC-v2012-04-15%29.zip/"
- },
- {
-  "pattern": "/msx2/Demo [COM]/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/tosec-main/MSX/MSX2/Demos/%5BCOM%5D/MSX%20MSX2%20-%20Demos%20-%20%5BCOM%5D%20%28TOSEC-v2025-01-15%29.zip/"
- },
- {
-  "pattern": "/msx2/Demo [DSK]/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/tosec-main/MSX/MSX2/Demos/%5BDSK%5D/MSX%20MSX2%20-%20Demos%20-%20%5BDSK%5D%20%28TOSEC-v2024-01-15%29.zip/"
- },
- {
-  "pattern": "/msx2/Edu/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/tosec-main/MSX/MSX2/Educational/MSX%20MSX2%20-%20Educational%20%28TOSEC-v2012-04-15%29.zip/"
- },
- {
-  "pattern": "/msx2/Cart MAME/",
-  "core": "mame_libretro hbf1xd -cart1",
-  "src": "https://archive.org/download/mame-sl/mame-sl/msx2_cart.zip/msx2_cart/"
- },
- {
-  "pattern": "/msx2/Flop MAME/",
-  "core": "mame_libretro hbf1xd -flop",
-  "src": "https://archive.org/download/mame-sl/mame-sl/msx2_flop.zip/msx2_flop/"
- },
- {
-  "pattern": "/msx2/Cass MAME/",
-  "core": "mame_libretro hbf1xd -autoboot_command 'RUN\"CAS:\"\\n' -autoboot_delay 3 -cass",
-  "src": "https://archive.org/download/mame-sl/mame-sl/msx2_cass.zip/msx2_cass/"
- },
- {
-  "pattern": "/msx2+/TOSEC/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/tosec-main/MSX/MSX2%2B/Games/MSX%20MSX2%2B%20-%20Games%20%28TOSEC-v2012-04-15%29.zip/"
- },
- {
-  "pattern": "/msx2+/Demo/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/tosec-main/MSX/MSX2%2B/Demos/MSX%20MSX2%2B%20-%20Demos%20%28TOSEC-v2012-04-15%29.zip/"
- },
- {
-  "pattern": "/msx2+/Cart MAME/",
-  "core": "mame_libretro fsa1wsx -cart1",
-  "src": "https://archive.org/download/mame-sl/mame-sl/msx2p_cart.zip/msx2p_cart/"
- },
- {
-  "pattern": "/msx2+/Flop MAME/",
-  "core": "mame_libretro fsa1wsx -flop",
-  "src": "https://archive.org/download/mame-sl/mame-sl/msx2p_flop.zip/msx2p_flop/"
- },
- {
-  "pattern": "/msxturbor/MSX TurboR/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/tosec-main/MSX/TurboR/Games/MSX%20TurboR%20-%20Games%20%28TOSEC-v2012-04-15%29.zip/"
- },
- {
-  "pattern": "/msxturbor/Demo/",
-  "core": "bluemsx_libretro",
-  "src": "https://archive.org/download/tosec-main/MSX/TurboR/Demos/MSX%20TurboR%20-%20Demos%20%28TOSEC-v2012-04-15%29.zip/"
- },
- {
-  "pattern": "/msxturbor/Flop MAME/",
-  "core": "mame_libretro fsa1gt -flop1",
-  "src": "https://archive.org/download/mame-sl/mame-sl/msxr_flop.zip/msxr_flop/"
- },
- {
-  "pattern": "/msxturbor/Cart MAME/",
-  "core": "mame_libretro fsa1gt -cart1",
-  "src": "https://archive.org/download/mame-sl/mame-sl/msxr_cart.zip/msxr_cart/"
+  "pattern": "/xbox360/Redump/",
+  "core": "xenia_edge_libretro",
+  "ext": "iso",
+  "src": "https://archive.org/download/redump-microsoft-xbox-360-games-myrient-unique-files/"
  },
  {
   "pattern": "/studio2/MAME/",
@@ -3462,6 +3442,21 @@
   "src": "https://archive.org/download/mame-sl/mame-sl/arcadia.zip/arcadia/"
  },
  {
+  "pattern": "/vc4000/NoIntro/",
+  "core": "mame_libretro vc4000 -cart",
+  "src": "https://archive.org/download/ni-roms/roms/Interton%20-%20VC%204000.zip/"
+ },
+ {
+  "pattern": "/vc4000/MAME/",
+  "core": "mame_libretro vc4000 -cart",
+  "src": "https://archive.org/download/mame-sl/mame-sl/vc4000.zip/vc4000/"
+ },
+ {
+  "pattern": "/unichamp/MAME/",
+  "core": "mame_libretro unichamp -cart",
+  "src": "https://archive.org/download/mame-sl/mame-sl/unichamp.zip/unichamp/"
+ },
+ {
   "pattern": "/supracan/NoIntro/",
   "core": "mame_libretro supracan -cart",
   "src": "https://archive.org/download/ni-roms/roms/Funtech%20-%20Super%20Acan.zip/"
@@ -3477,24 +3472,34 @@
   "src": "https://archive.org/download/mame-sl/mame-sl/supracan.zip/supracan/"
  },
  {
-  "pattern": "/vc4000/NoIntro/",
-  "core": "mame_libretro vc4000 -cart",
-  "src": "https://archive.org/download/ni-roms/roms/Interton%20-%20VC%204000.zip/"
- },
- {
-  "pattern": "/vc4000/MAME/",
-  "core": "mame_libretro vc4000 -cart",
-  "src": "https://archive.org/download/mame-sl/mame-sl/vc4000.zip/vc4000/"
- },
- {
   "pattern": "/vii/MAME/",
   "core": "mame_libretro vii -cart",
   "src": "https://archive.org/download/mame-sl/mame-sl/vii.zip/vii/"
  },
  {
-  "pattern": "/unichamp/MAME/",
-  "core": "mame_libretro unichamp -cart",
-  "src": "https://archive.org/download/mame-sl/mame-sl/unichamp.zip/unichamp/"
+  "pattern": "/ekara/MAME/",
+  "core": "mame_libretro ekara -cart",
+  "src": "https://archive.org/download/mame-sl/mame-sl/ekara_cart.zip/ekara_cart/"
+ },
+ {
+  "pattern": "/multivision/Othello Multivision/",
+  "core": "gearsystem_libretro",
+  "src": "https://archive.org/download/tosec-main/Tsukuda%20Original/Othello%20Multivision/Games/Tsukuda%20Original%20Othello%20Multivision%20-%20Games%20%28TOSEC-v2021-02-12%29.zip/"
+ },
+ {
+  "pattern": "/atomiswave/Atomiswave/",
+  "core": "flycast_libretro",
+  "src": "https://archive.org/download/atomiswave_202607/"
+ },
+ {
+  "pattern": "/gaelco/MAME 0.264/",
+  "core": "odin_libretro",
+  "src": "https://archive.org/download/mame-0.264-roms-non-merged/MAME%200.264%20ROMs%20%28non-merged%29/"
+ },
+ {
+  "pattern": "/triforce/Triforce/",
+  "core": "dolphin_libretro",
+  "src": "https://archive.org/download/triforce_namco-sega-nintendo/"
  },
  {
   "pattern": "/pdp1/MAME/",
@@ -5568,11 +5573,6 @@
   "pattern": "/pockstat/TOSEC/",
   "core": "mame_libretro pockstat -cart",
   "src": "https://archive.org/download/tosec-main/Sony/PocketStation/Various/Sony%20PocketStation%20-%20Various%20%28TOSEC-v2014-05-29%29.zip/"
- },
- {
-  "pattern": "/ekara/MAME/",
-  "core": "mame_libretro ekara -cart",
-  "src": "https://archive.org/download/mame-sl/mame-sl/ekara_cart.zip/ekara_cart/"
  },
  {
   "pattern": "/j2me/NoIntro/",
