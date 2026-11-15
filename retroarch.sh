@@ -21,8 +21,8 @@ case "$adresar/" in
 *"/arduboy/TOSEC/"*) core="arduous_libretro"; src="https://archive.org/download/tosec-main/Arduboy/Arduboy/Games/%5BARDUBOY%5D/Arduboy%20Arduboy%20-%20Games%20-%20%5BARDUBOY%5D%20%28TOSEC-v2024-01-15%29.zip/";;
 *"/arduboy/Demo/"*) core="arduous_libretro"; src="https://archive.org/download/tosec-main/Arduboy/Arduboy/Demos/Arduboy%20Arduboy%20-%20Demos%20%28TOSEC-v2024-01-15%29.zip/";;
 *"/uzebox/MAME/"*) core="mame_libretro uzebox -cart"; src="https://archive.org/download/mame-sl/mame-sl/uzebox.zip/uzebox/";;
-*"/commanderx16/Games/"*) core="x16emu"; ext="img"; src="https://archive.org/download/tosec-main/8-Bit%20Productions/Commander%20X16/Games/%5BIMG%5D/8-Bit%20Productions%20Commander%20X16%20-%20Games%20-%20%5BIMG%5D%20%28TOSEC-v2024-01-15%29.zip/";;
-*"/commanderx16/Demo/"*) core="x16emu"; ext="img"; src="https://archive.org/download/tosec-main/8-Bit%20Productions/Commander%20X16/Demos/8-Bit%20Productions%20Commander%20X16%20-%20Demos%20%28TOSEC-v2023-08-29%29.zip/";;
+*"/commanderx16/Games/"*) core="x16emu_libretro"; ext="img"; src="https://archive.org/download/tosec-main/8-Bit%20Productions/Commander%20X16/Games/%5BIMG%5D/8-Bit%20Productions%20Commander%20X16%20-%20Games%20-%20%5BIMG%5D%20%28TOSEC-v2024-01-15%29.zip/";;
+*"/commanderx16/Demo/"*) core="x16emu_libretro"; ext="img"; src="https://archive.org/download/tosec-main/8-Bit%20Productions/Commander%20X16/Demos/8-Bit%20Productions%20Commander%20X16%20-%20Demos%20%28TOSEC-v2023-08-29%29.zip/";;
 *"/vircon32/Vircon32/"*) core="vircon32_libretro"; src="https://archive.org/download/all_vircon32_roms_and_media/all_vircon32_roms_and_media/";;
 *"/chip8/MAME/"*) core="mame_libretro d6800 -quik"; src="https://archive.org/download/mame-sl/mame-sl/chip8_quik.zip/chip8_quik/";;
 *"/atari2600/ROMS/"*) core="stella_libretro"; src="https://archive.org/download/atari-2600-vcs-roms/ROMS/";;
@@ -428,6 +428,7 @@ case "$adresar/" in
 *"/sg1000/TOSEC/"*) core="gearsystem_libretro"; src="https://archive.org/download/tosec-main/Sega/Game%201000/Games/Sega%20Game%201000%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/";;
 *"/sg1000/Demo [BIN]/"*) core="gearsystem_libretro"; src="https://archive.org/download/tosec-main/Sega/Game%201000/Demos/%5BBIN%5D/Sega%20Game%201000%20-%20Demos%20-%20%5BBIN%5D%20%28TOSEC-v2025-01-15%29.zip/";;
 *"/sg1000/MAME/"*) core="mame_libretro sg1000 -cart"; src="https://archive.org/download/mame-sl/mame-sl/sg1000.zip/sg1000/";;
+*"/multivision/Othello Multivision/"*) core="gearsystem_libretro"; src="https://archive.org/download/tosec-main/Tsukuda%20Original/Othello%20Multivision/Games/Tsukuda%20Original%20Othello%20Multivision%20-%20Games%20%28TOSEC-v2021-02-12%29.zip/";;
 *"/sc3000/App/"*) core="mame_libretro sc3000 -cart"; src="https://archive.org/download/tosec-main/Sega/Computer%203000/Applications/Sega%20Computer%203000%20-%20Applications%20%28TOSEC-v2011-11-01%29.zip/";;
 *"/sc3000/Edu/"*) core="mame_libretro sc3000 -cart"; src="https://archive.org/download/tosec-main/Sega/Computer%203000/Educational/Sega%20Computer%203000%20-%20Educational%20%28TOSEC-v2011-11-01%29.zip/";;
 *"/sc3000/WAV/"*) core="mame_libretro sc3000 -cart sc3000_cart:basic3 -autoboot_command 'LOAD\n' -autoboot_delay 5 -cass"; src="https://archive.org/download/tosec-main/Sega/Computer%203000/Games/%5BROM%5D/Sega%20Computer%203000%20-%20Games%20-%20%5BROM%5D%20%28TOSEC-v2025-01-15%29.zip/";;
@@ -692,25 +693,16 @@ case "$adresar/" in
 *"/crvision/NoIntro/"*) core="mame_libretro crvision -cart"; src="https://archive.org/download/ni-roms/roms/VTech%20-%20CreatiVision.zip/";;
 *"/crvision/TOSEC/"*) core="mame_libretro crvision -cart"; src="https://archive.org/download/tosec-main/VTech/Laser%202001%20%26%20CreatiVision/Games/VTech%20Laser%202001%20%26%20CreatiVision%20-%20Games%20%28TOSEC-v2025-01-15%29.zip/";;
 *"/crvision/MAME/"*) core="mame_libretro crvision -cart"; src="https://archive.org/download/mame-sl/mame-sl/crvision.zip/crvision/";;
-*"/vsmile/NoIntro/"*) core="mame_libretro vsmile -cart"; src="https://archive.org/download/ni-roms/roms/VTech%20-%20V.Smile.zip/";;
-*"/vsmile/TOSEC/"*) core="mame_libretro vsmile -cart"; src="https://archive.org/download/tosec-main/VTech/V.Smile%20Motion/Games/%5BBIN%5D/VTech%20V.Smile%20Motion%20-%20Games%20-%20%5BBIN%5D%20%28TOSEC-v2023-05-16%29.zip/";;
-*"/vsmile/MAME/"*) core="mame_libretro vsmile -cart"; src="https://archive.org/download/mame-sl/mame-sl/vsmile_cart.zip/vsmile_cart/";;
-*"/vsmile/Cart MAME/"*) core="mame_libretro vsmilem -cart"; src="https://archive.org/download/mame-sl/mame-sl/vsmilem_cart.zip/vsmilem_cart/";;
-*"/vsmileb/MAME/"*) core="mame_libretro vsmileb -cart"; src="https://archive.org/download/mame-sl/mame-sl/vsmileb_cart.zip/vsmileb_cart/";;
 *"/arcadia/NoIntro/"*) core="mame_libretro arcadia -cart"; src="https://archive.org/download/ni-roms/roms/Emerson%20-%20Arcadia%202001.zip/";;
 *"/arcadia/TOSEC/"*) core="mame_libretro arcadia -cart"; src="https://archive.org/download/tosec-main/Emerson/Arcadia%202001/Games/Emerson%20Arcadia%202001%20-%20Games%20%28TOSEC-v2011-02-22%29.zip/";;
 *"/arcadia/MAME/"*) core="mame_libretro arcadia -cart"; src="https://archive.org/download/mame-sl/mame-sl/arcadia.zip/arcadia/";;
-*"/hyperscan/MAME/"*) core="mame_libretro hyprscan -cdrom"; src="https://archive.org/download/mame-software-list-chds-2/hyperscan/";;
 *"/supracan/NoIntro/"*) core="mame_libretro supracan -cart"; src="https://archive.org/download/ni-roms/roms/Funtech%20-%20Super%20Acan.zip/";;
 *"/supracan/TOSEC/"*) core="mame_libretro supracan -cart"; src="https://archive.org/download/tosec-main/Funtech/Super%20A%27can/Games/Funtech%20Super%20A%27can%20-%20Games%20%28TOSEC-v2021-07-25%29.zip/";;
 *"/supracan/MAME/"*) core="mame_libretro supracan -cart"; src="https://archive.org/download/mame-sl/mame-sl/supracan.zip/supracan/";;
 *"/vc4000/NoIntro/"*) core="mame_libretro vc4000 -cart"; src="https://archive.org/download/ni-roms/roms/Interton%20-%20VC%204000.zip/";;
 *"/vc4000/MAME/"*) core="mame_libretro vc4000 -cart"; src="https://archive.org/download/mame-sl/mame-sl/vc4000.zip/vc4000/";;
-*"/multivision/Othello Multivision/"*) core="gearsystem_libretro"; src="https://archive.org/download/tosec-main/Tsukuda%20Original/Othello%20Multivision/Games/Tsukuda%20Original%20Othello%20Multivision%20-%20Games%20%28TOSEC-v2021-02-12%29.zip/";;
 *"/vii/MAME/"*) core="mame_libretro vii -cart"; src="https://archive.org/download/mame-sl/mame-sl/vii.zip/vii/";;
 *"/unichamp/MAME/"*) core="mame_libretro unichamp -cart"; src="https://archive.org/download/mame-sl/mame-sl/unichamp.zip/unichamp/";;
-*"/entexsag/MAME/"*) core="mame_libretro sag -cart"; src="https://archive.org/download/mame-sl/mame-sl/entex_sag.zip/entex_sag/";;
-*"/videoart/MAME/"*) core="mame_libretro videoart -cart"; src="https://archive.org/download/mame-sl/mame-sl/videoart.zip/videoart/";;
 *"/pdp1/MAME/"*) core="mame_libretro pdp1 -ptap1"; src="https://archive.org/download/mame-sl/mame-sl/pdp1_ptp.zip/pdp1_ptp/";;
 *"/sol20/MAME/"*) core="mame_libretro sol20 -cass1"; src="https://archive.org/download/mame-sl/mame-sl/sol20_cass.zip/sol20_cass/";;
 *"/trs80/Model III/"*) core="mame_libretro trs80m3 -quik"; src="https://archive.org/download/tosec-main/Tandy%20Radio%20Shack/TRS-80%20Model%20III/Games/%5BBAS%5D/Tandy%20Radio%20Shack%20TRS-80%20Model%20III%20-%20Games%20-%20%5BBAS%5D%20%28TOSEC-v2024-07-03%29.zip/";;
@@ -1050,6 +1042,13 @@ case "$adresar/" in
 *"/vis/Games/"*) core="mame_libretro vis -cdrm"; ext="cue"; src="https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Games/";;
 *"/vis/Multimedia/"*) core="mame_libretro vis -cdrm"; ext="cue"; src="https://archive.org/download/tosec-iso-memorex/Video%20Information%20System/Multimedia/";;
 *"/playdia/Redump/"*) core="playdiaemu_libretro"; src="https://archive.org/download/bandai_playdia_quick_interactive_system/";;
+*"/vsmile/NoIntro/"*) core="mame_libretro vsmile -cart"; src="https://archive.org/download/ni-roms/roms/VTech%20-%20V.Smile.zip/";;
+*"/vsmile/TOSEC/"*) core="mame_libretro vsmile -cart"; src="https://archive.org/download/tosec-main/VTech/V.Smile%20Motion/Games/%5BBIN%5D/VTech%20V.Smile%20Motion%20-%20Games%20-%20%5BBIN%5D%20%28TOSEC-v2023-05-16%29.zip/";;
+*"/vsmile/MAME/"*) core="mame_libretro vsmile -cart"; src="https://archive.org/download/mame-sl/mame-sl/vsmile_cart.zip/vsmile_cart/";;
+*"/vsmile/Cart MAME/"*) core="mame_libretro vsmilem -cart"; src="https://archive.org/download/mame-sl/mame-sl/vsmilem_cart.zip/vsmilem_cart/";;
+*"/vsmileb/MAME/"*) core="mame_libretro vsmileb -cart"; src="https://archive.org/download/mame-sl/mame-sl/vsmileb_cart.zip/vsmileb_cart/";;
+*"/hyperscan/MAME/"*) core="mame_libretro hyprscan -cdrom"; src="https://archive.org/download/mame-software-list-chds-2/hyperscan/";;
+*"/videoart/MAME/"*) core="mame_libretro videoart -cart"; src="https://archive.org/download/mame-sl/mame-sl/videoart.zip/videoart/";;
 *"/mame/Merged/"*) core="mame_libretro"; src="https://archive.org/download/mame-roms-merged_/MAME%20ROMs%20%28merged%29/";;
 *"/mame/Non-Merged/"*) core="mame_libretro"; src="https://archive.org/download/mame-0.264-roms-non-merged/MAME%200.264%20ROMs%20%28non-merged%29/";;
 *"/mame/Split/"*) core="mame_libretro"; src="https://archive.org/download/mame-0.260-roms-split_202310/MAME%200.260%20ROMs%20%28split%29/MAME%200.260%20ROMs%20%28split%29/";;
@@ -1105,6 +1104,7 @@ case "$adresar/" in
 *"/advision/NoIntro/"*) core="mame_libretro advision -cart"; src="https://archive.org/download/ni-roms/roms/Entex%20-%20Adventure%20Vision.zip/";;
 *"/advision/TOSEC/"*) core="mame_libretro advision -cart"; src="https://archive.org/download/tosec-main/Entex/Adventure%20Vision/Games/Entex%20Adventure%20Vision%20-%20Games%20%28TOSEC-v2014-01-23%29.zip/";;
 *"/advision/MAME/"*) core="mame_libretro advision -cart"; src="https://archive.org/download/mame-sl/mame-sl/advision.zip/advision/";;
+*"/entexsag/MAME/"*) core="mame_libretro sag -cart"; src="https://archive.org/download/mame-sl/mame-sl/entex_sag.zip/entex_sag/";;
 *"/mononcolor/MAME/"*) core="mame_libretro mononcol -cart"; src="https://archive.org/download/mame-sl/mame-sl/monon_color.zip/monon_color/";;
 *"/gameking/MAME/"*) core="mame_libretro gameking -cart"; src="https://archive.org/download/mame-sl/mame-sl/gameking.zip/gameking/";;
 *"/gameking3/MAME/"*) core="mame_libretro gamekin3 -cart"; src="https://archive.org/download/mame-sl/mame-sl/gameking3.zip/gameking3/";;
@@ -1270,6 +1270,27 @@ gameflix_fetch_firmware() {
     fi
   done
   return $missing
+}
+
+# Commander X16 (x16emu_libretro): the KERNAL ROM, x16/rom.bin, is in no
+# BIOS pack and no buildbot system zip, but every x16emu release ships it
+# (BSD licensed). The release the core is built from: change it with the core.
+x16_rom_release="r49"
+gameflix_x16_rom() {
+  local dest="$sysdir/x16/rom.bin" tmpz
+  [[ -s "$dest" ]] && return 0
+  tmpz=$(mktemp)
+  echo "Fetching the Commander X16 KERNAL ROM ($x16_rom_release) ..." >&2
+  mkdir -p "$sysdir/x16"
+  if curl -sfL --max-time 300 -o "$tmpz" \
+       "https://github.com/X16Community/x16-emulator/releases/download/$x16_rom_release/x16emu_linux-x86_64-$x16_rom_release.zip" &&
+     unzip -ojq "$tmpz" rom.bin -d "$sysdir/x16" && [[ -s "$dest" ]]; then
+    rm -f "$tmpz"
+    return 0
+  fi
+  rm -f "$tmpz" "$dest"
+  echo "Could not fetch rom.bin - put it in $dest yourself" >&2
+  return 1
 }
 
 # Sega Chihiro (xemu_libretro): the BIOS, the media board flash and the
@@ -1937,6 +1958,7 @@ if [[ "$core" == *libretro* ]]; then
   fi
   # Whatever core we ended up with - the one asked for, the one fetched, or the
   # near-name fallback - it is the one whose firmware has to be there.
+  case "$corepath" in */x16emu_libretro.so) gameflix_x16_rom ;; esac
   gameflix_fetch_firmware "$(basename "$corepath" .so)"
   case "$1" in */chihiro/*) gameflix_chihiro_files ;; */ps3/*) LC_ALL=C gameflix_ps3_dkey "$1" ;; esac
 fi
