@@ -690,6 +690,7 @@ Voxatron/	vox
 /supracan/MAME/	mame_libretro supracan -cart		https://archive.org/download/mame-sl/mame-sl/supracan.zip/supracan/
 /vii/MAME/	mame_libretro vii -cart		https://archive.org/download/mame-sl/mame-sl/vii.zip/vii/
 /ekara/MAME/	mame_libretro ekara -cart		https://archive.org/download/mame-sl/mame-sl/ekara_cart.zip/ekara_cart/
+/hikara/MAME/	mame_libretro hikara -cart		https://archive.org/download/mame-sl/mame-sl/hikara.zip/hikara/
 /multivision/Othello Multivision/	gearsystem_libretro		https://archive.org/download/tosec-main/Tsukuda%20Original/Othello%20Multivision/Games/Tsukuda%20Original%20Othello%20Multivision%20-%20Games%20%28TOSEC-v2021-02-12%29.zip/
 /atomiswave/Atomiswave/	flycast_libretro		https://archive.org/download/atomiswave_202607/
 /gaelco/MAME 0.264/	odin_libretro		https://archive.org/download/mame-0.264-roms-non-merged/MAME%200.264%20ROMs%20%28non-merged%29/

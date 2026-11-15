@@ -3482,6 +3482,11 @@
   "src": "https://archive.org/download/mame-sl/mame-sl/ekara_cart.zip/ekara_cart/"
  },
  {
+  "pattern": "/hikara/MAME/",
+  "core": "mame_libretro hikara -cart",
+  "src": "https://archive.org/download/mame-sl/mame-sl/hikara.zip/hikara/"
+ },
+ {
   "pattern": "/multivision/Othello Multivision/",
   "core": "gearsystem_libretro",
   "src": "https://archive.org/download/tosec-main/Tsukuda%20Original/Othello%20Multivision/Games/Tsukuda%20Original%20Othello%20Multivision%20-%20Games%20%28TOSEC-v2021-02-12%29.zip/"

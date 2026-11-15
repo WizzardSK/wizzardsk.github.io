@@ -700,6 +700,7 @@ case "$adresar/" in
 *"/supracan/MAME/"*) core="mame_libretro supracan -cart"; src="https://archive.org/download/mame-sl/mame-sl/supracan.zip/supracan/";;
 *"/vii/MAME/"*) core="mame_libretro vii -cart"; src="https://archive.org/download/mame-sl/mame-sl/vii.zip/vii/";;
 *"/ekara/MAME/"*) core="mame_libretro ekara -cart"; src="https://archive.org/download/mame-sl/mame-sl/ekara_cart.zip/ekara_cart/";;
+*"/hikara/MAME/"*) core="mame_libretro hikara -cart"; src="https://archive.org/download/mame-sl/mame-sl/hikara.zip/hikara/";;
 *"/multivision/Othello Multivision/"*) core="gearsystem_libretro"; src="https://archive.org/download/tosec-main/Tsukuda%20Original/Othello%20Multivision/Games/Tsukuda%20Original%20Othello%20Multivision%20-%20Games%20%28TOSEC-v2021-02-12%29.zip/";;
 *"/atomiswave/Atomiswave/"*) core="flycast_libretro"; src="https://archive.org/download/atomiswave_202607/";;
 *"/gaelco/MAME 0.264/"*) core="odin_libretro"; src="https://archive.org/download/mame-0.264-roms-non-merged/MAME%200.264%20ROMs%20%28non-merged%29/";;
