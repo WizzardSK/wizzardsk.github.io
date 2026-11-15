@@ -841,7 +841,7 @@ case "$adresar/" in
 *"/ti99/MAME/"*) core="mame_libretro ti99_4a"; src="https://archive.org/download/mame-sl/mame-sl/ti99_cart.zip/ti99_cart/";;
 *"/mbee/Cart MAME/"*) core="mame_libretro mbee -rom2"; src="https://archive.org/download/mame-sl/mame-sl/mbee_cart.zip/mbee_cart/";;
 *"/mbee/Quik MAME/"*) core="mame_libretro mbee -quik"; src="https://archive.org/download/mame-sl/mame-sl/mbee_quik.zip/mbee_quik/";;
-*"/mbee/Flop MAME/"*) core="mame_libretro mbee56 -flop1"; src="https://archive.org/download/mame-sl/mame-sl/mbee_flop.zip/mbee_flop/";;
+*"/mbee/Flop MAME/"*) core="mame_libretro mbeepp -flop1"; src="https://archive.org/download/mame-sl/mame-sl/mbee_flop.zip/mbee_flop/";;
 *"/m5/Cart MAME/"*) core="mame_libretro m5 -cart1"; src="https://archive.org/download/mame-sl/mame-sl/m5_cart.zip/m5_cart/";;
 *"/m5/Cass MAME/"*) core="mame_libretro m5 -cart1 m5_cart:basici -autoboot_command 'CHAIN\n' -autoboot_delay 5 -cass"; src="https://archive.org/download/mame-sl/mame-sl/m5_cass.zip/m5_cass/";;
 *"/aquarius/Cart MAME/"*) core="mame_libretro aquarius -cart1"; src="https://archive.org/download/mame-sl/mame-sl/aquarius_cart.zip/aquarius_cart/";;

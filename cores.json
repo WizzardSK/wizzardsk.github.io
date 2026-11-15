@@ -4188,7 +4188,7 @@
  },
  {
   "pattern": "/mbee/Flop MAME/",
-  "core": "mame_libretro mbee56 -flop1",
+  "core": "mame_libretro mbeepp -flop1",
   "src": "https://archive.org/download/mame-sl/mame-sl/mbee_flop.zip/mbee_flop/"
  },
  {
