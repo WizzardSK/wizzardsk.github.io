@@ -6,6 +6,11 @@ on:
     - cron: '0 2 * * 0'
   # Run by hand after a change in WizzardSK/gameflix to deploy it
   workflow_dispatch:
+    inputs:
+      main_only:
+        description: 'Only the front page (main.html, menu): no platform pages, no fantasy consoles'
+        type: boolean
+        default: false
 
 jobs:
   build:
@@ -20,4 +25,5 @@ jobs:
         # list) out of the anonymous limit the runners share
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAIN_ONLY: ${{ inputs.main_only }}
         run: bash update.sh
