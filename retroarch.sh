@@ -927,13 +927,13 @@ case "$adresar/" in
 *"/thomson/TO8 K7/"*) core="theodore_libretro"; src="https://archive.org/download/tosec-main/Thomson/TO8%2C%20TO8D%2C%20TO9%2C%20TO9%2B/Games/%5BK7%5D/Thomson%20TO8%2C%20TO8D%2C%20TO9%2C%20TO9%2B%20-%20Games%20-%20%5BK7%5D%20%28TOSEC-v2025-01-15%29.zip/";;
 *"/thomson/TO8 SAP/"*) core="theodore_libretro"; src="https://archive.org/download/tosec-main/Thomson/TO8%2C%20TO8D%2C%20TO9%2C%20TO9%2B/Games/%5BSAP%5D/Thomson%20TO8%2C%20TO8D%2C%20TO9%2C%20TO9%2B%20-%20Games%20-%20%5BSAP%5D%20%28TOSEC-v2025-01-15%29.zip/";;
 *"/thomson/MO5 Cart MAME/"*) core="mame_libretro mo5 -cart"; src="https://archive.org/download/mame-sl/mame-sl/mo5_cart.zip/mo5_cart/";;
-*"/thomson/MO5 Cass MAME/"*) core="mame_libretro mo5 -gameflix_tape 'RUN\"\"\n||5||||usage' -cass"; src="https://archive.org/download/mame-sl/mame-sl/mo5_cass.zip/mo5_cass/";;
+*"/thomson/MO5 Cass MAME/"*) core="mame_libretro mo5 -gameflix_tape 'RUN\"\"\n||5||||usage+mo5' -cass"; src="https://archive.org/download/mame-sl/mame-sl/mo5_cass.zip/mo5_cass/";;
 *"/thomson/MO5 Flop MAME/"*) core="mame_libretro mo5 -extension cd90_640 -flop"; src="https://archive.org/download/mame-sl/mame-sl/mo5_flop.zip/mo5_flop/";;
 *"/thomson/MO6 Cass MAME/"*) core="mame_libretro mo6 -autoboot_command '2\nRUN\"\"\n' -autoboot_delay 5 -cass"; src="https://archive.org/download/mame-sl/mame-sl/mo6_cass.zip/mo6_cass/";;
 *"/thomson/MO6 Flop MAME/"*) core="mame_libretro mo6 -extension cd90_640 -flop"; src="https://archive.org/download/mame-sl/mame-sl/mo6_flop.zip/mo6_flop/";;
-*"/thomson/TO Flop MAME/"*) core="mame_libretro to8 -gameflix_tape '2||3' -flop"; src="https://archive.org/download/mame-sl/mame-sl/to_flop.zip/to_flop/";;
+*"/thomson/TO Flop MAME/"*) core="mame_libretro to8 -gameflix_tape 'B||3' -flop"; src="https://archive.org/download/mame-sl/mame-sl/to_flop.zip/to_flop/";;
 *"/thomson/TO7 Cart MAME/"*) core="mame_libretro to7 -cart"; src="https://archive.org/download/mame-sl/mame-sl/to7_cart.zip/to7_cart/";;
-*"/thomson/TO7 Cass MAME/"*) core="mame_libretro to7 -cart basic -autoboot_command '1\nRUN\"\"\n' -autoboot_delay 5 -cass"; src="https://archive.org/download/mame-sl/mame-sl/to7_cass.zip/to7_cass/";;
+*"/thomson/TO7 Cass MAME/"*) core="mame_libretro to7 -cart basic -gameflix_tape '2||5' -cass"; src="https://archive.org/download/mame-sl/mame-sl/to7_cass.zip/to7_cass/";;
 *"/thomson/TO8 Cass MAME/"*) core="mame_libretro to8 -autoboot_command '2\nRUN\"\"\n' -autoboot_delay 5 -cass"; src="https://archive.org/download/mame-sl/mame-sl/to8_cass.zip/to8_cass/";;
 *"/thomson/MO5 QD MAME/"*) core="mame_libretro mo5 -flop"; src="https://archive.org/download/mame-sl/mame-sl/mo5_qd.zip/mo5_qd/";;
 *"/thomson/TO7 QD MAME/"*) core="mame_libretro to7 -flop"; src="https://archive.org/download/mame-sl/mame-sl/to7_qd.zip/to7_qd/";;

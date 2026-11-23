@@ -4618,7 +4618,7 @@
  },
  {
   "pattern": "/thomson/MO5 Cass MAME/",
-  "core": "mame_libretro mo5 -gameflix_tape 'RUN\"\"\\n||5||||usage' -cass",
+  "core": "mame_libretro mo5 -gameflix_tape 'RUN\"\"\\n||5||||usage+mo5' -cass",
   "src": "https://archive.org/download/mame-sl/mame-sl/mo5_cass.zip/mo5_cass/"
  },
  {
@@ -4638,7 +4638,7 @@
  },
  {
   "pattern": "/thomson/TO Flop MAME/",
-  "core": "mame_libretro to8 -gameflix_tape '2||3' -flop",
+  "core": "mame_libretro to8 -gameflix_tape 'B||3' -flop",
   "src": "https://archive.org/download/mame-sl/mame-sl/to_flop.zip/to_flop/"
  },
  {
@@ -4648,7 +4648,7 @@
  },
  {
   "pattern": "/thomson/TO7 Cass MAME/",
-  "core": "mame_libretro to7 -cart basic -autoboot_command '1\\nRUN\"\"\\n' -autoboot_delay 5 -cass",
+  "core": "mame_libretro to7 -cart basic -gameflix_tape '2||5' -cass",
   "src": "https://archive.org/download/mame-sl/mame-sl/to7_cass.zip/to7_cass/"
  },
  {
