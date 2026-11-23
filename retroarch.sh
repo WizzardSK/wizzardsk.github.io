@@ -1493,7 +1493,7 @@ gameflix_from_mame_set() {
 # clone's ROMs are in its parent's zip in a merged set, and the keyboard, disk
 # controller or cassette interface of the default configuration have zips of
 # their own (abc80 needs abc80kb, apple2ee needs apple2e). mame_deps.tsv, made
-# by gen_mame_deps.py from MAME's -listxml, lists them per driver.
+# by scripts/gen_mame_deps.py from MAME's -listxml, lists them per driver.
 # With a second argument of 3, the driver's software lists instead.
 gameflix_mame_deps() {
   local cache="${XDG_CACHE_HOME:-$HOME/.cache}/gameflix" deps col="${2:-2}"
@@ -1764,14 +1764,36 @@ gameflix_pick_image() {
   gameflix_largest "$dir"
 }
 
-# An archive at ~/iso: mounted by mount-zip (zips) or ratarmount (.rar, .7z),
-# as the README asks for; without them, unpacked there instead. Without either
-# tool the image was never found, and RetroArch started the core with no
-# content at all (ScummVM, every CD system in a zip).
+# fuse-archive for .rar/.7z: the installed one, else the static build from the
+# gameflix repo (bin/linux-<arch>, .github/workflows/fuse-archive.yml),
+# downloaded once into the cache. It mounts about twice as fast as ratarmount
+# (it unpacks the archive once, ratarmount reads it twice) and needs no Python.
+gameflix_fuse_archive() {
+  command -v fuse-archive && return
+  local arch bin="${XDG_CACHE_HOME:-$HOME/.cache}/gameflix/bin/fuse-archive"
+  case "$(uname -m)" in
+    x86_64) arch=x86_64 ;;
+    aarch64|arm64) arch=aarch64 ;;
+    *) return 1 ;;
+  esac
+  if [[ ! -x "$bin" ]]; then
+    mkdir -p "${bin%/*}"
+    curl -sfL --max-time 120 -o "$bin.part" "https://raw.githubusercontent.com/WizzardSK/gameflix/main/bin/linux-$arch/fuse-archive" &&
+      chmod +x "$bin.part" && mv "$bin.part" "$bin" || { rm -f "$bin.part"; return 1; }
+  fi
+  printf '%s' "$bin"
+}
+
+# An archive at ~/iso: mounted by mount-zip (zips), fuse-archive or ratarmount
+# (.rar, .7z), all optional (README); without them, unpacked there instead.
+# Without any tool the image was never found, and RetroArch started the core
+# with no content at all (ScummVM, every CD system in a zip).
 gameflix_open_archive() {
-  umount -l ~/iso 2>/dev/null
+  local fa
+  fusermount3 -uz ~/iso 2>/dev/null || fusermount -uz ~/iso 2>/dev/null || umount -l ~/iso 2>/dev/null
   mkdir -p ~/iso
   if [[ "$1" == *.rar || "$1" == *.7z ]]; then
+    fa=$(gameflix_fuse_archive) && "$fa" "$1" ~/iso && return
     command -v ratarmount >/dev/null && ratarmount "$1" ~/iso && return
   else
     command -v mount-zip >/dev/null && mount-zip "$1" ~/iso && return
@@ -1793,7 +1815,7 @@ if [[ -n "$ext" && "$1" != *.zip && "$1" != *.rar && "$1" != *.7z ]]; then
   rom="$1"   # not an archive after all (3DS .cci); the core takes it as it is
 elif [ -n "$ext" ]; then
   # mount-zip reads zips only; .rar and .7z (Wii U NUS titles ship as .7z) go
-  # through ratarmount, which handles both.
+  # through fuse-archive or ratarmount, which handle both.
   gameflix_open_archive "$1"
   rom=$(gameflix_pick_image ~/iso "$ext")
   # ScummVM detects the game in the folder of the file it is given: a file
